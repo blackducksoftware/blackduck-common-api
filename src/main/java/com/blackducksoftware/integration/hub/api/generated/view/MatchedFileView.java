@@ -20,6 +20,6 @@ public class MatchedFileView extends HubView {
     }
 
     public CompositePathWithArchiveContext filePath;
-    public MatchedFileUsagesEnum usages;
+    public java.util.List<MatchedFileUsagesEnum> usages;
 
 }

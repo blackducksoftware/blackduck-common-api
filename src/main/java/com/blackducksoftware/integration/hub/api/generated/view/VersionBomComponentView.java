@@ -50,7 +50,7 @@ public class VersionBomComponentView extends HubView {
     public String componentVersionName;
     public RiskProfileView licenseRiskProfile;
     public java.util.List<VersionBomLicenseView> licenses;
-    public VersionBomComponentMatchTypesEnum matchTypes;
+    public java.util.List<VersionBomComponentMatchTypesEnum> matchTypes;
     public RiskProfileView operationalRiskProfile;
     public java.util.List<VersionBomOriginView> origins;
     public VersionBomComponentPolicyStatusEnum policyStatus;
@@ -59,7 +59,7 @@ public class VersionBomComponentView extends HubView {
     public ReviewedDetails reviewedDetails;
     public RiskProfileView securityRiskProfile;
     public Long totalFileMatchCount;
-    public VersionBomComponentUsagesEnum usages;
+    public java.util.List<VersionBomComponentUsagesEnum> usages;
     public RiskProfileView versionRiskProfile;
 
 }
