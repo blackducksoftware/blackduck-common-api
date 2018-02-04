@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectSourceEnum;
-import com.blackducksoftware.integration.hub.api.generated.model.AssignedUserGroupView;
+import com.blackducksoftware.integration.hub.api.generated.response.AssignedUserGroupView;
 import com.blackducksoftware.integration.hub.api.generated.view.AssignedUserView;
 import com.blackducksoftware.integration.hub.api.generated.view.ProjectVersionView;
 import com.google.gson.reflect.TypeToken;
