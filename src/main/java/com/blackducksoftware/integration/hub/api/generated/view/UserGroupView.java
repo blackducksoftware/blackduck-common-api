@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.UserGroupCreatedFrom;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.UserGroupCreatedFromType;
 import com.blackducksoftware.integration.hub.api.generated.response.AssignedProjectView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleAssignmentView;
 import com.blackducksoftware.integration.hub.api.generated.view.UserView;
@@ -27,7 +27,7 @@ public class UserGroupView extends HubView {
     }
 
     public Boolean active;
-    public UserGroupCreatedFrom createdFrom;
+    public UserGroupCreatedFromType createdFrom;
     public String externalName;
     public String name;
     public String userGroup;

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.OriginSource;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.OriginSourceType;
 import com.blackducksoftware.integration.hub.api.generated.model.ComponentVersionReferenceView;
 import com.blackducksoftware.integration.hub.api.generated.model.ComponentVersionRiskView;
 import com.blackducksoftware.integration.hub.api.generated.view.ComplexLicenseView;
@@ -35,7 +35,7 @@ public class ComponentVersionView extends HubView {
 
     public ComplexLicenseView license;
     public java.util.Date releasedOn;
-    public OriginSource source;
+    public OriginSourceType source;
     public String versionName;
 
 }

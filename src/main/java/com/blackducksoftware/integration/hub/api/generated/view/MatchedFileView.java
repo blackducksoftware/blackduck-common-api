@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsages;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsagesType;
 import com.blackducksoftware.integration.hub.api.generated.model.CompositePathWithArchiveContext;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
 
@@ -20,6 +20,6 @@ public class MatchedFileView extends HubView {
     }
 
     public CompositePathWithArchiveContext filePath;
-    public java.util.List<MatchedFileUsages> usages;
+    public java.util.List<MatchedFileUsagesType> usages;
 
 }
