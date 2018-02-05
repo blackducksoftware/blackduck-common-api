@@ -23,22 +23,24 @@
  */
 package com.blackducksoftware.integration.hub.api.enumeration;
 
-public enum ScanSummaryStatusEnum {
-    UNSTARTED,
-    SCANNING,
-    SAVING_SCAN_DATA,
-    SCAN_DATA_SAVE_COMPLETE,
-    REQUESTED_MATCH_JOB,
-    MATCHING,
-    BOM_VERSION_CHECK,
-    BUILDING_BOM,
-    COMPLETE,
-    CANCELLED,
-    CLONED,
-    ERROR_SCANNING,
-    ERROR_SAVING_SCAN_DATA,
-    ERROR_MATCHING,
-    ERROR_BUILDING_BOM,
-    ERROR;
+public enum PolicyRuleConditionType {
+    PROJECT_TIER("Project Tier"),
+    VERSION_PHASE("Version Phase"),
+    VERSION_DISTRIBUTION("Version Distribution"),
+    SINGLE_VERSION("Component"),
+    COMPONENT_USAGE("Component Usage"),
+    LICENSE_FAMILY("License Family"),
+    SINGLE_LICENSE("License"),
+    NEWER_VERSIONS_COUNT("Newer Versions Count"),
+    HIGH_SEVERITY_VULN_COUNT("High Severity Vulnerability Count"),
+    MEDIUM_SEVERITY_VULN_COUNT("Medium Severity Vulnerability Count"),
+    LOW_SEVERITY_VULN_COUNT("Low Severity Vulnerability Count"),
+    UNKNOWN_RULE_CONDTION("Unknown Rule Condition");
+
+    public final String displayValue;
+
+    private PolicyRuleConditionType(final String displayValue) {
+        this.displayValue = displayValue;
+    }
 
 }

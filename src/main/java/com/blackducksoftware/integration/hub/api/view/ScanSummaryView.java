@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.enumeration.ScanSummaryStatusEnum;
+import com.blackducksoftware.integration.hub.api.enumeration.ScanSummaryStatusType;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
 
 public class ScanSummaryView extends HubView {
@@ -18,7 +18,7 @@ public class ScanSummaryView extends HubView {
         links.put(CODELOCATION_LINK, CodeLocationView.class);
     }
 
-    public ScanSummaryStatusEnum status;
+    public ScanSummaryStatusType status;
     public String statusMessage;
     public Date createdAt;
     public Date updatedAt;
