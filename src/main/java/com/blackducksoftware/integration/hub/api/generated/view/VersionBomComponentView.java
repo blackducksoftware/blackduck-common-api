@@ -6,11 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentApprovalStatusEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentMatchTypesEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentPolicyStatusEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentReviewStatusEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentUsagesEnum;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsages;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusApprovalStatus;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentMatchTypes;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentReviewStatus;
 import com.blackducksoftware.integration.hub.api.generated.model.ActivityDataView;
 import com.blackducksoftware.integration.hub.api.generated.model.ReviewedDetails;
 import com.blackducksoftware.integration.hub.api.generated.model.UserCommentView;
@@ -43,23 +42,23 @@ public class VersionBomComponentView extends HubView {
 
     public ActivityDataView activityData;
     public RiskProfileView activityRiskProfile;
-    public VersionBomComponentApprovalStatusEnum approvalStatus;
+    public PolicyStatusApprovalStatus approvalStatus;
     public String component;
     public String componentName;
     public String componentVersion;
     public String componentVersionName;
     public RiskProfileView licenseRiskProfile;
     public java.util.List<VersionBomLicenseView> licenses;
-    public java.util.List<VersionBomComponentMatchTypesEnum> matchTypes;
+    public java.util.List<VersionBomComponentMatchTypes> matchTypes;
     public RiskProfileView operationalRiskProfile;
     public java.util.List<VersionBomOriginView> origins;
-    public VersionBomComponentPolicyStatusEnum policyStatus;
+    public PolicyStatusApprovalStatus policyStatus;
     public java.util.Date releasedOn;
-    public VersionBomComponentReviewStatusEnum reviewStatus;
+    public VersionBomComponentReviewStatus reviewStatus;
     public ReviewedDetails reviewedDetails;
     public RiskProfileView securityRiskProfile;
     public Long totalFileMatchCount;
-    public java.util.List<VersionBomComponentUsagesEnum> usages;
+    public java.util.List<MatchedFileUsages> usages;
     public RiskProfileView versionRiskProfile;
 
 }

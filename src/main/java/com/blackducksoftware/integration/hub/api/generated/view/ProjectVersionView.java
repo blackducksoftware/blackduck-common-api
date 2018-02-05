@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectVersionDistributionEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectVersionPhaseEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectVersionSourceEnum;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.OriginSource;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectVersionDistribution;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectVersionPhase;
 import com.blackducksoftware.integration.hub.api.generated.model.VersionRiskProfileView;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
 import com.blackducksoftware.integration.hub.api.generated.view.ComplexLicenseView;
@@ -43,13 +43,13 @@ public class ProjectVersionView extends HubView {
             links.put(VERSIONREPORT_LINK, new TypeToken<ArrayList<ReportView>>() {}.getType());
     }
 
-    public ProjectVersionDistributionEnum distribution;
+    public ProjectVersionDistribution distribution;
     public ComplexLicenseView license;
     public String nickname;
-    public ProjectVersionPhaseEnum phase;
+    public ProjectVersionPhase phase;
     public String releaseComments;
     public java.util.Date releasedOn;
-    public ProjectVersionSourceEnum source;
+    public OriginSource source;
     public String versionName;
 
 }
