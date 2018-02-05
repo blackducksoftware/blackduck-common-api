@@ -8,7 +8,7 @@ import java.util.Map;
 import com.blackducksoftware.integration.hub.api.HubView;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsagesType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusApprovalStatusType;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentMatchTypesType;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentMatchType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentReviewStatusType;
 import com.blackducksoftware.integration.hub.api.generated.model.ActivityDataView;
 import com.blackducksoftware.integration.hub.api.generated.model.ReviewedDetails;
@@ -49,7 +49,7 @@ public class VersionBomComponentView extends HubView {
     public String componentVersionName;
     public RiskProfileView licenseRiskProfile;
     public java.util.List<VersionBomLicenseView> licenses;
-    public java.util.List<VersionBomComponentMatchTypesType> matchTypes;
+    public java.util.List<VersionBomComponentMatchType> matchTypes;
     public RiskProfileView operationalRiskProfile;
     public java.util.List<VersionBomOriginView> origins;
     public PolicyStatusApprovalStatusType policyStatus;
