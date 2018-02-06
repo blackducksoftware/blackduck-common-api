@@ -1,5 +1,5 @@
 /**
- * hub-common-model
+ * hub-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
