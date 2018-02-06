@@ -1,6 +1,6 @@
 package com.blackducksoftware.integration.hub.api.generated.view;
 
-import com.blackducksoftware.integration.hub.api.HubView;
+import com.blackducksoftware.integration.hub.api.core.HubView;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.ComplexLicenseType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseCodeSharingType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseOwnershipType;

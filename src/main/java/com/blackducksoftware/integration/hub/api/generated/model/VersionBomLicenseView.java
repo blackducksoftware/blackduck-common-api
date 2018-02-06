@@ -1,6 +1,6 @@
 package com.blackducksoftware.integration.hub.api.generated.model;
 
-import com.blackducksoftware.integration.hub.api.HubModel;
+import com.blackducksoftware.integration.hub.api.core.HubModel;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.ComplexLicenseType;
 import com.blackducksoftware.integration.hub.api.generated.model.VersionBomLicenseView;
 

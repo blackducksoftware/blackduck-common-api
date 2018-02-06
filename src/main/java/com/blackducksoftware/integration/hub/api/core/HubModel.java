@@ -21,12 +21,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api;
+package com.blackducksoftware.integration.hub.api.core;
 
-public enum HttpAllow {
-    GET,
-    POST,
-    PUT,
-    DELETE;
+import com.blackducksoftware.integration.util.Stringable;
+
+/**
+ * A base class for any object that can interact with the Hub API.
+ */
+public class HubModel extends Stringable {
 
 }

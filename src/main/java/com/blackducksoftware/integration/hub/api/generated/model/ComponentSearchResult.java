@@ -1,6 +1,6 @@
 package com.blackducksoftware.integration.hub.api.generated.model;
 
-import com.blackducksoftware.integration.hub.api.HubModel;
+import com.blackducksoftware.integration.hub.api.core.HubModel;
 import com.blackducksoftware.integration.hub.api.generated.model.ComponentHit;
 import com.blackducksoftware.integration.hub.api.generated.model.Facet;
 import com.blackducksoftware.integration.hub.api.generated.model.SearchResultSpec;

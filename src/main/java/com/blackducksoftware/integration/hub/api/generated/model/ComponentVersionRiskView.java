@@ -1,6 +1,6 @@
 package com.blackducksoftware.integration.hub.api.generated.model;
 
-import com.blackducksoftware.integration.hub.api.HubModel;
+import com.blackducksoftware.integration.hub.api.core.HubModel;
 import com.blackducksoftware.integration.hub.api.generated.model.ActivityDataView;
 import com.blackducksoftware.integration.hub.api.generated.model.VersionDataView;
 import com.blackducksoftware.integration.hub.api.generated.view.RiskProfileView;

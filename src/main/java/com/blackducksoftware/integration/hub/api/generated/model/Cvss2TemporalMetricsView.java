@@ -1,6 +1,6 @@
 package com.blackducksoftware.integration.hub.api.generated.model;
 
-import com.blackducksoftware.integration.hub.api.HubModel;
+import com.blackducksoftware.integration.hub.api.core.HubModel;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.Cvss2TemporalMetricsExploitabilityType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.Cvss2TemporalMetricsRemediationLevelType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.Cvss2TemporalMetricsReportConfidenceType;

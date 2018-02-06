@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.blackducksoftware.integration.hub.api.HubView;
+import com.blackducksoftware.integration.hub.api.core.HubView;
 import com.blackducksoftware.integration.hub.api.generated.response.AssignedProjectView;
 import com.blackducksoftware.integration.hub.api.generated.view.NotificationUserView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleAssignmentView;

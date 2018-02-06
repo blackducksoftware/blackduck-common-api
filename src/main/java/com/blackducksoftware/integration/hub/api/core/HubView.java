@@ -1,5 +1,5 @@
 /**
- * hub-common-model
+ * hub-common-response
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,13 +21,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api;
+package com.blackducksoftware.integration.hub.api.core;
 
-import com.blackducksoftware.integration.util.Stringable;
+import com.blackducksoftware.integration.hub.api.generated.model.ResourceMetadata;
+import com.google.gson.annotations.SerializedName;
 
 /**
- * A base class for any object that can interact with the Hub API.
+ * A marker class used when a HubResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
  */
-public class HubModel extends Stringable {
+public class HubView extends HubResponse {
+    @SerializedName("_meta")
+    public ResourceMetadata meta;
 
 }

@@ -1,5 +1,5 @@
 /**
- * hub-common-response
+ * hub-common-model
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,26 +21,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.enumeration;
+package com.blackducksoftware.integration.hub.api.core;
 
-public enum PolicyRuleConditionType {
-    PROJECT_TIER("Project Tier"),
-    VERSION_PHASE("Version Phase"),
-    VERSION_DISTRIBUTION("Version Distribution"),
-    SINGLE_VERSION("Component"),
-    COMPONENT_USAGE("Component Usage"),
-    LICENSE_FAMILY("License Family"),
-    SINGLE_LICENSE("License"),
-    NEWER_VERSIONS_COUNT("Newer Versions Count"),
-    HIGH_SEVERITY_VULN_COUNT("High Severity Vulnerability Count"),
-    MEDIUM_SEVERITY_VULN_COUNT("Medium Severity Vulnerability Count"),
-    LOW_SEVERITY_VULN_COUNT("Low Severity Vulnerability Count"),
-    UNKNOWN_RULE_CONDTION("Unknown Rule Condition");
-
-    public final String displayValue;
-
-    private PolicyRuleConditionType(final String displayValue) {
-        this.displayValue = displayValue;
-    }
+/**
+ * All Hub API JSON Responses should be marshaled to instances of this class.
+ */
+public class HubResponse extends HubModel {
+    public String json;
 
 }
