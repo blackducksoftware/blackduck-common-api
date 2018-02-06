@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ReportEnum;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ReportFormatEnum;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.ReportFormatType;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.ReportType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ReportView extends HubView {
@@ -27,8 +27,8 @@ public class ReportView extends HubView {
     public Long fileSize;
     public java.util.Date finishedAt;
     public String locale;
-    public ReportFormatEnum reportFormat;
-    public ReportEnum reportType;
+    public ReportFormatType reportFormat;
+    public ReportType reportType;
     public java.util.Date updatedAt;
 
 }

@@ -1,7 +1,7 @@
 package com.blackducksoftware.integration.hub.api.generated.view;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomPolicyStatusOverallStatusEnum;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusApprovalStatusType;
 import com.blackducksoftware.integration.hub.api.generated.model.ComponentVersionPolicyViolationDetails;
 import com.blackducksoftware.integration.hub.api.generated.model.NameValuePairView;
 
@@ -9,7 +9,7 @@ import com.blackducksoftware.integration.hub.api.generated.model.NameValuePairVi
 public class VersionBomPolicyStatusView extends HubView {
     public ComponentVersionPolicyViolationDetails componentVersionPolicyViolationDetails;
     public java.util.List<NameValuePairView> componentVersionStatusCounts;
-    public VersionBomPolicyStatusOverallStatusEnum overallStatus;
+    public PolicyStatusApprovalStatusType overallStatus;
     public java.util.Date updatedAt;
 
 }

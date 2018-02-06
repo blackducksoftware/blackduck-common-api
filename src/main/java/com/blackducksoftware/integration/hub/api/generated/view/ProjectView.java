@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blackducksoftware.integration.hub.api.HubView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.ProjectSourceEnum;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.OriginSourceType;
 import com.blackducksoftware.integration.hub.api.generated.response.AssignedUserGroupView;
 import com.blackducksoftware.integration.hub.api.generated.view.AssignedUserView;
 import com.blackducksoftware.integration.hub.api.generated.view.ProjectVersionView;
@@ -33,6 +33,6 @@ public class ProjectView extends HubView {
     public Boolean projectLevelAdjustments;
     public String projectOwner;
     public Integer projectTier;
-    public ProjectSourceEnum source;
+    public OriginSourceType source;
 
 }
