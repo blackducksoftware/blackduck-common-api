@@ -23,9 +23,13 @@
  */
 package com.blackducksoftware.integration.hub.api.core;
 
-public class LinkMultipleResponses extends LinkResponse {
-    public LinkMultipleResponses(final String link, final Class<? extends HubResponse> responseClass) {
-        super(link, responseClass);
+public class LinkMultipleResponses<T extends HubResponse> extends LinkResponse {
+    public String link;
+    public Class<T> responseClass;
+
+    public LinkMultipleResponses(final String link, final Class<T> responseClass) {
+        this.link = link;
+        this.responseClass = responseClass;
     }
 
 }

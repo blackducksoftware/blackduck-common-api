@@ -1,26 +1,3 @@
-/**
- * hub-common-api
- *
- * Copyright (C) 2018 Black Duck Software, Inc.
- * http://www.blackducksoftware.com/
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.blackducksoftware.integration.hub.api.generated.discovery;
 
 import java.util.HashMap;
@@ -74,29 +51,29 @@ public class ApiDiscovery {
     public static final String VULNERABILITY_STATUS_REPORTS_LINK = "/api/vulnerability-status-reports";
     public static final String VULNERABILITY_UPDATE_REPORTS_LINK = "/api/vulnerability-update-reports";
 
-    public static final LinkMultipleResponses CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final LinkMultipleResponses COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(COMPONENTS_LINK, ComponentSearchResultView.class);
-    public static final LinkSingleResponse CURRENT_USER_LINK_RESPONSE = new LinkSingleResponse(CURRENT_USER_LINK, UserView.class);
-    public static final LinkMultipleResponses CURRENT_USER_TOKENS_LINK_RESPONSE = new LinkMultipleResponses(CURRENT_USER_TOKENS_LINK, ApiTokenView.class);
-    public static final LinkSingleResponse CURRENT_VERSION_LINK_RESPONSE = new LinkSingleResponse(CURRENT_VERSION_LINK, CurrentVersionView.class);
-    public static final LinkSingleResponse ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new LinkSingleResponse(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
-    public static final LinkSingleResponse HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new LinkSingleResponse(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
-    public static final LinkSingleResponse HEALTH_CHECKS_READINESS_LINK_RESPONSE = new LinkSingleResponse(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
-    public static final LinkMultipleResponses LICENSES_LINK_RESPONSE = new LinkMultipleResponses(LICENSES_LINK, LicenseView.class);
-    public static final LinkSingleResponse NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new LinkSingleResponse(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
-    public static final LinkSingleResponse NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new LinkSingleResponse(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
-    public static final LinkMultipleResponses NOTIFICATIONS_LINK_RESPONSE = new LinkMultipleResponses(NOTIFICATIONS_LINK, NotificationView.class);
-    public static final LinkSingleResponse POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new LinkSingleResponse(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
-    public static final LinkMultipleResponses POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses(POLICY_RULES_LINK, PolicyRuleView.class);
-    public static final LinkMultipleResponses PROJECTS_LINK_RESPONSE = new LinkMultipleResponses(PROJECTS_LINK, ProjectView.class);
-    public static final LinkMultipleResponses ROLES_LINK_RESPONSE = new LinkMultipleResponses(ROLES_LINK, RoleView.class);
-    public static final LinkMultipleResponses SEARCH_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
-    public static final LinkSingleResponse USER_STATUS_FILTERS_LINK_RESPONSE = new LinkSingleResponse(USER_STATUS_FILTERS_LINK, FilterView.class);
-    public static final LinkMultipleResponses USERGROUPS_LINK_RESPONSE = new LinkMultipleResponses(USERGROUPS_LINK, UserGroupView.class);
-    public static final LinkMultipleResponses USERS_LINK_RESPONSE = new LinkMultipleResponses(USERS_LINK, UserView.class);
-    public static final LinkMultipleResponses VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
-    public static final LinkMultipleResponses VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
-    public static final LinkMultipleResponses VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final LinkMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final LinkSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new LinkSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
+    public static final LinkMultipleResponses<ApiTokenView> CURRENT_USER_TOKENS_LINK_RESPONSE = new LinkMultipleResponses<ApiTokenView>(CURRENT_USER_TOKENS_LINK, ApiTokenView.class);
+    public static final LinkSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new LinkSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
+    public static final LinkSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new LinkSingleResponse<EndUserLicenseAgreementView>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
+    public static final LinkSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new LinkSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
+    public static final LinkSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new LinkSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
+    public static final LinkMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new LinkMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
+    public static final LinkSingleResponse<FilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new LinkSingleResponse<FilterView>(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
+    public static final LinkSingleResponse<FilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new LinkSingleResponse<FilterView>(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new LinkMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
+    public static final LinkSingleResponse<FilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new LinkSingleResponse<FilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final LinkMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
+    public static final LinkMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new LinkMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
+    public static final LinkMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
+    public static final LinkSingleResponse<FilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new LinkSingleResponse<FilterView>(USER_STATUS_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses<UserGroupView> USERGROUPS_LINK_RESPONSE = new LinkMultipleResponses<UserGroupView>(USERGROUPS_LINK, UserGroupView.class);
+    public static final LinkMultipleResponses<UserView> USERS_LINK_RESPONSE = new LinkMultipleResponses<UserView>(USERS_LINK, UserView.class);
+    public static final LinkMultipleResponses<ReportView> VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses<ReportView> VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses<ReportView> VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
 
     static {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);

@@ -1,26 +1,3 @@
-/**
- * hub-common-api
- *
- * Copyright (C) 2018 Black Duck Software, Inc.
- * http://www.blackducksoftware.com/
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.blackducksoftware.integration.hub.api.generated.view;
 
 import java.util.HashMap;
@@ -55,14 +32,14 @@ public class ProjectVersionView extends HubView {
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
     public static final String VERSIONREPORT_LINK = "versionReport";
 
-    public static final LinkMultipleResponses COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(COMPONENTS_LINK, VersionBomComponentView.class);
-    public static final LinkSingleResponse POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse(POLICY_STATUS_LINK, VersionBomPolicyStatusView.class);
-    public static final LinkSingleResponse RISKPROFILE_LINK_RESPONSE = new LinkSingleResponse(RISKPROFILE_LINK, VersionRiskProfileView.class);
-    public static final LinkMultipleResponses CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final LinkMultipleResponses LICENSEREPORTS_LINK_RESPONSE = new LinkMultipleResponses(LICENSEREPORTS_LINK, ReportView.class);
-    public static final LinkSingleResponse PROJECT_LINK_RESPONSE = new LinkSingleResponse(PROJECT_LINK, ProjectView.class);
-    public static final LinkMultipleResponses VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABLE_COMPONENTS_LINK, VulnerableComponentView.class);
-    public static final LinkMultipleResponses VERSIONREPORT_LINK_RESPONSE = new LinkMultipleResponses(VERSIONREPORT_LINK, ReportView.class);
+    public static final LinkMultipleResponses<VersionBomComponentView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<VersionBomComponentView>(COMPONENTS_LINK, VersionBomComponentView.class);
+    public static final LinkSingleResponse<VersionBomPolicyStatusView> POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse<VersionBomPolicyStatusView>(POLICY_STATUS_LINK, VersionBomPolicyStatusView.class);
+    public static final LinkSingleResponse<VersionRiskProfileView> RISKPROFILE_LINK_RESPONSE = new LinkSingleResponse<VersionRiskProfileView>(RISKPROFILE_LINK, VersionRiskProfileView.class);
+    public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final LinkMultipleResponses<ReportView> LICENSEREPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSEREPORTS_LINK, ReportView.class);
+    public static final LinkSingleResponse<ProjectView> PROJECT_LINK_RESPONSE = new LinkSingleResponse<ProjectView>(PROJECT_LINK, ProjectView.class);
+    public static final LinkMultipleResponses<VulnerableComponentView> VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<VulnerableComponentView>(VULNERABLE_COMPONENTS_LINK, VulnerableComponentView.class);
+    public static final LinkMultipleResponses<ReportView> VERSIONREPORT_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(VERSIONREPORT_LINK, ReportView.class);
 
     static {
             links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
