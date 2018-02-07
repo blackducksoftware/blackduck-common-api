@@ -21,12 +21,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.core;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
-
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class HealthCheckStatusView extends HubModel {
-    public Boolean healthy;
+public class LinkStringResponse extends LinkResponse {
+    public LinkStringResponse(final String link, final Class<String> stringClass) {
+        super(link, null);
+    }
 
 }

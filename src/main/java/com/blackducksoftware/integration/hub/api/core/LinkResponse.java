@@ -21,12 +21,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.core;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
+public abstract class LinkResponse {
+    public String link;
+    public Class<? extends HubResponse> responseClass;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class EndUserLicenseAgreementView extends HubModel {
-    public java.util.Date acceptedDate;
+    public LinkResponse(final String link, final Class<? extends HubResponse> responseClass) {
+        this.link = link;
+        this.responseClass = responseClass;
+    }
 
 }

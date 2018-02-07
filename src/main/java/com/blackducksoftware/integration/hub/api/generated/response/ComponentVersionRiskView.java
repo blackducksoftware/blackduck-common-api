@@ -21,30 +21,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.view;
+package com.blackducksoftware.integration.hub.api.generated.response;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.blackducksoftware.integration.hub.api.core.HubView;
-import com.blackducksoftware.integration.hub.api.core.LinkResponse;
-import com.blackducksoftware.integration.hub.api.core.LinkSingleResponse;
-import com.blackducksoftware.integration.hub.api.generated.view.UserView;
+import com.blackducksoftware.integration.hub.api.core.HubResponse;
+import com.blackducksoftware.integration.hub.api.generated.model.ActivityDataView;
+import com.blackducksoftware.integration.hub.api.generated.model.VersionDataView;
+import com.blackducksoftware.integration.hub.api.generated.view.RiskProfileView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class RoleAssignmentView extends HubView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
-
-    public static final String USER_LINK = "user";
-
-    public static final LinkSingleResponse USER_LINK_RESPONSE = new LinkSingleResponse(USER_LINK, UserView.class);
-
-    static {
-            links.put(USER_LINK, USER_LINK_RESPONSE);
-    }
-
-    public String description;
-    public String name;
-    public String role;
+public class ComponentVersionRiskView extends HubResponse {
+    public ActivityDataView activityData;
+    public RiskProfileView riskData;
+    public VersionDataView versionData;
 
 }

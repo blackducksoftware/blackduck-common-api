@@ -21,17 +21,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.generated.response;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
-import com.blackducksoftware.integration.hub.api.generated.model.ActivityDataView;
-import com.blackducksoftware.integration.hub.api.generated.model.VersionDataView;
-import com.blackducksoftware.integration.hub.api.generated.view.RiskProfileView;
+import com.blackducksoftware.integration.hub.api.core.HubResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionRiskView extends HubModel {
-    public ActivityDataView activityData;
-    public RiskProfileView riskData;
-    public VersionDataView versionData;
+public class CurrentVersionView extends HubResponse {
+    public String version;
 
 }

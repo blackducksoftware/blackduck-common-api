@@ -21,19 +21,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.generated.response;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
-import com.blackducksoftware.integration.hub.api.generated.model.CweCommonConsequenceView;
+import com.blackducksoftware.integration.hub.api.core.HubResponse;
+import com.blackducksoftware.integration.hub.api.generated.model.FilterValueView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CweView extends HubModel {
-    public static final String SOURCES_LINK = "sources";
-
-    public java.util.List<CweCommonConsequenceView> commonConsequences;
-    public String description;
-    public String extendedDescription;
-    public String id;
+public class FilterView extends HubResponse {
+    public String label;
     public String name;
+    public java.util.List<FilterValueView> values;
 
 }

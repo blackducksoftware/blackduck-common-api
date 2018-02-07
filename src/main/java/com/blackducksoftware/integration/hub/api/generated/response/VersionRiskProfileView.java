@@ -21,16 +21,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.generated.response;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
-import com.blackducksoftware.integration.hub.api.generated.model.ResourceMetadata;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.blackducksoftware.integration.hub.api.core.HubResponse;
+import com.blackducksoftware.integration.hub.api.core.LinkResponse;
+import com.blackducksoftware.integration.hub.api.core.LinkSingleResponse;
+import com.blackducksoftware.integration.hub.api.generated.view.ProjectVersionView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ApiTokenView extends HubModel {
-    public ResourceMetadata _meta;
-    public String description;
-    public String name;
-    public java.util.List<String> scopes;
+public class VersionRiskProfileView extends HubResponse {
+    public static final Map<String, LinkResponse> links = new HashMap<>();
+
+    public static final String VERSION_LINK = "version";
+
+    public static final LinkSingleResponse VERSION_LINK_RESPONSE = new LinkSingleResponse(VERSION_LINK, ProjectVersionView.class);
+
+    static {
+            links.put(VERSION_LINK, VERSION_LINK_RESPONSE);
+    }
+
+    public java.util.Date bomLastUpdatedAt;
+    public String categories;
 
 }

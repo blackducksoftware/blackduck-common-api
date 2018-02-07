@@ -21,14 +21,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.model;
+package com.blackducksoftware.integration.hub.api.core;
 
-import com.blackducksoftware.integration.hub.api.core.HubModel;
-
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionReferenceView extends HubModel {
-    public String projectName;
-    public String projectVersionUrl;
-    public String versionName;
+public class LinkSingleResponse extends LinkResponse {
+    public LinkSingleResponse(final String link, final Class<? extends HubResponse> responseClass) {
+        super(link, responseClass);
+    }
 
 }

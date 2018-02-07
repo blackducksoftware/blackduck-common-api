@@ -23,17 +23,18 @@
  */
 package com.blackducksoftware.integration.hub.api.generated.discovery;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.blackducksoftware.integration.hub.api.generated.model.ApiTokenView;
-import com.blackducksoftware.integration.hub.api.generated.model.ComponentSearchResult;
-import com.blackducksoftware.integration.hub.api.generated.model.CurrentVersionView;
-import com.blackducksoftware.integration.hub.api.generated.model.EndUserLicenseAgreementView;
-import com.blackducksoftware.integration.hub.api.generated.model.FilterView;
-import com.blackducksoftware.integration.hub.api.generated.model.HealthCheckStatusView;
+import com.blackducksoftware.integration.hub.api.core.LinkMultipleResponses;
+import com.blackducksoftware.integration.hub.api.core.LinkResponse;
+import com.blackducksoftware.integration.hub.api.core.LinkSingleResponse;
+import com.blackducksoftware.integration.hub.api.generated.response.ApiTokenView;
+import com.blackducksoftware.integration.hub.api.generated.response.ComponentSearchResult;
+import com.blackducksoftware.integration.hub.api.generated.response.CurrentVersionView;
+import com.blackducksoftware.integration.hub.api.generated.response.EndUserLicenseAgreementView;
+import com.blackducksoftware.integration.hub.api.generated.response.FilterView;
+import com.blackducksoftware.integration.hub.api.generated.response.HealthCheckStatusView;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
 import com.blackducksoftware.integration.hub.api.generated.view.ComponentSearchResultView;
 import com.blackducksoftware.integration.hub.api.generated.view.LicenseView;
@@ -44,11 +45,10 @@ import com.blackducksoftware.integration.hub.api.generated.view.ReportView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleView;
 import com.blackducksoftware.integration.hub.api.generated.view.UserGroupView;
 import com.blackducksoftware.integration.hub.api.generated.view.UserView;
-import com.google.gson.reflect.TypeToken;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ApiDiscovery {
-    public static final Map<String, Type> links = new HashMap<>();
+    public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String CODELOCATIONS_LINK = "/api/codelocations";
     public static final String COMPONENTS_LINK = "/api/components";
@@ -74,30 +74,54 @@ public class ApiDiscovery {
     public static final String VULNERABILITY_STATUS_REPORTS_LINK = "/api/vulnerability-status-reports";
     public static final String VULNERABILITY_UPDATE_REPORTS_LINK = "/api/vulnerability-update-reports";
 
+    public static final LinkMultipleResponses CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final LinkMultipleResponses COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final LinkSingleResponse CURRENT_USER_LINK_RESPONSE = new LinkSingleResponse(CURRENT_USER_LINK, UserView.class);
+    public static final LinkMultipleResponses CURRENT_USER_TOKENS_LINK_RESPONSE = new LinkMultipleResponses(CURRENT_USER_TOKENS_LINK, ApiTokenView.class);
+    public static final LinkSingleResponse CURRENT_VERSION_LINK_RESPONSE = new LinkSingleResponse(CURRENT_VERSION_LINK, CurrentVersionView.class);
+    public static final LinkSingleResponse ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new LinkSingleResponse(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
+    public static final LinkSingleResponse HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new LinkSingleResponse(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
+    public static final LinkSingleResponse HEALTH_CHECKS_READINESS_LINK_RESPONSE = new LinkSingleResponse(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
+    public static final LinkMultipleResponses LICENSES_LINK_RESPONSE = new LinkMultipleResponses(LICENSES_LINK, LicenseView.class);
+    public static final LinkSingleResponse NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new LinkSingleResponse(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
+    public static final LinkSingleResponse NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new LinkSingleResponse(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses NOTIFICATIONS_LINK_RESPONSE = new LinkMultipleResponses(NOTIFICATIONS_LINK, NotificationView.class);
+    public static final LinkSingleResponse POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new LinkSingleResponse(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final LinkMultipleResponses PROJECTS_LINK_RESPONSE = new LinkMultipleResponses(PROJECTS_LINK, ProjectView.class);
+    public static final LinkMultipleResponses ROLES_LINK_RESPONSE = new LinkMultipleResponses(ROLES_LINK, RoleView.class);
+    public static final LinkMultipleResponses SEARCH_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
+    public static final LinkSingleResponse USER_STATUS_FILTERS_LINK_RESPONSE = new LinkSingleResponse(USER_STATUS_FILTERS_LINK, FilterView.class);
+    public static final LinkMultipleResponses USERGROUPS_LINK_RESPONSE = new LinkMultipleResponses(USERGROUPS_LINK, UserGroupView.class);
+    public static final LinkMultipleResponses USERS_LINK_RESPONSE = new LinkMultipleResponses(USERS_LINK, UserView.class);
+    public static final LinkMultipleResponses VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
+
     static {
-        links.put(CODELOCATIONS_LINK, new TypeToken<ArrayList<CodeLocationView>>() {}.getType());
-        links.put(COMPONENTS_LINK, new TypeToken<ArrayList<ComponentSearchResultView>>() {}.getType());
-        links.put(CURRENT_USER_LINK, UserView.class);
-        links.put(CURRENT_USER_TOKENS_LINK, new TypeToken<ArrayList<ApiTokenView>>() {}.getType());
-        links.put(CURRENT_VERSION_LINK, CurrentVersionView.class);
-        links.put(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
-        links.put(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
-        links.put(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
-        links.put(LICENSES_LINK, new TypeToken<ArrayList<LicenseView>>() {}.getType());
-        links.put(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
-        links.put(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
-        links.put(NOTIFICATIONS_LINK, new TypeToken<ArrayList<NotificationView>>() {}.getType());
-        links.put(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
-        links.put(POLICY_RULES_LINK, new TypeToken<ArrayList<PolicyRuleView>>() {}.getType());
-        links.put(PROJECTS_LINK, new TypeToken<ArrayList<ProjectView>>() {}.getType());
-        links.put(ROLES_LINK, new TypeToken<ArrayList<RoleView>>() {}.getType());
-        links.put(SEARCH_COMPONENTS_LINK, new TypeToken<ArrayList<ComponentSearchResult>>() {}.getType());
-        links.put(USER_STATUS_FILTERS_LINK, FilterView.class);
-        links.put(USERGROUPS_LINK, new TypeToken<ArrayList<UserGroupView>>() {}.getType());
-        links.put(USERS_LINK, new TypeToken<ArrayList<UserView>>() {}.getType());
-        links.put(VULNERABILITY_REMEDIATION_REPORTS_LINK, new TypeToken<ArrayList<ReportView>>() {}.getType());
-        links.put(VULNERABILITY_STATUS_REPORTS_LINK, new TypeToken<ArrayList<ReportView>>() {}.getType());
-        links.put(VULNERABILITY_UPDATE_REPORTS_LINK, new TypeToken<ArrayList<ReportView>>() {}.getType());
+        links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
+        links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
+        links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
+        links.put(CURRENT_USER_TOKENS_LINK, CURRENT_USER_TOKENS_LINK_RESPONSE);
+        links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
+        links.put(ENDUSERLICENSEAGREEMENT_LINK, ENDUSERLICENSEAGREEMENT_LINK_RESPONSE);
+        links.put(HEALTH_CHECKS_LIVENESS_LINK, HEALTH_CHECKS_LIVENESS_LINK_RESPONSE);
+        links.put(HEALTH_CHECKS_READINESS_LINK, HEALTH_CHECKS_READINESS_LINK_RESPONSE);
+        links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
+        links.put(NOTIFICATION_STATE_FILTERS_LINK, NOTIFICATION_STATE_FILTERS_LINK_RESPONSE);
+        links.put(NOTIFICATION_TYPE_FILTERS_LINK, NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE);
+        links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        links.put(POLICY_RULE_ENABLED_FILTERS_LINK, POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE);
+        links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+        links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
+        links.put(SEARCH_COMPONENTS_LINK, SEARCH_COMPONENTS_LINK_RESPONSE);
+        links.put(USER_STATUS_FILTERS_LINK, USER_STATUS_FILTERS_LINK_RESPONSE);
+        links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
+        links.put(USERS_LINK, USERS_LINK_RESPONSE);
+        links.put(VULNERABILITY_REMEDIATION_REPORTS_LINK, VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE);
+        links.put(VULNERABILITY_STATUS_REPORTS_LINK, VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE);
+        links.put(VULNERABILITY_UPDATE_REPORTS_LINK, VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE);
     }
 
 }
