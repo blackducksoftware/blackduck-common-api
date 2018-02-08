@@ -26,7 +26,7 @@ package com.blackducksoftware.integration.hub.api.core;
 /**
  * All Hub API JSON Responses should be marshaled to instances of this class.
  */
-public class HubResponse extends HubModel {
+public class HubResponse extends HubComponent {
     public String json;
 
 }

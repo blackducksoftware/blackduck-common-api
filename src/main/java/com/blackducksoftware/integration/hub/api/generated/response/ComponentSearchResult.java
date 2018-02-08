@@ -1,10 +1,10 @@
 package com.blackducksoftware.integration.hub.api.generated.response;
 
 import com.blackducksoftware.integration.hub.api.core.HubResponse;
-import com.blackducksoftware.integration.hub.api.generated.model.ComponentHit;
-import com.blackducksoftware.integration.hub.api.generated.model.Facet;
-import com.blackducksoftware.integration.hub.api.generated.model.SearchResultSpec;
-import com.blackducksoftware.integration.hub.api.generated.model.SearchResultStatistics;
+import com.blackducksoftware.integration.hub.api.generated.component.ComponentHit;
+import com.blackducksoftware.integration.hub.api.generated.component.Facet;
+import com.blackducksoftware.integration.hub.api.generated.component.SearchResultSpec;
+import com.blackducksoftware.integration.hub.api.generated.component.SearchResultStatistics;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentSearchResult extends HubResponse {

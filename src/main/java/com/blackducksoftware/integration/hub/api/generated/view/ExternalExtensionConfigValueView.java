@@ -1,8 +1,8 @@
 package com.blackducksoftware.integration.hub.api.generated.view;
 
 import com.blackducksoftware.integration.hub.api.core.HubView;
+import com.blackducksoftware.integration.hub.api.generated.component.ConfigOptionView;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.ExternalExtensionConfigValueOptionType;
-import com.blackducksoftware.integration.hub.api.generated.model.ConfigOptionView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ExternalExtensionConfigValueView extends HubView {

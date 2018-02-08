@@ -1,7 +1,7 @@
 package com.blackducksoftware.integration.hub.api.generated.view;
 
 import com.blackducksoftware.integration.hub.api.core.HubView;
-import com.blackducksoftware.integration.hub.api.generated.model.PolicyRuleExpressionSetView;
+import com.blackducksoftware.integration.hub.api.generated.component.PolicyRuleExpressionSetView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleViewV2 extends HubView {

@@ -6,8 +6,8 @@ import java.util.Map;
 import com.blackducksoftware.integration.hub.api.core.HubView;
 import com.blackducksoftware.integration.hub.api.core.LinkResponse;
 import com.blackducksoftware.integration.hub.api.core.LinkSingleResponse;
+import com.blackducksoftware.integration.hub.api.generated.component.CompositePathWithArchiveContext;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsagesType;
-import com.blackducksoftware.integration.hub.api.generated.model.CompositePathWithArchiveContext;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
