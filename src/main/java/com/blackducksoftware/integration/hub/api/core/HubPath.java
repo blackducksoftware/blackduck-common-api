@@ -37,4 +37,9 @@ public class HubPath {
         return path;
     }
 
+    @Override
+    public String toString() {
+        return path;
+    }
+
 }

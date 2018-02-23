@@ -23,10 +23,30 @@
  */
 package com.blackducksoftware.integration.hub.api.generated.view;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.blackducksoftware.integration.hub.api.core.HubView;
+import com.blackducksoftware.integration.hub.api.core.LinkMultipleResponses;
+import com.blackducksoftware.integration.hub.api.core.LinkResponse;
+import com.blackducksoftware.integration.hub.api.generated.view.ExternalExtensionConfigValueView;
+import com.blackducksoftware.integration.hub.api.generated.view.ExternalExtensionUserView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ExternalExtensionView extends HubView {
+    public static final Map<String, LinkResponse> links = new HashMap<>();
+
+    public static final String GLOBAL_OPTIONS_LINK = "global-options";
+    public static final String USER_OPTIONS_LINK = "user-options";
+
+    public static final LinkMultipleResponses<ExternalExtensionConfigValueView> GLOBAL_OPTIONS_LINK_RESPONSE = new LinkMultipleResponses<ExternalExtensionConfigValueView>(GLOBAL_OPTIONS_LINK, ExternalExtensionConfigValueView.class);
+    public static final LinkMultipleResponses<ExternalExtensionUserView> USER_OPTIONS_LINK_RESPONSE = new LinkMultipleResponses<ExternalExtensionUserView>(USER_OPTIONS_LINK, ExternalExtensionUserView.class);
+
+    static {
+            links.put(GLOBAL_OPTIONS_LINK, GLOBAL_OPTIONS_LINK_RESPONSE);
+            links.put(USER_OPTIONS_LINK, USER_OPTIONS_LINK_RESPONSE);
+    }
+
     public Boolean authenticated;
     public String description;
     public String infoUrl;
