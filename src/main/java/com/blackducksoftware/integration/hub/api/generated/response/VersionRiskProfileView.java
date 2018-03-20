@@ -44,6 +44,6 @@ public class VersionRiskProfileView extends HubResponse {
     }
 
     public java.util.Date bomLastUpdatedAt;
-    public String categories;
+    public Object categories;
 
 }
