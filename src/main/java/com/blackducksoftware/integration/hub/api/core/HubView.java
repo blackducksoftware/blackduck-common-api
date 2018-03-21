@@ -24,13 +24,11 @@
 package com.blackducksoftware.integration.hub.api.core;
 
 import com.blackducksoftware.integration.hub.api.generated.component.ResourceMetadata;
-import com.google.gson.annotations.SerializedName;
 
 /**
  * A marker class used when a HubResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
  */
 public class HubView extends HubResponse {
-    @SerializedName("_meta")
-    public ResourceMetadata meta;
+    public ResourceMetadata _meta;
 
 }
