@@ -23,8 +23,6 @@
  */
 package com.blackducksoftware.integration.hub.api.core;
 
-import com.blackducksoftware.integration.hub.api.generated.component.ResourceMetadata;
-
 /**
  * A marker class used when a HubResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
  */

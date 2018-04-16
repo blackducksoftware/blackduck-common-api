@@ -21,16 +21,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.response;
+package com.blackducksoftware.integration.hub.api.generated.component;
 
-import com.blackducksoftware.integration.hub.api.core.HubResponse;
-import com.blackducksoftware.integration.hub.api.generated.component.ResourceMetadata;
+import com.blackducksoftware.integration.hub.api.core.HubComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ApiTokenView extends HubResponse {
-    public ResourceMetadata _meta;
-    public String description;
-    public String name;
-    public java.util.List<String> scopes;
+public class UUID extends HubComponent {
+    public Long leastSignificantBits;
+    public Long mostSignificantBits;
 
 }

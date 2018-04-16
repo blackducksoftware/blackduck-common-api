@@ -46,6 +46,7 @@ public class CodeLocationView extends HubView {
     public java.util.Date createdAt;
     public String mappedProjectVersion;
     public String name;
+    public Long scanSize;
     public CodeLocationType type;
     public java.util.Date updatedAt;
     public String url;

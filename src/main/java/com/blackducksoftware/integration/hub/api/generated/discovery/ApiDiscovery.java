@@ -30,7 +30,6 @@ import com.blackducksoftware.integration.hub.api.core.HubPath;
 import com.blackducksoftware.integration.hub.api.core.HubPathMultipleResponses;
 import com.blackducksoftware.integration.hub.api.core.HubPathSingleResponse;
 import com.blackducksoftware.integration.hub.api.core.LinkResponse;
-import com.blackducksoftware.integration.hub.api.generated.response.ApiTokenView;
 import com.blackducksoftware.integration.hub.api.generated.response.ComponentSearchResult;
 import com.blackducksoftware.integration.hub.api.generated.response.CurrentVersionView;
 import com.blackducksoftware.integration.hub.api.generated.response.EndUserLicenseAgreementView;
@@ -40,7 +39,7 @@ import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView
 import com.blackducksoftware.integration.hub.api.generated.view.ComponentSearchResultView;
 import com.blackducksoftware.integration.hub.api.generated.view.LicenseView;
 import com.blackducksoftware.integration.hub.api.generated.view.NotificationView;
-import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleViewV2;
+import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleView;
 import com.blackducksoftware.integration.hub.api.generated.view.ProjectView;
 import com.blackducksoftware.integration.hub.api.generated.view.ReportView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleView;
@@ -54,7 +53,6 @@ public class ApiDiscovery {
     public static final HubPath CODELOCATIONS_LINK = new HubPath("/api/codelocations");
     public static final HubPath COMPONENTS_LINK = new HubPath("/api/components");
     public static final HubPath CURRENT_USER_LINK = new HubPath("/api/current-user");
-    public static final HubPath CURRENT_USER_TOKENS_LINK = new HubPath("/api/current-user/tokens");
     public static final HubPath CURRENT_VERSION_LINK = new HubPath("/api/current-version");
     public static final HubPath ENDUSERLICENSEAGREEMENT_LINK = new HubPath("/api/enduserlicenseagreement");
     public static final HubPath HEALTH_CHECKS_LIVENESS_LINK = new HubPath("/api/health-checks/liveness");
@@ -78,7 +76,6 @@ public class ApiDiscovery {
     public static final HubPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new HubPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
     public static final HubPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
     public static final HubPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new HubPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
-    public static final HubPathMultipleResponses<ApiTokenView> CURRENT_USER_TOKENS_LINK_RESPONSE = new HubPathMultipleResponses<ApiTokenView>(CURRENT_USER_TOKENS_LINK, ApiTokenView.class);
     public static final HubPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new HubPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
     public static final HubPathSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new HubPathSingleResponse<EndUserLicenseAgreementView>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
     public static final HubPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new HubPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
@@ -88,7 +85,7 @@ public class ApiDiscovery {
     public static final HubPathSingleResponse<FilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
     public static final HubPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new HubPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
     public static final HubPathSingleResponse<FilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
-    public static final HubPathMultipleResponses<PolicyRuleViewV2> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleViewV2>(POLICY_RULES_LINK, PolicyRuleViewV2.class);
+    public static final HubPathMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
     public static final HubPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new HubPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
     public static final HubPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new HubPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
     public static final HubPathMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
@@ -103,7 +100,6 @@ public class ApiDiscovery {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
         links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
-        links.put(CURRENT_USER_TOKENS_LINK, CURRENT_USER_TOKENS_LINK_RESPONSE);
         links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
         links.put(ENDUSERLICENSEAGREEMENT_LINK, ENDUSERLICENSEAGREEMENT_LINK_RESPONSE);
         links.put(HEALTH_CHECKS_LIVENESS_LINK, HEALTH_CHECKS_LIVENESS_LINK_RESPONSE);

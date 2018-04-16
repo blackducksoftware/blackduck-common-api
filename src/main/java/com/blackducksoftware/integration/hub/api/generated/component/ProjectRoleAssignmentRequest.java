@@ -26,8 +26,9 @@ package com.blackducksoftware.integration.hub.api.generated.component;
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class RoleAssignmentRequest extends HubComponent {
+public class ProjectRoleAssignmentRequest extends HubComponent {
     public String role;
-    public String scope;
+    public String user;
+    public String usergroup;
 
 }
