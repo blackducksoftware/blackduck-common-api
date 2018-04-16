@@ -32,6 +32,7 @@ import com.blackducksoftware.integration.hub.api.core.LinkStringResponse;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseCodeSharingType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseOwnershipType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseSourceType;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.LicenseStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseView extends HubView {
@@ -49,9 +50,16 @@ public class LicenseView extends HubView {
     public java.util.Date createdAt;
     public String createdBy;
     public String createdByUser;
+    public java.util.Date expirationDate;
     public LicenseSourceType licenseSource;
+    public LicenseStatusType licenseStatus;
     public String name;
+    public String notes;
     public LicenseOwnershipType ownership;
+    public String spdxId;
+    public java.util.Date statusUpdatedAt;
+    public String statusUpdatedBy;
+    public String statusUpdatedByUser;
     public java.util.Date updatedAt;
     public String updatedBy;
     public String updatedByUser;

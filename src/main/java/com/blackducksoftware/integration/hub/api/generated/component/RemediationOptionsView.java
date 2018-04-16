@@ -24,10 +24,12 @@
 package com.blackducksoftware.integration.hub.api.generated.component;
 
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
+import com.blackducksoftware.integration.hub.api.generated.component.RemediatingVersionView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class RoleAssignmentRequest extends HubComponent {
-    public String role;
-    public String scope;
+public class RemediationOptionsView extends HubComponent {
+    public RemediatingVersionView fixesPreviousVulnerabilities;
+    public RemediatingVersionView latestAfterCurrent;
+    public RemediatingVersionView noVulnerabilities;
 
 }

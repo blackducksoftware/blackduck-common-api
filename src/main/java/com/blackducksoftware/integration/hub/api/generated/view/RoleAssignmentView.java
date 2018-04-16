@@ -46,5 +46,6 @@ public class RoleAssignmentView extends HubView {
     public String description;
     public String name;
     public String role;
+    public String scope;
 
 }
