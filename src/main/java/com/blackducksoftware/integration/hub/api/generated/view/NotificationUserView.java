@@ -45,7 +45,6 @@ public class NotificationUserView extends HubView {
             links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    public String content;
     public String contentType;
     public java.util.Date createdAt;
     public NotificationStateRequestStateType notificationState;
