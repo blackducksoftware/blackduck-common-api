@@ -24,18 +24,36 @@
 package com.blackducksoftware.integration.hub.api.generated.component;
 
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.CryptoAlgorithmKeyLengthsType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CryptoAlgorithmView extends HubComponent {
-    public String description;
-    public java.util.List<Integer> keyLengths;
-    public CryptoAlgorithmKeyLengthsType keyLengthsType;
-    public String knownWeaknesses;
-    public String label;
-    public String licensingInfo;
-    public String name;
-    public String originator;
-    public String patentInfo;
+public class UrlDirectoryInternalView extends HubComponent {
+    public String bomImport;
+    public String codeLocations;
+    public String companyLogo;
+    public String componentDashboard;
+    public String components;
+    public String createProject;
+    public String debug;
+    public String extensions;
+    public String jobs;
+    public String ldap;
+    public String licenseManagement;
+    public String notificationStateFilters;
+    public String notificationTypeFilters;
+    public String notifications;
+    public String policyRules;
+    public String projectDashboard;
+    public String projects;
+    public String registration;
+    public String roles;
+    public String securityDashboard;
+    public String sso;
+    public String summaryDashboard;
+    public String userGroups;
+    public String userStatusFilters;
+    public String users;
+    public String vulnerabilityRemidiationReports;
+    public String vulnerabilityStatusReports;
+    public String vulnerabilityUpdateReports;
 
 }

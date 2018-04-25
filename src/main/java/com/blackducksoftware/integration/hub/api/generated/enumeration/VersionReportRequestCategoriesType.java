@@ -28,6 +28,7 @@ public enum VersionReportRequestCategoriesType {
     ATTACHMENTS,
     CODE_LOCATIONS,
     COMPONENTS,
+    CRYPTO_ALGORITHMS,
     FILES,
     SECURITY,
     VERSION;
