@@ -40,7 +40,7 @@ import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView
 import com.blackducksoftware.integration.hub.api.generated.view.ComponentSearchResultView;
 import com.blackducksoftware.integration.hub.api.generated.view.LicenseView;
 import com.blackducksoftware.integration.hub.api.generated.view.NotificationView;
-import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleView;
+import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleViewV2;
 import com.blackducksoftware.integration.hub.api.generated.view.ProjectView;
 import com.blackducksoftware.integration.hub.api.generated.view.ReportView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleView;
@@ -90,7 +90,7 @@ public class ApiDiscovery {
     public static final HubPathSingleResponse<FilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
     public static final HubPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new HubPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
     public static final HubPathSingleResponse<FilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
-    public static final HubPathMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final HubPathMultipleResponses<PolicyRuleViewV2> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleViewV2>(POLICY_RULES_LINK, PolicyRuleViewV2.class);
     public static final HubPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new HubPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
     public static final HubPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new HubPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
     public static final HubPathMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
