@@ -30,9 +30,4 @@ public class LinkStringResponse extends LinkResponse {
         this.link = link;
     }
 
-    @Override
-    public String toString() {
-        return link;
-    }
-
 }

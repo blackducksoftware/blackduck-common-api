@@ -32,9 +32,4 @@ public class LinkMultipleResponses<T extends HubResponse> extends LinkResponse {
         this.responseClass = responseClass;
     }
 
-    @Override
-    public String toString() {
-        return link;
-    }
-
 }
