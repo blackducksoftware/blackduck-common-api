@@ -21,15 +21,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.blackducksoftware.integration.hub.api.generated.component;
+package com.blackducksoftware.integration.hub.api.generated.view;
 
-import com.blackducksoftware.integration.hub.api.core.HubComponent;
-import com.blackducksoftware.integration.hub.api.generated.component.NameValuePairView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusSummaryStatusType;
+import com.blackducksoftware.integration.hub.api.core.HubView;
+import com.blackducksoftware.integration.hub.api.generated.component.ProjectRiskProfile;
+import com.blackducksoftware.integration.hub.api.generated.component.RiskProfile;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionPolicyViolationDetails extends HubComponent {
-    public PolicyStatusSummaryStatusType name;
-    public java.util.List<NameValuePairView> severityLevels;
+public class ProjectDashboardRiskAmalgamation extends HubView {
+    public RiskProfile overallRiskAggregate;
+    public java.util.List<ProjectRiskProfile> projectRiskProfilePageView;
 
 }

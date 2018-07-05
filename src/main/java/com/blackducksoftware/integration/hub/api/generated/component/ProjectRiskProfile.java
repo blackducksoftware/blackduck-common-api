@@ -24,12 +24,22 @@
 package com.blackducksoftware.integration.hub.api.generated.component;
 
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
-import com.blackducksoftware.integration.hub.api.generated.component.NameValuePairView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusSummaryStatusType;
+import com.blackducksoftware.integration.hub.api.generated.component.PolicyStatusSummary;
+import com.blackducksoftware.integration.hub.api.generated.component.RiskProfile;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionPolicyViolationDetails extends HubComponent {
-    public PolicyStatusSummaryStatusType name;
-    public java.util.List<NameValuePairView> severityLevels;
+public class ProjectRiskProfile extends HubComponent {
+    public Integer bomCount;
+    public java.util.List<Integer> bomViewEntryIds;
+    public java.util.Date createdAt;
+    public String id;
+    public java.util.Date lastBomUpdateDate;
+    public java.util.Date lastScanDate;
+    public String name;
+    public String policyStatus;
+    public java.util.List<PolicyStatusSummary> policyStatusSummaries;
+    public Integer releaseCount;
+    public RiskProfile riskProfile;
+    public Integer tier;
 
 }

@@ -31,6 +31,7 @@ public class UrlDirectoryInternalView extends HubComponent {
     public String codeLocations;
     public String companyLogo;
     public String componentDashboard;
+    public String componentManagement;
     public String components;
     public String createProject;
     public String debug;

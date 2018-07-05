@@ -24,12 +24,9 @@
 package com.blackducksoftware.integration.hub.api.generated.component;
 
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
-import com.blackducksoftware.integration.hub.api.generated.component.NameValuePairView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusSummaryStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionPolicyViolationDetails extends HubComponent {
-    public PolicyStatusSummaryStatusType name;
-    public java.util.List<NameValuePairView> severityLevels;
+public class RiskProfile extends HubComponent {
+    public Object categories;
 
 }

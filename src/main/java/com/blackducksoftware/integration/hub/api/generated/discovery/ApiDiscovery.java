@@ -37,10 +37,11 @@ import com.blackducksoftware.integration.hub.api.generated.response.EndUserLicen
 import com.blackducksoftware.integration.hub.api.generated.response.FilterView;
 import com.blackducksoftware.integration.hub.api.generated.response.HealthCheckStatusView;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
-import com.blackducksoftware.integration.hub.api.generated.view.ComponentSearchResultView;
+import com.blackducksoftware.integration.hub.api.generated.view.ComponentDetailsView;
 import com.blackducksoftware.integration.hub.api.generated.view.LicenseView;
 import com.blackducksoftware.integration.hub.api.generated.view.NotificationView;
 import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleViewV2;
+import com.blackducksoftware.integration.hub.api.generated.view.ProjectDashboardRiskAmalgamation;
 import com.blackducksoftware.integration.hub.api.generated.view.ProjectView;
 import com.blackducksoftware.integration.hub.api.generated.view.ReportView;
 import com.blackducksoftware.integration.hub.api.generated.view.RoleView;
@@ -67,6 +68,7 @@ public class ApiDiscovery {
     public static final HubPath POLICY_RULE_ENABLED_FILTERS_LINK = new HubPath("/api/policy-rule-enabled-filters");
     public static final HubPath POLICY_RULES_LINK = new HubPath("/api/policy-rules");
     public static final HubPath PROJECTS_LINK = new HubPath("/api/projects");
+    public static final HubPath RISK_PROFILE_DASHBOARD_LINK = new HubPath("/api/risk-profile-dashboard");
     public static final HubPath ROLES_LINK = new HubPath("/api/roles");
     public static final HubPath SEARCH_COMPONENTS_LINK = new HubPath("/api/search/components");
     public static final HubPath USER_STATUS_FILTERS_LINK = new HubPath("/api/user-status-filters");
@@ -77,7 +79,7 @@ public class ApiDiscovery {
     public static final HubPath VULNERABILITY_UPDATE_REPORTS_LINK = new HubPath("/api/vulnerability-update-reports");
 
     public static final HubPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new HubPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final HubPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final HubPathMultipleResponses<ComponentDetailsView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentDetailsView>(COMPONENTS_LINK, ComponentDetailsView.class);
     public static final HubPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new HubPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
     public static final HubPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new HubPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
     public static final HubPathSingleResponse<DashboardSummaryView> DASHBOARD_SUMMARY_LINK_RESPONSE = new HubPathSingleResponse<DashboardSummaryView>(DASHBOARD_SUMMARY_LINK, DashboardSummaryView.class);
@@ -92,6 +94,7 @@ public class ApiDiscovery {
     public static final HubPathSingleResponse<FilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
     public static final HubPathMultipleResponses<PolicyRuleViewV2> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleViewV2>(POLICY_RULES_LINK, PolicyRuleViewV2.class);
     public static final HubPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new HubPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
+    public static final HubPathSingleResponse<ProjectDashboardRiskAmalgamation> RISK_PROFILE_DASHBOARD_LINK_RESPONSE = new HubPathSingleResponse<ProjectDashboardRiskAmalgamation>(RISK_PROFILE_DASHBOARD_LINK, ProjectDashboardRiskAmalgamation.class);
     public static final HubPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new HubPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
     public static final HubPathMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
     public static final HubPathSingleResponse<FilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(USER_STATUS_FILTERS_LINK, FilterView.class);
@@ -118,6 +121,7 @@ public class ApiDiscovery {
         links.put(POLICY_RULE_ENABLED_FILTERS_LINK, POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE);
         links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
         links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(RISK_PROFILE_DASHBOARD_LINK, RISK_PROFILE_DASHBOARD_LINK_RESPONSE);
         links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
         links.put(SEARCH_COMPONENTS_LINK, SEARCH_COMPONENTS_LINK_RESPONSE);
         links.put(USER_STATUS_FILTERS_LINK, USER_STATUS_FILTERS_LINK_RESPONSE);

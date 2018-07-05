@@ -29,6 +29,7 @@ import java.util.Map;
 import com.blackducksoftware.integration.hub.api.core.HubView;
 import com.blackducksoftware.integration.hub.api.core.LinkMultipleResponses;
 import com.blackducksoftware.integration.hub.api.core.LinkResponse;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.ComponentType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.OriginSourceType;
 import com.blackducksoftware.integration.hub.api.generated.view.ComponentVersionView;
 
@@ -47,5 +48,7 @@ public class ComponentView extends HubView {
     public String description;
     public String name;
     public OriginSourceType source;
+    public ComponentType type;
+    public String url;
 
 }

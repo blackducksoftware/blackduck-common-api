@@ -24,12 +24,21 @@
 package com.blackducksoftware.integration.hub.api.generated.component;
 
 import com.blackducksoftware.integration.hub.api.core.HubComponent;
-import com.blackducksoftware.integration.hub.api.generated.component.NameValuePairView;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusSummaryStatusType;
+import com.blackducksoftware.integration.hub.api.generated.component.AppliedFilterView;
+import com.blackducksoftware.integration.hub.api.generated.component.VersionBomComponentDiffView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionPolicyViolationDetails extends HubComponent {
-    public PolicyStatusSummaryStatusType name;
-    public java.util.List<NameValuePairView> severityLevels;
+public class DiffPageView extends HubComponent {
+    public java.util.List<AppliedFilterView> appliedFilters;
+    public java.util.List<VersionBomComponentDiffView> items;
+    public Integer totalAddedComponentVersions;
+    public Integer totalAddedComponents;
+    public Integer totalChangedComponentVersions;
+    public Integer totalChangedComponents;
+    public Integer totalCount;
+    public Integer totalRemovedComponentVersions;
+    public Integer totalRemovedComponents;
+    public Integer totalUnchangedComponentVersions;
+    public Integer totalUnchangedComponents;
 
 }

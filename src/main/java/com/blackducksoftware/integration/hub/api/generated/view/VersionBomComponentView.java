@@ -35,7 +35,7 @@ import com.blackducksoftware.integration.hub.api.generated.component.ReviewedDet
 import com.blackducksoftware.integration.hub.api.generated.component.VersionBomLicenseView;
 import com.blackducksoftware.integration.hub.api.generated.component.VersionBomOriginView;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.MatchedFileUsagesType;
-import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusApprovalStatusType;
+import com.blackducksoftware.integration.hub.api.generated.enumeration.PolicyStatusSummaryStatusType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentMatchType;
 import com.blackducksoftware.integration.hub.api.generated.enumeration.VersionBomComponentReviewStatusType;
 import com.blackducksoftware.integration.hub.api.generated.response.UserCommentView;
@@ -71,7 +71,7 @@ public class VersionBomComponentView extends HubView {
 
     public ActivityDataView activityData;
     public RiskProfileView activityRiskProfile;
-    public PolicyStatusApprovalStatusType approvalStatus;
+    public PolicyStatusSummaryStatusType approvalStatus;
     public String component;
     public String componentName;
     public String componentVersion;
@@ -81,7 +81,7 @@ public class VersionBomComponentView extends HubView {
     public java.util.List<VersionBomComponentMatchType> matchTypes;
     public RiskProfileView operationalRiskProfile;
     public java.util.List<VersionBomOriginView> origins;
-    public PolicyStatusApprovalStatusType policyStatus;
+    public PolicyStatusSummaryStatusType policyStatus;
     public java.util.Date releasedOn;
     public VersionBomComponentReviewStatusType reviewStatus;
     public ReviewedDetails reviewedDetails;
