@@ -37,7 +37,7 @@ import com.blackducksoftware.integration.hub.api.generated.response.EndUserLicen
 import com.blackducksoftware.integration.hub.api.generated.response.FilterView;
 import com.blackducksoftware.integration.hub.api.generated.response.HealthCheckStatusView;
 import com.blackducksoftware.integration.hub.api.generated.view.CodeLocationView;
-import com.blackducksoftware.integration.hub.api.generated.view.ComponentDetailsView;
+import com.blackducksoftware.integration.hub.api.generated.view.ComponentSearchResultView;
 import com.blackducksoftware.integration.hub.api.generated.view.LicenseView;
 import com.blackducksoftware.integration.hub.api.generated.view.NotificationView;
 import com.blackducksoftware.integration.hub.api.generated.view.PolicyRuleViewV2;
@@ -79,7 +79,7 @@ public class ApiDiscovery {
     public static final HubPath VULNERABILITY_UPDATE_REPORTS_LINK = new HubPath("/api/vulnerability-update-reports");
 
     public static final HubPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new HubPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final HubPathMultipleResponses<ComponentDetailsView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentDetailsView>(COMPONENTS_LINK, ComponentDetailsView.class);
+    public static final HubPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
     public static final HubPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new HubPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
     public static final HubPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new HubPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
     public static final HubPathSingleResponse<DashboardSummaryView> DASHBOARD_SUMMARY_LINK_RESPONSE = new HubPathSingleResponse<DashboardSummaryView>(DASHBOARD_SUMMARY_LINK, DashboardSummaryView.class);
