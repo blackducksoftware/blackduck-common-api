@@ -23,6 +23,8 @@
  */
 package com.blackducksoftware.integration.hub.api.generated.enumeration;
 
+import com.blackducksoftware.integration.util.EnumUtils;
+
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public enum ReportType {
     VERSION,
@@ -30,5 +32,9 @@ public enum ReportType {
     VULNERABILITY_REMEDIATION,
     VULNERABILITY_STATUS,
     VULNERABILITY_UPDATE;
+
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
+    }
 
 }

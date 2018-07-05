@@ -23,6 +23,8 @@
  */
 package com.blackducksoftware.integration.hub.api.generated.enumeration;
 
+import com.blackducksoftware.integration.util.EnumUtils;
+
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public enum Cvss2TemporalMetricsRemediationLevelType {
     NOT_DEFINED,
@@ -30,5 +32,9 @@ public enum Cvss2TemporalMetricsRemediationLevelType {
     TEMPORARY_FIX,
     UNAVAILABLE,
     WORKAROUND;
+
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
+    }
 
 }
