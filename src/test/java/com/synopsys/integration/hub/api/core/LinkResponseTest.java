@@ -3,7 +3,10 @@ package com.synopsys.integration.hub.api.core;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.synopsys.integration.hub.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 
 public class LinkResponseTest {
     @Test
