@@ -40,7 +40,7 @@ public class RoleAssignmentView extends HubView {
     public static final LinkSingleResponse<UserView> USER_LINK_RESPONSE = new LinkSingleResponse<UserView>(USER_LINK, UserView.class);
 
     static {
-            links.put(USER_LINK, USER_LINK_RESPONSE);
+        links.put(USER_LINK, USER_LINK_RESPONSE);
     }
 
     public String description;

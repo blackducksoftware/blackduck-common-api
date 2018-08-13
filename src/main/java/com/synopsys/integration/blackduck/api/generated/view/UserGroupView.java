@@ -47,9 +47,9 @@ public class UserGroupView extends HubView {
     public static final LinkMultipleResponses<UserView> USERS_LINK_RESPONSE = new LinkMultipleResponses<UserView>(USERS_LINK, UserView.class);
 
     static {
-            links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
-            links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
-            links.put(USERS_LINK, USERS_LINK_RESPONSE);
+        links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
+        links.put(USERS_LINK, USERS_LINK_RESPONSE);
     }
 
     public Boolean active;

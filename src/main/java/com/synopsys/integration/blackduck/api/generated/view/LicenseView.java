@@ -43,7 +43,7 @@ public class LicenseView extends HubView {
     public static final LinkStringResponse TEXT_LINK_RESPONSE = new LinkStringResponse(TEXT_LINK, String.class);
 
     static {
-            links.put(TEXT_LINK, TEXT_LINK_RESPONSE);
+        links.put(TEXT_LINK, TEXT_LINK_RESPONSE);
     }
 
     public LicenseCodeSharingType codeSharing;

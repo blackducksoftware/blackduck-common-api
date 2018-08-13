@@ -62,11 +62,11 @@ public class VersionBomComponentView extends HubView {
     public static final LinkMultipleResponses<VulnerabilityV2View> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityV2View>(VULNERABILITIES_LINK, VulnerabilityV2View.class);
 
     static {
-            links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
-            links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
-            links.put(COMMENTS_LINK, COMMENTS_LINK_RESPONSE);
-            links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
-            links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+        links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+        links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
+        links.put(COMMENTS_LINK, COMMENTS_LINK_RESPONSE);
+        links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
+        links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 
     public ActivityDataView activityData;

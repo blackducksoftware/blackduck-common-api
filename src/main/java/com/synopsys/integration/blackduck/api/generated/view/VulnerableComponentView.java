@@ -45,8 +45,8 @@ public class VulnerableComponentView extends HubView {
     public static final LinkMultipleResponses<VulnerabilityV2View> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityV2View>(VULNERABILITIES_LINK, VulnerabilityV2View.class);
 
     static {
-            links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
-            links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+        links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
+        links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 
     public String component;

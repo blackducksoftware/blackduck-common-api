@@ -48,10 +48,10 @@ public class UserView extends HubView {
     public static final LinkMultipleResponses<NotificationUserView> NOTIFICATIONS_LINK_RESPONSE = new LinkMultipleResponses<NotificationUserView>(NOTIFICATIONS_LINK, NotificationUserView.class);
 
     static {
-            links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
-            links.put(INHERITED_ROLES_LINK, INHERITED_ROLES_LINK_RESPONSE);
-            links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
-            links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(INHERITED_ROLES_LINK, INHERITED_ROLES_LINK_RESPONSE);
+        links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
+        links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
     }
 
     public Boolean active;

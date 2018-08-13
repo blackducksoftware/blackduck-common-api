@@ -56,11 +56,11 @@ public class ComponentVersionView extends HubView {
     public static final LinkSingleResponse<ComponentVersionRiskView> RISK_PROFILE_LINK_RESPONSE = new LinkSingleResponse<ComponentVersionRiskView>(RISK_PROFILE_LINK, ComponentVersionRiskView.class);
 
     static {
-            links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
-            links.put(REFERENCES_LINK, REFERENCES_LINK_RESPONSE);
-            links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
-            links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
-            links.put(RISK_PROFILE_LINK, RISK_PROFILE_LINK_RESPONSE);
+        links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
+        links.put(REFERENCES_LINK, REFERENCES_LINK_RESPONSE);
+        links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+        links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+        links.put(RISK_PROFILE_LINK, RISK_PROFILE_LINK_RESPONSE);
     }
 
     public java.util.List<String> additionalHomepages;

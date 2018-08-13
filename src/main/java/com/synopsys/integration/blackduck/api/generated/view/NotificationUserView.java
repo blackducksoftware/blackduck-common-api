@@ -42,7 +42,7 @@ public class NotificationUserView extends HubView {
     public static final LinkSingleResponse<NotificationUserView> NOTIFICATIONS_LINK_RESPONSE = new LinkSingleResponse<NotificationUserView>(NOTIFICATIONS_LINK, NotificationUserView.class);
 
     static {
-            links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
     }
 
     public String contentType;

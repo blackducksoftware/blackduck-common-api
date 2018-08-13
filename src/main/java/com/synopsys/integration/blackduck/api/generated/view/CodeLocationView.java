@@ -40,7 +40,7 @@ public class CodeLocationView extends HubView {
     public static final LinkStringResponse SCANS_LINK_RESPONSE = new LinkStringResponse(SCANS_LINK, String.class);
 
     static {
-            links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
+        links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
     }
 
     public java.util.Date createdAt;

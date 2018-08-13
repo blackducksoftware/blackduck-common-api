@@ -42,8 +42,8 @@ public class RoleView extends HubView {
     public static final LinkMultipleResponses<UserView> INHERITED_ROLE_USERS_LINK_RESPONSE = new LinkMultipleResponses<UserView>(INHERITED_ROLE_USERS_LINK, UserView.class);
 
     static {
-            links.put(ROLE_USERS_LINK, ROLE_USERS_LINK_RESPONSE);
-            links.put(INHERITED_ROLE_USERS_LINK, INHERITED_ROLE_USERS_LINK_RESPONSE);
+        links.put(ROLE_USERS_LINK, ROLE_USERS_LINK_RESPONSE);
+        links.put(INHERITED_ROLE_USERS_LINK, INHERITED_ROLE_USERS_LINK_RESPONSE);
     }
 
     public String description;

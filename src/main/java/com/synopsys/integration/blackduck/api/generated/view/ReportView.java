@@ -42,7 +42,7 @@ public class ReportView extends HubView {
     public static final LinkStringResponse CONTENT_LINK_RESPONSE = new LinkStringResponse(CONTENT_LINK, String.class);
 
     static {
-            links.put(CONTENT_LINK, CONTENT_LINK_RESPONSE);
+        links.put(CONTENT_LINK, CONTENT_LINK_RESPONSE);
     }
 
     public java.util.Date createdAt;

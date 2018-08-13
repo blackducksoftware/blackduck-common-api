@@ -27,7 +27,7 @@ import com.synopsys.integration.util.EnumUtils;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public enum CweCommonConsequenceTechnicalImpactsType {
-ALTER_EXECUTION_LOGIC,
+    ALTER_EXECUTION_LOGIC,
     BYPASS_PROTECTION,
     DOS_AMPLIFICATION,
     DOS_CRASH_EXIT_RESTART,

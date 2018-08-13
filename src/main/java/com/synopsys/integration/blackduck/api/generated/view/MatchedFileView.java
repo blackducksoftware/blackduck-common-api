@@ -42,7 +42,7 @@ public class MatchedFileView extends HubView {
     public static final LinkSingleResponse<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkSingleResponse<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
 
     static {
-            links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
+        links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
     }
 
     public CompositePathWithArchiveContext filePath;

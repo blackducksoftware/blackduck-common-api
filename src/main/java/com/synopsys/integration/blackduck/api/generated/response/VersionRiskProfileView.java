@@ -40,7 +40,7 @@ public class VersionRiskProfileView extends HubResponse {
     public static final LinkSingleResponse<ProjectVersionView> VERSION_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionView>(VERSION_LINK, ProjectVersionView.class);
 
     static {
-            links.put(VERSION_LINK, VERSION_LINK_RESPONSE);
+        links.put(VERSION_LINK, VERSION_LINK_RESPONSE);
     }
 
     public java.util.Date bomLastUpdatedAt;

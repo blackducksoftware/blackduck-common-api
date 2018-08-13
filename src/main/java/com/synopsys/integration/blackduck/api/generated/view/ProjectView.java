@@ -51,10 +51,10 @@ public class ProjectView extends HubView {
     public static final LinkMultipleResponses<AssignedUserView> USERS_LINK_RESPONSE = new LinkMultipleResponses<AssignedUserView>(USERS_LINK, AssignedUserView.class);
 
     static {
-            links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
-            links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
-            links.put(CANONICALVERSION_LINK, CANONICALVERSION_LINK_RESPONSE);
-            links.put(USERS_LINK, USERS_LINK_RESPONSE);
+        links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+        links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
+        links.put(CANONICALVERSION_LINK, CANONICALVERSION_LINK_RESPONSE);
+        links.put(USERS_LINK, USERS_LINK_RESPONSE);
     }
 
     public java.util.List<ProjectCloneCategoriesType> cloneCategories;

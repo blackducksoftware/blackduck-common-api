@@ -43,8 +43,8 @@ public class ExternalExtensionView extends HubView {
     public static final LinkMultipleResponses<ExternalExtensionUserView> USER_OPTIONS_LINK_RESPONSE = new LinkMultipleResponses<ExternalExtensionUserView>(USER_OPTIONS_LINK, ExternalExtensionUserView.class);
 
     static {
-            links.put(GLOBAL_OPTIONS_LINK, GLOBAL_OPTIONS_LINK_RESPONSE);
-            links.put(USER_OPTIONS_LINK, USER_OPTIONS_LINK_RESPONSE);
+        links.put(GLOBAL_OPTIONS_LINK, GLOBAL_OPTIONS_LINK_RESPONSE);
+        links.put(USER_OPTIONS_LINK, USER_OPTIONS_LINK_RESPONSE);
     }
 
     public Boolean authenticated;

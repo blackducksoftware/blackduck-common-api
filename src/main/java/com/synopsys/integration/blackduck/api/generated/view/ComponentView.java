@@ -43,7 +43,7 @@ public class ComponentView extends HubView {
     public static final LinkMultipleResponses<ComponentVersionView> VERSIONS_LINK_RESPONSE = new LinkMultipleResponses<ComponentVersionView>(VERSIONS_LINK, ComponentVersionView.class);
 
     static {
-            links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+        links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
     }
 
     public java.util.List<String> additionalHomepages;
