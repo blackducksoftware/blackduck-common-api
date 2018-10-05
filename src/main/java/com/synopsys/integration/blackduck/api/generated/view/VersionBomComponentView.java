@@ -73,7 +73,10 @@ public class VersionBomComponentView extends HubView {
     public RiskProfileView activityRiskProfile;
     public PolicySummaryStatusType approvalStatus;
     public String component;
+    public String componentModification;
+    public Boolean componentModified;
     public String componentName;
+    public String componentPurpose;
     public String componentVersion;
     public String componentVersionName;
     public RiskProfileView licenseRiskProfile;

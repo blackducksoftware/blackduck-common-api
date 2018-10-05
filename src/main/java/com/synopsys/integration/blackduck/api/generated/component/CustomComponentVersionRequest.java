@@ -25,10 +25,13 @@ package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.HubComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ComplexLicenseRequest;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CustomComponentVersionRequest extends HubComponent {
+    public ComponentVersionApprovalStatusType approvalStatus;
     public ComplexLicenseRequest license;
+    public String notes;
     public java.util.Date releasedOn;
     public String versionName;
 

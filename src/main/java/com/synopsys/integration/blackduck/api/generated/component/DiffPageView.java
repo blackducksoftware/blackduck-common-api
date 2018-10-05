@@ -24,12 +24,12 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.HubComponent;
-import com.synopsys.integration.blackduck.api.generated.component.AppliedFilterView;
+import com.synopsys.integration.blackduck.api.generated.component.LegacyAppliedFilterView;
 import com.synopsys.integration.blackduck.api.generated.component.VersionBomComponentDiffView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class DiffPageView extends HubComponent {
-    public java.util.List<AppliedFilterView> appliedFilters;
+    public java.util.List<LegacyAppliedFilterView> appliedFilters;
     public java.util.List<VersionBomComponentDiffView> items;
     public Integer totalAddedComponentVersions;
     public Integer totalAddedComponents;

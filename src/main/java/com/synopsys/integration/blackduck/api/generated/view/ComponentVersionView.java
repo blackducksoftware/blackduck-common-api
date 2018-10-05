@@ -31,6 +31,7 @@ import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
 import com.synopsys.integration.blackduck.api.generated.response.ComponentVersionReferenceView;
 import com.synopsys.integration.blackduck.api.generated.response.ComponentVersionRiskView;
@@ -64,10 +65,15 @@ public class ComponentVersionView extends HubView {
     }
 
     public java.util.List<String> additionalHomepages;
+    public ComponentVersionApprovalStatusType approvalStatus;
     public ComplexLicenseView license;
+    public String notes;
     public java.util.Date releasedOn;
     public OriginSourceType source;
     public ComponentType type;
+    public java.util.Date updatedAt;
+    public String updatedBy;
+    public String updatedByUrl;
     public String versionName;
 
 }
