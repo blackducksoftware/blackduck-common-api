@@ -38,6 +38,8 @@ public class ProjectVersionInternalView extends HubComponent {
     public String createdBy;
     public String createdByUser;
     public ProjectVersionDistributionType distribution;
+    public java.util.Date lastBomUpdateDate;
+    public java.util.Date lastScanDate;
     public ComplexLicenseView license;
     public RiskProfileView licenseRiskProfile;
     public String nickname;

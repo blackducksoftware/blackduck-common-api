@@ -24,6 +24,7 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.generated.component.ComplexLicenseRequest;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionPhaseType;
 
@@ -31,6 +32,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 public class ProjectVersionRequest extends HubComponent {
     public String cloneFromReleaseUrl;
     public ProjectVersionDistributionType distribution;
+    public ComplexLicenseRequest license;
     public String nickname;
     public ProjectVersionPhaseType phase;
     public String releaseComments;

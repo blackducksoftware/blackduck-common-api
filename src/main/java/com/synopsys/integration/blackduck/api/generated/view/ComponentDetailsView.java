@@ -24,16 +24,22 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.HubView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionDetails;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentDetailsView extends HubView {
+    public ComponentApprovalStatusType approvalStatus;
     public String description;
     public String name;
+    public String notes;
     public OriginSourceType source;
     public ComponentType type;
-    public java.util.List<ComponentVersionDetails> versions;
+    public java.util.Date updatedAt;
+    public String updatedBy;
+    public String updatedByUrl;
+    public String url;
+    public Long versionCount;
 
 }

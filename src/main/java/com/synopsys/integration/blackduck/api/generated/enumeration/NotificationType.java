@@ -32,6 +32,7 @@ public enum NotificationType {
     POLICY_OVERRIDE,
     RULE_VIOLATION,
     RULE_VIOLATION_CLEARED,
+    VERSION_BOM_CODE_LOCATION_BOM_COMPUTED,
     VULNERABILITY;
 
     public String prettyPrint() {

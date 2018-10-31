@@ -29,7 +29,6 @@ import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.HubView;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
-import com.synopsys.integration.blackduck.api.generated.enumeration.CodeLocationType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CodeLocationView extends HubView {
@@ -47,7 +46,6 @@ public class CodeLocationView extends HubView {
     public String mappedProjectVersion;
     public String name;
     public Long scanSize;
-    public CodeLocationType type;
     public java.util.Date updatedAt;
     public String url;
 

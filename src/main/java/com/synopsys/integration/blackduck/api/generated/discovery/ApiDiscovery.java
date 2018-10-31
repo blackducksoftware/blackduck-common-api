@@ -34,8 +34,8 @@ import com.synopsys.integration.blackduck.api.generated.response.ComponentSearch
 import com.synopsys.integration.blackduck.api.generated.response.CurrentVersionView;
 import com.synopsys.integration.blackduck.api.generated.response.DashboardSummaryView;
 import com.synopsys.integration.blackduck.api.generated.response.EndUserLicenseAgreementView;
-import com.synopsys.integration.blackduck.api.generated.response.FilterView;
 import com.synopsys.integration.blackduck.api.generated.response.HealthCheckStatusView;
+import com.synopsys.integration.blackduck.api.generated.response.LegacyFilterView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentSearchResultView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
@@ -52,6 +52,9 @@ public class ApiDiscovery {
     public static final Map<HubPath, LinkResponse> links = new HashMap<>();
 
     public static final HubPath CODELOCATIONS_LINK = new HubPath("/api/codelocations");
+    public static final HubPath COMPONENT_APPROVAL_STATUS_FILTERS_LINK = new HubPath("/api/component-approval-status-filters");
+    public static final HubPath COMPONENT_SOURCE_FILTERS_LINK = new HubPath("/api/component-source-filters");
+    public static final HubPath COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK = new HubPath("/api/component-version-approval-status-filters");
     public static final HubPath COMPONENTS_LINK = new HubPath("/api/components");
     public static final HubPath CURRENT_USER_LINK = new HubPath("/api/current-user");
     public static final HubPath CURRENT_VERSION_LINK = new HubPath("/api/current-version");
@@ -77,6 +80,9 @@ public class ApiDiscovery {
     public static final HubPath VULNERABILITY_UPDATE_REPORTS_LINK = new HubPath("/api/vulnerability-update-reports");
 
     public static final HubPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new HubPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> COMPONENT_APPROVAL_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(COMPONENT_APPROVAL_STATUS_FILTERS_LINK, LegacyFilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> COMPONENT_SOURCE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(COMPONENT_SOURCE_FILTERS_LINK, LegacyFilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK, LegacyFilterView.class);
     public static final HubPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
     public static final HubPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new HubPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
     public static final HubPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new HubPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
@@ -84,17 +90,17 @@ public class ApiDiscovery {
     public static final HubPathSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new HubPathSingleResponse<EndUserLicenseAgreementView>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
     public static final HubPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new HubPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
     public static final HubPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new HubPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
-    public static final HubPathSingleResponse<FilterView> LICENSE_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(LICENSE_STATUS_FILTERS_LINK, FilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> LICENSE_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(LICENSE_STATUS_FILTERS_LINK, LegacyFilterView.class);
     public static final HubPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new HubPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
-    public static final HubPathSingleResponse<FilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
-    public static final HubPathSingleResponse<FilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(NOTIFICATION_STATE_FILTERS_LINK, LegacyFilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(NOTIFICATION_TYPE_FILTERS_LINK, LegacyFilterView.class);
     public static final HubPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new HubPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
-    public static final HubPathSingleResponse<FilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, FilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, LegacyFilterView.class);
     public static final HubPathMultipleResponses<PolicyRuleViewV2> POLICY_RULES_LINK_RESPONSE = new HubPathMultipleResponses<PolicyRuleViewV2>(POLICY_RULES_LINK, PolicyRuleViewV2.class);
     public static final HubPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new HubPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
     public static final HubPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new HubPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
     public static final HubPathMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new HubPathMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
-    public static final HubPathSingleResponse<FilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<FilterView>(USER_STATUS_FILTERS_LINK, FilterView.class);
+    public static final HubPathSingleResponse<LegacyFilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new HubPathSingleResponse<LegacyFilterView>(USER_STATUS_FILTERS_LINK, LegacyFilterView.class);
     public static final HubPathMultipleResponses<UserGroupView> USERGROUPS_LINK_RESPONSE = new HubPathMultipleResponses<UserGroupView>(USERGROUPS_LINK, UserGroupView.class);
     public static final HubPathMultipleResponses<UserView> USERS_LINK_RESPONSE = new HubPathMultipleResponses<UserView>(USERS_LINK, UserView.class);
     public static final HubPathMultipleResponses<ReportView> VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new HubPathMultipleResponses<ReportView>(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
@@ -103,6 +109,9 @@ public class ApiDiscovery {
 
     static {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
+        links.put(COMPONENT_APPROVAL_STATUS_FILTERS_LINK, COMPONENT_APPROVAL_STATUS_FILTERS_LINK_RESPONSE);
+        links.put(COMPONENT_SOURCE_FILTERS_LINK, COMPONENT_SOURCE_FILTERS_LINK_RESPONSE);
+        links.put(COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK, COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
         links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
         links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
