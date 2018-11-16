@@ -38,6 +38,10 @@ public class BlackDuckView extends BlackDuckResponse {
         return _meta;
     }
 
+    public void setMeta(final ResourceMetadata meta) {
+        _meta = meta;
+    }
+
     public boolean hasLink(final String linkKey) {
         if (null == _meta || null == _meta.getLinks()) {
             return false;
