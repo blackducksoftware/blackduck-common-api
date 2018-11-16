@@ -23,13 +23,23 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-public class HubPathSingleResponse<T extends HubResponse> extends LinkResponse {
-    public HubPath hubPath;
-    public Class<T> responseClass;
+/**
+ * This will represent a starting point for a REST conversation with Black Duck, such as '/api/codelocations' or '/api/projects'
+ */
+public class BlackDuckPath {
+    private final String path;
 
-    public HubPathSingleResponse(final HubPath hubPath, final Class<T> responseClass) {
-        this.hubPath = hubPath;
-        this.responseClass = responseClass;
+    public BlackDuckPath(final String path) {
+        this.path = path;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    @Override
+    public String toString() {
+        return path;
     }
 
 }

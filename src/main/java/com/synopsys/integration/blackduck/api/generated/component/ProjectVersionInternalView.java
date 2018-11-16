@@ -23,7 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyStatusSummaryInternalView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicySummaryStatusType;
@@ -33,7 +33,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectVersionInternalView extends HubComponent {
+public class ProjectVersionInternalView extends BlackDuckComponent {
     public java.util.Date createdAt;
     public String createdBy;
     public String createdByUser;

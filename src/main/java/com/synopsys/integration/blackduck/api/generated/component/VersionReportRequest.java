@@ -23,13 +23,13 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportFormatType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.VersionReportRequestCategoriesType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class VersionReportRequest extends HubComponent {
+public class VersionReportRequest extends BlackDuckComponent {
     public java.util.List<VersionReportRequestCategoriesType> categories;
     public ReportFormatType reportFormat;
     public ReportType reportType;

@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ActivityDataTrendingType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ActivityDataView extends HubComponent {
+public class ActivityDataView extends BlackDuckComponent {
     public Long commitCount12Month;
     public Long contributorCount12Month;
     public java.util.Date lastCommitDate;

@@ -23,7 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-public class LinkSingleResponse<T extends HubResponse> extends LinkResponse {
+public class LinkSingleResponse<T extends BlackDuckResponse> extends LinkResponse {
     public String link;
     public Class<T> responseClass;
 

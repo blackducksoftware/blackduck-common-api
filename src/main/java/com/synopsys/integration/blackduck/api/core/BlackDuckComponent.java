@@ -23,23 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.synopsys.integration.util.Stringable;
+
 /**
- * This will represent a starting point for a REST conversation with the Hub, such as '/api/codelocations' or '/api/projects'
+ * A base class for any object that can interact with the Black Duck API.
  */
-public class HubPath {
-    private final String path;
-
-    public HubPath(final String path) {
-        this.path = path;
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    @Override
-    public String toString() {
-        return path;
-    }
+public class BlackDuckComponent extends Stringable {
 
 }

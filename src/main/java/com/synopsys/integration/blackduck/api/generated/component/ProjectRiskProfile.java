@@ -23,12 +23,12 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyStatusSummary;
 import com.synopsys.integration.blackduck.api.generated.component.RiskProfile;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectRiskProfile extends HubComponent {
+public class ProjectRiskProfile extends BlackDuckComponent {
     public Integer bomCount;
     public java.util.List<Integer> bomViewEntryIds;
     public java.util.Date createdAt;

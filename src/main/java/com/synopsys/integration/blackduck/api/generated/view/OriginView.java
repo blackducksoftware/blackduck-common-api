@@ -23,12 +23,12 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
 import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class OriginView extends HubView {
+public class OriginView extends BlackDuckView {
     public ComplexLicenseView license;
     public String originId;
     public String originName;

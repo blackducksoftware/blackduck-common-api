@@ -23,14 +23,14 @@
  */
 package com.synopsys.integration.blackduck.api.generated.response;
 
-import com.synopsys.integration.blackduck.api.core.HubResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentHit;
 import com.synopsys.integration.blackduck.api.generated.component.Facet;
 import com.synopsys.integration.blackduck.api.generated.component.SearchResultSpec;
 import com.synopsys.integration.blackduck.api.generated.component.SearchResultStatistics;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentSearchResult extends HubResponse {
+public class ComponentSearchResult extends BlackDuckResponse {
     public java.util.List<Facet> facets;
     public java.util.List<ComponentHit> hits;
     public String localError;

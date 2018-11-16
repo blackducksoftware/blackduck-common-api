@@ -23,13 +23,13 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.Cvss3TemporalMetricsExploitabilityType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.Cvss3TemporalMetricsRemediationLevelType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.Cvss3TemporalMetricsReportConfidenceType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class Cvss3TemporalMetricsView extends HubComponent {
+public class Cvss3TemporalMetricsView extends BlackDuckComponent {
     public Cvss3TemporalMetricsExploitabilityType exploitability;
     public Cvss3TemporalMetricsRemediationLevelType remediationLevel;
     public Cvss3TemporalMetricsReportConfidenceType reportConfidence;

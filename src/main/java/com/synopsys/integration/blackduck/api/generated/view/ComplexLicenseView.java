@@ -23,14 +23,14 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComplexLicenseType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseCodeSharingType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComplexLicenseView extends HubView {
+public class ComplexLicenseView extends BlackDuckView {
     public LicenseCodeSharingType codeSharing;
     public String license;
     public String licenseDisplay;

@@ -26,13 +26,13 @@ package com.synopsys.integration.blackduck.api.generated.response;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.synopsys.integration.blackduck.api.core.HubResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class VersionRiskProfileView extends HubResponse {
+public class VersionRiskProfileView extends BlackDuckResponse {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String VERSION_LINK = "version";

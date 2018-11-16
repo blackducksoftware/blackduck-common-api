@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.AssignedUserGroup;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class AssignedInheritedProjectView extends HubComponent {
+public class AssignedInheritedProjectView extends BlackDuckComponent {
     public java.util.List<AssignedUserGroup> assignedGroups;
     public String assignment;
     public String name;

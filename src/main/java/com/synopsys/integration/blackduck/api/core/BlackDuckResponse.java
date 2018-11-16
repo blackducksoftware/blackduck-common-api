@@ -23,10 +23,39 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+
 /**
  * All Hub API JSON Responses should be marshaled to instances of this class.
  */
-public class HubResponse extends HubComponent {
-    public String json;
+public class BlackDuckResponse extends BlackDuckComponent {
+    private String json;
+    private JsonElement jsonElement;
+    private Gson gson;
+
+    public String getJson() {
+        return json;
+    }
+
+    public void setJson(final String json) {
+        this.json = json;
+    }
+
+    public JsonElement getJsonElement() {
+        return jsonElement;
+    }
+
+    public void setJsonElement(final JsonElement jsonElement) {
+        this.jsonElement = jsonElement;
+    }
+
+    public Gson getGson() {
+        return gson;
+    }
+
+    public void setGson(final Gson gson) {
+        this.gson = gson;
+    }
 
 }

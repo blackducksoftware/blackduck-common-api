@@ -23,28 +23,24 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.RecursiveToStringStyle;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-
-/**
- * A base class for any object that can interact with the Hub API.
- */
-public class HubComponent {
-    @Override
-    public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+public class BlackDuckApiMetaException extends BlackDuckIntegrationException {
+    public BlackDuckApiMetaException() {
     }
 
-    @Override
-    public boolean equals(final Object obj) {
-        return EqualsBuilder.reflectionEquals(this, obj);
+    public BlackDuckApiMetaException(final String message) {
+        super(message);
     }
 
-    @Override
-    public String toString() {
-        return ReflectionToStringBuilder.toString(this, RecursiveToStringStyle.JSON_STYLE);
+    public BlackDuckApiMetaException(final String message, final Throwable cause) {
+        super(message, cause);
+    }
+
+    public BlackDuckApiMetaException(final Throwable cause) {
+        super(cause);
+    }
+
+    public BlackDuckApiMetaException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 
 }

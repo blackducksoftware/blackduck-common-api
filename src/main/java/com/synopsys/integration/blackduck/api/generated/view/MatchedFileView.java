@@ -26,7 +26,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.component.CompositePathWithArchiveContext;
@@ -34,7 +34,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.MatchedFileU
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class MatchedFileView extends HubView {
+public class MatchedFileView extends BlackDuckView {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String CODELOCATIONS_LINK = "codelocations";

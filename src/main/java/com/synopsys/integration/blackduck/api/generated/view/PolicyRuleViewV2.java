@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionSetView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleViewV2 extends HubView {
+public class PolicyRuleViewV2 extends BlackDuckView {
     public java.util.Date createdAt;
     public String createdBy;
     public String createdByUser;

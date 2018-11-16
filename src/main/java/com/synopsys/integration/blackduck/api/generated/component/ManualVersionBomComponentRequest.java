@@ -23,10 +23,10 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ManualVersionBomComponentRequest extends HubComponent {
+public class ManualVersionBomComponentRequest extends BlackDuckComponent {
     public String component;
     public String componentModification;
     public Boolean componentModified;

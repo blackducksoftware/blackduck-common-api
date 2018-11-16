@@ -1,11 +1,10 @@
-package com.synopsys.integration.hub.api.core;
+package com.synopsys.integration.blackduck.api.core;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.LinkResponse;
-import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import org.junit.jupiter.api.Test;
+
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 
 public class LinkResponseTest {
@@ -15,8 +14,8 @@ public class LinkResponseTest {
         final LinkResponse linkResponse2 = new LinkMultipleResponses<>("uri", ProjectView.class);
         final LinkResponse linkResponse3 = new LinkSingleResponse<>("uri", ProjectView.class);
 
-        Assert.assertNotEquals(linkResponse1, linkResponse2);
-        Assert.assertEquals(linkResponse1, linkResponse3);
+        assertNotEquals(linkResponse1, linkResponse2);
+        assertEquals(linkResponse1, linkResponse3);
     }
 
 }

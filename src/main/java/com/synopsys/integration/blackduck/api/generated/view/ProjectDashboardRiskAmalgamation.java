@@ -23,12 +23,12 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectRiskProfile;
 import com.synopsys.integration.blackduck.api.generated.component.RiskProfile;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectDashboardRiskAmalgamation extends HubView {
+public class ProjectDashboardRiskAmalgamation extends BlackDuckView {
     public RiskProfile overallRiskAggregate;
     public java.util.List<ProjectRiskProfile> projectRiskProfilePageView;
 

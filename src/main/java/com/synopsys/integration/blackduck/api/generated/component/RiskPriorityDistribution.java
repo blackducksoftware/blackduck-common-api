@@ -23,10 +23,10 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class RiskPriorityDistribution extends HubComponent {
+public class RiskPriorityDistribution extends BlackDuckComponent {
     public Integer HIGH;
     public Integer LOW;
     public Integer MEDIUM;

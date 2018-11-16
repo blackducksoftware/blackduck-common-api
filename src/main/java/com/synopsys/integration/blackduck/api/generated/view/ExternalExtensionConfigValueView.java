@@ -23,12 +23,12 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.ConfigOptionView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ExternalExtensionConfigValueOptionType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ExternalExtensionConfigValueView extends HubView {
+public class ExternalExtensionConfigValueView extends BlackDuckView {
     public String description;
     public String name;
     public ExternalExtensionConfigValueOptionType optionType;

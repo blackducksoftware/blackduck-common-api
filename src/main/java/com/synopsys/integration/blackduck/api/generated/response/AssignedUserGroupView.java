@@ -23,10 +23,10 @@
  */
 package com.synopsys.integration.blackduck.api.generated.response;
 
-import com.synopsys.integration.blackduck.api.core.HubResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class AssignedUserGroupView extends HubResponse {
+public class AssignedUserGroupView extends BlackDuckResponse {
     public Boolean active;
     public String group;
     public String name;

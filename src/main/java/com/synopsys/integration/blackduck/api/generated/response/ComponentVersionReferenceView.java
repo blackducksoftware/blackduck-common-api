@@ -23,12 +23,12 @@
  */
 package com.synopsys.integration.blackduck.api.generated.response;
 
-import com.synopsys.integration.blackduck.api.core.HubResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionPhaseType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentVersionReferenceView extends HubResponse {
+public class ComponentVersionReferenceView extends BlackDuckResponse {
     public ProjectVersionDistributionType distribution;
     public ProjectVersionPhaseType phase;
     public String projectName;

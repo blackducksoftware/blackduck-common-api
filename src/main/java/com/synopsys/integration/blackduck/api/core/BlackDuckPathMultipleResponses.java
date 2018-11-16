@@ -23,10 +23,13 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-/**
- * A marker class used when a HubResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
- */
-public class HubView extends HubResponse {
-    public ResourceMetadata _meta;
+public class BlackDuckPathMultipleResponses<T extends BlackDuckResponse> extends LinkResponse {
+    public BlackDuckPath blackDuckPath;
+    public Class<T> responseClass;
+
+    public BlackDuckPathMultipleResponses(final BlackDuckPath blackDuckPath, final Class<T> responseClass) {
+        this.blackDuckPath = blackDuckPath;
+        this.responseClass = responseClass;
+    }
 
 }

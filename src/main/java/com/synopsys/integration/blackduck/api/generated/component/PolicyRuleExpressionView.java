@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionParameter;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionView extends HubComponent {
+public class PolicyRuleExpressionView extends BlackDuckComponent {
     public String name;
     public String operation;
     public PolicyRuleExpressionParameter parameters;

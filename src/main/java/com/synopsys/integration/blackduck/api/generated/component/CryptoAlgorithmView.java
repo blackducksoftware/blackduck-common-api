@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.HubComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.CryptoAlgorithmKeyLengthsType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CryptoAlgorithmView extends HubComponent {
+public class CryptoAlgorithmView extends BlackDuckComponent {
     public String description;
     public java.util.List<Integer> keyLengths;
     public CryptoAlgorithmKeyLengthsType keyLengthsType;

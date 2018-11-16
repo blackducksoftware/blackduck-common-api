@@ -23,11 +23,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.response;
 
-import com.synopsys.integration.blackduck.api.core.HubResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.CweCommonConsequenceView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CweView extends HubResponse {
+public class CweView extends BlackDuckResponse {
     public static final String SOURCES_LINK = "sources";
 
 

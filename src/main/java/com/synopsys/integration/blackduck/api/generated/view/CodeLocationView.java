@@ -26,12 +26,12 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.synopsys.integration.blackduck.api.core.HubView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CodeLocationView extends HubView {
+public class CodeLocationView extends BlackDuckView {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String SCANS_LINK = "scans";

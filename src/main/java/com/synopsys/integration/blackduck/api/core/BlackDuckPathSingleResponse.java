@@ -21,13 +21,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+public class BlackDuckPathSingleResponse<T extends BlackDuckResponse> extends LinkResponse {
+    public BlackDuckPath blackDuckPath;
+    public Class<T> responseClass;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ReviewedDetails extends BlackDuckComponent {
-    public java.util.Date reviewedAt;
-    public String reviewedBy;
+    public BlackDuckPathSingleResponse(final BlackDuckPath blackDuckPath, final Class<T> responseClass) {
+        this.blackDuckPath = blackDuckPath;
+        this.responseClass = responseClass;
+    }
 
 }
