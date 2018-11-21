@@ -1,26 +1,3 @@
-/**
- * hub-common-api
- *
- * Copyright (C) 2018 Black Duck Software, Inc.
- * http://www.blackducksoftware.com/
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -69,28 +46,212 @@ public class VersionBomComponentView extends BlackDuckView {
         links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 
-    public ActivityDataView activityData;
-    public RiskProfileView activityRiskProfile;
-    public PolicySummaryStatusType approvalStatus;
-    public String component;
-    public String componentModification;
-    public Boolean componentModified;
-    public String componentName;
-    public String componentPurpose;
-    public String componentVersion;
-    public String componentVersionName;
-    public RiskProfileView licenseRiskProfile;
-    public java.util.List<VersionBomLicenseView> licenses;
-    public java.util.List<VersionBomComponentMatchType> matchTypes;
-    public RiskProfileView operationalRiskProfile;
-    public java.util.List<VersionBomOriginView> origins;
-    public PolicySummaryStatusType policyStatus;
-    public java.util.Date releasedOn;
-    public VersionBomComponentReviewStatusType reviewStatus;
-    public ReviewedDetails reviewedDetails;
-    public RiskProfileView securityRiskProfile;
-    public Long totalFileMatchCount;
-    public java.util.List<MatchedFileUsagesType> usages;
-    public RiskProfileView versionRiskProfile;
+    private ActivityDataView activityData;
+    private RiskProfileView activityRiskProfile;
+    private PolicySummaryStatusType approvalStatus;
+    private String component;
+    private String componentModification;
+    private Boolean componentModified;
+    private String componentName;
+    private String componentPurpose;
+    private String componentVersion;
+    private String componentVersionName;
+    private RiskProfileView licenseRiskProfile;
+    private java.util.List<VersionBomLicenseView> licenses;
+    private java.util.List<VersionBomComponentMatchType> matchTypes;
+    private RiskProfileView operationalRiskProfile;
+    private java.util.List<VersionBomOriginView> origins;
+    private PolicySummaryStatusType policyStatus;
+    private java.util.Date releasedOn;
+    private VersionBomComponentReviewStatusType reviewStatus;
+    private ReviewedDetails reviewedDetails;
+    private RiskProfileView securityRiskProfile;
+    private Long totalFileMatchCount;
+    private java.util.List<MatchedFileUsagesType> usages;
+    private RiskProfileView versionRiskProfile;
+
+    public ActivityDataView getActivityData() {
+        return activityData;
+    }
+
+    public void setActivityData(ActivityDataView activityData) {
+        this.activityData = activityData;
+    }
+
+    public RiskProfileView getActivityRiskProfile() {
+        return activityRiskProfile;
+    }
+
+    public void setActivityRiskProfile(RiskProfileView activityRiskProfile) {
+        this.activityRiskProfile = activityRiskProfile;
+    }
+
+    public PolicySummaryStatusType getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(PolicySummaryStatusType approvalStatus) {
+        this.approvalStatus = approvalStatus;
+    }
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getComponentModification() {
+        return componentModification;
+    }
+
+    public void setComponentModification(String componentModification) {
+        this.componentModification = componentModification;
+    }
+
+    public Boolean getComponentModified() {
+        return componentModified;
+    }
+
+    public void setComponentModified(Boolean componentModified) {
+        this.componentModified = componentModified;
+    }
+
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    public String getComponentPurpose() {
+        return componentPurpose;
+    }
+
+    public void setComponentPurpose(String componentPurpose) {
+        this.componentPurpose = componentPurpose;
+    }
+
+    public String getComponentVersion() {
+        return componentVersion;
+    }
+
+    public void setComponentVersion(String componentVersion) {
+        this.componentVersion = componentVersion;
+    }
+
+    public String getComponentVersionName() {
+        return componentVersionName;
+    }
+
+    public void setComponentVersionName(String componentVersionName) {
+        this.componentVersionName = componentVersionName;
+    }
+
+    public RiskProfileView getLicenseRiskProfile() {
+        return licenseRiskProfile;
+    }
+
+    public void setLicenseRiskProfile(RiskProfileView licenseRiskProfile) {
+        this.licenseRiskProfile = licenseRiskProfile;
+    }
+
+    public java.util.List<VersionBomLicenseView> getLicenses() {
+        return licenses;
+    }
+
+    public void setLicenses(java.util.List<VersionBomLicenseView> licenses) {
+        this.licenses = licenses;
+    }
+
+    public java.util.List<VersionBomComponentMatchType> getMatchTypes() {
+        return matchTypes;
+    }
+
+    public void setMatchTypes(java.util.List<VersionBomComponentMatchType> matchTypes) {
+        this.matchTypes = matchTypes;
+    }
+
+    public RiskProfileView getOperationalRiskProfile() {
+        return operationalRiskProfile;
+    }
+
+    public void setOperationalRiskProfile(RiskProfileView operationalRiskProfile) {
+        this.operationalRiskProfile = operationalRiskProfile;
+    }
+
+    public java.util.List<VersionBomOriginView> getOrigins() {
+        return origins;
+    }
+
+    public void setOrigins(java.util.List<VersionBomOriginView> origins) {
+        this.origins = origins;
+    }
+
+    public PolicySummaryStatusType getPolicyStatus() {
+        return policyStatus;
+    }
+
+    public void setPolicyStatus(PolicySummaryStatusType policyStatus) {
+        this.policyStatus = policyStatus;
+    }
+
+    public java.util.Date getReleasedOn() {
+        return releasedOn;
+    }
+
+    public void setReleasedOn(java.util.Date releasedOn) {
+        this.releasedOn = releasedOn;
+    }
+
+    public VersionBomComponentReviewStatusType getReviewStatus() {
+        return reviewStatus;
+    }
+
+    public void setReviewStatus(VersionBomComponentReviewStatusType reviewStatus) {
+        this.reviewStatus = reviewStatus;
+    }
+
+    public ReviewedDetails getReviewedDetails() {
+        return reviewedDetails;
+    }
+
+    public void setReviewedDetails(ReviewedDetails reviewedDetails) {
+        this.reviewedDetails = reviewedDetails;
+    }
+
+    public RiskProfileView getSecurityRiskProfile() {
+        return securityRiskProfile;
+    }
+
+    public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
+        this.securityRiskProfile = securityRiskProfile;
+    }
+
+    public Long getTotalFileMatchCount() {
+        return totalFileMatchCount;
+    }
+
+    public void setTotalFileMatchCount(Long totalFileMatchCount) {
+        this.totalFileMatchCount = totalFileMatchCount;
+    }
+
+    public java.util.List<MatchedFileUsagesType> getUsages() {
+        return usages;
+    }
+
+    public void setUsages(java.util.List<MatchedFileUsagesType> usages) {
+        this.usages = usages;
+    }
+
+    public RiskProfileView getVersionRiskProfile() {
+        return versionRiskProfile;
+    }
+
+    public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
+        this.versionRiskProfile = versionRiskProfile;
+    }
 
 }

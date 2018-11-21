@@ -1,26 +1,3 @@
-/**
- * hub-common-api
- *
- * Copyright (C) 2018 Black Duck Software, Inc.
- * http://www.blackducksoftware.com/
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -57,18 +34,122 @@ public class ProjectView extends BlackDuckView {
         links.put(USERS_LINK, USERS_LINK_RESPONSE);
     }
 
-    public java.util.List<ProjectCloneCategoriesType> cloneCategories;
-    public java.util.Date createdAt;
-    public String createdBy;
-    public String createdByUser;
-    public String description;
-    public String name;
-    public Boolean projectLevelAdjustments;
-    public String projectOwner;
-    public Integer projectTier;
-    public OriginSourceType source;
-    public java.util.Date updatedAt;
-    public String updatedBy;
-    public String updatedByUser;
+    private java.util.List<ProjectCloneCategoriesType> cloneCategories;
+    private java.util.Date createdAt;
+    private String createdBy;
+    private String createdByUser;
+    private String description;
+    private String name;
+    private Boolean projectLevelAdjustments;
+    private String projectOwner;
+    private Integer projectTier;
+    private OriginSourceType source;
+    private java.util.Date updatedAt;
+    private String updatedBy;
+    private String updatedByUser;
+
+    public java.util.List<ProjectCloneCategoriesType> getCloneCategories() {
+        return cloneCategories;
+    }
+
+    public void setCloneCategories(java.util.List<ProjectCloneCategoriesType> cloneCategories) {
+        this.cloneCategories = cloneCategories;
+    }
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getCreatedByUser() {
+        return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean getProjectLevelAdjustments() {
+        return projectLevelAdjustments;
+    }
+
+    public void setProjectLevelAdjustments(Boolean projectLevelAdjustments) {
+        this.projectLevelAdjustments = projectLevelAdjustments;
+    }
+
+    public String getProjectOwner() {
+        return projectOwner;
+    }
+
+    public void setProjectOwner(String projectOwner) {
+        this.projectOwner = projectOwner;
+    }
+
+    public Integer getProjectTier() {
+        return projectTier;
+    }
+
+    public void setProjectTier(Integer projectTier) {
+        this.projectTier = projectTier;
+    }
+
+    public OriginSourceType getSource() {
+        return source;
+    }
+
+    public void setSource(OriginSourceType source) {
+        this.source = source;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public String getUpdatedByUser() {
+        return updatedByUser;
+    }
+
+    public void setUpdatedByUser(String updatedByUser) {
+        this.updatedByUser = updatedByUser;
+    }
 
 }
