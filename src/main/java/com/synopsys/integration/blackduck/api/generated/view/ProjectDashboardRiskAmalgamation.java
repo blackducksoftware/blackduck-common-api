@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,7 +29,23 @@ import com.synopsys.integration.blackduck.api.generated.component.RiskProfile;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectDashboardRiskAmalgamation extends BlackDuckView {
-    public RiskProfile overallRiskAggregate;
-    public java.util.List<ProjectRiskProfile> projectRiskProfilePageView;
+    private RiskProfile overallRiskAggregate;
+    private java.util.List<ProjectRiskProfile> projectRiskProfilePageView;
+
+    public RiskProfile getOverallRiskAggregate() {
+        return overallRiskAggregate;
+    }
+
+    public void setOverallRiskAggregate(RiskProfile overallRiskAggregate) {
+        this.overallRiskAggregate = overallRiskAggregate;
+    }
+
+    public java.util.List<ProjectRiskProfile> getProjectRiskProfilePageView() {
+        return projectRiskProfilePageView;
+    }
+
+    public void setProjectRiskProfilePageView(java.util.List<ProjectRiskProfile> projectRiskProfilePageView) {
+        this.projectRiskProfilePageView = projectRiskProfilePageView;
+    }
 
 }

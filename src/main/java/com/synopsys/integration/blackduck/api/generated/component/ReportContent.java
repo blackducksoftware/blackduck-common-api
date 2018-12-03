@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,6 +28,14 @@ import com.synopsys.integration.blackduck.api.generated.component.ReportFileCont
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ReportContent extends BlackDuckComponent {
-    public java.util.List<ReportFileContent> reportContent;
+    private java.util.List<ReportFileContent> reportContent;
+
+    public java.util.List<ReportFileContent> getReportContent() {
+        return reportContent;
+    }
+
+    public void setReportContent(java.util.List<ReportFileContent> reportContent) {
+        this.reportContent = reportContent;
+    }
 
 }

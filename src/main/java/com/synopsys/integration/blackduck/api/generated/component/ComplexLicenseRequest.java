@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,8 +29,32 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ComplexLicen
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComplexLicenseRequest extends BlackDuckComponent {
-    public String license;
-    public java.util.List<ComplexLicenseRequest> licenses;
-    public ComplexLicenseType type;
+    private String license;
+    private java.util.List<ComplexLicenseRequest> licenses;
+    private ComplexLicenseType type;
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public java.util.List<ComplexLicenseRequest> getLicenses() {
+        return licenses;
+    }
+
+    public void setLicenses(java.util.List<ComplexLicenseRequest> licenses) {
+        this.licenses = licenses;
+    }
+
+    public ComplexLicenseType getType() {
+        return type;
+    }
+
+    public void setType(ComplexLicenseType type) {
+        this.type = type;
+    }
 
 }

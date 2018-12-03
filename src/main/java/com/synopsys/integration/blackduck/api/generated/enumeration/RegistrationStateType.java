@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,26 +21,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.generated.enumeration;
 
-public class BlackDuckIntegrationException extends Exception {
-    public BlackDuckIntegrationException() {
-    }
+import com.synopsys.integration.util.EnumUtils;
 
-    public BlackDuckIntegrationException(final String message) {
-        super(message);
-    }
+//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public enum RegistrationStateType {
+    Expired,
+    Incomplete_install,
+    Invalid,
+    Network_failure,
+    Not_set,
+    Valid;
 
-    public BlackDuckIntegrationException(final String message, final Throwable cause) {
-        super(message, cause);
-    }
-
-    public BlackDuckIntegrationException(final Throwable cause) {
-        super(cause);
-    }
-
-    public BlackDuckIntegrationException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
     }
 
 }

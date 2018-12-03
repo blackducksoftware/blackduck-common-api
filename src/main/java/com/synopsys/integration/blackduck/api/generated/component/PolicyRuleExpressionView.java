@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,8 +28,32 @@ import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpr
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleExpressionView extends BlackDuckComponent {
-    public String name;
-    public String operation;
-    public PolicyRuleExpressionParameter parameters;
+    private String name;
+    private String operation;
+    private PolicyRuleExpressionParameter parameters;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public PolicyRuleExpressionParameter getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(PolicyRuleExpressionParameter parameters) {
+        this.parameters = parameters;
+    }
 
 }

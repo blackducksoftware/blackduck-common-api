@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,9 +27,41 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ManualVersionBomComponentRequest extends BlackDuckComponent {
-    public String component;
-    public String componentModification;
-    public Boolean componentModified;
-    public String componentPurpose;
+    private String component;
+    private String componentModification;
+    private Boolean componentModified;
+    private String componentPurpose;
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getComponentModification() {
+        return componentModification;
+    }
+
+    public void setComponentModification(String componentModification) {
+        this.componentModification = componentModification;
+    }
+
+    public Boolean getComponentModified() {
+        return componentModified;
+    }
+
+    public void setComponentModified(Boolean componentModified) {
+        this.componentModified = componentModified;
+    }
+
+    public String getComponentPurpose() {
+        return componentPurpose;
+    }
+
+    public void setComponentPurpose(String componentPurpose) {
+        this.componentPurpose = componentPurpose;
+    }
 
 }

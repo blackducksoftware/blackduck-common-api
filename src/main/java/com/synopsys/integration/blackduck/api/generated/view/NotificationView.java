@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,8 +28,32 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Notification
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class NotificationView extends BlackDuckView {
-    public String contentType;
-    public java.util.Date createdAt;
-    public NotificationType type;
+    private String contentType;
+    private java.util.Date createdAt;
+    private NotificationType type;
+
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public NotificationType getType() {
+        return type;
+    }
+
+    public void setType(NotificationType type) {
+        this.type = type;
+    }
 
 }

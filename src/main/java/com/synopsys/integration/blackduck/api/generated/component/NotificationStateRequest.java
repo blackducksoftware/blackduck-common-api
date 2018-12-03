@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,6 +28,14 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Notification
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class NotificationStateRequest extends BlackDuckComponent {
-    public NotificationStateRequestStateType state;
+    private NotificationStateRequestStateType state;
+
+    public NotificationStateRequestStateType getState() {
+        return state;
+    }
+
+    public void setState(NotificationStateRequestStateType state) {
+        this.state = state;
+    }
 
 }

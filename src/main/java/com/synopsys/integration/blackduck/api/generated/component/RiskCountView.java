@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,7 +28,23 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.RiskCountTyp
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class RiskCountView extends BlackDuckComponent {
-    public Integer count;
-    public RiskCountType countType;
+    private Integer count;
+    private RiskCountType countType;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public RiskCountType getCountType() {
+        return countType;
+    }
+
+    public void setCountType(RiskCountType countType) {
+        this.countType = countType;
+    }
 
 }

@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -23,6 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
@@ -30,9 +31,11 @@ import com.google.gson.JsonElement;
  * All Hub API JSON Responses should be marshaled to instances of this class.
  */
 public class BlackDuckResponse extends BlackDuckComponent {
-    private String json;
-    private JsonElement jsonElement;
-    private Gson gson;
+    // these are transient to prevent gson serialization
+    private transient String json;
+    private transient JsonElement jsonElement;
+    private transient Gson gson;
+    private transient JsonNode patch;
 
     public String getJson() {
         return json;
@@ -56,6 +59,14 @@ public class BlackDuckResponse extends BlackDuckComponent {
 
     public void setGson(final Gson gson) {
         this.gson = gson;
+    }
+
+    public JsonNode getPatch() {
+        return patch;
+    }
+
+    public void setPatch(final JsonNode patch) {
+        this.patch = patch;
     }
 
 }

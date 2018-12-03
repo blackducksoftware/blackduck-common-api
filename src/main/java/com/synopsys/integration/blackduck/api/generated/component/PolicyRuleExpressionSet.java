@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,7 +29,23 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleEx
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleExpressionSet extends BlackDuckComponent {
-    public java.util.List<PolicyRuleExpression> expressions;
-    public PolicyRuleExpressionSetOperatorType operator;
+    private java.util.List<PolicyRuleExpression> expressions;
+    private PolicyRuleExpressionSetOperatorType operator;
+
+    public java.util.List<PolicyRuleExpression> getExpressions() {
+        return expressions;
+    }
+
+    public void setExpressions(java.util.List<PolicyRuleExpression> expressions) {
+        this.expressions = expressions;
+    }
+
+    public PolicyRuleExpressionSetOperatorType getOperator() {
+        return operator;
+    }
+
+    public void setOperator(PolicyRuleExpressionSetOperatorType operator) {
+        this.operator = operator;
+    }
 
 }

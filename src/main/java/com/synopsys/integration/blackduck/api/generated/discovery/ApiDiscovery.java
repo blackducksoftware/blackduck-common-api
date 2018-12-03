@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -38,10 +38,15 @@ import com.synopsys.integration.blackduck.api.generated.response.HealthCheckStat
 import com.synopsys.integration.blackduck.api.generated.response.LegacyFilterView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentSearchResultView;
+import com.synopsys.integration.blackduck.api.generated.view.FilterView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.NotificationView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleViewV2;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.RegistrationAttributesInternalView;
+import com.synopsys.integration.blackduck.api.generated.view.RegistrationSummaryInternalView;
+import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
@@ -52,24 +57,28 @@ public class ApiDiscovery {
     public static final Map<BlackDuckPath, LinkResponse> links = new HashMap<>();
 
     public static final BlackDuckPath CODELOCATIONS_LINK = new BlackDuckPath("/api/codelocations");
-    public static final BlackDuckPath COMPONENT_APPROVAL_STATUS_FILTERS_LINK = new BlackDuckPath("/api/component-approval-status-filters");
-    public static final BlackDuckPath COMPONENT_SOURCE_FILTERS_LINK = new BlackDuckPath("/api/component-source-filters");
     public static final BlackDuckPath COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK = new BlackDuckPath("/api/component-version-approval-status-filters");
     public static final BlackDuckPath COMPONENTS_LINK = new BlackDuckPath("/api/components");
+    public static final BlackDuckPath COMPONENTS_FILTERS_LINK = new BlackDuckPath("/api/components-filters");
     public static final BlackDuckPath CURRENT_USER_LINK = new BlackDuckPath("/api/current-user");
     public static final BlackDuckPath CURRENT_VERSION_LINK = new BlackDuckPath("/api/current-version");
     public static final BlackDuckPath DASHBOARD_SUMMARY_LINK = new BlackDuckPath("/api/dashboard-summary");
     public static final BlackDuckPath ENDUSERLICENSEAGREEMENT_LINK = new BlackDuckPath("/api/enduserlicenseagreement");
     public static final BlackDuckPath HEALTH_CHECKS_LIVENESS_LINK = new BlackDuckPath("/api/health-checks/liveness");
     public static final BlackDuckPath HEALTH_CHECKS_READINESS_LINK = new BlackDuckPath("/api/health-checks/readiness");
-    public static final BlackDuckPath LICENSE_STATUS_FILTERS_LINK = new BlackDuckPath("/api/license-status-filters");
+    public static final BlackDuckPath LICENSE_FAMILIES_LINK = new BlackDuckPath("/api/license-families");
     public static final BlackDuckPath LICENSES_LINK = new BlackDuckPath("/api/licenses");
+    public static final BlackDuckPath LICENSES_FILTERS_LINK = new BlackDuckPath("/api/licenses-filters");
     public static final BlackDuckPath NOTIFICATION_STATE_FILTERS_LINK = new BlackDuckPath("/api/notification-state-filters");
     public static final BlackDuckPath NOTIFICATION_TYPE_FILTERS_LINK = new BlackDuckPath("/api/notification-type-filters");
     public static final BlackDuckPath NOTIFICATIONS_LINK = new BlackDuckPath("/api/notifications");
+    public static final BlackDuckPath NOTIFICATIONS_FILTERS_LINK = new BlackDuckPath("/api/notifications-filters");
     public static final BlackDuckPath POLICY_RULE_ENABLED_FILTERS_LINK = new BlackDuckPath("/api/policy-rule-enabled-filters");
     public static final BlackDuckPath POLICY_RULES_LINK = new BlackDuckPath("/api/policy-rules");
     public static final BlackDuckPath PROJECTS_LINK = new BlackDuckPath("/api/projects");
+    public static final BlackDuckPath REGISTRATION_LINK = new BlackDuckPath("/api/registration");
+    public static final BlackDuckPath REGISTRATION_ATTRIBUTES_LINK = new BlackDuckPath("/api/registration-attributes");
+    public static final BlackDuckPath REGISTRATION_SUMMARY_LINK = new BlackDuckPath("/api/registration-summary");
     public static final BlackDuckPath ROLES_LINK = new BlackDuckPath("/api/roles");
     public static final BlackDuckPath SEARCH_COMPONENTS_LINK = new BlackDuckPath("/api/search/components");
     public static final BlackDuckPath USER_STATUS_FILTERS_LINK = new BlackDuckPath("/api/user-status-filters");
@@ -80,24 +89,28 @@ public class ApiDiscovery {
     public static final BlackDuckPath VULNERABILITY_UPDATE_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-update-reports");
 
     public static final BlackDuckPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final BlackDuckPathSingleResponse<LegacyFilterView> COMPONENT_APPROVAL_STATUS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(COMPONENT_APPROVAL_STATUS_FILTERS_LINK, LegacyFilterView.class);
-    public static final BlackDuckPathSingleResponse<LegacyFilterView> COMPONENT_SOURCE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(COMPONENT_SOURCE_FILTERS_LINK, LegacyFilterView.class);
     public static final BlackDuckPathSingleResponse<LegacyFilterView> COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK, LegacyFilterView.class);
     public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> COMPONENTS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(COMPONENTS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new BlackDuckPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
     public static final BlackDuckPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new BlackDuckPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
     public static final BlackDuckPathSingleResponse<DashboardSummaryView> DASHBOARD_SUMMARY_LINK_RESPONSE = new BlackDuckPathSingleResponse<DashboardSummaryView>(DASHBOARD_SUMMARY_LINK, DashboardSummaryView.class);
     public static final BlackDuckPathSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new BlackDuckPathSingleResponse<EndUserLicenseAgreementView>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
     public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
     public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
-    public static final BlackDuckPathSingleResponse<LegacyFilterView> LICENSE_STATUS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(LICENSE_STATUS_FILTERS_LINK, LegacyFilterView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseFamilyView>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
     public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
-    public static final BlackDuckPathSingleResponse<LegacyFilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(NOTIFICATION_STATE_FILTERS_LINK, LegacyFilterView.class);
-    public static final BlackDuckPathSingleResponse<LegacyFilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(NOTIFICATION_TYPE_FILTERS_LINK, LegacyFilterView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> LICENSES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSES_FILTERS_LINK, FilterView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(NOTIFICATION_TYPE_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> NOTIFICATIONS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(NOTIFICATIONS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathSingleResponse<LegacyFilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, LegacyFilterView.class);
     public static final BlackDuckPathMultipleResponses<PolicyRuleViewV2> POLICY_RULES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<PolicyRuleViewV2>(POLICY_RULES_LINK, PolicyRuleViewV2.class);
     public static final BlackDuckPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
+    public static final BlackDuckPathSingleResponse<RegistrationView> REGISTRATION_LINK_RESPONSE = new BlackDuckPathSingleResponse<RegistrationView>(REGISTRATION_LINK, RegistrationView.class);
+    public static final BlackDuckPathSingleResponse<RegistrationAttributesInternalView> REGISTRATION_ATTRIBUTES_LINK_RESPONSE = new BlackDuckPathSingleResponse<RegistrationAttributesInternalView>(REGISTRATION_ATTRIBUTES_LINK, RegistrationAttributesInternalView.class);
+    public static final BlackDuckPathSingleResponse<RegistrationSummaryInternalView> REGISTRATION_SUMMARY_LINK_RESPONSE = new BlackDuckPathSingleResponse<RegistrationSummaryInternalView>(REGISTRATION_SUMMARY_LINK, RegistrationSummaryInternalView.class);
     public static final BlackDuckPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
     public static final BlackDuckPathMultipleResponses<ComponentSearchResult> SEARCH_COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ComponentSearchResult>(SEARCH_COMPONENTS_LINK, ComponentSearchResult.class);
     public static final BlackDuckPathSingleResponse<LegacyFilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(USER_STATUS_FILTERS_LINK, LegacyFilterView.class);
@@ -109,24 +122,28 @@ public class ApiDiscovery {
 
     static {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
-        links.put(COMPONENT_APPROVAL_STATUS_FILTERS_LINK, COMPONENT_APPROVAL_STATUS_FILTERS_LINK_RESPONSE);
-        links.put(COMPONENT_SOURCE_FILTERS_LINK, COMPONENT_SOURCE_FILTERS_LINK_RESPONSE);
         links.put(COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK, COMPONENT_VERSION_APPROVAL_STATUS_FILTERS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
+        links.put(COMPONENTS_FILTERS_LINK, COMPONENTS_FILTERS_LINK_RESPONSE);
         links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
         links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
         links.put(DASHBOARD_SUMMARY_LINK, DASHBOARD_SUMMARY_LINK_RESPONSE);
         links.put(ENDUSERLICENSEAGREEMENT_LINK, ENDUSERLICENSEAGREEMENT_LINK_RESPONSE);
         links.put(HEALTH_CHECKS_LIVENESS_LINK, HEALTH_CHECKS_LIVENESS_LINK_RESPONSE);
         links.put(HEALTH_CHECKS_READINESS_LINK, HEALTH_CHECKS_READINESS_LINK_RESPONSE);
-        links.put(LICENSE_STATUS_FILTERS_LINK, LICENSE_STATUS_FILTERS_LINK_RESPONSE);
+        links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
         links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
+        links.put(LICENSES_FILTERS_LINK, LICENSES_FILTERS_LINK_RESPONSE);
         links.put(NOTIFICATION_STATE_FILTERS_LINK, NOTIFICATION_STATE_FILTERS_LINK_RESPONSE);
         links.put(NOTIFICATION_TYPE_FILTERS_LINK, NOTIFICATION_TYPE_FILTERS_LINK_RESPONSE);
         links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        links.put(NOTIFICATIONS_FILTERS_LINK, NOTIFICATIONS_FILTERS_LINK_RESPONSE);
         links.put(POLICY_RULE_ENABLED_FILTERS_LINK, POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE);
         links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
         links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(REGISTRATION_LINK, REGISTRATION_LINK_RESPONSE);
+        links.put(REGISTRATION_ATTRIBUTES_LINK, REGISTRATION_ATTRIBUTES_LINK_RESPONSE);
+        links.put(REGISTRATION_SUMMARY_LINK, REGISTRATION_SUMMARY_LINK_RESPONSE);
         links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
         links.put(SEARCH_COMPONENTS_LINK, SEARCH_COMPONENTS_LINK_RESPONSE);
         links.put(USER_STATUS_FILTERS_LINK, USER_STATUS_FILTERS_LINK_RESPONSE);

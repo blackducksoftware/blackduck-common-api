@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -28,8 +28,32 @@ import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpr
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleExpression extends BlackDuckComponent {
-    public String name;
-    public String operation;
-    public java.util.List<PolicyRuleExpressionValue> values;
+    private String name;
+    private String operation;
+    private java.util.List<PolicyRuleExpressionValue> values;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public java.util.List<PolicyRuleExpressionValue> getValues() {
+        return values;
+    }
+
+    public void setValues(java.util.List<PolicyRuleExpressionValue> values) {
+        this.values = values;
+    }
 
 }

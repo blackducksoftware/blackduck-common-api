@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,7 +27,23 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class EndUserLicenseAgreementAction extends BlackDuckComponent {
-    public Boolean accept;
-    public Boolean acceptEndUserLicense;
+    private Boolean accept;
+    private Boolean acceptEndUserLicense;
+
+    public Boolean getAccept() {
+        return accept;
+    }
+
+    public void setAccept(Boolean accept) {
+        this.accept = accept;
+    }
+
+    public Boolean getAcceptEndUserLicense() {
+        return acceptEndUserLicense;
+    }
+
+    public void setAcceptEndUserLicense(Boolean acceptEndUserLicense) {
+        this.acceptEndUserLicense = acceptEndUserLicense;
+    }
 
 }

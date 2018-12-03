@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,6 +27,14 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UserGroupAssignmentRequest extends BlackDuckComponent {
-    public String userGroupUrl;
+    private String userGroupUrl;
+
+    public String getUserGroupUrl() {
+        return userGroupUrl;
+    }
+
+    public void setUserGroupUrl(String userGroupUrl) {
+        this.userGroupUrl = userGroupUrl;
+    }
 
 }

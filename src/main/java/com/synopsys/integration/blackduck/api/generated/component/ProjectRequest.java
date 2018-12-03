@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,12 +29,77 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectClone
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectRequest extends BlackDuckComponent {
-    public java.util.List<ProjectCloneCategoriesType> cloneCategories;
-    public String description;
-    public String name;
-    public Boolean projectLevelAdjustments;
-    public String projectOwner;
-    public Integer projectTier;
-    public ProjectVersionRequest versionRequest;
+    private java.util.List<ProjectCloneCategoriesType> cloneCategories;
+    private Boolean customSignatureEnabled;
+    private String description;
+    private String name;
+    private Boolean projectLevelAdjustments;
+    private String projectOwner;
+    private Integer projectTier;
+    private ProjectVersionRequest versionRequest;
+
+    public java.util.List<ProjectCloneCategoriesType> getCloneCategories() {
+        return cloneCategories;
+    }
+
+    public void setCloneCategories(java.util.List<ProjectCloneCategoriesType> cloneCategories) {
+        this.cloneCategories = cloneCategories;
+    }
+
+    public Boolean getCustomSignatureEnabled() {
+        return customSignatureEnabled;
+    }
+
+    public void setCustomSignatureEnabled(Boolean customSignatureEnabled) {
+        this.customSignatureEnabled = customSignatureEnabled;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean getProjectLevelAdjustments() {
+        return projectLevelAdjustments;
+    }
+
+    public void setProjectLevelAdjustments(Boolean projectLevelAdjustments) {
+        this.projectLevelAdjustments = projectLevelAdjustments;
+    }
+
+    public String getProjectOwner() {
+        return projectOwner;
+    }
+
+    public void setProjectOwner(String projectOwner) {
+        this.projectOwner = projectOwner;
+    }
+
+    public Integer getProjectTier() {
+        return projectTier;
+    }
+
+    public void setProjectTier(Integer projectTier) {
+        this.projectTier = projectTier;
+    }
+
+    public ProjectVersionRequest getVersionRequest() {
+        return versionRequest;
+    }
+
+    public void setVersionRequest(ProjectVersionRequest versionRequest) {
+        this.versionRequest = versionRequest;
+    }
 
 }

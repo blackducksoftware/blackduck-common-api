@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -43,7 +43,23 @@ public class VersionRiskProfileView extends BlackDuckResponse {
         links.put(VERSION_LINK, VERSION_LINK_RESPONSE);
     }
 
-    public java.util.Date bomLastUpdatedAt;
-    public Object categories;
+    private java.util.Date bomLastUpdatedAt;
+    private Object categories;
+
+    public java.util.Date getBomLastUpdatedAt() {
+        return bomLastUpdatedAt;
+    }
+
+    public void setBomLastUpdatedAt(java.util.Date bomLastUpdatedAt) {
+        this.bomLastUpdatedAt = bomLastUpdatedAt;
+    }
+
+    public Object getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Object categories) {
+        this.categories = categories;
+    }
 
 }

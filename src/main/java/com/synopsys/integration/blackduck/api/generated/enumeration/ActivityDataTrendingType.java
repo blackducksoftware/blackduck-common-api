@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,7 +29,8 @@ import com.synopsys.integration.util.EnumUtils;
 public enum ActivityDataTrendingType {
     DECREASING,
     INCREASING,
-    STABLE;
+    STABLE,
+    UNKNOWN;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);
