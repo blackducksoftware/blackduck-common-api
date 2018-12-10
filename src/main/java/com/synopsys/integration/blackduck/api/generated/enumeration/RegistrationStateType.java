@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,37 +21,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.generated.enumeration;
 
-import java.util.List;
+import com.synopsys.integration.util.EnumUtils;
 
-public class ResourceMetadata extends BlackDuckComponent {
-    private java.util.List<String> allow;
-    private String href;
-    private java.util.List<ResourceLink> links;
+//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public enum RegistrationStateType {
+    Expired,
+    Incomplete_install,
+    Invalid,
+    Network_failure,
+    Not_set,
+    Valid;
 
-    public List<String> getAllow() {
-        return allow;
-    }
-
-    public void setAllow(final List<String> allow) {
-        this.allow = allow;
-    }
-
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(final String href) {
-        this.href = href;
-    }
-
-    public List<ResourceLink> getLinks() {
-        return links;
-    }
-
-    public void setLinks(final List<ResourceLink> links) {
-        this.links = links;
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
     }
 
 }

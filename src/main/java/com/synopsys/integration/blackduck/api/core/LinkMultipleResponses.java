@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -24,12 +24,20 @@
 package com.synopsys.integration.blackduck.api.core;
 
 public class LinkMultipleResponses<T extends BlackDuckResponse> extends LinkResponse {
-    public String link;
-    public Class<T> responseClass;
+    private final String link;
+    private final Class<T> responseClass;
 
     public LinkMultipleResponses(final String link, final Class<T> responseClass) {
         this.link = link;
         this.responseClass = responseClass;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public Class<T> getResponseClass() {
+        return responseClass;
     }
 
 }

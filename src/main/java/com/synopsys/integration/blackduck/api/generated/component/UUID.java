@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,7 +27,23 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UUID extends BlackDuckComponent {
-    public Long leastSignificantBits;
-    public Long mostSignificantBits;
+    private Long leastSignificantBits;
+    private Long mostSignificantBits;
+
+    public Long getLeastSignificantBits() {
+        return leastSignificantBits;
+    }
+
+    public void setLeastSignificantBits(Long leastSignificantBits) {
+        this.leastSignificantBits = leastSignificantBits;
+    }
+
+    public Long getMostSignificantBits() {
+        return mostSignificantBits;
+    }
+
+    public void setMostSignificantBits(Long mostSignificantBits) {
+        this.mostSignificantBits = mostSignificantBits;
+    }
 
 }

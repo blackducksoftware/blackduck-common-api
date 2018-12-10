@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -29,7 +29,23 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicySummar
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentVersionPolicyViolationDetails extends BlackDuckComponent {
-    public PolicySummaryStatusType name;
-    public java.util.List<NameValuePairView> severityLevels;
+    private PolicySummaryStatusType name;
+    private java.util.List<NameValuePairView> severityLevels;
+
+    public PolicySummaryStatusType getName() {
+        return name;
+    }
+
+    public void setName(PolicySummaryStatusType name) {
+        this.name = name;
+    }
+
+    public java.util.List<NameValuePairView> getSeverityLevels() {
+        return severityLevels;
+    }
+
+    public void setSeverityLevels(java.util.List<NameValuePairView> severityLevels) {
+        this.severityLevels = severityLevels;
+    }
 
 }

@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -49,13 +49,77 @@ public class VulnerableComponentView extends BlackDuckView {
         links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 
-    public String component;
-    public String componentName;
-    public String componentVersion;
-    public String componentVersionName;
-    public String componentVersionOriginId;
-    public String componentVersionOriginName;
-    public ComplexLicenseView license;
-    public VulnerabilityWithRemediationView vulnerabilityWithRemediation;
+    private String component;
+    private String componentName;
+    private String componentVersion;
+    private String componentVersionName;
+    private String componentVersionOriginId;
+    private String componentVersionOriginName;
+    private ComplexLicenseView license;
+    private VulnerabilityWithRemediationView vulnerabilityWithRemediation;
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    public String getComponentVersion() {
+        return componentVersion;
+    }
+
+    public void setComponentVersion(String componentVersion) {
+        this.componentVersion = componentVersion;
+    }
+
+    public String getComponentVersionName() {
+        return componentVersionName;
+    }
+
+    public void setComponentVersionName(String componentVersionName) {
+        this.componentVersionName = componentVersionName;
+    }
+
+    public String getComponentVersionOriginId() {
+        return componentVersionOriginId;
+    }
+
+    public void setComponentVersionOriginId(String componentVersionOriginId) {
+        this.componentVersionOriginId = componentVersionOriginId;
+    }
+
+    public String getComponentVersionOriginName() {
+        return componentVersionOriginName;
+    }
+
+    public void setComponentVersionOriginName(String componentVersionOriginName) {
+        this.componentVersionOriginName = componentVersionOriginName;
+    }
+
+    public ComplexLicenseView getLicense() {
+        return license;
+    }
+
+    public void setLicense(ComplexLicenseView license) {
+        this.license = license;
+    }
+
+    public VulnerabilityWithRemediationView getVulnerabilityWithRemediation() {
+        return vulnerabilityWithRemediation;
+    }
+
+    public void setVulnerabilityWithRemediation(VulnerabilityWithRemediationView vulnerabilityWithRemediation) {
+        this.vulnerabilityWithRemediation = vulnerabilityWithRemediation;
+    }
 
 }

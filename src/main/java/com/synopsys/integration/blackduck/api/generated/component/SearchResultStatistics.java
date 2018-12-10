@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,8 +27,32 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SearchResultStatistics extends BlackDuckComponent {
-    public Long numResultsFound;
-    public Integer numResultsInThisPage;
-    public Long timeTakenMs;
+    private Long numResultsFound;
+    private Integer numResultsInThisPage;
+    private Long timeTakenMs;
+
+    public Long getNumResultsFound() {
+        return numResultsFound;
+    }
+
+    public void setNumResultsFound(Long numResultsFound) {
+        this.numResultsFound = numResultsFound;
+    }
+
+    public Integer getNumResultsInThisPage() {
+        return numResultsInThisPage;
+    }
+
+    public void setNumResultsInThisPage(Integer numResultsInThisPage) {
+        this.numResultsInThisPage = numResultsInThisPage;
+    }
+
+    public Long getTimeTakenMs() {
+        return timeTakenMs;
+    }
+
+    public void setTimeTakenMs(Long timeTakenMs) {
+        this.timeTakenMs = timeTakenMs;
+    }
 
 }

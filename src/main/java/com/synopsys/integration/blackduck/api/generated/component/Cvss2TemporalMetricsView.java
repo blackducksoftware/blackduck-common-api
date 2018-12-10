@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -30,9 +30,41 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Cvss3Tempora
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class Cvss2TemporalMetricsView extends BlackDuckComponent {
-    public Cvss2TemporalMetricsExploitabilityType exploitability;
-    public Cvss3TemporalMetricsRemediationLevelType remediationLevel;
-    public Cvss2TemporalMetricsReportConfidenceType reportConfidence;
-    public java.math.BigDecimal score;
+    private Cvss2TemporalMetricsExploitabilityType exploitability;
+    private Cvss3TemporalMetricsRemediationLevelType remediationLevel;
+    private Cvss2TemporalMetricsReportConfidenceType reportConfidence;
+    private java.math.BigDecimal score;
+
+    public Cvss2TemporalMetricsExploitabilityType getExploitability() {
+        return exploitability;
+    }
+
+    public void setExploitability(Cvss2TemporalMetricsExploitabilityType exploitability) {
+        this.exploitability = exploitability;
+    }
+
+    public Cvss3TemporalMetricsRemediationLevelType getRemediationLevel() {
+        return remediationLevel;
+    }
+
+    public void setRemediationLevel(Cvss3TemporalMetricsRemediationLevelType remediationLevel) {
+        this.remediationLevel = remediationLevel;
+    }
+
+    public Cvss2TemporalMetricsReportConfidenceType getReportConfidence() {
+        return reportConfidence;
+    }
+
+    public void setReportConfidence(Cvss2TemporalMetricsReportConfidenceType reportConfidence) {
+        this.reportConfidence = reportConfidence;
+    }
+
+    public java.math.BigDecimal getScore() {
+        return score;
+    }
+
+    public void setScore(java.math.BigDecimal score) {
+        this.score = score;
+    }
 
 }

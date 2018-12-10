@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -45,7 +45,23 @@ public class MatchedFileView extends BlackDuckView {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
     }
 
-    public CompositePathWithArchiveContext filePath;
-    public java.util.List<MatchedFileUsagesType> usages;
+    private CompositePathWithArchiveContext filePath;
+    private java.util.List<MatchedFileUsagesType> usages;
+
+    public CompositePathWithArchiveContext getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(CompositePathWithArchiveContext filePath) {
+        this.filePath = filePath;
+    }
+
+    public java.util.List<MatchedFileUsagesType> getUsages() {
+        return usages;
+    }
+
+    public void setUsages(java.util.List<MatchedFileUsagesType> usages) {
+        this.usages = usages;
+    }
 
 }

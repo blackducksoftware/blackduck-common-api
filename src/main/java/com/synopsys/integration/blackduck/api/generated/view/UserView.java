@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -54,13 +54,77 @@ public class UserView extends BlackDuckView {
         links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    public Boolean active;
-    public String email;
-    public String externalUserName;
-    public String firstName;
-    public String lastName;
-    public String type;
-    public String user;
-    public String userName;
+    private Boolean active;
+    private String email;
+    private String externalUserName;
+    private String firstName;
+    private String lastName;
+    private String type;
+    private String user;
+    private String userName;
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getExternalUserName() {
+        return externalUserName;
+    }
+
+    public void setExternalUserName(String externalUserName) {
+        this.externalUserName = externalUserName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
 }

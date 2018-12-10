@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -42,11 +42,59 @@ public class CodeLocationView extends BlackDuckView {
         links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
     }
 
-    public java.util.Date createdAt;
-    public String mappedProjectVersion;
-    public String name;
-    public Long scanSize;
-    public java.util.Date updatedAt;
-    public String url;
+    private java.util.Date createdAt;
+    private String mappedProjectVersion;
+    private String name;
+    private Long scanSize;
+    private java.util.Date updatedAt;
+    private String url;
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getMappedProjectVersion() {
+        return mappedProjectVersion;
+    }
+
+    public void setMappedProjectVersion(String mappedProjectVersion) {
+        this.mappedProjectVersion = mappedProjectVersion;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getScanSize() {
+        return scanSize;
+    }
+
+    public void setScanSize(Long scanSize) {
+        this.scanSize = scanSize;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
 }

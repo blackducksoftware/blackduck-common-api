@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -30,8 +30,32 @@ import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentVersionRiskView extends BlackDuckResponse {
-    public ActivityDataView activityData;
-    public RiskProfileView riskData;
-    public VersionDataView versionData;
+    private ActivityDataView activityData;
+    private RiskProfileView riskData;
+    private VersionDataView versionData;
+
+    public ActivityDataView getActivityData() {
+        return activityData;
+    }
+
+    public void setActivityData(ActivityDataView activityData) {
+        this.activityData = activityData;
+    }
+
+    public RiskProfileView getRiskData() {
+        return riskData;
+    }
+
+    public void setRiskData(RiskProfileView riskData) {
+        this.riskData = riskData;
+    }
+
+    public VersionDataView getVersionData() {
+        return versionData;
+    }
+
+    public void setVersionData(VersionDataView versionData) {
+        this.versionData = versionData;
+    }
 
 }

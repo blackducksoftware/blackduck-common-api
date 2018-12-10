@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,7 +27,23 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class NotificationSubscriptionView extends BlackDuckComponent {
-    public java.util.Date createdAt;
-    public String subscriptionTarget;
+    private java.util.Date createdAt;
+    private String subscriptionTarget;
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getSubscriptionTarget() {
+        return subscriptionTarget;
+    }
+
+    public void setSubscriptionTarget(String subscriptionTarget) {
+        this.subscriptionTarget = subscriptionTarget;
+    }
 
 }

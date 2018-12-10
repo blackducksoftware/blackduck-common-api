@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -64,16 +64,104 @@ public class ComponentVersionView extends BlackDuckView {
         links.put(RISK_PROFILE_LINK, RISK_PROFILE_LINK_RESPONSE);
     }
 
-    public java.util.List<String> additionalHomepages;
-    public ComponentVersionApprovalStatusType approvalStatus;
-    public ComplexLicenseView license;
-    public String notes;
-    public java.util.Date releasedOn;
-    public OriginSourceType source;
-    public ComponentType type;
-    public java.util.Date updatedAt;
-    public String updatedBy;
-    public String updatedByUrl;
-    public String versionName;
+    private java.util.List<String> additionalHomepages;
+    private ComponentVersionApprovalStatusType approvalStatus;
+    private ComplexLicenseView license;
+    private String notes;
+    private java.util.Date releasedOn;
+    private OriginSourceType source;
+    private ComponentType type;
+    private java.util.Date updatedAt;
+    private String updatedBy;
+    private String updatedByUrl;
+    private String versionName;
+
+    public java.util.List<String> getAdditionalHomepages() {
+        return additionalHomepages;
+    }
+
+    public void setAdditionalHomepages(java.util.List<String> additionalHomepages) {
+        this.additionalHomepages = additionalHomepages;
+    }
+
+    public ComponentVersionApprovalStatusType getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(ComponentVersionApprovalStatusType approvalStatus) {
+        this.approvalStatus = approvalStatus;
+    }
+
+    public ComplexLicenseView getLicense() {
+        return license;
+    }
+
+    public void setLicense(ComplexLicenseView license) {
+        this.license = license;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public java.util.Date getReleasedOn() {
+        return releasedOn;
+    }
+
+    public void setReleasedOn(java.util.Date releasedOn) {
+        this.releasedOn = releasedOn;
+    }
+
+    public OriginSourceType getSource() {
+        return source;
+    }
+
+    public void setSource(OriginSourceType source) {
+        this.source = source;
+    }
+
+    public ComponentType getType() {
+        return type;
+    }
+
+    public void setType(ComponentType type) {
+        this.type = type;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public String getUpdatedByUrl() {
+        return updatedByUrl;
+    }
+
+    public void setUpdatedByUrl(String updatedByUrl) {
+        this.updatedByUrl = updatedByUrl;
+    }
+
+    public String getVersionName() {
+        return versionName;
+    }
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
 
 }

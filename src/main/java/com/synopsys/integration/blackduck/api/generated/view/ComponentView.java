@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -46,14 +46,86 @@ public class ComponentView extends BlackDuckView {
         links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
     }
 
-    public java.util.List<String> additionalHomepages;
-    public ComponentApprovalStatusType approvalStatus;
-    public String description;
-    public String name;
-    public String notes;
-    public String primaryLanguage;
-    public OriginSourceType source;
-    public ComponentType type;
-    public String url;
+    private java.util.List<String> additionalHomepages;
+    private ComponentApprovalStatusType approvalStatus;
+    private String description;
+    private String name;
+    private String notes;
+    private String primaryLanguage;
+    private OriginSourceType source;
+    private ComponentType type;
+    private String url;
+
+    public java.util.List<String> getAdditionalHomepages() {
+        return additionalHomepages;
+    }
+
+    public void setAdditionalHomepages(java.util.List<String> additionalHomepages) {
+        this.additionalHomepages = additionalHomepages;
+    }
+
+    public ComponentApprovalStatusType getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(ComponentApprovalStatusType approvalStatus) {
+        this.approvalStatus = approvalStatus;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public String getPrimaryLanguage() {
+        return primaryLanguage;
+    }
+
+    public void setPrimaryLanguage(String primaryLanguage) {
+        this.primaryLanguage = primaryLanguage;
+    }
+
+    public OriginSourceType getSource() {
+        return source;
+    }
+
+    public void setSource(OriginSourceType source) {
+        this.source = source;
+    }
+
+    public ComponentType getType() {
+        return type;
+    }
+
+    public void setType(ComponentType type) {
+        this.type = type;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
 }

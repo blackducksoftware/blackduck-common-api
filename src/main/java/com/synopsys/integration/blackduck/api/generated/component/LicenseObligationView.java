@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,26 +21,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-public class BlackDuckApiMetaException extends BlackDuckIntegrationException {
-    public BlackDuckApiMetaException() {
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseObligationResponsibilityType;
+
+//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public class LicenseObligationView extends BlackDuckComponent {
+    private String name;
+    private LicenseObligationResponsibilityType responsibility;
+
+    public String getName() {
+        return name;
     }
 
-    public BlackDuckApiMetaException(final String message) {
-        super(message);
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public BlackDuckApiMetaException(final String message, final Throwable cause) {
-        super(message, cause);
+    public LicenseObligationResponsibilityType getResponsibility() {
+        return responsibility;
     }
 
-    public BlackDuckApiMetaException(final Throwable cause) {
-        super(cause);
-    }
-
-    public BlackDuckApiMetaException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
+    public void setResponsibility(LicenseObligationResponsibilityType responsibility) {
+        this.responsibility = responsibility;
     }
 
 }

@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,7 +27,23 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ExternalExtensionUserView extends BlackDuckView {
-    public String extensionOptions;
-    public String user;
+    private String extensionOptions;
+    private String user;
+
+    public String getExtensionOptions() {
+        return extensionOptions;
+    }
+
+    public void setExtensionOptions(String extensionOptions) {
+        this.extensionOptions = extensionOptions;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
 
 }

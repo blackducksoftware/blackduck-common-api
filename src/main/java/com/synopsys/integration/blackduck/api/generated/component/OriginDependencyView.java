@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,11 +27,59 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class OriginDependencyView extends BlackDuckComponent {
-    public String componentName;
-    public String discoveryType;
-    public String originId;
-    public String originName;
-    public String scope;
-    public String versionName;
+    private String componentName;
+    private String discoveryType;
+    private String originId;
+    private String originName;
+    private String scope;
+    private String versionName;
+
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    public String getDiscoveryType() {
+        return discoveryType;
+    }
+
+    public void setDiscoveryType(String discoveryType) {
+        this.discoveryType = discoveryType;
+    }
+
+    public String getOriginId() {
+        return originId;
+    }
+
+    public void setOriginId(String originId) {
+        this.originId = originId;
+    }
+
+    public String getOriginName() {
+        return originName;
+    }
+
+    public void setOriginName(String originName) {
+        this.originName = originName;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    public String getVersionName() {
+        return versionName;
+    }
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
 
 }

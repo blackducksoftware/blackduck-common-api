@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,11 +27,59 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UserRequest extends BlackDuckComponent {
-    public Boolean active;
-    public String email;
-    public String firstName;
-    public String lastName;
-    public String password;
-    public String userName;
+    private Boolean active;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private String userName;
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
 }

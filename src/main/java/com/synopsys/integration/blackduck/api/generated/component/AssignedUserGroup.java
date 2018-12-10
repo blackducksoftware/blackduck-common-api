@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -27,8 +27,32 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class AssignedUserGroup extends BlackDuckComponent {
-    public String assignment;
-    public String group;
-    public String name;
+    private String assignment;
+    private String group;
+    private String name;
+
+    public String getAssignment() {
+        return assignment;
+    }
+
+    public void setAssignment(String assignment) {
+        this.assignment = assignment;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

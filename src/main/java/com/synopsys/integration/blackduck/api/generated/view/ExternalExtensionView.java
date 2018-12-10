@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -47,9 +47,41 @@ public class ExternalExtensionView extends BlackDuckView {
         links.put(USER_OPTIONS_LINK, USER_OPTIONS_LINK_RESPONSE);
     }
 
-    public Boolean authenticated;
-    public String description;
-    public String infoUrl;
-    public String name;
+    private Boolean authenticated;
+    private String description;
+    private String infoUrl;
+    private String name;
+
+    public Boolean getAuthenticated() {
+        return authenticated;
+    }
+
+    public void setAuthenticated(Boolean authenticated) {
+        this.authenticated = authenticated;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getInfoUrl() {
+        return infoUrl;
+    }
+
+    public void setInfoUrl(String infoUrl) {
+        this.infoUrl = infoUrl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

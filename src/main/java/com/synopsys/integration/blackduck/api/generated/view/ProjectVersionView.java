@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -75,19 +75,131 @@ public class ProjectVersionView extends BlackDuckView {
         links.put(VERSIONREPORT_LINK, VERSIONREPORT_LINK_RESPONSE);
     }
 
-    public java.util.Date createdAt;
-    public String createdBy;
-    public String createdByUser;
-    public ProjectVersionDistributionType distribution;
-    public ComplexLicenseView license;
-    public String nickname;
-    public ProjectVersionPhaseType phase;
-    public String releaseComments;
-    public java.util.Date releasedOn;
-    public java.util.Date settingUpdatedAt;
-    public String settingUpdatedBy;
-    public String settingUpdatedByUser;
-    public OriginSourceType source;
-    public String versionName;
+    private java.util.Date createdAt;
+    private String createdBy;
+    private String createdByUser;
+    private ProjectVersionDistributionType distribution;
+    private ComplexLicenseView license;
+    private String nickname;
+    private ProjectVersionPhaseType phase;
+    private String releaseComments;
+    private java.util.Date releasedOn;
+    private java.util.Date settingUpdatedAt;
+    private String settingUpdatedBy;
+    private String settingUpdatedByUser;
+    private OriginSourceType source;
+    private String versionName;
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getCreatedByUser() {
+        return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+    }
+
+    public ProjectVersionDistributionType getDistribution() {
+        return distribution;
+    }
+
+    public void setDistribution(ProjectVersionDistributionType distribution) {
+        this.distribution = distribution;
+    }
+
+    public ComplexLicenseView getLicense() {
+        return license;
+    }
+
+    public void setLicense(ComplexLicenseView license) {
+        this.license = license;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public ProjectVersionPhaseType getPhase() {
+        return phase;
+    }
+
+    public void setPhase(ProjectVersionPhaseType phase) {
+        this.phase = phase;
+    }
+
+    public String getReleaseComments() {
+        return releaseComments;
+    }
+
+    public void setReleaseComments(String releaseComments) {
+        this.releaseComments = releaseComments;
+    }
+
+    public java.util.Date getReleasedOn() {
+        return releasedOn;
+    }
+
+    public void setReleasedOn(java.util.Date releasedOn) {
+        this.releasedOn = releasedOn;
+    }
+
+    public java.util.Date getSettingUpdatedAt() {
+        return settingUpdatedAt;
+    }
+
+    public void setSettingUpdatedAt(java.util.Date settingUpdatedAt) {
+        this.settingUpdatedAt = settingUpdatedAt;
+    }
+
+    public String getSettingUpdatedBy() {
+        return settingUpdatedBy;
+    }
+
+    public void setSettingUpdatedBy(String settingUpdatedBy) {
+        this.settingUpdatedBy = settingUpdatedBy;
+    }
+
+    public String getSettingUpdatedByUser() {
+        return settingUpdatedByUser;
+    }
+
+    public void setSettingUpdatedByUser(String settingUpdatedByUser) {
+        this.settingUpdatedByUser = settingUpdatedByUser;
+    }
+
+    public OriginSourceType getSource() {
+        return source;
+    }
+
+    public void setSource(OriginSourceType source) {
+        this.source = source;
+    }
+
+    public String getVersionName() {
+        return versionName;
+    }
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
 
 }

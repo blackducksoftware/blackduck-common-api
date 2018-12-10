@@ -1,5 +1,5 @@
 /**
- * hub-common-api
+ * blackduck-common-api
  *
  * Copyright (C) 2018 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -52,10 +52,50 @@ public class UserGroupView extends BlackDuckView {
         links.put(USERS_LINK, USERS_LINK_RESPONSE);
     }
 
-    public Boolean active;
-    public UserGroupCreatedFromType createdFrom;
-    public String externalName;
-    public String name;
-    public String userGroup;
+    private Boolean active;
+    private UserGroupCreatedFromType createdFrom;
+    private String externalName;
+    private String name;
+    private String userGroup;
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public UserGroupCreatedFromType getCreatedFrom() {
+        return createdFrom;
+    }
+
+    public void setCreatedFrom(UserGroupCreatedFromType createdFrom) {
+        this.createdFrom = createdFrom;
+    }
+
+    public String getExternalName() {
+        return externalName;
+    }
+
+    public void setExternalName(String externalName) {
+        this.externalName = externalName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUserGroup() {
+        return userGroup;
+    }
+
+    public void setUserGroup(String userGroup) {
+        this.userGroup = userGroup;
+    }
 
 }
