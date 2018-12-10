@@ -28,6 +28,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.synopsys.integration.blackduck.api.generated.component.ResourceLink;
+import com.synopsys.integration.blackduck.api.generated.component.ResourceMetadata;
+
 /**
  * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
  */
