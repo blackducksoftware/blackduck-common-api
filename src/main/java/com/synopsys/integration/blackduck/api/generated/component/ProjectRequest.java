@@ -24,6 +24,7 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.ProjectRequestBuilder;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionRequest;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
 import com.synopsys.integration.util.Buildable;
@@ -38,6 +39,10 @@ public class ProjectRequest extends BlackDuckComponent implements Buildable {
     private String projectOwner;
     private Integer projectTier;
     private ProjectVersionRequest versionRequest;
+
+    public static ProjectRequestBuilder newBuilder() {
+        return new ProjectRequestBuilder();
+    }
 
     public java.util.List<ProjectCloneCategoriesType> getCloneCategories() {
         return cloneCategories;
