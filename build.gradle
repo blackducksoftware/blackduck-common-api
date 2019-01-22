@@ -12,5 +12,5 @@ version = '2018.12.0.1-SNAPSHOT'
 apply plugin: 'com.blackducksoftware.integration.library'
 
 dependencies {
-    implementation 'com.blackducksoftware.integration:integration-rest:0.7.0'
+    api 'com.blackducksoftware.integration:integration-rest:0.8.0'
 }
