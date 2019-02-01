@@ -21,28 +21,31 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.manual.view;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.NotificationViewData;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationStateRequestStateType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.generated.view.NotificationUserView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class NotificationUserView extends BlackDuckView {
+public class NotificationUserView extends BlackDuckView implements NotificationViewData {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";
 
-    public static final LinkSingleResponse<NotificationUserView> NOTIFICATIONS_LINK_RESPONSE = new LinkSingleResponse<NotificationUserView>(NOTIFICATIONS_LINK, NotificationUserView.class);
+    public static final LinkSingleResponse<NotificationUserView> NOTIFICATIONS_LINK_RESPONSE = new LinkSingleResponse<>(
+            NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.class);
 
     static {
-        links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        NotificationUserView.links.put(
+                NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.NOTIFICATIONS_LINK_RESPONSE);
     }
 
     private String contentType;
@@ -50,18 +53,49 @@ public class NotificationUserView extends BlackDuckView {
     private NotificationStateRequestStateType notificationState;
     private NotificationType type;
 
+    @Override
+    public boolean hasSubclasses() {
+        return true;
+    }
+
+    @Override
+    public Class<? extends BlackDuckResponse> getSubclass() {
+        switch (type) {
+        case BOM_EDIT:
+            return BomEditNotificationUserView.class;
+        case LICENSE_LIMIT:
+            return LicenseLimitNotificationUserView.class;
+        case POLICY_OVERRIDE:
+            return PolicyOverrideNotificationUserView.class;
+        case RULE_VIOLATION_CLEARED:
+            return RuleViolationClearedNotificationUserView.class;
+        case RULE_VIOLATION:
+            return RuleViolationNotificationUserView.class;
+        case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
+            return VersionBomCodeLocationBomComputedNotificationUserView.class;
+        case VULNERABILITY:
+            return VulnerabilityNotificationUserView.class;
+        default:
+            return NotificationUserView.class;
+        }
+    }
+
+    @Override
     public String getContentType() {
         return contentType;
     }
 
+    @Override
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
 
+    @Override
     public java.util.Date getCreatedAt() {
         return createdAt;
     }
 
+    @Override
     public void setCreatedAt(java.util.Date createdAt) {
         this.createdAt = createdAt;
     }
@@ -74,10 +108,12 @@ public class NotificationUserView extends BlackDuckView {
         this.notificationState = notificationState;
     }
 
+    @Override
     public NotificationType getType() {
         return type;
     }
 
+    @Override
     public void setType(NotificationType type) {
         this.type = type;
     }

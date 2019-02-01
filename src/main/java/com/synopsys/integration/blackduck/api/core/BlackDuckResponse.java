@@ -37,11 +37,19 @@ public class BlackDuckResponse extends BlackDuckComponent {
     private transient Gson gson;
     private transient JsonNode patch;
 
+    public boolean hasSubclasses() {
+        return false;
+    }
+
+    public Class<? extends BlackDuckResponse> getSubclass() {
+        throw new UnsupportedOperationException("A subclass must implement this with its specific behavior");
+    }
+
     public String getJson() {
         return json;
     }
 
-    public void setJson(final String json) {
+    public void setJson(String json) {
         this.json = json;
     }
 
@@ -49,7 +57,7 @@ public class BlackDuckResponse extends BlackDuckComponent {
         return jsonElement;
     }
 
-    public void setJsonElement(final JsonElement jsonElement) {
+    public void setJsonElement(JsonElement jsonElement) {
         this.jsonElement = jsonElement;
     }
 
@@ -57,7 +65,7 @@ public class BlackDuckResponse extends BlackDuckComponent {
         return gson;
     }
 
-    public void setGson(final Gson gson) {
+    public void setGson(Gson gson) {
         this.gson = gson;
     }
 
@@ -65,7 +73,7 @@ public class BlackDuckResponse extends BlackDuckComponent {
         return patch;
     }
 
-    public void setPatch(final JsonNode patch) {
+    public void setPatch(JsonNode patch) {
         this.patch = patch;
     }
 

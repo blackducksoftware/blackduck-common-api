@@ -41,11 +41,11 @@ public class BlackDuckView extends BlackDuckResponse {
         return _meta;
     }
 
-    public void setMeta(final ResourceMetadata meta) {
+    public void setMeta(ResourceMetadata meta) {
         _meta = meta;
     }
 
-    public boolean hasLink(final String linkKey) {
+    public boolean hasLink(String linkKey) {
         if (null == _meta || null == _meta.getLinks()) {
             return false;
         }
@@ -55,7 +55,7 @@ public class BlackDuckView extends BlackDuckResponse {
                        .anyMatch(linkKey::equals);
     }
 
-    public Optional<String> getFirstLink(final String linkKey) {
+    public Optional<String> getFirstLink(String linkKey) {
         if (null == _meta || null == _meta.getLinks()) {
             return Optional.empty();
         }
@@ -66,7 +66,7 @@ public class BlackDuckView extends BlackDuckResponse {
                        .map(ResourceLink::getHref);
     }
 
-    public List<String> getLinks(final String linkKey) {
+    public List<String> getLinks(String linkKey) {
         return getResourceLinks().stream()
                        .map(ResourceLink::getHref)
                        .collect(Collectors.toList());
