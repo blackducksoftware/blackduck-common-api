@@ -21,37 +21,71 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.manual.view;
 
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.NotificationViewData;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class NotificationView extends BlackDuckView {
+public class NotificationView extends BlackDuckView implements NotificationViewData {
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
 
+    @Override
+    public boolean hasSubclasses() {
+        return true;
+    }
+
+    @Override
+    public Class<? extends BlackDuckResponse> getSubclass() {
+        switch (type) {
+        case BOM_EDIT:
+            return BomEditNotificationView.class;
+        case LICENSE_LIMIT:
+            return LicenseLimitNotificationView.class;
+        case POLICY_OVERRIDE:
+            return PolicyOverrideNotificationView.class;
+        case RULE_VIOLATION_CLEARED:
+            return RuleViolationClearedNotificationView.class;
+        case RULE_VIOLATION:
+            return RuleViolationNotificationView.class;
+        case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
+            return VersionBomCodeLocationBomComputedNotificationView.class;
+        case VULNERABILITY:
+            return VulnerabilityNotificationView.class;
+        default:
+            return NotificationView.class;
+        }
+    }
+
+    @Override
     public String getContentType() {
         return contentType;
     }
 
+    @Override
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
 
+    @Override
     public java.util.Date getCreatedAt() {
         return createdAt;
     }
 
+    @Override
     public void setCreatedAt(java.util.Date createdAt) {
         this.createdAt = createdAt;
     }
 
+    @Override
     public NotificationType getType() {
         return type;
     }
 
+    @Override
     public void setType(NotificationType type) {
         this.type = type;
     }

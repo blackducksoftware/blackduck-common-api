@@ -24,13 +24,11 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.core.ProjectRequestBuilder;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionRequest;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
-import com.synopsys.integration.util.Buildable;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectRequest extends BlackDuckComponent implements Buildable {
+public class ProjectRequest extends BlackDuckComponent {
     private java.util.List<ProjectCloneCategoriesType> cloneCategories;
     private Boolean customSignatureEnabled;
     private String description;
@@ -39,10 +37,6 @@ public class ProjectRequest extends BlackDuckComponent implements Buildable {
     private String projectOwner;
     private Integer projectTier;
     private ProjectVersionRequest versionRequest;
-
-    public static ProjectRequestBuilder newBuilder() {
-        return new ProjectRequestBuilder();
-    }
 
     public java.util.List<ProjectCloneCategoriesType> getCloneCategories() {
         return cloneCategories;

@@ -44,7 +44,6 @@ import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectVi
 import com.synopsys.integration.blackduck.api.generated.view.FilterView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
-import com.synopsys.integration.blackduck.api.generated.view.NotificationView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
@@ -52,6 +51,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ReportView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
+import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ApiDiscovery {
