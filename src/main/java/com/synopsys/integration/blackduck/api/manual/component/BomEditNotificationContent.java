@@ -23,9 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-
-public class BomEditNotificationContent extends BlackDuckComponent {
+public class BomEditNotificationContent extends NotificationContentComponent {
     private String bomComponent;
 
     public String getBomComponent() {

@@ -25,13 +25,15 @@ package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.VersionBomCodeLocationBomComputedNotificationContent;
 
-public class VersionBomCodeLocationBomComputedNotificationUserView extends NotificationUserView {
+public class VersionBomCodeLocationBomComputedNotificationUserView extends NotificationUserView<VersionBomCodeLocationBomComputedNotificationContent> {
     private VersionBomCodeLocationBomComputedNotificationContent content;
 
+    @Override
     public VersionBomCodeLocationBomComputedNotificationContent getContent() {
         return content;
     }
 
+    @Override
     public void setContent(VersionBomCodeLocationBomComputedNotificationContent content) {
         this.content = content;
     }
