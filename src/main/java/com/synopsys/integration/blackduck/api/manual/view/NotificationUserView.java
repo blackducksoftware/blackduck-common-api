@@ -23,6 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,7 +36,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Notification
 import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
 
-public abstract class NotificationUserView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
+public class NotificationUserView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";
@@ -52,6 +53,7 @@ public abstract class NotificationUserView<T extends NotificationContentComponen
     private java.util.Date createdAt;
     private NotificationStateRequestStateType notificationState;
     private NotificationType type;
+    private T content;
 
     @Override
     public boolean hasSubclasses() {
@@ -91,12 +93,12 @@ public abstract class NotificationUserView<T extends NotificationContentComponen
     }
 
     @Override
-    public java.util.Date getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
     @Override
-    public void setCreatedAt(java.util.Date createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -116,6 +118,16 @@ public abstract class NotificationUserView<T extends NotificationContentComponen
     @Override
     public void setType(NotificationType type) {
         this.type = type;
+    }
+
+    @Override
+    public T getContent() {
+        return content;
+    }
+
+    @Override
+    public void setContent(T content) {
+        this.content = content;
     }
 
 }

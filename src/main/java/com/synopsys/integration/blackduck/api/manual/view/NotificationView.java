@@ -23,6 +23,8 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
+import java.util.Date;
+
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
@@ -33,6 +35,7 @@ public abstract class NotificationView<T extends NotificationContentComponent> e
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
+    private T content;
 
     @Override
     public boolean hasSubclasses() {
@@ -72,12 +75,12 @@ public abstract class NotificationView<T extends NotificationContentComponent> e
     }
 
     @Override
-    public java.util.Date getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
     @Override
-    public void setCreatedAt(java.util.Date createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -92,9 +95,13 @@ public abstract class NotificationView<T extends NotificationContentComponent> e
     }
 
     @Override
-    public abstract T getContent();
+    public T getContent() {
+        return content;
+    }
 
     @Override
-    public abstract void setContent(T content);
+    public void setContent(T content) {
+        this.content = content;
+    }
 
 }
