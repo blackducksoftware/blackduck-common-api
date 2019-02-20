@@ -23,9 +23,7 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-
-public class VersionBomCodeLocationBomComputedNotificationContent extends BlackDuckComponent {
+public class VersionBomCodeLocationBomComputedNotificationContent extends NotificationContentComponent {
     private String projectVersion;
     private String codeLocation;
     private String scanSummary;

@@ -23,10 +23,9 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.manual.enumeration.LicenseLimitType;
 
-public class LicenseLimitNotificationContent extends BlackDuckComponent {
+public class LicenseLimitNotificationContent extends NotificationContentComponent {
     private LicenseLimitType licenseViolationType;
     private String message;
     private String marketingPageUrl;

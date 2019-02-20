@@ -27,8 +27,9 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.NotificationViewData;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-public class NotificationView extends BlackDuckView implements NotificationViewData {
+public abstract class NotificationView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
@@ -89,5 +90,11 @@ public class NotificationView extends BlackDuckView implements NotificationViewD
     public void setType(NotificationType type) {
         this.type = type;
     }
+
+    @Override
+    public abstract T getContent();
+
+    @Override
+    public abstract void setContent(T content);
 
 }

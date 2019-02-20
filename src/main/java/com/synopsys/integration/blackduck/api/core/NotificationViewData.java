@@ -24,8 +24,9 @@
 package com.synopsys.integration.blackduck.api.core;
 
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-public interface NotificationViewData {
+public interface NotificationViewData<T extends NotificationContentComponent> {
     String getContentType();
 
     void setContentType(String contentType);
@@ -38,4 +39,7 @@ public interface NotificationViewData {
 
     void setType(NotificationType type);
 
+    T getContent();
+
+    void setContent(T content);
 }

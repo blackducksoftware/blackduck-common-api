@@ -25,13 +25,15 @@ package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.RuleViolationNotificationContent;
 
-public class RuleViolationNotificationUserView extends NotificationUserView {
+public class RuleViolationNotificationUserView extends NotificationUserView<RuleViolationNotificationContent> {
     private RuleViolationNotificationContent content;
 
+    @Override
     public RuleViolationNotificationContent getContent() {
         return content;
     }
 
+    @Override
     public void setContent(RuleViolationNotificationContent content) {
         this.content = content;
     }

@@ -33,9 +33,9 @@ import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.core.NotificationViewData;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationStateRequestStateType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class NotificationUserView extends BlackDuckView implements NotificationViewData {
+public abstract class NotificationUserView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";

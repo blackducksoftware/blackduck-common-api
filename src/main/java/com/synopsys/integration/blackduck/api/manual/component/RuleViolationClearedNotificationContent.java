@@ -25,9 +25,7 @@ package com.synopsys.integration.blackduck.api.manual.component;
 
 import java.util.List;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-
-public class RuleViolationClearedNotificationContent extends BlackDuckComponent {
+public class RuleViolationClearedNotificationContent extends NotificationContentComponent {
     private String projectName;
     private String projectVersionName;
     private String projectVersion;
