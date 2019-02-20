@@ -33,10 +33,9 @@ import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationStateRequestStateType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
 
-public class NotificationUserView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
+public class NotificationUserView extends BlackDuckView implements NotificationViewData {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";
@@ -53,7 +52,6 @@ public class NotificationUserView<T extends NotificationContentComponent> extend
     private java.util.Date createdAt;
     private NotificationStateRequestStateType notificationState;
     private NotificationType type;
-    private T content;
 
     @Override
     public boolean hasSubclasses() {
@@ -118,16 +116,6 @@ public class NotificationUserView<T extends NotificationContentComponent> extend
     @Override
     public void setType(NotificationType type) {
         this.type = type;
-    }
-
-    @Override
-    public T getContent() {
-        return content;
-    }
-
-    @Override
-    public void setContent(T content) {
-        this.content = content;
     }
 
 }

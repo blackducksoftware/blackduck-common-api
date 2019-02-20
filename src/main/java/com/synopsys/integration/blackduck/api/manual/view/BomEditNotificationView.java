@@ -24,8 +24,9 @@
 package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.BomEditNotificationContent;
+import com.synopsys.integration.blackduck.api.manual.contract.NotificationContentData;
 
-public class BomEditNotificationView extends NotificationView<BomEditNotificationContent> {
+public class BomEditNotificationView extends NotificationView implements NotificationContentData<BomEditNotificationContent> {
     private BomEditNotificationContent content;
 
     @Override

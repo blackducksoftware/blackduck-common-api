@@ -24,8 +24,9 @@
 package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.LicenseLimitNotificationContent;
+import com.synopsys.integration.blackduck.api.manual.contract.NotificationContentData;
 
-public class LicenseLimitNotificationView extends NotificationView<LicenseLimitNotificationContent> {
+public class LicenseLimitNotificationView extends NotificationView implements NotificationContentData<LicenseLimitNotificationContent> {
     private LicenseLimitNotificationContent content;
 
     @Override

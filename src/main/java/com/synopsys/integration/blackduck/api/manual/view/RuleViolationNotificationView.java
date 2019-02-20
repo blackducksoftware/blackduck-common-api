@@ -24,8 +24,9 @@
 package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.RuleViolationNotificationContent;
+import com.synopsys.integration.blackduck.api.manual.contract.NotificationContentData;
 
-public class RuleViolationNotificationView extends NotificationView<RuleViolationNotificationContent> {
+public class RuleViolationNotificationView extends NotificationView implements NotificationContentData<RuleViolationNotificationContent> {
     private RuleViolationNotificationContent content;
 
     @Override

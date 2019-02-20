@@ -28,14 +28,12 @@ import java.util.Date;
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
 
-public abstract class NotificationView<T extends NotificationContentComponent> extends BlackDuckView implements NotificationViewData<T> {
+public class NotificationView extends BlackDuckView implements NotificationViewData {
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
-    private T content;
 
     @Override
     public boolean hasSubclasses() {
@@ -92,16 +90,6 @@ public abstract class NotificationView<T extends NotificationContentComponent> e
     @Override
     public void setType(NotificationType type) {
         this.type = type;
-    }
-
-    @Override
-    public T getContent() {
-        return content;
-    }
-
-    @Override
-    public void setContent(T content) {
-        this.content = content;
     }
 
 }

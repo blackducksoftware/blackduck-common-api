@@ -21,22 +21,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.manual.view;
+package com.synopsys.integration.blackduck.api.manual.contract;
 
-import com.synopsys.integration.blackduck.api.manual.component.PolicyOverrideNotificationContent;
-import com.synopsys.integration.blackduck.api.manual.contract.NotificationContentData;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-public class PolicyOverrideNotificationView extends NotificationView implements NotificationContentData<PolicyOverrideNotificationContent> {
-    private PolicyOverrideNotificationContent content;
+public interface NotificationContentData<T extends NotificationContentComponent> extends NotificationViewData {
+    T getContent();
 
-    @Override
-    public PolicyOverrideNotificationContent getContent() {
-        return content;
-    }
-
-    @Override
-    public void setContent(PolicyOverrideNotificationContent content) {
-        this.content = content;
-    }
+    void setContent(T content);
 
 }
