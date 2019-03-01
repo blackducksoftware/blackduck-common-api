@@ -21,23 +21,38 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.util.EnumUtils;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public enum VersionReportRequestCategoriesType {
-    ATTACHMENTS,
-    CODE_LOCATIONS,
-    COMPONENTS,
-    CRYPTO_ALGORITHMS,
-    CUSTOM_FIELDS,
-    FILES,
-    SECURITY,
-    VERSION;
+public class CodeLocationProgress extends BlackDuckComponent {
+    private String message;
+    private java.math.BigDecimal percentage;
+    private Long value;
 
-    public String prettyPrint() {
-        return EnumUtils.prettyPrint(this);
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public java.math.BigDecimal getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(java.math.BigDecimal percentage) {
+        this.percentage = percentage;
+    }
+
+    public Long getValue() {
+        return value;
+    }
+
+    public void setValue(Long value) {
+        this.value = value;
     }
 
 }

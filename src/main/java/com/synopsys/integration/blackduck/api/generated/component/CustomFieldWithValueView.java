@@ -24,17 +24,16 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.CustomFieldOptionRequest;
 import com.synopsys.integration.blackduck.api.generated.enumeration.CustomFieldType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CustomFieldRequest extends BlackDuckComponent {
+public class CustomFieldWithValueView extends BlackDuckComponent {
     private Boolean active;
     private String description;
-    private java.util.List<CustomFieldOptionRequest> initialOptions;
     private String label;
     private Integer position;
     private CustomFieldType type;
+    private java.util.List<String> values;
 
     public Boolean getActive() {
         return active;
@@ -50,14 +49,6 @@ public class CustomFieldRequest extends BlackDuckComponent {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public java.util.List<CustomFieldOptionRequest> getInitialOptions() {
-        return initialOptions;
-    }
-
-    public void setInitialOptions(java.util.List<CustomFieldOptionRequest> initialOptions) {
-        this.initialOptions = initialOptions;
     }
 
     public String getLabel() {
@@ -82,6 +73,14 @@ public class CustomFieldRequest extends BlackDuckComponent {
 
     public void setType(CustomFieldType type) {
         this.type = type;
+    }
+
+    public java.util.List<String> getValues() {
+        return values;
+    }
+
+    public void setValues(java.util.List<String> values) {
+        this.values = values;
     }
 
 }
