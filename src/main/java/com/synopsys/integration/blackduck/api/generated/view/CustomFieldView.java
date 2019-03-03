@@ -24,16 +24,20 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.generated.component.UserSummaryView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.CustomFieldType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CustomFieldView extends BlackDuckView {
     private Boolean active;
-    private java.util.List<String> defaultValues;
+    private java.util.Date createdAt;
+    private UserSummaryView createdBy;
     private String description;
     private String label;
     private Integer position;
     private CustomFieldType type;
+    private java.util.Date updatedAt;
+    private UserSummaryView updatedBy;
 
     public Boolean getActive() {
         return active;
@@ -43,12 +47,20 @@ public class CustomFieldView extends BlackDuckView {
         this.active = active;
     }
 
-    public java.util.List<String> getDefaultValues() {
-        return defaultValues;
+    public java.util.Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setDefaultValues(java.util.List<String> defaultValues) {
-        this.defaultValues = defaultValues;
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public UserSummaryView getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(UserSummaryView createdBy) {
+        this.createdBy = createdBy;
     }
 
     public String getDescription() {
@@ -81,6 +93,22 @@ public class CustomFieldView extends BlackDuckView {
 
     public void setType(CustomFieldType type) {
         this.type = type;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public UserSummaryView getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(UserSummaryView updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
 }

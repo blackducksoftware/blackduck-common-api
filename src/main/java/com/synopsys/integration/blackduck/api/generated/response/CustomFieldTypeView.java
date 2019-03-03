@@ -29,6 +29,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.CustomFieldT
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CustomFieldTypeView extends BlackDuckResponse {
     private String name;
+    private Boolean supportsOptions;
     private CustomFieldType type;
 
     public String getName() {
@@ -37,6 +38,14 @@ public class CustomFieldTypeView extends BlackDuckResponse {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getSupportsOptions() {
+        return supportsOptions;
+    }
+
+    public void setSupportsOptions(Boolean supportsOptions) {
+        this.supportsOptions = supportsOptions;
     }
 
     public CustomFieldType getType() {

@@ -58,6 +58,7 @@ public class ApiDiscovery {
     public static final Map<BlackDuckPath, LinkResponse> links = new HashMap<>();
 
     public static final BlackDuckPath CODELOCATIONS_LINK = new BlackDuckPath("/api/codelocations");
+    public static final BlackDuckPath CODELOCATIONS_FILTERS_LINK = new BlackDuckPath("/api/codelocations-filters");
     public static final BlackDuckPath COMPONENTS_LINK = new BlackDuckPath("/api/components");
     public static final BlackDuckPath COMPONENTS_FILTERS_LINK = new BlackDuckPath("/api/components-filters");
     public static final BlackDuckPath CURRENT_USER_LINK = new BlackDuckPath("/api/current-user");
@@ -69,6 +70,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath HEALTH_CHECKS_LIVENESS_LINK = new BlackDuckPath("/api/health-checks/liveness");
     public static final BlackDuckPath HEALTH_CHECKS_READINESS_LINK = new BlackDuckPath("/api/health-checks/readiness");
     public static final BlackDuckPath JOB_STATISTICS_LINK = new BlackDuckPath("/api/job-statistics");
+    public static final BlackDuckPath JOBS_FILTERS_LINK = new BlackDuckPath("/api/jobs-filters");
     public static final BlackDuckPath LICENSE_FAMILIES_LINK = new BlackDuckPath("/api/license-families");
     public static final BlackDuckPath LICENSE_FAMILIES_FILTERS_LINK = new BlackDuckPath("/api/license-families-filters");
     public static final BlackDuckPath LICENSES_LINK = new BlackDuckPath("/api/licenses");
@@ -79,6 +81,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath NOTIFICATIONS_FILTERS_LINK = new BlackDuckPath("/api/notifications-filters");
     public static final BlackDuckPath POLICY_RULE_ENABLED_FILTERS_LINK = new BlackDuckPath("/api/policy-rule-enabled-filters");
     public static final BlackDuckPath POLICY_RULES_LINK = new BlackDuckPath("/api/policy-rules");
+    public static final BlackDuckPath POLICY_RULES_FILTERS_LINK = new BlackDuckPath("/api/policy-rules-filters");
     public static final BlackDuckPath PROJECTS_LINK = new BlackDuckPath("/api/projects");
     public static final BlackDuckPath REGISTRATION_LINK = new BlackDuckPath("/api/registration");
     public static final BlackDuckPath RISK_PROFILE_FILTERS_LINK = new BlackDuckPath("/api/risk-profile-filters");
@@ -87,11 +90,13 @@ public class ApiDiscovery {
     public static final BlackDuckPath USER_STATUS_FILTERS_LINK = new BlackDuckPath("/api/user-status-filters");
     public static final BlackDuckPath USERGROUPS_LINK = new BlackDuckPath("/api/usergroups");
     public static final BlackDuckPath USERS_LINK = new BlackDuckPath("/api/users");
+    public static final BlackDuckPath USERS_FILTERS_LINK = new BlackDuckPath("/api/users-filters");
     public static final BlackDuckPath VULNERABILITY_REMEDIATION_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-remediation-reports");
     public static final BlackDuckPath VULNERABILITY_STATUS_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-status-reports");
     public static final BlackDuckPath VULNERABILITY_UPDATE_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-update-reports");
 
     public static final BlackDuckPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> CODELOCATIONS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(CODELOCATIONS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
     public static final BlackDuckPathSingleResponse<FilterView> COMPONENTS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(COMPONENTS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new BlackDuckPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
@@ -103,6 +108,7 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
     public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
     public static final BlackDuckPathMultipleResponses<JobStatisticsView> JOB_STATISTICS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<JobStatisticsView>(JOB_STATISTICS_LINK, JobStatisticsView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> JOBS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(JOBS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseFamilyView>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
     public static final BlackDuckPathSingleResponse<FilterView> LICENSE_FAMILIES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSE_FAMILIES_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
@@ -113,6 +119,7 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<FilterView> NOTIFICATIONS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(NOTIFICATIONS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathSingleResponse<LegacyFilterView> POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(POLICY_RULE_ENABLED_FILTERS_LINK, LegacyFilterView.class);
     public static final BlackDuckPathMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> POLICY_RULES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(POLICY_RULES_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
     public static final BlackDuckPathSingleResponse<RegistrationView> REGISTRATION_LINK_RESPONSE = new BlackDuckPathSingleResponse<RegistrationView>(REGISTRATION_LINK, RegistrationView.class);
     public static final BlackDuckPathSingleResponse<FilterView> RISK_PROFILE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(RISK_PROFILE_FILTERS_LINK, FilterView.class);
@@ -121,12 +128,14 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<LegacyFilterView> USER_STATUS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<LegacyFilterView>(USER_STATUS_FILTERS_LINK, LegacyFilterView.class);
     public static final BlackDuckPathMultipleResponses<UserGroupView> USERGROUPS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<UserGroupView>(USERGROUPS_LINK, UserGroupView.class);
     public static final BlackDuckPathMultipleResponses<UserView> USERS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<UserView>(USERS_LINK, UserView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> USERS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(USERS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
     public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
     public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
 
     static {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
+        links.put(CODELOCATIONS_FILTERS_LINK, CODELOCATIONS_FILTERS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
         links.put(COMPONENTS_FILTERS_LINK, COMPONENTS_FILTERS_LINK_RESPONSE);
         links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
@@ -138,6 +147,7 @@ public class ApiDiscovery {
         links.put(HEALTH_CHECKS_LIVENESS_LINK, HEALTH_CHECKS_LIVENESS_LINK_RESPONSE);
         links.put(HEALTH_CHECKS_READINESS_LINK, HEALTH_CHECKS_READINESS_LINK_RESPONSE);
         links.put(JOB_STATISTICS_LINK, JOB_STATISTICS_LINK_RESPONSE);
+        links.put(JOBS_FILTERS_LINK, JOBS_FILTERS_LINK_RESPONSE);
         links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
         links.put(LICENSE_FAMILIES_FILTERS_LINK, LICENSE_FAMILIES_FILTERS_LINK_RESPONSE);
         links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
@@ -148,6 +158,7 @@ public class ApiDiscovery {
         links.put(NOTIFICATIONS_FILTERS_LINK, NOTIFICATIONS_FILTERS_LINK_RESPONSE);
         links.put(POLICY_RULE_ENABLED_FILTERS_LINK, POLICY_RULE_ENABLED_FILTERS_LINK_RESPONSE);
         links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+        links.put(POLICY_RULES_FILTERS_LINK, POLICY_RULES_FILTERS_LINK_RESPONSE);
         links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
         links.put(REGISTRATION_LINK, REGISTRATION_LINK_RESPONSE);
         links.put(RISK_PROFILE_FILTERS_LINK, RISK_PROFILE_FILTERS_LINK_RESPONSE);
@@ -156,6 +167,7 @@ public class ApiDiscovery {
         links.put(USER_STATUS_FILTERS_LINK, USER_STATUS_FILTERS_LINK_RESPONSE);
         links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
         links.put(USERS_LINK, USERS_LINK_RESPONSE);
+        links.put(USERS_FILTERS_LINK, USERS_FILTERS_LINK_RESPONSE);
         links.put(VULNERABILITY_REMEDIATION_REPORTS_LINK, VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE);
         links.put(VULNERABILITY_STATUS_REPORTS_LINK, VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE);
         links.put(VULNERABILITY_UPDATE_REPORTS_LINK, VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE);

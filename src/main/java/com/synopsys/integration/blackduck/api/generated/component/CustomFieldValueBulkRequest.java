@@ -21,23 +21,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.util.EnumUtils;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.component.CustomFieldValueBulkRequestEntry;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public enum VersionReportRequestCategoriesType {
-    ATTACHMENTS,
-    CODE_LOCATIONS,
-    COMPONENTS,
-    CRYPTO_ALGORITHMS,
-    CUSTOM_FIELDS,
-    FILES,
-    SECURITY,
-    VERSION;
+public class CustomFieldValueBulkRequest extends BlackDuckComponent {
+    private java.util.List<CustomFieldValueBulkRequestEntry> fields;
 
-    public String prettyPrint() {
-        return EnumUtils.prettyPrint(this);
+    public java.util.List<CustomFieldValueBulkRequestEntry> getFields() {
+        return fields;
+    }
+
+    public void setFields(java.util.List<CustomFieldValueBulkRequestEntry> fields) {
+        this.fields = fields;
     }
 
 }

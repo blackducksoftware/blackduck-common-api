@@ -28,8 +28,17 @@ import com.synopsys.integration.blackduck.api.generated.component.AuditEventCoun
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VersionBomStatusView extends BlackDuckComponent {
+    private String errorMessage;
     private java.util.List<AuditEventCount> eventCounts;
     private Boolean upToDate;
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
 
     public java.util.List<AuditEventCount> getEventCounts() {
         return eventCounts;
