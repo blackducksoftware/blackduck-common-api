@@ -10,7 +10,8 @@ buildscript {
 project.ext.moduleName = 'com.synopsys.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2018.12.0.10'
+version = '2019.2.0.0'
+description = 'A library of mostly generated request/response classes for the Black Duck REST API.'
 
 apply plugin: 'com.blackducksoftware.integration.library'
 
