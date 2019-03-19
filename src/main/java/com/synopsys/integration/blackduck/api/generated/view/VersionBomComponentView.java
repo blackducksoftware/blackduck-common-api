@@ -44,6 +44,7 @@ import com.synopsys.integration.blackduck.api.generated.view.MatchedFileView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
+import com.synopsys.integration.blackduck.api.generated.view.VulnerableComponentView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VersionBomComponentView extends BlackDuckView {
@@ -54,12 +55,14 @@ public class VersionBomComponentView extends BlackDuckView {
     public static final String COMMENTS_LINK = "comments";
     public static final String COMPONENT_ISSUES_LINK = "component-issues";
     public static final String VULNERABILITIES_LINK = "vulnerabilities";
+    public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
 
     public static final LinkMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
     public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
     public static final LinkMultipleResponses<UserCommentView> COMMENTS_LINK_RESPONSE = new LinkMultipleResponses<UserCommentView>(COMMENTS_LINK, UserCommentView.class);
     public static final LinkSingleResponse<IssueView> COMPONENT_ISSUES_LINK_RESPONSE = new LinkSingleResponse<IssueView>(COMPONENT_ISSUES_LINK, IssueView.class);
     public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
+    public static final LinkMultipleResponses<VulnerableComponentView> VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<VulnerableComponentView>(VULNERABLE_COMPONENTS_LINK, VulnerableComponentView.class);
 
     static {
         links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
@@ -67,6 +70,7 @@ public class VersionBomComponentView extends BlackDuckView {
         links.put(COMMENTS_LINK, COMMENTS_LINK_RESPONSE);
         links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
         links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+        links.put(VULNERABLE_COMPONENTS_LINK, VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
     private ActivityDataView activityData;
