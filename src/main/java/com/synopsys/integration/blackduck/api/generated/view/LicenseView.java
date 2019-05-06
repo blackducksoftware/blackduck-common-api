@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilySummaryView;
@@ -33,16 +34,20 @@ import com.synopsys.integration.blackduck.api.generated.component.UserSummaryVie
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseSourceType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseStatusType;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseTermAssociationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseView extends BlackDuckView {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
+    public static final String LICENSE_TERMS_LINK = "license-terms";
     public static final String TEXT_LINK = "text";
 
+    public static final LinkMultipleResponses<LicenseTermAssociationView> LICENSE_TERMS_LINK_RESPONSE = new LinkMultipleResponses<LicenseTermAssociationView>(LICENSE_TERMS_LINK, LicenseTermAssociationView.class);
     public static final LinkStringResponse TEXT_LINK_RESPONSE = new LinkStringResponse(TEXT_LINK, String.class);
 
     static {
+        links.put(LICENSE_TERMS_LINK, LICENSE_TERMS_LINK_RESPONSE);
         links.put(TEXT_LINK, TEXT_LINK_RESPONSE);
     }
 

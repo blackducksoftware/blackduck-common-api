@@ -23,17 +23,27 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.SignaturePairSignatureType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class View extends BlackDuckComponent {
-    private String contentType;
+public class SignaturePair extends BlackDuckComponent {
+    private SignaturePairSignatureType signatureType;
+    private String signatureValue;
 
-    public String getContentType() {
-        return contentType;
+    public SignaturePairSignatureType getSignatureType() {
+        return signatureType;
     }
 
-    public void setContentType(String contentType) {
-        this.contentType = contentType;
+    public void setSignatureType(SignaturePairSignatureType signatureType) {
+        this.signatureType = signatureType;
+    }
+
+    public String getSignatureValue() {
+        return signatureValue;
+    }
+
+    public void setSignatureValue(String signatureValue) {
+        this.signatureValue = signatureValue;
     }
 
 }

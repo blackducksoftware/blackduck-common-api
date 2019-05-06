@@ -23,21 +23,29 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionParameter;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionView extends BlackDuckComponent {
-    private String displayName;
+public class SourceTreeNodeView extends BlackDuckComponent {
+    private Boolean containsMatch;
+    private Boolean matched;
     private String name;
-    private String operation;
-    private PolicyRuleExpressionParameter parameters;
+    private String nodeType;
+    private java.util.List<String> scanIds;
 
-    public String getDisplayName() {
-        return displayName;
+    public Boolean getContainsMatch() {
+        return containsMatch;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setContainsMatch(Boolean containsMatch) {
+        this.containsMatch = containsMatch;
+    }
+
+    public Boolean getMatched() {
+        return matched;
+    }
+
+    public void setMatched(Boolean matched) {
+        this.matched = matched;
     }
 
     public String getName() {
@@ -48,20 +56,20 @@ public class PolicyRuleExpressionView extends BlackDuckComponent {
         this.name = name;
     }
 
-    public String getOperation() {
-        return operation;
+    public String getNodeType() {
+        return nodeType;
     }
 
-    public void setOperation(String operation) {
-        this.operation = operation;
+    public void setNodeType(String nodeType) {
+        this.nodeType = nodeType;
     }
 
-    public PolicyRuleExpressionParameter getParameters() {
-        return parameters;
+    public java.util.List<String> getScanIds() {
+        return scanIds;
     }
 
-    public void setParameters(PolicyRuleExpressionParameter parameters) {
-        this.parameters = parameters;
+    public void setScanIds(java.util.List<String> scanIds) {
+        this.scanIds = scanIds;
     }
 
 }

@@ -42,6 +42,8 @@ import com.synopsys.integration.blackduck.api.generated.view.ComponentSearchResu
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
 import com.synopsys.integration.blackduck.api.generated.view.FilterView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseTermCategoryView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
@@ -72,6 +74,10 @@ public class ApiDiscovery {
     public static final BlackDuckPath JOBS_FILTERS_LINK = new BlackDuckPath("/api/jobs-filters");
     public static final BlackDuckPath LICENSE_FAMILIES_LINK = new BlackDuckPath("/api/license-families");
     public static final BlackDuckPath LICENSE_FAMILIES_FILTERS_LINK = new BlackDuckPath("/api/license-families-filters");
+    public static final BlackDuckPath LICENSE_TERM_CATEGORIES_LINK = new BlackDuckPath("/api/license-term-categories");
+    public static final BlackDuckPath LICENSE_TERM_CATEGORIES_FILTERS_LINK = new BlackDuckPath("/api/license-term-categories-filters");
+    public static final BlackDuckPath LICENSE_TERMS_LINK = new BlackDuckPath("/api/license-terms");
+    public static final BlackDuckPath LICENSE_TERMS_FILTERS_LINK = new BlackDuckPath("/api/license-terms-filters");
     public static final BlackDuckPath LICENSES_LINK = new BlackDuckPath("/api/licenses");
     public static final BlackDuckPath LICENSES_FILTERS_LINK = new BlackDuckPath("/api/licenses-filters");
     public static final BlackDuckPath NOTIFICATION_STATE_FILTERS_LINK = new BlackDuckPath("/api/notification-state-filters");
@@ -110,6 +116,10 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<FilterView> JOBS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(JOBS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseFamilyView>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
     public static final BlackDuckPathSingleResponse<FilterView> LICENSE_FAMILIES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSE_FAMILIES_FILTERS_LINK, FilterView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermCategoryView>(LICENSE_TERM_CATEGORIES_LINK, LicenseTermCategoryView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> LICENSE_TERM_CATEGORIES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSE_TERM_CATEGORIES_FILTERS_LINK, FilterView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseTermView> LICENSE_TERMS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermView>(LICENSE_TERMS_LINK, LicenseTermView.class);
+    public static final BlackDuckPathSingleResponse<FilterView> LICENSE_TERMS_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSE_TERMS_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
     public static final BlackDuckPathSingleResponse<FilterView> LICENSES_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(LICENSES_FILTERS_LINK, FilterView.class);
     public static final BlackDuckPathSingleResponse<FilterView> NOTIFICATION_STATE_FILTERS_LINK_RESPONSE = new BlackDuckPathSingleResponse<FilterView>(NOTIFICATION_STATE_FILTERS_LINK, FilterView.class);
@@ -149,6 +159,10 @@ public class ApiDiscovery {
         links.put(JOBS_FILTERS_LINK, JOBS_FILTERS_LINK_RESPONSE);
         links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
         links.put(LICENSE_FAMILIES_FILTERS_LINK, LICENSE_FAMILIES_FILTERS_LINK_RESPONSE);
+        links.put(LICENSE_TERM_CATEGORIES_LINK, LICENSE_TERM_CATEGORIES_LINK_RESPONSE);
+        links.put(LICENSE_TERM_CATEGORIES_FILTERS_LINK, LICENSE_TERM_CATEGORIES_FILTERS_LINK_RESPONSE);
+        links.put(LICENSE_TERMS_LINK, LICENSE_TERMS_LINK_RESPONSE);
+        links.put(LICENSE_TERMS_FILTERS_LINK, LICENSE_TERMS_FILTERS_LINK_RESPONSE);
         links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
         links.put(LICENSES_FILTERS_LINK, LICENSES_FILTERS_LINK_RESPONSE);
         links.put(NOTIFICATION_STATE_FILTERS_LINK, NOTIFICATION_STATE_FILTERS_LINK_RESPONSE);

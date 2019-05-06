@@ -23,45 +23,28 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionParameter;
+import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleViolationView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.PolicySummaryStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionView extends BlackDuckComponent {
-    private String displayName;
-    private String name;
-    private String operation;
-    private PolicyRuleExpressionParameter parameters;
+public class BomPolicyRuleView extends BlackDuckComponent {
+    private PolicySummaryStatusType approvalStatus;
+    private java.util.List<PolicyRuleViolationView> policyRuleViolationViews;
 
-    public String getDisplayName() {
-        return displayName;
+    public PolicySummaryStatusType getApprovalStatus() {
+        return approvalStatus;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setApprovalStatus(PolicySummaryStatusType approvalStatus) {
+        this.approvalStatus = approvalStatus;
     }
 
-    public String getName() {
-        return name;
+    public java.util.List<PolicyRuleViolationView> getPolicyRuleViolationViews() {
+        return policyRuleViolationViews;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOperation() {
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
-
-    public PolicyRuleExpressionParameter getParameters() {
-        return parameters;
-    }
-
-    public void setParameters(PolicyRuleExpressionParameter parameters) {
-        this.parameters = parameters;
+    public void setPolicyRuleViolationViews(java.util.List<PolicyRuleViolationView> policyRuleViolationViews) {
+        this.policyRuleViolationViews = policyRuleViolationViews;
     }
 
 }

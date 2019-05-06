@@ -23,21 +23,19 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionParameter;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionView extends BlackDuckComponent {
-    private String displayName;
+public class UserSummary extends BlackDuckComponent {
+    private String comment;
     private String name;
-    private String operation;
-    private PolicyRuleExpressionParameter parameters;
+    private String user;
 
-    public String getDisplayName() {
-        return displayName;
+    public String getComment() {
+        return comment;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public String getName() {
@@ -48,20 +46,12 @@ public class PolicyRuleExpressionView extends BlackDuckComponent {
         this.name = name;
     }
 
-    public String getOperation() {
-        return operation;
+    public String getUser() {
+        return user;
     }
 
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
-
-    public PolicyRuleExpressionParameter getParameters() {
-        return parameters;
-    }
-
-    public void setParameters(PolicyRuleExpressionParameter parameters) {
-        this.parameters = parameters;
+    public void setUser(String user) {
+        this.user = user;
     }
 
 }
