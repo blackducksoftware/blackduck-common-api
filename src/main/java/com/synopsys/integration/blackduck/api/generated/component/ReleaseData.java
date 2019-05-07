@@ -20,17 +20,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.util.EnumUtils;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.component.Version;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public enum LicenseFamilySourceType {
-    CUSTOM,
-    KB;
+public class ReleaseData extends BlackDuckComponent {
+    private String id;
+    private Version version;
 
-    public String prettyPrint() {
-        return EnumUtils.prettyPrint(this);
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Version getVersion() {
+        return version;
+    }
+
+    public void setVersion(Version version) {
+        this.version = version;
     }
 
 }

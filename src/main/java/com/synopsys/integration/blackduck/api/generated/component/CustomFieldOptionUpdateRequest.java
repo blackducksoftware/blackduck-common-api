@@ -20,16 +20,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.component.FilterValueView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class FilterView extends BlackDuckView {
+public class CustomFieldOptionUpdateRequest extends BlackDuckComponent {
     private String label;
-    private String name;
-    private java.util.List<FilterValueView> values;
+    private String option;
+    private Integer position;
 
     public String getLabel() {
         return label;
@@ -39,20 +38,20 @@ public class FilterView extends BlackDuckView {
         this.label = label;
     }
 
-    public String getName() {
-        return name;
+    public String getOption() {
+        return option;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOption(String option) {
+        this.option = option;
     }
 
-    public java.util.List<FilterValueView> getValues() {
-        return values;
+    public Integer getPosition() {
+        return position;
     }
 
-    public void setValues(java.util.List<FilterValueView> values) {
-        this.values = values;
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
 }

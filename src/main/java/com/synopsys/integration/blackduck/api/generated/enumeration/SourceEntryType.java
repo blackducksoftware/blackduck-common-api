@@ -20,39 +20,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.enumeration;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseObligationResponsibilityType;
+import com.synopsys.integration.util.EnumUtils;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class LicenseObligationView extends BlackDuckComponent {
-    private String description;
-    private String name;
-    private LicenseObligationResponsibilityType responsibility;
+public enum SourceEntryType {
+    ARCHIVE,
+    DECLARED_COMPONENT,
+    DIRECTORY,
+    FILE,
+    PLACEHOLDER,
+    UNKNOWN;
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public LicenseObligationResponsibilityType getResponsibility() {
-        return responsibility;
-    }
-
-    public void setResponsibility(LicenseObligationResponsibilityType responsibility) {
-        this.responsibility = responsibility;
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
     }
 
 }

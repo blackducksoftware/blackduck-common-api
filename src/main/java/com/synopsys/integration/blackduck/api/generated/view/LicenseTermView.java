@@ -22,21 +22,48 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyRiskRuleView;
+import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.LinkResponse;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseTermCategorySummaryView;
 import com.synopsys.integration.blackduck.api.generated.component.UserSummaryView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermResponsibilityType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermSourceType;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseTermAssociationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class LicenseFamilyView extends BlackDuckView {
+public class LicenseTermView extends BlackDuckView {
+    public static final Map<String, LinkResponse> links = new HashMap<>();
+
+    public static final String LICENSE_TERM_LICENSES_LINK = "license-term-licenses";
+
+    public static final LinkMultipleResponses<LicenseTermAssociationView> LICENSE_TERM_LICENSES_LINK_RESPONSE = new LinkMultipleResponses<LicenseTermAssociationView>(LICENSE_TERM_LICENSES_LINK, LicenseTermAssociationView.class);
+
+    static {
+        links.put(LICENSE_TERM_LICENSES_LINK, LICENSE_TERM_LICENSES_LINK_RESPONSE);
+    }
+
+    private LicenseTermCategorySummaryView category;
     private java.util.Date createdAt;
     private UserSummaryView createdBy;
+    private Boolean deprecated;
     private String description;
-    private java.util.List<LicenseFamilyRiskRuleView> licenseFamilyRiskRules;
     private String name;
+    private LicenseTermResponsibilityType responsibility;
     private LicenseTermSourceType source;
     private java.util.Date updatedAt;
     private UserSummaryView updatedBy;
+
+    public LicenseTermCategorySummaryView getCategory() {
+        return category;
+    }
+
+    public void setCategory(LicenseTermCategorySummaryView category) {
+        this.category = category;
+    }
 
     public java.util.Date getCreatedAt() {
         return createdAt;
@@ -54,6 +81,14 @@ public class LicenseFamilyView extends BlackDuckView {
         this.createdBy = createdBy;
     }
 
+    public Boolean getDeprecated() {
+        return deprecated;
+    }
+
+    public void setDeprecated(Boolean deprecated) {
+        this.deprecated = deprecated;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -62,20 +97,20 @@ public class LicenseFamilyView extends BlackDuckView {
         this.description = description;
     }
 
-    public java.util.List<LicenseFamilyRiskRuleView> getLicenseFamilyRiskRules() {
-        return licenseFamilyRiskRules;
-    }
-
-    public void setLicenseFamilyRiskRules(java.util.List<LicenseFamilyRiskRuleView> licenseFamilyRiskRules) {
-        this.licenseFamilyRiskRules = licenseFamilyRiskRules;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LicenseTermResponsibilityType getResponsibility() {
+        return responsibility;
+    }
+
+    public void setResponsibility(LicenseTermResponsibilityType responsibility) {
+        this.responsibility = responsibility;
     }
 
     public LicenseTermSourceType getSource() {
