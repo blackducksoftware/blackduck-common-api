@@ -3,9 +3,8 @@ package com.synopsys.integration.blackduck.api.core;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import org.junit.jupiter.api.Test;
-
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import org.junit.jupiter.api.Test;
 
 public class LinkResponseTest {
     @Test

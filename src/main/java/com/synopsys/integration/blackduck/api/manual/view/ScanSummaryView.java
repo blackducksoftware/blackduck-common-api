@@ -22,14 +22,14 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
+import com.synopsys.integration.blackduck.api.manual.enumeration.ScanSummaryStatusType;
+
 import java.lang.reflect.Type;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.manual.enumeration.ScanSummaryStatusType;
 
 public class ScanSummaryView extends BlackDuckView {
     public static final Map<String, Type> links = new HashMap<>();

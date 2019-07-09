@@ -20,14 +20,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionSetView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicySummaryStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class VersionBomPolicyRuleView extends BlackDuckComponent {
+public class VersionBomPolicyRuleView extends BlackDuckView {
     private java.util.Date createdAt;
     private String createdBy;
     private String createdByUser;
