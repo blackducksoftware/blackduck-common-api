@@ -22,42 +22,35 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
-public class VersionBomCodeLocationBomComputedNotificationContent extends NotificationContentComponent {
-    private String projectVersion;
-    private String codeLocation;
-    private String scanSummary;
-    private String snippetScanSummary;
+import com.synopsys.integration.blackduck.api.manual.enumeration.OperationType;
 
-    public String getProjectVersion() {
-        return projectVersion;
+public class ProjectNotificationContent extends NotificationContentComponent {
+    private String project;
+    private String projectName;
+    private OperationType operationType;
+
+    public String getProject() {
+        return project;
     }
 
-    public void setProjectVersion(String projectVersion) {
-        this.projectVersion = projectVersion;
+    public void setProject(String project) {
+        this.project = project;
     }
 
-    public String getCodeLocation() {
-        return codeLocation;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setCodeLocation(String codeLocation) {
-        this.codeLocation = codeLocation;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
-    public String getScanSummary() {
-        return scanSummary;
+    public OperationType getOperationType() {
+        return operationType;
     }
 
-    public void setScanSummary(String scanSummary) {
-        this.scanSummary = scanSummary;
-    }
-
-    public String getSnippetScanSummary() {
-        return snippetScanSummary;
-    }
-
-    public void setSnippetScanSummary(String snippetScanSummary) {
-        this.snippetScanSummary = snippetScanSummary;
+    public void setOperationType(OperationType operationType) {
+        this.operationType = operationType;
     }
 
 }
