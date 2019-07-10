@@ -48,6 +48,10 @@ public class NotificationView extends BlackDuckView implements NotificationViewD
                 return LicenseLimitNotificationView.class;
             case POLICY_OVERRIDE:
                 return PolicyOverrideNotificationView.class;
+            case PROJECT:
+                return ProjectNotificationView.class;
+            case PROJECT_VERSION:
+                return ProjectVersionNotificationView.class;
             case RULE_VIOLATION_CLEARED:
                 return RuleViolationClearedNotificationView.class;
             case RULE_VIOLATION:
