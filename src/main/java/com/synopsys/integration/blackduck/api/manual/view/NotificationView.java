@@ -22,12 +22,12 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import java.util.Date;
-
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
 import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
+
+import java.util.Date;
 
 public class NotificationView extends BlackDuckView implements NotificationViewData {
     private String contentType;
@@ -42,22 +42,22 @@ public class NotificationView extends BlackDuckView implements NotificationViewD
     @Override
     public Class<? extends BlackDuckResponse> getSubclass() {
         switch (type) {
-        case BOM_EDIT:
-            return BomEditNotificationView.class;
-        case LICENSE_LIMIT:
-            return LicenseLimitNotificationView.class;
-        case POLICY_OVERRIDE:
-            return PolicyOverrideNotificationView.class;
-        case RULE_VIOLATION_CLEARED:
-            return RuleViolationClearedNotificationView.class;
-        case RULE_VIOLATION:
-            return RuleViolationNotificationView.class;
-        case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
-            return VersionBomCodeLocationBomComputedNotificationView.class;
-        case VULNERABILITY:
-            return VulnerabilityNotificationView.class;
-        default:
-            return NotificationView.class;
+            case BOM_EDIT:
+                return BomEditNotificationView.class;
+            case LICENSE_LIMIT:
+                return LicenseLimitNotificationView.class;
+            case POLICY_OVERRIDE:
+                return PolicyOverrideNotificationView.class;
+            case RULE_VIOLATION_CLEARED:
+                return RuleViolationClearedNotificationView.class;
+            case RULE_VIOLATION:
+                return RuleViolationNotificationView.class;
+            case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
+                return VersionBomCodeLocationBomComputedNotificationView.class;
+            case VULNERABILITY:
+                return VulnerabilityNotificationView.class;
+            default:
+                return NotificationView.class;
         }
     }
 

@@ -26,11 +26,20 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class RiskPriorityDistribution extends BlackDuckComponent {
+    private Integer CRITICAL;
     private Integer HIGH;
     private Integer LOW;
     private Integer MEDIUM;
     private Integer OK;
     private Integer UNKNOWN;
+
+    public Integer getCRITICAL() {
+        return CRITICAL;
+    }
+
+    public void setCRITICAL(Integer CRITICAL) {
+        this.CRITICAL = CRITICAL;
+    }
 
     public Integer getHIGH() {
         return HIGH;

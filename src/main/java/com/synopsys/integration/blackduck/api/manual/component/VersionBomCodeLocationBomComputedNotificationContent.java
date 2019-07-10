@@ -26,6 +26,7 @@ public class VersionBomCodeLocationBomComputedNotificationContent extends Notifi
     private String projectVersion;
     private String codeLocation;
     private String scanSummary;
+    private String snippetScanSummary;
 
     public String getProjectVersion() {
         return projectVersion;
@@ -49,6 +50,14 @@ public class VersionBomCodeLocationBomComputedNotificationContent extends Notifi
 
     public void setScanSummary(String scanSummary) {
         this.scanSummary = scanSummary;
+    }
+
+    public String getSnippetScanSummary() {
+        return snippetScanSummary;
+    }
+
+    public void setSnippetScanSummary(String snippetScanSummary) {
+        this.snippetScanSummary = snippetScanSummary;
     }
 
 }

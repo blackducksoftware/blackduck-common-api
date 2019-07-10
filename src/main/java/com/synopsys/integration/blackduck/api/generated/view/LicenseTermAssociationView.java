@@ -52,6 +52,7 @@ public class LicenseTermAssociationView extends BlackDuckView {
     private Boolean deactivated;
     private Boolean deprecated;
     private String description;
+    private Boolean fulfillmentRequired;
     private String name;
     private LicenseTermResponsibilityType responsibility;
 
@@ -85,6 +86,14 @@ public class LicenseTermAssociationView extends BlackDuckView {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Boolean getFulfillmentRequired() {
+        return fulfillmentRequired;
+    }
+
+    public void setFulfillmentRequired(Boolean fulfillmentRequired) {
+        this.fulfillmentRequired = fulfillmentRequired;
     }
 
     public String getName() {

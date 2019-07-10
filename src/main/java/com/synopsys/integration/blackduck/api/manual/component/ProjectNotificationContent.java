@@ -20,29 +20,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.manual.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.manual.enumeration.OperationType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionValue extends BlackDuckComponent {
-    private String label;
-    private String value;
+public class ProjectNotificationContent extends NotificationContentComponent {
+    private String project;
+    private String projectName;
+    private OperationType operationType;
 
-    public String getLabel() {
-        return label;
+    public String getProject() {
+        return project;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    public void setProject(String project) {
+        this.project = project;
     }
 
-    public String getValue() {
-        return value;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public OperationType getOperationType() {
+        return operationType;
+    }
+
+    public void setOperationType(OperationType operationType) {
+        this.operationType = operationType;
     }
 
 }

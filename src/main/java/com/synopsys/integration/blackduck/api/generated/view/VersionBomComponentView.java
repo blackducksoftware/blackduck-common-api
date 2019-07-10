@@ -40,8 +40,8 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.VersionBomCo
 import com.synopsys.integration.blackduck.api.generated.response.UserCommentView;
 import com.synopsys.integration.blackduck.api.generated.view.IssueView;
 import com.synopsys.integration.blackduck.api.generated.view.MatchedFileView;
-import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
+import com.synopsys.integration.blackduck.api.generated.view.VersionBomPolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerableComponentView;
 
@@ -56,7 +56,7 @@ public class VersionBomComponentView extends BlackDuckView {
     public static final String VULNERABILITIES_LINK = "vulnerabilities";
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
 
-    public static final LinkMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final LinkMultipleResponses<VersionBomPolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<VersionBomPolicyRuleView>(POLICY_RULES_LINK, VersionBomPolicyRuleView.class);
     public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
     public static final LinkMultipleResponses<UserCommentView> COMMENTS_LINK_RESPONSE = new LinkMultipleResponses<UserCommentView>(COMMENTS_LINK, UserCommentView.class);
     public static final LinkSingleResponse<IssueView> COMPONENT_ISSUES_LINK_RESPONSE = new LinkSingleResponse<IssueView>(COMPONENT_ISSUES_LINK, IssueView.class);

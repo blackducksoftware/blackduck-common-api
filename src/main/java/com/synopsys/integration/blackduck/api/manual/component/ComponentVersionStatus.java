@@ -22,9 +22,9 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
-import java.util.List;
-
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+
+import java.util.List;
 
 public class ComponentVersionStatus extends BlackDuckComponent {
     private String componentName;

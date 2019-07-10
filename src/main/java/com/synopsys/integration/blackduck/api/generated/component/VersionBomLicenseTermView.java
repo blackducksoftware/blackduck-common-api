@@ -23,28 +23,46 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpression;
-import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleExpressionSetOperatorType;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseTermCategorySummaryView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermResponsibilityType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicyRuleExpressionSet extends BlackDuckComponent {
-    private java.util.List<PolicyRuleExpression> expressions;
-    private PolicyRuleExpressionSetOperatorType operator;
+public class VersionBomLicenseTermView extends BlackDuckComponent {
+    private LicenseTermCategorySummaryView category;
+    private Boolean fulfilled;
+    private String name;
+    private LicenseTermResponsibilityType responsibility;
 
-    public java.util.List<PolicyRuleExpression> getExpressions() {
-        return expressions;
+    public LicenseTermCategorySummaryView getCategory() {
+        return category;
     }
 
-    public void setExpressions(java.util.List<PolicyRuleExpression> expressions) {
-        this.expressions = expressions;
+    public void setCategory(LicenseTermCategorySummaryView category) {
+        this.category = category;
     }
 
-    public PolicyRuleExpressionSetOperatorType getOperator() {
-        return operator;
+    public Boolean getFulfilled() {
+        return fulfilled;
     }
 
-    public void setOperator(PolicyRuleExpressionSetOperatorType operator) {
-        this.operator = operator;
+    public void setFulfilled(Boolean fulfilled) {
+        this.fulfilled = fulfilled;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LicenseTermResponsibilityType getResponsibility() {
+        return responsibility;
+    }
+
+    public void setResponsibility(LicenseTermResponsibilityType responsibility) {
+        this.responsibility = responsibility;
     }
 
 }

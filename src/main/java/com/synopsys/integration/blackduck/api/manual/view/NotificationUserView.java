@@ -22,10 +22,6 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
@@ -33,6 +29,10 @@ import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationStateRequestStateType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
 import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NotificationUserView extends BlackDuckView implements NotificationViewData {
     public static final Map<String, LinkResponse> links = new HashMap<>();

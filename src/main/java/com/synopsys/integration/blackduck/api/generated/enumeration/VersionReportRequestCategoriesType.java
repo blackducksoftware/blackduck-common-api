@@ -32,6 +32,7 @@ public enum VersionReportRequestCategoriesType {
     CRYPTO_ALGORITHMS,
     CUSTOM_FIELDS,
     FILES,
+    LICENSE_TERM_FULFILLMENT,
     SECURITY,
     VERSION;
 
