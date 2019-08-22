@@ -22,7 +22,7 @@
  */
 package com.synopsys.integration.blackduck.api.manual.contract;
 
-import com.synopsys.integration.blackduck.api.generated.enumeration.NotificationType;
+import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
 
 public interface NotificationViewData {
     String getContentType();
