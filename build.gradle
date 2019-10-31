@@ -3,13 +3,13 @@ buildscript {
         mavenCentral()
         maven { url 'https://plugins.gradle.org/m2/' }
     }
-    dependencies { classpath 'com.blackducksoftware.integration:common-gradle-plugin:0.0.+' }
+    dependencies { classpath 'com.blackducksoftware.integration:common-gradle-plugin:0.0.73' }
 }
 
 project.ext.moduleName = 'com.synopsys.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2019.6.0.3-SNAPSHOT'
+version = '2019.6.0.3'
 description = 'A library of mostly generated request/response classes for the Black Duck REST API.'
 
 apply plugin: 'com.blackducksoftware.integration.library'
