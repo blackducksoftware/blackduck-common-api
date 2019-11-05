@@ -22,20 +22,25 @@
  */
 package com.synopsys.integration.blackduck.api.manual.throwaway.generated.component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.PolicyRuleExpressionView;
+import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsParametersView;
+import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsView;
+import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.PolicyRuleExpressionSetOperatorType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleExpressionSetView extends BlackDuckComponent {
-    private java.util.List<PolicyRuleExpressionView> expressions;
+    private java.util.List<PolicyRuleExpressionExpressionsView> expressions;
     private PolicyRuleExpressionSetOperatorType operator;
 
-    public java.util.List<PolicyRuleExpressionView> getExpressions() {
+    public java.util.List<PolicyRuleExpressionExpressionsView> getExpressions() {
         return expressions;
     }
 
-    public void setExpressions(java.util.List<PolicyRuleExpressionView> expressions) {
+    public void setExpressions(java.util.List<PolicyRuleExpressionExpressionsView> expressions) {
         this.expressions = expressions;
     }
 
@@ -45,6 +50,36 @@ public class PolicyRuleExpressionSetView extends BlackDuckComponent {
 
     public void setOperator(PolicyRuleExpressionSetOperatorType operator) {
         this.operator = operator;
+    }
+
+    // Method to build a PolicyRuleViewExpression from a PolicyRuleExpressionSetView
+    public PolicyRuleExpressionView buildPolicyRuleViewExpression() {
+        PolicyRuleExpressionView policyRuleExpressionView = new PolicyRuleExpressionView();
+
+        // String operator
+        policyRuleExpressionView.setOperator(operator.toString());
+
+        // List<PolicyRuleExpressionExpressionsView> expressions
+        List<PolicyRuleExpressionExpressionsView> expressionList = new ArrayList<>();
+        PolicyRuleExpressionExpressionsView policyRuleExpressionExpressionsView = new PolicyRuleExpressionExpressionsView();
+        PolicyRuleExpressionExpressionsView policyRuleExpressionExpressionsViewDataSource = expressions.get(0);
+
+            // String name
+        policyRuleExpressionExpressionsView.setName(policyRuleExpressionExpressionsViewDataSource.getName());
+            // String operation
+        policyRuleExpressionExpressionsView.setOperation(policyRuleExpressionExpressionsViewDataSource.getOperation());
+            // PolicyRuleExpressionParameter parameters
+        PolicyRuleExpressionExpressionsParametersView policyRuleExpressionExpressionParametersView = new PolicyRuleExpressionExpressionsParametersView();
+        PolicyRuleExpressionExpressionsParametersView policyRuleExpressionExpressionsParametersViewDataSource = policyRuleExpressionExpressionsViewDataSource.getParameters();
+
+            // java.util.List<String> values
+        policyRuleExpressionExpressionParametersView.setValues(policyRuleExpressionExpressionsParametersViewDataSource.getValues());
+        policyRuleExpressionExpressionsView.setParameters(policyRuleExpressionExpressionParametersView);
+
+        expressionList.add(policyRuleExpressionExpressionsView);
+        policyRuleExpressionView.setExpressions(expressionList);
+
+        return policyRuleExpressionView;
     }
 
 }

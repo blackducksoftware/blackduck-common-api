@@ -24,13 +24,13 @@ package com.synopsys.integration.blackduck.api.manual.throwaway.generated.compon
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.ComplexLicenseRequest;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ProjectVersionDistributionType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ProjectVersionPhaseType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionRequest extends BlackDuckComponent {
     private String cloneFromReleaseUrl;
-    private ProjectVersionDistributionType distribution;
+    private LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType distribution;
     private ComplexLicenseRequest license;
     private String nickname;
     private ProjectVersionPhaseType phase;
@@ -46,11 +46,11 @@ public class ProjectVersionRequest extends BlackDuckComponent {
         this.cloneFromReleaseUrl = cloneFromReleaseUrl;
     }
 
-    public ProjectVersionDistributionType getDistribution() {
+    public LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType getDistribution() {
         return distribution;
     }
 
-    public void setDistribution(ProjectVersionDistributionType distribution) {
+    public void setDistribution(LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType distribution) {
         this.distribution = distribution;
     }
 

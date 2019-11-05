@@ -109,4 +109,8 @@ public class BlackDuckView extends BlackDuckResponse {
         return Optional.of(_meta.getHref());
     }
 
+    public String getMediaType() {
+        return "application/json";
+    }
+
 }

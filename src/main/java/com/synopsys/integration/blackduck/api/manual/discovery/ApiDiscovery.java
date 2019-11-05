@@ -29,12 +29,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
 import com.synopsys.integration.blackduck.api.core.BlackDuckPathMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.BlackDuckPathSingleResponse;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
-import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
-import com.synopsys.integration.blackduck.api.generated.view.RoleView;
-import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
-import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.ComponentSearchResult;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.CurrentVersionView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.CustomFieldTypeView;
@@ -42,14 +36,20 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.respons
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.EndUserLicenseAgreementView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.HealthCheckStatusView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.JobStatisticsView;
+import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ComponentSearchResultView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.CustomFieldObjectView;
+import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.RegistrationView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
+import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ReportView;
+import com.synopsys.integration.blackduck.api.generated.view.RoleView;
+import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
+import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

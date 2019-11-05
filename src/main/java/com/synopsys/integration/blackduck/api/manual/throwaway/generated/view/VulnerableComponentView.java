@@ -28,8 +28,8 @@ import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
-import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
-import com.synopsys.integration.blackduck.api.manual.temporary.MatchedFileView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerabilityView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.MatchedFileView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VulnerableComponentView extends BlackDuckView {

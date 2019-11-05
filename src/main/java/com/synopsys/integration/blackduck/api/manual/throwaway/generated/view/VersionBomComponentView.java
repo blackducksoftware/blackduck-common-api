@@ -38,9 +38,9 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumera
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentMatchType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.UserCommentView;
-import com.synopsys.integration.blackduck.api.generated.view.IssueView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.IssueView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VersionBomPolicyRuleView;
-import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerableComponentView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.MatchedFileView;
 
