@@ -4,6 +4,7 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 import java.util.List;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.NameValuePairView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 
@@ -11,18 +12,10 @@ import java.util.Optional;
 public class ProjectVersionPolicyStatusViewV5 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
-    private String overallStatus;
     private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
     private String updatedAt;
     private java.util.List<NameValuePairView> componentVersionStatusCounts;
-
-    public String getOverallStatus() {
-	return overallStatus;
-    }
-
-    public void setOverallStatus(String overallStatus) {
-	this.overallStatus = overallStatus;
-    }
+    private PolicyStatusType overallStatus;
 
     public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
 	return componentVersionPolicyViolationDetails;
@@ -46,6 +39,14 @@ public class ProjectVersionPolicyStatusViewV5 extends BlackDuckView {
 
     public void setComponentVersionStatusCounts(java.util.List<NameValuePairView> componentVersionStatusCounts) {
 	this.componentVersionStatusCounts = componentVersionStatusCounts;
+    }
+
+    public PolicyStatusType getOverallStatus() {
+	return overallStatus;
+    }
+
+    public void setOverallStatus(PolicyStatusType overallStatus) {
+	this.overallStatus = overallStatus;
     }
 
 

@@ -29,17 +29,17 @@ public class ProjectVersionComponentViewV5 extends BlackDuckView {
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
         public static final String POLICY_RULES_LINK = "policy-rules";
-        public static final String MATCHED_FILES_LINK = "matched-files";
         public static final String ORIGINS_LINK = "origins";
+        public static final String MATCHED_FILES_LINK = "matched-files";
 
 	public static final LinkMultipleResponses<VersionBomPolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<VersionBomPolicyRuleView>(POLICY_RULES_LINK, VersionBomPolicyRuleView.class);
-	public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+	public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
 
     static {
 	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
-	links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
 	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+	links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
     }
 
     private Boolean inAttributionReport;

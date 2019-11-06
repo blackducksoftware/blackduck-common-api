@@ -4,6 +4,7 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 import java.util.List;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.NameValuePairView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 
@@ -12,9 +13,9 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
-    private String overallStatus;
     private String updatedAt;
     private java.util.List<NameValuePairView> componentVersionStatusCounts;
+    private PolicyStatusType overallStatus;
 
     public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
 	return componentVersionPolicyViolationDetails;
@@ -22,14 +23,6 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 
     public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
 	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
-    }
-
-    public String getOverallStatus() {
-	return overallStatus;
-    }
-
-    public void setOverallStatus(String overallStatus) {
-	this.overallStatus = overallStatus;
     }
 
     public String getUpdatedAt() {
@@ -46,6 +39,14 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 
     public void setComponentVersionStatusCounts(java.util.List<NameValuePairView> componentVersionStatusCounts) {
 	this.componentVersionStatusCounts = componentVersionStatusCounts;
+    }
+
+    public PolicyStatusType getOverallStatus() {
+	return overallStatus;
+    }
+
+    public void setOverallStatus(PolicyStatusType overallStatus) {
+	this.overallStatus = overallStatus;
     }
 
 
