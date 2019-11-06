@@ -10,7 +10,7 @@ import java.util.Optional;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CustomFieldViewV5 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
+	public static final String mediaType = "application/vnd.blackducksoftware.project-detail-5+json";
 
     private String label;
     private java.util.List<String> values;

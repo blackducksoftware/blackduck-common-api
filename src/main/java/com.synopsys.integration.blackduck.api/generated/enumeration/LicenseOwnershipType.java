@@ -8,7 +8,7 @@ public enum LicenseOwnershipType {
 	PROPRIETARY,
 	UNKNOWN;
 
-	private String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
+	private String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
 	public String getMediaType() {
 	return mediaType;

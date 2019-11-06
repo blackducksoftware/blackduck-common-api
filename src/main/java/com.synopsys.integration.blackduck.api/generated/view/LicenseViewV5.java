@@ -3,13 +3,17 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseSourceType;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseStatusType;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseUpdatedByView;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseStatusUpdatedByView;
+import com.synopsys.integration.blackduck.api.generated.component.LicenseCreatedByView;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -28,9 +32,17 @@ public class LicenseViewV5 extends BlackDuckView {
     private String name;
     private String expirationDate;
     private String notes;
+    private LicenseLicenseSourceType licenseSource;
+    private String statusUpdatedAt;
+    private LicenseUpdatedByView updatedBy;
+    private String updatedAt;
+    private String createdAt;
+    private LicenseOwnershipType ownership;
+    private String spdxId;
+    private LicenseCreatedByView createdBy;
     private LicenseLicenseStatusType licenseStatus;
     private LicenseLicenseFamilyView licenseFamily;
-    private LicenseLicenseSourceType licenseSource;
+    private LicenseStatusUpdatedByView statusUpdatedBy;
 
     public String getName() {
 	return name;
@@ -56,6 +68,70 @@ public class LicenseViewV5 extends BlackDuckView {
 	this.notes = notes;
     }
 
+    public LicenseLicenseSourceType getLicenseSource() {
+	return licenseSource;
+    }
+
+    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
+	this.licenseSource = licenseSource;
+    }
+
+    public String getStatusUpdatedAt() {
+	return statusUpdatedAt;
+    }
+
+    public void setStatusUpdatedAt(String statusUpdatedAt) {
+	this.statusUpdatedAt = statusUpdatedAt;
+    }
+
+    public LicenseUpdatedByView getUpdatedBy() {
+	return updatedBy;
+    }
+
+    public void setUpdatedBy(LicenseUpdatedByView updatedBy) {
+	this.updatedBy = updatedBy;
+    }
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public String getCreatedAt() {
+	return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+	this.createdAt = createdAt;
+    }
+
+    public LicenseOwnershipType getOwnership() {
+	return ownership;
+    }
+
+    public void setOwnership(LicenseOwnershipType ownership) {
+	this.ownership = ownership;
+    }
+
+    public String getSpdxId() {
+	return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+	this.spdxId = spdxId;
+    }
+
+    public LicenseCreatedByView getCreatedBy() {
+	return createdBy;
+    }
+
+    public void setCreatedBy(LicenseCreatedByView createdBy) {
+	this.createdBy = createdBy;
+    }
+
     public LicenseLicenseStatusType getLicenseStatus() {
 	return licenseStatus;
     }
@@ -72,12 +148,12 @@ public class LicenseViewV5 extends BlackDuckView {
 	this.licenseFamily = licenseFamily;
     }
 
-    public LicenseLicenseSourceType getLicenseSource() {
-	return licenseSource;
+    public LicenseStatusUpdatedByView getStatusUpdatedBy() {
+	return statusUpdatedBy;
     }
 
-    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
-	this.licenseSource = licenseSource;
+    public void setStatusUpdatedBy(LicenseStatusUpdatedByView statusUpdatedBy) {
+	this.statusUpdatedBy = statusUpdatedBy;
     }
 
 

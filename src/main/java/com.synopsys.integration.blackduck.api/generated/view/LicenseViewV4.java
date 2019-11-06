@@ -10,6 +10,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseStatusType;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -26,11 +27,22 @@ public class LicenseViewV4 extends BlackDuckView {
     }
 
     private String name;
+    private String expirationDate;
+    private String notes;
+    private String createdBy;
+    private String createdByUser;
+    private LicenseLicenseSourceType licenseSource;
+    private String statusUpdatedAt;
+    private String statusUpdatedBy;
+    private String updatedByUser;
+    private String updatedAt;
+    private String createdAt;
+    private String statusUpdatedByUser;
     private LicenseOwnershipType ownership;
+    private String spdxId;
     private LicenseCodeSharingType codeSharing;
     private LicenseLicenseStatusType licenseStatus;
-    private String spdxId;
-    private LicenseLicenseSourceType licenseSource;
+    private String updatedBy;
 
     public String getName() {
 	return name;
@@ -40,12 +52,108 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.name = name;
     }
 
+    public String getExpirationDate() {
+	return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+	this.expirationDate = expirationDate;
+    }
+
+    public String getNotes() {
+	return notes;
+    }
+
+    public void setNotes(String notes) {
+	this.notes = notes;
+    }
+
+    public String getCreatedBy() {
+	return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+	this.createdBy = createdBy;
+    }
+
+    public String getCreatedByUser() {
+	return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+	this.createdByUser = createdByUser;
+    }
+
+    public LicenseLicenseSourceType getLicenseSource() {
+	return licenseSource;
+    }
+
+    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
+	this.licenseSource = licenseSource;
+    }
+
+    public String getStatusUpdatedAt() {
+	return statusUpdatedAt;
+    }
+
+    public void setStatusUpdatedAt(String statusUpdatedAt) {
+	this.statusUpdatedAt = statusUpdatedAt;
+    }
+
+    public String getStatusUpdatedBy() {
+	return statusUpdatedBy;
+    }
+
+    public void setStatusUpdatedBy(String statusUpdatedBy) {
+	this.statusUpdatedBy = statusUpdatedBy;
+    }
+
+    public String getUpdatedByUser() {
+	return updatedByUser;
+    }
+
+    public void setUpdatedByUser(String updatedByUser) {
+	this.updatedByUser = updatedByUser;
+    }
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public String getCreatedAt() {
+	return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+	this.createdAt = createdAt;
+    }
+
+    public String getStatusUpdatedByUser() {
+	return statusUpdatedByUser;
+    }
+
+    public void setStatusUpdatedByUser(String statusUpdatedByUser) {
+	this.statusUpdatedByUser = statusUpdatedByUser;
+    }
+
     public LicenseOwnershipType getOwnership() {
 	return ownership;
     }
 
     public void setOwnership(LicenseOwnershipType ownership) {
 	this.ownership = ownership;
+    }
+
+    public String getSpdxId() {
+	return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+	this.spdxId = spdxId;
     }
 
     public LicenseCodeSharingType getCodeSharing() {
@@ -64,20 +172,12 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.licenseStatus = licenseStatus;
     }
 
-    public String getSpdxId() {
-	return spdxId;
+    public String getUpdatedBy() {
+	return updatedBy;
     }
 
-    public void setSpdxId(String spdxId) {
-	this.spdxId = spdxId;
-    }
-
-    public LicenseLicenseSourceType getLicenseSource() {
-	return licenseSource;
-    }
-
-    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
-	this.licenseSource = licenseSource;
+    public void setUpdatedBy(String updatedBy) {
+	this.updatedBy = updatedBy;
     }
 
 
