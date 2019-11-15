@@ -33,12 +33,36 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ScanStatusTy
 public class ScanViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.scan-4+json";
 
+    private String updatedAt;
+    private String statusMessage;
+    private String createdAt;
     private BigDecimal scanSize;
     private String serverVersion;
-    private String statusMessage;
-    private String updatedAt;
-    private String createdAt;
     private ScanStatusType status;
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public String getStatusMessage() {
+	return statusMessage;
+    }
+
+    public void setStatusMessage(String statusMessage) {
+	this.statusMessage = statusMessage;
+    }
+
+    public String getCreatedAt() {
+	return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+	this.createdAt = createdAt;
+    }
 
     public BigDecimal getScanSize() {
 	return scanSize;
@@ -54,30 +78,6 @@ public class ScanViewV4 extends BlackDuckView {
 
     public void setServerVersion(String serverVersion) {
 	this.serverVersion = serverVersion;
-    }
-
-    public String getStatusMessage() {
-	return statusMessage;
-    }
-
-    public void setStatusMessage(String statusMessage) {
-	this.statusMessage = statusMessage;
-    }
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-    public String getCreatedAt() {
-	return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-	this.createdAt = createdAt;
     }
 
     public ScanStatusType getStatus() {

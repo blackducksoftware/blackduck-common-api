@@ -32,20 +32,12 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermA
 public class LicenseTermViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
-    private String name;
     private LicenseTermResponsibilityType responsibility;
-    private Boolean deactivated;
-    private LicenseTermAssociationSourceType associationSource;
     private String description;
+    private String name;
     private Boolean fulfillmentRequired;
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
+    private LicenseTermAssociationSourceType associationSource;
+    private Boolean deactivated;
 
     public LicenseTermResponsibilityType getResponsibility() {
 	return responsibility;
@@ -53,22 +45,6 @@ public class LicenseTermViewV4 extends BlackDuckView {
 
     public void setResponsibility(LicenseTermResponsibilityType responsibility) {
 	this.responsibility = responsibility;
-    }
-
-    public Boolean getDeactivated() {
-	return deactivated;
-    }
-
-    public void setDeactivated(Boolean deactivated) {
-	this.deactivated = deactivated;
-    }
-
-    public LicenseTermAssociationSourceType getAssociationSource() {
-	return associationSource;
-    }
-
-    public void setAssociationSource(LicenseTermAssociationSourceType associationSource) {
-	this.associationSource = associationSource;
     }
 
     public String getDescription() {
@@ -79,12 +55,36 @@ public class LicenseTermViewV4 extends BlackDuckView {
 	this.description = description;
     }
 
+    public String getName() {
+	return name;
+    }
+
+    public void setName(String name) {
+	this.name = name;
+    }
+
     public Boolean getFulfillmentRequired() {
 	return fulfillmentRequired;
     }
 
     public void setFulfillmentRequired(Boolean fulfillmentRequired) {
 	this.fulfillmentRequired = fulfillmentRequired;
+    }
+
+    public LicenseTermAssociationSourceType getAssociationSource() {
+	return associationSource;
+    }
+
+    public void setAssociationSource(LicenseTermAssociationSourceType associationSource) {
+	this.associationSource = associationSource;
+    }
+
+    public Boolean getDeactivated() {
+	return deactivated;
+    }
+
+    public void setDeactivated(Boolean deactivated) {
+	this.deactivated = deactivated;
     }
 
 

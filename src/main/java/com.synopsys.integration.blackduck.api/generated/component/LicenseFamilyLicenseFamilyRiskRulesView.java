@@ -32,17 +32,9 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamil
 public class LicenseFamilyLicenseFamilyRiskRulesView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
-    private LicenseFamilyLicenseFamilyRiskRulesUsageType usage;
     private LicenseFamilyLicenseFamilyRiskRulesRiskPriorityType riskPriority;
     private LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType releaseDistribution;
-
-    public LicenseFamilyLicenseFamilyRiskRulesUsageType getUsage() {
-	return usage;
-    }
-
-    public void setUsage(LicenseFamilyLicenseFamilyRiskRulesUsageType usage) {
-	this.usage = usage;
-    }
+    private LicenseFamilyLicenseFamilyRiskRulesUsageType usage;
 
     public LicenseFamilyLicenseFamilyRiskRulesRiskPriorityType getRiskPriority() {
 	return riskPriority;
@@ -58,6 +50,14 @@ public class LicenseFamilyLicenseFamilyRiskRulesView extends BlackDuckComponent 
 
     public void setReleaseDistribution(LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType releaseDistribution) {
 	this.releaseDistribution = releaseDistribution;
+    }
+
+    public LicenseFamilyLicenseFamilyRiskRulesUsageType getUsage() {
+	return usage;
+    }
+
+    public void setUsage(LicenseFamilyLicenseFamilyRiskRulesUsageType usage) {
+	this.usage = usage;
     }
 
 

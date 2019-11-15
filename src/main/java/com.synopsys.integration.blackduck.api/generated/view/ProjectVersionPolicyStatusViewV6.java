@@ -34,18 +34,10 @@ import java.util.Optional;
 public class ProjectVersionPolicyStatusViewV6 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
     private String updatedAt;
-    private java.util.List<NameValuePairView> componentVersionStatusCounts;
+    private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
     private PolicyStatusType overallStatus;
-
-    public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
-	return componentVersionPolicyViolationDetails;
-    }
-
-    public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
-	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
-    }
+    private java.util.List<NameValuePairView> componentVersionStatusCounts;
 
     public String getUpdatedAt() {
 	return updatedAt;
@@ -55,12 +47,12 @@ public class ProjectVersionPolicyStatusViewV6 extends BlackDuckView {
 	this.updatedAt = updatedAt;
     }
 
-    public java.util.List<NameValuePairView> getComponentVersionStatusCounts() {
-	return componentVersionStatusCounts;
+    public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
+	return componentVersionPolicyViolationDetails;
     }
 
-    public void setComponentVersionStatusCounts(java.util.List<NameValuePairView> componentVersionStatusCounts) {
-	this.componentVersionStatusCounts = componentVersionStatusCounts;
+    public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
+	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
     }
 
     public PolicyStatusType getOverallStatus() {
@@ -69,6 +61,14 @@ public class ProjectVersionPolicyStatusViewV6 extends BlackDuckView {
 
     public void setOverallStatus(PolicyStatusType overallStatus) {
 	this.overallStatus = overallStatus;
+    }
+
+    public java.util.List<NameValuePairView> getComponentVersionStatusCounts() {
+	return componentVersionStatusCounts;
+    }
+
+    public void setComponentVersionStatusCounts(java.util.List<NameValuePairView> componentVersionStatusCounts) {
+	this.componentVersionStatusCounts = componentVersionStatusCounts;
     }
 
 

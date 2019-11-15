@@ -30,16 +30,8 @@ import java.util.Optional;
 public class ComponentVersionRiskProfileVersionDataView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
-    private String releasedOn;
     private BigDecimal newerReleasesCount;
-
-    public String getReleasedOn() {
-	return releasedOn;
-    }
-
-    public void setReleasedOn(String releasedOn) {
-	this.releasedOn = releasedOn;
-    }
+    private String releasedOn;
 
     public BigDecimal getNewerReleasesCount() {
 	return newerReleasesCount;
@@ -47,6 +39,14 @@ public class ComponentVersionRiskProfileVersionDataView extends BlackDuckCompone
 
     public void setNewerReleasesCount(BigDecimal newerReleasesCount) {
 	this.newerReleasesCount = newerReleasesCount;
+    }
+
+    public String getReleasedOn() {
+	return releasedOn;
+    }
+
+    public void setReleasedOn(String releasedOn) {
+	this.releasedOn = releasedOn;
     }
 
 

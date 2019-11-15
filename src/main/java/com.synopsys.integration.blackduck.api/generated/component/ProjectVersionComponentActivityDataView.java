@@ -31,19 +31,11 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 public class ProjectVersionComponentActivityDataView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private BigDecimal contributorCount12Month;
     private BigDecimal commitCount12Month;
-    private String lastCommitDate;
-    private BigDecimal newerReleases;
     private ProjectVersionComponentActivityDataTrendingType trending;
-
-    public BigDecimal getContributorCount12Month() {
-	return contributorCount12Month;
-    }
-
-    public void setContributorCount12Month(BigDecimal contributorCount12Month) {
-	this.contributorCount12Month = contributorCount12Month;
-    }
+    private BigDecimal newerReleases;
+    private BigDecimal contributorCount12Month;
+    private String lastCommitDate;
 
     public BigDecimal getCommitCount12Month() {
 	return commitCount12Month;
@@ -53,12 +45,12 @@ public class ProjectVersionComponentActivityDataView extends BlackDuckComponent 
 	this.commitCount12Month = commitCount12Month;
     }
 
-    public String getLastCommitDate() {
-	return lastCommitDate;
+    public ProjectVersionComponentActivityDataTrendingType getTrending() {
+	return trending;
     }
 
-    public void setLastCommitDate(String lastCommitDate) {
-	this.lastCommitDate = lastCommitDate;
+    public void setTrending(ProjectVersionComponentActivityDataTrendingType trending) {
+	this.trending = trending;
     }
 
     public BigDecimal getNewerReleases() {
@@ -69,12 +61,20 @@ public class ProjectVersionComponentActivityDataView extends BlackDuckComponent 
 	this.newerReleases = newerReleases;
     }
 
-    public ProjectVersionComponentActivityDataTrendingType getTrending() {
-	return trending;
+    public BigDecimal getContributorCount12Month() {
+	return contributorCount12Month;
     }
 
-    public void setTrending(ProjectVersionComponentActivityDataTrendingType trending) {
-	this.trending = trending;
+    public void setContributorCount12Month(BigDecimal contributorCount12Month) {
+	this.contributorCount12Month = contributorCount12Month;
+    }
+
+    public String getLastCommitDate() {
+	return lastCommitDate;
+    }
+
+    public void setLastCommitDate(String lastCommitDate) {
+	this.lastCommitDate = lastCommitDate;
     }
 
 

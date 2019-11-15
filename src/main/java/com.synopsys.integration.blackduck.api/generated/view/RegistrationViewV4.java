@@ -35,21 +35,13 @@ import com.synopsys.integration.blackduck.api.generated.component.RegistrationMe
 public class RegistrationViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
 
-    private String expirationDate;
     private java.util.List<RegistrationAttributesView> attributes;
-    private RegistrationStateType state;
-    private java.util.List<RegistrationMessagesView> messages;
-    private String expirationWarningDate;
-    private java.util.List<RegistrationFeaturesView> features;
     private String registrationId;
-
-    public String getExpirationDate() {
-	return expirationDate;
-    }
-
-    public void setExpirationDate(String expirationDate) {
-	this.expirationDate = expirationDate;
-    }
+    private java.util.List<RegistrationMessagesView> messages;
+    private RegistrationStateType state;
+    private String expirationWarningDate;
+    private String expirationDate;
+    private java.util.List<RegistrationFeaturesView> features;
 
     public java.util.List<RegistrationAttributesView> getAttributes() {
 	return attributes;
@@ -59,12 +51,12 @@ public class RegistrationViewV4 extends BlackDuckView {
 	this.attributes = attributes;
     }
 
-    public RegistrationStateType getState() {
-	return state;
+    public String getRegistrationId() {
+	return registrationId;
     }
 
-    public void setState(RegistrationStateType state) {
-	this.state = state;
+    public void setRegistrationId(String registrationId) {
+	this.registrationId = registrationId;
     }
 
     public java.util.List<RegistrationMessagesView> getMessages() {
@@ -75,6 +67,14 @@ public class RegistrationViewV4 extends BlackDuckView {
 	this.messages = messages;
     }
 
+    public RegistrationStateType getState() {
+	return state;
+    }
+
+    public void setState(RegistrationStateType state) {
+	this.state = state;
+    }
+
     public String getExpirationWarningDate() {
 	return expirationWarningDate;
     }
@@ -83,20 +83,20 @@ public class RegistrationViewV4 extends BlackDuckView {
 	this.expirationWarningDate = expirationWarningDate;
     }
 
+    public String getExpirationDate() {
+	return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+	this.expirationDate = expirationDate;
+    }
+
     public java.util.List<RegistrationFeaturesView> getFeatures() {
 	return features;
     }
 
     public void setFeatures(java.util.List<RegistrationFeaturesView> features) {
 	this.features = features;
-    }
-
-    public String getRegistrationId() {
-	return registrationId;
-    }
-
-    public void setRegistrationId(String registrationId) {
-	this.registrationId = registrationId;
     }
 
 

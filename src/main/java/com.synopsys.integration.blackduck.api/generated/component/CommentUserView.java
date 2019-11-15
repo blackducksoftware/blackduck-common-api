@@ -29,27 +29,11 @@ import java.util.Optional;
 public class CommentUserView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private String userName;
-    private String lastName;
     private String firstName;
     private String email;
+    private String lastName;
     private Boolean active;
-
-    public String getUserName() {
-	return userName;
-    }
-
-    public void setUserName(String userName) {
-	this.userName = userName;
-    }
-
-    public String getLastName() {
-	return lastName;
-    }
-
-    public void setLastName(String lastName) {
-	this.lastName = lastName;
-    }
+    private String userName;
 
     public String getFirstName() {
 	return firstName;
@@ -67,12 +51,28 @@ public class CommentUserView extends BlackDuckComponent {
 	this.email = email;
     }
 
+    public String getLastName() {
+	return lastName;
+    }
+
+    public void setLastName(String lastName) {
+	this.lastName = lastName;
+    }
+
     public Boolean getActive() {
 	return active;
     }
 
     public void setActive(Boolean active) {
 	this.active = active;
+    }
+
+    public String getUserName() {
+	return userName;
+    }
+
+    public void setUserName(String userName) {
+	this.userName = userName;
     }
 
 

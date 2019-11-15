@@ -45,12 +45,36 @@ public class UserGroupViewV4 extends BlackDuckView {
 	links.put(USERS_LINK, USERS_LINK_RESPONSE);
     }
 
+    private Boolean active;
+    private String userGroup;
+    private String externalName;
     private String name;
     private Boolean default_;
-    private Boolean active;
-    private String externalName;
     private String createdFrom;
-    private String userGroup;
+
+    public Boolean getActive() {
+	return active;
+    }
+
+    public void setActive(Boolean active) {
+	this.active = active;
+    }
+
+    public String getUserGroup() {
+	return userGroup;
+    }
+
+    public void setUserGroup(String userGroup) {
+	this.userGroup = userGroup;
+    }
+
+    public String getExternalName() {
+	return externalName;
+    }
+
+    public void setExternalName(String externalName) {
+	this.externalName = externalName;
+    }
 
     public String getName() {
 	return name;
@@ -68,36 +92,12 @@ public class UserGroupViewV4 extends BlackDuckView {
 	this.default_ = default_;
     }
 
-    public Boolean getActive() {
-	return active;
-    }
-
-    public void setActive(Boolean active) {
-	this.active = active;
-    }
-
-    public String getExternalName() {
-	return externalName;
-    }
-
-    public void setExternalName(String externalName) {
-	this.externalName = externalName;
-    }
-
     public String getCreatedFrom() {
 	return createdFrom;
     }
 
     public void setCreatedFrom(String createdFrom) {
 	this.createdFrom = createdFrom;
-    }
-
-    public String getUserGroup() {
-	return userGroup;
-    }
-
-    public void setUserGroup(String userGroup) {
-	this.userGroup = userGroup;
     }
 
 

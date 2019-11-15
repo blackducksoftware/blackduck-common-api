@@ -29,16 +29,8 @@ import java.util.Optional;
 public class ProjectVersionLicenseLicensesLicenseFamilySummaryViewV5 extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.project-detail-5+json";
 
-    private String href;
     private String name;
-
-    public String getHref() {
-	return href;
-    }
-
-    public void setHref(String href) {
-	this.href = href;
-    }
+    private String href;
 
     public String getName() {
 	return name;
@@ -46,6 +38,14 @@ public class ProjectVersionLicenseLicensesLicenseFamilySummaryViewV5 extends Bla
 
     public void setName(String name) {
 	this.name = name;
+    }
+
+    public String getHref() {
+	return href;
+    }
+
+    public void setHref(String href) {
+	this.href = href;
     }
 
 

@@ -32,24 +32,40 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseRepor
 public class LicenseReportsReportViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.report-4+json";
 
-    private String reportType;
+    private String locale;
+    private String updatedAt;
+    private String finishedAt;
     private LicenseReportsReportReportFormatType reportFormat;
     private String createdByUser;
     private String fileNamePrefix;
-    private BigDecimal fileSize;
-    private String fileName;
-    private String updatedAt;
     private String createdAt;
     private String createdBy;
-    private String locale;
-    private String finishedAt;
+    private BigDecimal fileSize;
+    private String fileName;
+    private String reportType;
 
-    public String getReportType() {
-	return reportType;
+    public String getLocale() {
+	return locale;
     }
 
-    public void setReportType(String reportType) {
-	this.reportType = reportType;
+    public void setLocale(String locale) {
+	this.locale = locale;
+    }
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public String getFinishedAt() {
+	return finishedAt;
+    }
+
+    public void setFinishedAt(String finishedAt) {
+	this.finishedAt = finishedAt;
     }
 
     public LicenseReportsReportReportFormatType getReportFormat() {
@@ -76,30 +92,6 @@ public class LicenseReportsReportViewV4 extends BlackDuckView {
 	this.fileNamePrefix = fileNamePrefix;
     }
 
-    public BigDecimal getFileSize() {
-	return fileSize;
-    }
-
-    public void setFileSize(BigDecimal fileSize) {
-	this.fileSize = fileSize;
-    }
-
-    public String getFileName() {
-	return fileName;
-    }
-
-    public void setFileName(String fileName) {
-	this.fileName = fileName;
-    }
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
     public String getCreatedAt() {
 	return createdAt;
     }
@@ -116,20 +108,28 @@ public class LicenseReportsReportViewV4 extends BlackDuckView {
 	this.createdBy = createdBy;
     }
 
-    public String getLocale() {
-	return locale;
+    public BigDecimal getFileSize() {
+	return fileSize;
     }
 
-    public void setLocale(String locale) {
-	this.locale = locale;
+    public void setFileSize(BigDecimal fileSize) {
+	this.fileSize = fileSize;
     }
 
-    public String getFinishedAt() {
-	return finishedAt;
+    public String getFileName() {
+	return fileName;
     }
 
-    public void setFinishedAt(String finishedAt) {
-	this.finishedAt = finishedAt;
+    public void setFileName(String fileName) {
+	this.fileName = fileName;
+    }
+
+    public String getReportType() {
+	return reportType;
+    }
+
+    public void setReportType(String reportType) {
+	this.reportType = reportType;
     }
 
 

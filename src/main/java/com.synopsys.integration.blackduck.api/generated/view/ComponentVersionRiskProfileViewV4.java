@@ -33,17 +33,9 @@ import java.util.Optional;
 public class ComponentVersionRiskProfileViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
-    private ComponentVersionRiskProfileRiskDataView riskData;
     private ComponentVersionRiskProfileVersionDataView versionData;
+    private ComponentVersionRiskProfileRiskDataView riskData;
     private ComponentVersionRiskProfileActivityDataView activityData;
-
-    public ComponentVersionRiskProfileRiskDataView getRiskData() {
-	return riskData;
-    }
-
-    public void setRiskData(ComponentVersionRiskProfileRiskDataView riskData) {
-	this.riskData = riskData;
-    }
 
     public ComponentVersionRiskProfileVersionDataView getVersionData() {
 	return versionData;
@@ -51,6 +43,14 @@ public class ComponentVersionRiskProfileViewV4 extends BlackDuckView {
 
     public void setVersionData(ComponentVersionRiskProfileVersionDataView versionData) {
 	this.versionData = versionData;
+    }
+
+    public ComponentVersionRiskProfileRiskDataView getRiskData() {
+	return riskData;
+    }
+
+    public void setRiskData(ComponentVersionRiskProfileRiskDataView riskData) {
+	this.riskData = riskData;
     }
 
     public ComponentVersionRiskProfileActivityDataView getActivityData() {

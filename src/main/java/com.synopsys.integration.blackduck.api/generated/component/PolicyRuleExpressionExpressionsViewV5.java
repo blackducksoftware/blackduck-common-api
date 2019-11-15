@@ -30,8 +30,8 @@ public class PolicyRuleExpressionExpressionsViewV5 extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.policy-5+json";
 
     private String name;
-    private String operation;
     private PolicyRuleExpressionExpressionsParametersView parameters;
+    private String operation;
 
     public String getName() {
 	return name;
@@ -41,20 +41,20 @@ public class PolicyRuleExpressionExpressionsViewV5 extends BlackDuckComponent {
 	this.name = name;
     }
 
-    public String getOperation() {
-	return operation;
-    }
-
-    public void setOperation(String operation) {
-	this.operation = operation;
-    }
-
     public PolicyRuleExpressionExpressionsParametersView getParameters() {
 	return parameters;
     }
 
     public void setParameters(PolicyRuleExpressionExpressionsParametersView parameters) {
 	this.parameters = parameters;
+    }
+
+    public String getOperation() {
+	return operation;
+    }
+
+    public void setOperation(String operation) {
+	this.operation = operation;
     }
 
 

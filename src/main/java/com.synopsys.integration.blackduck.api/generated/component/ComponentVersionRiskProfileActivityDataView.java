@@ -31,11 +31,27 @@ import java.util.Optional;
 public class ComponentVersionRiskProfileActivityDataView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
+    private BigDecimal commitCount12Month;
+    private BigDecimal newerReleases;
     private ComponentVersionRiskProfileActivityDataTrendingType trending;
     private BigDecimal contributorCount12Month;
-    private BigDecimal commitCount12Month;
     private String lastCommitDate;
-    private BigDecimal newerReleases;
+
+    public BigDecimal getCommitCount12Month() {
+	return commitCount12Month;
+    }
+
+    public void setCommitCount12Month(BigDecimal commitCount12Month) {
+	this.commitCount12Month = commitCount12Month;
+    }
+
+    public BigDecimal getNewerReleases() {
+	return newerReleases;
+    }
+
+    public void setNewerReleases(BigDecimal newerReleases) {
+	this.newerReleases = newerReleases;
+    }
 
     public ComponentVersionRiskProfileActivityDataTrendingType getTrending() {
 	return trending;
@@ -53,28 +69,12 @@ public class ComponentVersionRiskProfileActivityDataView extends BlackDuckCompon
 	this.contributorCount12Month = contributorCount12Month;
     }
 
-    public BigDecimal getCommitCount12Month() {
-	return commitCount12Month;
-    }
-
-    public void setCommitCount12Month(BigDecimal commitCount12Month) {
-	this.commitCount12Month = commitCount12Month;
-    }
-
     public String getLastCommitDate() {
 	return lastCommitDate;
     }
 
     public void setLastCommitDate(String lastCommitDate) {
 	this.lastCommitDate = lastCommitDate;
-    }
-
-    public BigDecimal getNewerReleases() {
-	return newerReleases;
-    }
-
-    public void setNewerReleases(BigDecimal newerReleases) {
-	this.newerReleases = newerReleases;
     }
 
 

@@ -30,16 +30,16 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 public class ProjectVersionComponentReviewedDetailsView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private String reviewedBy;
-    private String reviewedAt;
     private ProjectVersionComponentReviewedDetailsReviewingUserView reviewingUser;
+    private String reviewedAt;
+    private String reviewedBy;
 
-    public String getReviewedBy() {
-	return reviewedBy;
+    public ProjectVersionComponentReviewedDetailsReviewingUserView getReviewingUser() {
+	return reviewingUser;
     }
 
-    public void setReviewedBy(String reviewedBy) {
-	this.reviewedBy = reviewedBy;
+    public void setReviewingUser(ProjectVersionComponentReviewedDetailsReviewingUserView reviewingUser) {
+	this.reviewingUser = reviewingUser;
     }
 
     public String getReviewedAt() {
@@ -50,12 +50,12 @@ public class ProjectVersionComponentReviewedDetailsView extends BlackDuckCompone
 	this.reviewedAt = reviewedAt;
     }
 
-    public ProjectVersionComponentReviewedDetailsReviewingUserView getReviewingUser() {
-	return reviewingUser;
+    public String getReviewedBy() {
+	return reviewedBy;
     }
 
-    public void setReviewingUser(ProjectVersionComponentReviewedDetailsReviewingUserView reviewingUser) {
-	this.reviewingUser = reviewingUser;
+    public void setReviewedBy(String reviewedBy) {
+	this.reviewedBy = reviewedBy;
     }
 
 

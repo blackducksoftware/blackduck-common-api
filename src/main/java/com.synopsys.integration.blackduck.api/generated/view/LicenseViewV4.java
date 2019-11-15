@@ -48,47 +48,23 @@ public class LicenseViewV4 extends BlackDuckView {
 	links.put(TEXT_LINK, TEXT_LINK_RESPONSE);
     }
 
-    private String name;
-    private String expirationDate;
-    private String notes;
     private String createdBy;
-    private String createdByUser;
-    private LicenseLicenseSourceType licenseSource;
-    private String statusUpdatedAt;
-    private String statusUpdatedBy;
-    private String updatedByUser;
     private String updatedAt;
-    private String createdAt;
+    private String name;
     private String statusUpdatedByUser;
-    private LicenseOwnershipType ownership;
-    private String spdxId;
-    private LicenseCodeSharingType codeSharing;
-    private LicenseLicenseStatusType licenseStatus;
+    private LicenseLicenseSourceType licenseSource;
+    private String createdAt;
+    private String statusUpdatedAt;
+    private String notes;
+    private String updatedByUser;
     private String updatedBy;
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
-
-    public String getExpirationDate() {
-	return expirationDate;
-    }
-
-    public void setExpirationDate(String expirationDate) {
-	this.expirationDate = expirationDate;
-    }
-
-    public String getNotes() {
-	return notes;
-    }
-
-    public void setNotes(String notes) {
-	this.notes = notes;
-    }
+    private String expirationDate;
+    private String createdByUser;
+    private String statusUpdatedBy;
+    private LicenseOwnershipType ownership;
+    private LicenseLicenseStatusType licenseStatus;
+    private LicenseCodeSharingType codeSharing;
+    private String spdxId;
 
     public String getCreatedBy() {
 	return createdBy;
@@ -96,46 +72,6 @@ public class LicenseViewV4 extends BlackDuckView {
 
     public void setCreatedBy(String createdBy) {
 	this.createdBy = createdBy;
-    }
-
-    public String getCreatedByUser() {
-	return createdByUser;
-    }
-
-    public void setCreatedByUser(String createdByUser) {
-	this.createdByUser = createdByUser;
-    }
-
-    public LicenseLicenseSourceType getLicenseSource() {
-	return licenseSource;
-    }
-
-    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
-	this.licenseSource = licenseSource;
-    }
-
-    public String getStatusUpdatedAt() {
-	return statusUpdatedAt;
-    }
-
-    public void setStatusUpdatedAt(String statusUpdatedAt) {
-	this.statusUpdatedAt = statusUpdatedAt;
-    }
-
-    public String getStatusUpdatedBy() {
-	return statusUpdatedBy;
-    }
-
-    public void setStatusUpdatedBy(String statusUpdatedBy) {
-	this.statusUpdatedBy = statusUpdatedBy;
-    }
-
-    public String getUpdatedByUser() {
-	return updatedByUser;
-    }
-
-    public void setUpdatedByUser(String updatedByUser) {
-	this.updatedByUser = updatedByUser;
     }
 
     public String getUpdatedAt() {
@@ -146,12 +82,12 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.updatedAt = updatedAt;
     }
 
-    public String getCreatedAt() {
-	return createdAt;
+    public String getName() {
+	return name;
     }
 
-    public void setCreatedAt(String createdAt) {
-	this.createdAt = createdAt;
+    public void setName(String name) {
+	this.name = name;
     }
 
     public String getStatusUpdatedByUser() {
@@ -162,28 +98,84 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.statusUpdatedByUser = statusUpdatedByUser;
     }
 
+    public LicenseLicenseSourceType getLicenseSource() {
+	return licenseSource;
+    }
+
+    public void setLicenseSource(LicenseLicenseSourceType licenseSource) {
+	this.licenseSource = licenseSource;
+    }
+
+    public String getCreatedAt() {
+	return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+	this.createdAt = createdAt;
+    }
+
+    public String getStatusUpdatedAt() {
+	return statusUpdatedAt;
+    }
+
+    public void setStatusUpdatedAt(String statusUpdatedAt) {
+	this.statusUpdatedAt = statusUpdatedAt;
+    }
+
+    public String getNotes() {
+	return notes;
+    }
+
+    public void setNotes(String notes) {
+	this.notes = notes;
+    }
+
+    public String getUpdatedByUser() {
+	return updatedByUser;
+    }
+
+    public void setUpdatedByUser(String updatedByUser) {
+	this.updatedByUser = updatedByUser;
+    }
+
+    public String getUpdatedBy() {
+	return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+	this.updatedBy = updatedBy;
+    }
+
+    public String getExpirationDate() {
+	return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+	this.expirationDate = expirationDate;
+    }
+
+    public String getCreatedByUser() {
+	return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+	this.createdByUser = createdByUser;
+    }
+
+    public String getStatusUpdatedBy() {
+	return statusUpdatedBy;
+    }
+
+    public void setStatusUpdatedBy(String statusUpdatedBy) {
+	this.statusUpdatedBy = statusUpdatedBy;
+    }
+
     public LicenseOwnershipType getOwnership() {
 	return ownership;
     }
 
     public void setOwnership(LicenseOwnershipType ownership) {
 	this.ownership = ownership;
-    }
-
-    public String getSpdxId() {
-	return spdxId;
-    }
-
-    public void setSpdxId(String spdxId) {
-	this.spdxId = spdxId;
-    }
-
-    public LicenseCodeSharingType getCodeSharing() {
-	return codeSharing;
-    }
-
-    public void setCodeSharing(LicenseCodeSharingType codeSharing) {
-	this.codeSharing = codeSharing;
     }
 
     public LicenseLicenseStatusType getLicenseStatus() {
@@ -194,12 +186,20 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.licenseStatus = licenseStatus;
     }
 
-    public String getUpdatedBy() {
-	return updatedBy;
+    public LicenseCodeSharingType getCodeSharing() {
+	return codeSharing;
     }
 
-    public void setUpdatedBy(String updatedBy) {
-	this.updatedBy = updatedBy;
+    public void setCodeSharing(LicenseCodeSharingType codeSharing) {
+	this.codeSharing = codeSharing;
+    }
+
+    public String getSpdxId() {
+	return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+	this.spdxId = spdxId;
     }
 
 

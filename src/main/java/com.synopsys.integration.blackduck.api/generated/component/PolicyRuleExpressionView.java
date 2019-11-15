@@ -31,16 +31,8 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 public class PolicyRuleExpressionView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.policy-5+json";
 
-    private java.util.List<PolicyRuleExpressionExpressionsView> expressions;
     private String operator;
-
-    public java.util.List<PolicyRuleExpressionExpressionsView> getExpressions() {
-	return expressions;
-    }
-
-    public void setExpressions(java.util.List<PolicyRuleExpressionExpressionsView> expressions) {
-	this.expressions = expressions;
-    }
+    private java.util.List<PolicyRuleExpressionExpressionsView> expressions;
 
     public String getOperator() {
 	return operator;
@@ -48,6 +40,14 @@ public class PolicyRuleExpressionView extends BlackDuckComponent {
 
     public void setOperator(String operator) {
 	this.operator = operator;
+    }
+
+    public java.util.List<PolicyRuleExpressionExpressionsView> getExpressions() {
+	return expressions;
+    }
+
+    public void setExpressions(java.util.List<PolicyRuleExpressionExpressionsView> expressions) {
+	this.expressions = expressions;
     }
 
 

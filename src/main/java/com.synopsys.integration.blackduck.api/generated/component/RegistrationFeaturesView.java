@@ -31,16 +31,16 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Registration
 public class RegistrationFeaturesView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
 
-    private RegistrationFeaturesFeatureType feature;
-    private BigDecimal warningValue;
     private BigDecimal limitValue;
+    private BigDecimal warningValue;
+    private RegistrationFeaturesFeatureType feature;
 
-    public RegistrationFeaturesFeatureType getFeature() {
-	return feature;
+    public BigDecimal getLimitValue() {
+	return limitValue;
     }
 
-    public void setFeature(RegistrationFeaturesFeatureType feature) {
-	this.feature = feature;
+    public void setLimitValue(BigDecimal limitValue) {
+	this.limitValue = limitValue;
     }
 
     public BigDecimal getWarningValue() {
@@ -51,12 +51,12 @@ public class RegistrationFeaturesView extends BlackDuckComponent {
 	this.warningValue = warningValue;
     }
 
-    public BigDecimal getLimitValue() {
-	return limitValue;
+    public RegistrationFeaturesFeatureType getFeature() {
+	return feature;
     }
 
-    public void setLimitValue(BigDecimal limitValue) {
-	this.limitValue = limitValue;
+    public void setFeature(RegistrationFeaturesFeatureType feature) {
+	this.feature = feature;
     }
 
 

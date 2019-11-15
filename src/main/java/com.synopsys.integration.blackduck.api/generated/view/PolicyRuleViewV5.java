@@ -31,12 +31,28 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleSe
 public class PolicyRuleViewV5 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.policy-5+json";
 
-    private String name;
-    private String description;
-    private PolicyRuleSeverityType severity;
-    private Boolean overridable;
     private Boolean enabled;
     private PolicyRuleExpressionView expression;
+    private String name;
+    private Boolean overridable;
+    private String description;
+    private PolicyRuleSeverityType severity;
+
+    public Boolean getEnabled() {
+	return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+	this.enabled = enabled;
+    }
+
+    public PolicyRuleExpressionView getExpression() {
+	return expression;
+    }
+
+    public void setExpression(PolicyRuleExpressionView expression) {
+	this.expression = expression;
+    }
 
     public String getName() {
 	return name;
@@ -44,6 +60,14 @@ public class PolicyRuleViewV5 extends BlackDuckView {
 
     public void setName(String name) {
 	this.name = name;
+    }
+
+    public Boolean getOverridable() {
+	return overridable;
+    }
+
+    public void setOverridable(Boolean overridable) {
+	this.overridable = overridable;
     }
 
     public String getDescription() {
@@ -60,30 +84,6 @@ public class PolicyRuleViewV5 extends BlackDuckView {
 
     public void setSeverity(PolicyRuleSeverityType severity) {
 	this.severity = severity;
-    }
-
-    public Boolean getOverridable() {
-	return overridable;
-    }
-
-    public void setOverridable(Boolean overridable) {
-	this.overridable = overridable;
-    }
-
-    public Boolean getEnabled() {
-	return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-	this.enabled = enabled;
-    }
-
-    public PolicyRuleExpressionView getExpression() {
-	return expression;
-    }
-
-    public void setExpression(PolicyRuleExpressionView expression) {
-	this.expression = expression;
     }
 
 

@@ -45,19 +45,19 @@ public class CodeLocationViewV4 extends BlackDuckView {
 	links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
     }
 
-    private BigDecimal scanSize;
-    private String name;
-    private String updatedAt;
     private String url;
+    private String name;
     private String mappedProjectVersion;
     private String createdAt;
+    private String updatedAt;
+    private BigDecimal scanSize;
 
-    public BigDecimal getScanSize() {
-	return scanSize;
+    public String getUrl() {
+	return url;
     }
 
-    public void setScanSize(BigDecimal scanSize) {
-	this.scanSize = scanSize;
+    public void setUrl(String url) {
+	this.url = url;
     }
 
     public String getName() {
@@ -66,22 +66,6 @@ public class CodeLocationViewV4 extends BlackDuckView {
 
     public void setName(String name) {
 	this.name = name;
-    }
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-    public String getUrl() {
-	return url;
-    }
-
-    public void setUrl(String url) {
-	this.url = url;
     }
 
     public String getMappedProjectVersion() {
@@ -98,6 +82,22 @@ public class CodeLocationViewV4 extends BlackDuckView {
 
     public void setCreatedAt(String createdAt) {
 	this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public BigDecimal getScanSize() {
+	return scanSize;
+    }
+
+    public void setScanSize(BigDecimal scanSize) {
+	this.scanSize = scanSize;
     }
 
 

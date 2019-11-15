@@ -32,27 +32,11 @@ import com.synopsys.integration.blackduck.api.generated.component.CommentUserVie
 public class CommentViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
-    private String comment;
-    private CommentUserView user;
     private String updatedAt;
     private String createdAt;
+    private String comment;
     private String commentType;
-
-    public String getComment() {
-	return comment;
-    }
-
-    public void setComment(String comment) {
-	this.comment = comment;
-    }
-
-    public CommentUserView getUser() {
-	return user;
-    }
-
-    public void setUser(CommentUserView user) {
-	this.user = user;
-    }
+    private CommentUserView user;
 
     public String getUpdatedAt() {
 	return updatedAt;
@@ -70,12 +54,28 @@ public class CommentViewV4 extends BlackDuckView {
 	this.createdAt = createdAt;
     }
 
+    public String getComment() {
+	return comment;
+    }
+
+    public void setComment(String comment) {
+	this.comment = comment;
+    }
+
     public String getCommentType() {
 	return commentType;
     }
 
     public void setCommentType(String commentType) {
 	this.commentType = commentType;
+    }
+
+    public CommentUserView getUser() {
+	return user;
+    }
+
+    public void setUser(CommentUserView user) {
+	this.user = user;
     }
 
 

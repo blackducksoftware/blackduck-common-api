@@ -30,16 +30,8 @@ import java.util.Optional;
 public class RegistrationMessagesView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
 
-    private String message;
     private RegistrationMessagesMessageCodeType messageCode;
-
-    public String getMessage() {
-	return message;
-    }
-
-    public void setMessage(String message) {
-	this.message = message;
-    }
+    private String message;
 
     public RegistrationMessagesMessageCodeType getMessageCode() {
 	return messageCode;
@@ -47,6 +39,14 @@ public class RegistrationMessagesView extends BlackDuckComponent {
 
     public void setMessageCode(RegistrationMessagesMessageCodeType messageCode) {
 	this.messageCode = messageCode;
+    }
+
+    public String getMessage() {
+	return message;
+    }
+
+    public void setMessage(String message) {
+	this.message = message;
     }
 
 

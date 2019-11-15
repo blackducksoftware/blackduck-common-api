@@ -37,8 +37,8 @@ import java.math.BigDecimal;
 import java.util.List;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VersionBomPolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
+import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentReviewStatusType;
@@ -50,63 +50,47 @@ public class ProjectVersionComponentViewV6 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-        public static final String ORIGINS_LINK = "origins";
         public static final String POLICY_RULES_LINK = "policy-rules";
         public static final String MATCHED_FILES_LINK = "matched-files";
+        public static final String ORIGINS_LINK = "origins";
 
-	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
 	public static final LinkMultipleResponses<VersionBomPolicyRuleView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<VersionBomPolicyRuleView>(POLICY_RULES_LINK, VersionBomPolicyRuleView.class);
 	public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
+	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
 
     static {
-	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
 	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
 	links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
+	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
     }
 
-    private RiskProfileView activityRiskProfile;
-    private Boolean inAttributionReport;
     private ProjectVersionComponentActivityDataView activityData;
-    private RiskProfileView licenseRiskProfile;
-    private java.util.Date releasedOn;
-    private String componentName;
-    private RiskProfileView securityRiskProfile;
-    private RiskProfileView operationalRiskProfile;
-    private String attributionStatement;
-    private RiskProfileView versionRiskProfile;
-    private java.util.List<VersionBomComponentMatchType> matchTypes;
     private java.util.List<VersionBomOriginView> origins;
-    private ProjectVersionComponentReviewedDetailsView reviewedDetails;
-    private java.util.List<ProjectVersionComponentLicensesView> licenses;
-    private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
-    private String policyStatus;
-    private String componentPurpose;
-    private Boolean componentModified;
-    private PolicyStatusType approvalStatus;
-    private String componentVersion;
-    private Boolean ignored;
-    private String componentModification;
-    private BigDecimal totalFileMatchCount;
-    private VersionBomComponentReviewStatusType reviewStatus;
-    private Boolean manuallyAdjusted;
     private String component;
+    private Boolean ignored;
     private String componentVersionName;
-
-    public RiskProfileView getActivityRiskProfile() {
-	return activityRiskProfile;
-    }
-
-    public void setActivityRiskProfile(RiskProfileView activityRiskProfile) {
-	this.activityRiskProfile = activityRiskProfile;
-    }
-
-    public Boolean getInAttributionReport() {
-	return inAttributionReport;
-    }
-
-    public void setInAttributionReport(Boolean inAttributionReport) {
-	this.inAttributionReport = inAttributionReport;
-    }
+    private RiskProfileView licenseRiskProfile;
+    private Boolean manuallyAdjusted;
+    private RiskProfileView activityRiskProfile;
+    private Boolean componentModified;
+    private java.util.List<VersionBomComponentMatchType> matchTypes;
+    private String componentPurpose;
+    private ProjectVersionComponentReviewedDetailsView reviewedDetails;
+    private String policyStatus;
+    private RiskProfileView operationalRiskProfile;
+    private RiskProfileView securityRiskProfile;
+    private RiskProfileView versionRiskProfile;
+    private PolicyStatusType approvalStatus;
+    private BigDecimal totalFileMatchCount;
+    private String componentVersion;
+    private String componentModification;
+    private Boolean inAttributionReport;
+    private String componentName;
+    private VersionBomComponentReviewStatusType reviewStatus;
+    private java.util.List<ProjectVersionComponentLicensesView> licenses;
+    private java.util.Date releasedOn;
+    private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
+    private String attributionStatement;
 
     public ProjectVersionComponentActivityDataView getActivityData() {
 	return activityData;
@@ -114,70 +98,6 @@ public class ProjectVersionComponentViewV6 extends BlackDuckView {
 
     public void setActivityData(ProjectVersionComponentActivityDataView activityData) {
 	this.activityData = activityData;
-    }
-
-    public RiskProfileView getLicenseRiskProfile() {
-	return licenseRiskProfile;
-    }
-
-    public void setLicenseRiskProfile(RiskProfileView licenseRiskProfile) {
-	this.licenseRiskProfile = licenseRiskProfile;
-    }
-
-    public java.util.Date getReleasedOn() {
-	return releasedOn;
-    }
-
-    public void setReleasedOn(java.util.Date releasedOn) {
-	this.releasedOn = releasedOn;
-    }
-
-    public String getComponentName() {
-	return componentName;
-    }
-
-    public void setComponentName(String componentName) {
-	this.componentName = componentName;
-    }
-
-    public RiskProfileView getSecurityRiskProfile() {
-	return securityRiskProfile;
-    }
-
-    public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
-	this.securityRiskProfile = securityRiskProfile;
-    }
-
-    public RiskProfileView getOperationalRiskProfile() {
-	return operationalRiskProfile;
-    }
-
-    public void setOperationalRiskProfile(RiskProfileView operationalRiskProfile) {
-	this.operationalRiskProfile = operationalRiskProfile;
-    }
-
-    public String getAttributionStatement() {
-	return attributionStatement;
-    }
-
-    public void setAttributionStatement(String attributionStatement) {
-	this.attributionStatement = attributionStatement;
-    }
-
-    public RiskProfileView getVersionRiskProfile() {
-	return versionRiskProfile;
-    }
-
-    public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
-	this.versionRiskProfile = versionRiskProfile;
-    }
-
-    public java.util.List<VersionBomComponentMatchType> getMatchTypes() {
-	return matchTypes;
-    }
-
-    public void setMatchTypes(java.util.List<VersionBomComponentMatchType> matchTypes) {
-	this.matchTypes = matchTypes;
     }
 
     public java.util.List<VersionBomOriginView> getOrigins() {
@@ -188,68 +108,12 @@ public class ProjectVersionComponentViewV6 extends BlackDuckView {
 	this.origins = origins;
     }
 
-    public ProjectVersionComponentReviewedDetailsView getReviewedDetails() {
-	return reviewedDetails;
+    public String getComponent() {
+	return component;
     }
 
-    public void setReviewedDetails(ProjectVersionComponentReviewedDetailsView reviewedDetails) {
-	this.reviewedDetails = reviewedDetails;
-    }
-
-    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	return licenses;
-    }
-
-    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	this.licenses = licenses;
-    }
-
-    public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
-	return usages;
-    }
-
-    public void setUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages) {
-	this.usages = usages;
-    }
-
-    public String getPolicyStatus() {
-	return policyStatus;
-    }
-
-    public void setPolicyStatus(String policyStatus) {
-	this.policyStatus = policyStatus;
-    }
-
-    public String getComponentPurpose() {
-	return componentPurpose;
-    }
-
-    public void setComponentPurpose(String componentPurpose) {
-	this.componentPurpose = componentPurpose;
-    }
-
-    public Boolean getComponentModified() {
-	return componentModified;
-    }
-
-    public void setComponentModified(Boolean componentModified) {
-	this.componentModified = componentModified;
-    }
-
-    public PolicyStatusType getApprovalStatus() {
-	return approvalStatus;
-    }
-
-    public void setApprovalStatus(PolicyStatusType approvalStatus) {
-	this.approvalStatus = approvalStatus;
-    }
-
-    public String getComponentVersion() {
-	return componentVersion;
-    }
-
-    public void setComponentVersion(String componentVersion) {
-	this.componentVersion = componentVersion;
+    public void setComponent(String component) {
+	this.component = component;
     }
 
     public Boolean getIgnored() {
@@ -260,28 +124,20 @@ public class ProjectVersionComponentViewV6 extends BlackDuckView {
 	this.ignored = ignored;
     }
 
-    public String getComponentModification() {
-	return componentModification;
+    public String getComponentVersionName() {
+	return componentVersionName;
     }
 
-    public void setComponentModification(String componentModification) {
-	this.componentModification = componentModification;
+    public void setComponentVersionName(String componentVersionName) {
+	this.componentVersionName = componentVersionName;
     }
 
-    public BigDecimal getTotalFileMatchCount() {
-	return totalFileMatchCount;
+    public RiskProfileView getLicenseRiskProfile() {
+	return licenseRiskProfile;
     }
 
-    public void setTotalFileMatchCount(BigDecimal totalFileMatchCount) {
-	this.totalFileMatchCount = totalFileMatchCount;
-    }
-
-    public VersionBomComponentReviewStatusType getReviewStatus() {
-	return reviewStatus;
-    }
-
-    public void setReviewStatus(VersionBomComponentReviewStatusType reviewStatus) {
-	this.reviewStatus = reviewStatus;
+    public void setLicenseRiskProfile(RiskProfileView licenseRiskProfile) {
+	this.licenseRiskProfile = licenseRiskProfile;
     }
 
     public Boolean getManuallyAdjusted() {
@@ -292,20 +148,164 @@ public class ProjectVersionComponentViewV6 extends BlackDuckView {
 	this.manuallyAdjusted = manuallyAdjusted;
     }
 
-    public String getComponent() {
-	return component;
+    public RiskProfileView getActivityRiskProfile() {
+	return activityRiskProfile;
     }
 
-    public void setComponent(String component) {
-	this.component = component;
+    public void setActivityRiskProfile(RiskProfileView activityRiskProfile) {
+	this.activityRiskProfile = activityRiskProfile;
     }
 
-    public String getComponentVersionName() {
-	return componentVersionName;
+    public Boolean getComponentModified() {
+	return componentModified;
     }
 
-    public void setComponentVersionName(String componentVersionName) {
-	this.componentVersionName = componentVersionName;
+    public void setComponentModified(Boolean componentModified) {
+	this.componentModified = componentModified;
+    }
+
+    public java.util.List<VersionBomComponentMatchType> getMatchTypes() {
+	return matchTypes;
+    }
+
+    public void setMatchTypes(java.util.List<VersionBomComponentMatchType> matchTypes) {
+	this.matchTypes = matchTypes;
+    }
+
+    public String getComponentPurpose() {
+	return componentPurpose;
+    }
+
+    public void setComponentPurpose(String componentPurpose) {
+	this.componentPurpose = componentPurpose;
+    }
+
+    public ProjectVersionComponentReviewedDetailsView getReviewedDetails() {
+	return reviewedDetails;
+    }
+
+    public void setReviewedDetails(ProjectVersionComponentReviewedDetailsView reviewedDetails) {
+	this.reviewedDetails = reviewedDetails;
+    }
+
+    public String getPolicyStatus() {
+	return policyStatus;
+    }
+
+    public void setPolicyStatus(String policyStatus) {
+	this.policyStatus = policyStatus;
+    }
+
+    public RiskProfileView getOperationalRiskProfile() {
+	return operationalRiskProfile;
+    }
+
+    public void setOperationalRiskProfile(RiskProfileView operationalRiskProfile) {
+	this.operationalRiskProfile = operationalRiskProfile;
+    }
+
+    public RiskProfileView getSecurityRiskProfile() {
+	return securityRiskProfile;
+    }
+
+    public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
+	this.securityRiskProfile = securityRiskProfile;
+    }
+
+    public RiskProfileView getVersionRiskProfile() {
+	return versionRiskProfile;
+    }
+
+    public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
+	this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public PolicyStatusType getApprovalStatus() {
+	return approvalStatus;
+    }
+
+    public void setApprovalStatus(PolicyStatusType approvalStatus) {
+	this.approvalStatus = approvalStatus;
+    }
+
+    public BigDecimal getTotalFileMatchCount() {
+	return totalFileMatchCount;
+    }
+
+    public void setTotalFileMatchCount(BigDecimal totalFileMatchCount) {
+	this.totalFileMatchCount = totalFileMatchCount;
+    }
+
+    public String getComponentVersion() {
+	return componentVersion;
+    }
+
+    public void setComponentVersion(String componentVersion) {
+	this.componentVersion = componentVersion;
+    }
+
+    public String getComponentModification() {
+	return componentModification;
+    }
+
+    public void setComponentModification(String componentModification) {
+	this.componentModification = componentModification;
+    }
+
+    public Boolean getInAttributionReport() {
+	return inAttributionReport;
+    }
+
+    public void setInAttributionReport(Boolean inAttributionReport) {
+	this.inAttributionReport = inAttributionReport;
+    }
+
+    public String getComponentName() {
+	return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+	this.componentName = componentName;
+    }
+
+    public VersionBomComponentReviewStatusType getReviewStatus() {
+	return reviewStatus;
+    }
+
+    public void setReviewStatus(VersionBomComponentReviewStatusType reviewStatus) {
+	this.reviewStatus = reviewStatus;
+    }
+
+    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
+	return licenses;
+    }
+
+    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
+	this.licenses = licenses;
+    }
+
+    public java.util.Date getReleasedOn() {
+	return releasedOn;
+    }
+
+    public void setReleasedOn(java.util.Date releasedOn) {
+	this.releasedOn = releasedOn;
+    }
+
+    public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
+	return usages;
+    }
+
+    public void setUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages) {
+	this.usages = usages;
+    }
+
+    public String getAttributionStatement() {
+	return attributionStatement;
+    }
+
+    public void setAttributionStatement(String attributionStatement) {
+	this.attributionStatement = attributionStatement;
     }
 
 

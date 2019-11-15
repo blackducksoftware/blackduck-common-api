@@ -29,8 +29,8 @@ import java.math.BigDecimal;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ReportReportFormatType;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ReportReportFormatType;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -46,32 +46,32 @@ public class ReportViewV4 extends BlackDuckView {
 	links.put(CONTENT_LINK, CONTENT_LINK_RESPONSE);
     }
 
-    private String reportType;
-    private ReportReportFormatType reportFormat;
+    private String locale;
+    private String updatedAt;
     private String createdByUser;
     private String fileNamePrefix;
-    private java.util.Date finishedAt;
+    private java.util.Date createdAt;
+    private String createdBy;
     private BigDecimal fileSize;
     private String fileName;
-    private java.util.Date createdAt;
-    private String updatedAt;
-    private String createdBy;
-    private String locale;
+    private ReportReportFormatType reportFormat;
+    private String reportType;
+    private java.util.Date finishedAt;
 
-    public String getReportType() {
-	return reportType;
+    public String getLocale() {
+	return locale;
     }
 
-    public void setReportType(String reportType) {
-	this.reportType = reportType;
+    public void setLocale(String locale) {
+	this.locale = locale;
     }
 
-    public ReportReportFormatType getReportFormat() {
-	return reportFormat;
+    public String getUpdatedAt() {
+	return updatedAt;
     }
 
-    public void setReportFormat(ReportReportFormatType reportFormat) {
-	this.reportFormat = reportFormat;
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
     public String getCreatedByUser() {
@@ -90,12 +90,20 @@ public class ReportViewV4 extends BlackDuckView {
 	this.fileNamePrefix = fileNamePrefix;
     }
 
-    public java.util.Date getFinishedAt() {
-	return finishedAt;
+    public java.util.Date getCreatedAt() {
+	return createdAt;
     }
 
-    public void setFinishedAt(java.util.Date finishedAt) {
-	this.finishedAt = finishedAt;
+    public void setCreatedAt(java.util.Date createdAt) {
+	this.createdAt = createdAt;
+    }
+
+    public String getCreatedBy() {
+	return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+	this.createdBy = createdBy;
     }
 
     public BigDecimal getFileSize() {
@@ -114,36 +122,28 @@ public class ReportViewV4 extends BlackDuckView {
 	this.fileName = fileName;
     }
 
-    public java.util.Date getCreatedAt() {
-	return createdAt;
+    public ReportReportFormatType getReportFormat() {
+	return reportFormat;
     }
 
-    public void setCreatedAt(java.util.Date createdAt) {
-	this.createdAt = createdAt;
+    public void setReportFormat(ReportReportFormatType reportFormat) {
+	this.reportFormat = reportFormat;
     }
 
-    public String getUpdatedAt() {
-	return updatedAt;
+    public String getReportType() {
+	return reportType;
     }
 
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
+    public void setReportType(String reportType) {
+	this.reportType = reportType;
     }
 
-    public String getCreatedBy() {
-	return createdBy;
+    public java.util.Date getFinishedAt() {
+	return finishedAt;
     }
 
-    public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
-    }
-
-    public String getLocale() {
-	return locale;
-    }
-
-    public void setLocale(String locale) {
-	this.locale = locale;
+    public void setFinishedAt(java.util.Date finishedAt) {
+	this.finishedAt = finishedAt;
     }
 
 

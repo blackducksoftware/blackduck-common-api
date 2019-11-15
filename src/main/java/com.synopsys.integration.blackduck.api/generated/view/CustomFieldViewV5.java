@@ -35,20 +35,12 @@ import java.util.Optional;
 public class CustomFieldViewV5 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.project-detail-5+json";
 
-    private String label;
     private java.util.List<String> values;
-    private BigDecimal position;
     private CustomFieldTypeType type;
+    private BigDecimal position;
     private String description;
     private Boolean active;
-
-    public String getLabel() {
-	return label;
-    }
-
-    public void setLabel(String label) {
-	this.label = label;
-    }
+    private String label;
 
     public java.util.List<String> getValues() {
 	return values;
@@ -58,20 +50,20 @@ public class CustomFieldViewV5 extends BlackDuckView {
 	this.values = values;
     }
 
-    public BigDecimal getPosition() {
-	return position;
-    }
-
-    public void setPosition(BigDecimal position) {
-	this.position = position;
-    }
-
     public CustomFieldTypeType getType() {
 	return type;
     }
 
     public void setType(CustomFieldTypeType type) {
 	this.type = type;
+    }
+
+    public BigDecimal getPosition() {
+	return position;
+    }
+
+    public void setPosition(BigDecimal position) {
+	this.position = position;
     }
 
     public String getDescription() {
@@ -88,6 +80,14 @@ public class CustomFieldViewV5 extends BlackDuckView {
 
     public void setActive(Boolean active) {
 	this.active = active;
+    }
+
+    public String getLabel() {
+	return label;
+    }
+
+    public void setLabel(String label) {
+	this.label = label;
     }
 
 

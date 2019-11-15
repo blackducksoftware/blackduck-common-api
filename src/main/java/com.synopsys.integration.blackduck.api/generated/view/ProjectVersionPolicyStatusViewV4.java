@@ -34,18 +34,10 @@ import java.util.Optional;
 public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
-    private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
     private String updatedAt;
-    private java.util.List<NameValuePairView> componentVersionStatusCounts;
     private PolicyStatusType overallStatus;
-
-    public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
-	return componentVersionPolicyViolationDetails;
-    }
-
-    public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
-	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
-    }
+    private java.util.List<NameValuePairView> componentVersionStatusCounts;
+    private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
 
     public String getUpdatedAt() {
 	return updatedAt;
@@ -53,6 +45,14 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 
     public void setUpdatedAt(String updatedAt) {
 	this.updatedAt = updatedAt;
+    }
+
+    public PolicyStatusType getOverallStatus() {
+	return overallStatus;
+    }
+
+    public void setOverallStatus(PolicyStatusType overallStatus) {
+	this.overallStatus = overallStatus;
     }
 
     public java.util.List<NameValuePairView> getComponentVersionStatusCounts() {
@@ -63,12 +63,12 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 	this.componentVersionStatusCounts = componentVersionStatusCounts;
     }
 
-    public PolicyStatusType getOverallStatus() {
-	return overallStatus;
+    public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
+	return componentVersionPolicyViolationDetails;
     }
 
-    public void setOverallStatus(PolicyStatusType overallStatus) {
-	this.overallStatus = overallStatus;
+    public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
+	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
     }
 
 

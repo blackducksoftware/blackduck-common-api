@@ -35,9 +35,17 @@ import com.synopsys.integration.blackduck.api.generated.component.ComponentVersi
 public class RemediationOptionsView extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
+    private ComponentVersionRemediatingLatestAfterCurrentView latestAfterCurrent;
     private ComponentVersionRemediatingNoVulnerabilitiesView noVulnerabilities;
     private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities;
-    private ComponentVersionRemediatingLatestAfterCurrentView latestAfterCurrent;
+
+    public ComponentVersionRemediatingLatestAfterCurrentView getLatestAfterCurrent() {
+	return latestAfterCurrent;
+    }
+
+    public void setLatestAfterCurrent(ComponentVersionRemediatingLatestAfterCurrentView latestAfterCurrent) {
+	this.latestAfterCurrent = latestAfterCurrent;
+    }
 
     public ComponentVersionRemediatingNoVulnerabilitiesView getNoVulnerabilities() {
 	return noVulnerabilities;
@@ -53,14 +61,6 @@ public class RemediationOptionsView extends BlackDuckView {
 
     public void setFixesPreviousVulnerabilities(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities) {
 	this.fixesPreviousVulnerabilities = fixesPreviousVulnerabilities;
-    }
-
-    public ComponentVersionRemediatingLatestAfterCurrentView getLatestAfterCurrent() {
-	return latestAfterCurrent;
-    }
-
-    public void setLatestAfterCurrent(ComponentVersionRemediatingLatestAfterCurrentView latestAfterCurrent) {
-	this.latestAfterCurrent = latestAfterCurrent;
     }
 
 

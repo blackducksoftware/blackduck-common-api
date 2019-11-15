@@ -22,42 +22,21 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentLicensesLicenseTypeType;
+import java.util.List;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import java.util.Optional;
 
-@Deprecated
-// ComplexLicenseView is now called ProjectVersionLicenseLicensesView
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComplexLicenseView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
+public class ComponentPolicyRulesItemsExpressionExpressionsParametersViewV5 extends BlackDuckComponent {
+	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
-    private String licenseDisplay;
-    private ProjectVersionComponentLicensesLicenseTypeType type;
-    private String ownership;
+    private java.util.List<String> values;
 
-    public String getLicenseDisplay() {
-	return licenseDisplay;
+    public java.util.List<String> getValues() {
+	return values;
     }
 
-    public void setLicenseDisplay(String licenseDisplay) {
-	this.licenseDisplay = licenseDisplay;
-    }
-
-    public ProjectVersionComponentLicensesLicenseTypeType getType() {
-	return type;
-    }
-
-    public void setType(ProjectVersionComponentLicensesLicenseTypeType type) {
-	this.type = type;
-    }
-
-    public String getOwnership() {
-	return ownership;
-    }
-
-    public void setOwnership(String ownership) {
-	this.ownership = ownership;
+    public void setValues(java.util.List<String> values) {
+	this.values = values;
     }
 
 

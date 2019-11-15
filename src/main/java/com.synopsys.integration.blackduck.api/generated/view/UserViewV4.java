@@ -55,29 +55,29 @@ public class UserViewV4 extends BlackDuckView {
 	links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    private String email;
-    private String lastName;
-    private String user;
     private String firstName;
-    private Boolean active;
-    private String type;
-    private String externalUserName;
     private String userName;
+    private String user;
+    private String lastName;
+    private String externalUserName;
+    private Boolean active;
+    private String email;
+    private String type;
 
-    public String getEmail() {
-	return email;
+    public String getFirstName() {
+	return firstName;
     }
 
-    public void setEmail(String email) {
-	this.email = email;
+    public void setFirstName(String firstName) {
+	this.firstName = firstName;
     }
 
-    public String getLastName() {
-	return lastName;
+    public String getUserName() {
+	return userName;
     }
 
-    public void setLastName(String lastName) {
-	this.lastName = lastName;
+    public void setUserName(String userName) {
+	this.userName = userName;
     }
 
     public String getUser() {
@@ -88,28 +88,12 @@ public class UserViewV4 extends BlackDuckView {
 	this.user = user;
     }
 
-    public String getFirstName() {
-	return firstName;
+    public String getLastName() {
+	return lastName;
     }
 
-    public void setFirstName(String firstName) {
-	this.firstName = firstName;
-    }
-
-    public Boolean getActive() {
-	return active;
-    }
-
-    public void setActive(Boolean active) {
-	this.active = active;
-    }
-
-    public String getType() {
-	return type;
-    }
-
-    public void setType(String type) {
-	this.type = type;
+    public void setLastName(String lastName) {
+	this.lastName = lastName;
     }
 
     public String getExternalUserName() {
@@ -120,12 +104,28 @@ public class UserViewV4 extends BlackDuckView {
 	this.externalUserName = externalUserName;
     }
 
-    public String getUserName() {
-	return userName;
+    public Boolean getActive() {
+	return active;
     }
 
-    public void setUserName(String userName) {
-	this.userName = userName;
+    public void setActive(Boolean active) {
+	this.active = active;
+    }
+
+    public String getEmail() {
+	return email;
+    }
+
+    public void setEmail(String email) {
+	this.email = email;
+    }
+
+    public String getType() {
+	return type;
+    }
+
+    public void setType(String type) {
+	this.type = type;
     }
 
 

@@ -30,25 +30,17 @@ import java.util.Optional;
 public class ComponentVersionRemediatingLatestAfterCurrentView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
-    private String componentVersion;
-    private String name;
-    private String releasedOn;
     private BigDecimal vulnerabilityCount;
+    private String releasedOn;
+    private String name;
+    private String componentVersion;
 
-    public String getComponentVersion() {
-	return componentVersion;
+    public BigDecimal getVulnerabilityCount() {
+	return vulnerabilityCount;
     }
 
-    public void setComponentVersion(String componentVersion) {
-	this.componentVersion = componentVersion;
-    }
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
+    public void setVulnerabilityCount(BigDecimal vulnerabilityCount) {
+	this.vulnerabilityCount = vulnerabilityCount;
     }
 
     public String getReleasedOn() {
@@ -59,12 +51,20 @@ public class ComponentVersionRemediatingLatestAfterCurrentView extends BlackDuck
 	this.releasedOn = releasedOn;
     }
 
-    public BigDecimal getVulnerabilityCount() {
-	return vulnerabilityCount;
+    public String getName() {
+	return name;
     }
 
-    public void setVulnerabilityCount(BigDecimal vulnerabilityCount) {
-	this.vulnerabilityCount = vulnerabilityCount;
+    public void setName(String name) {
+	this.name = name;
+    }
+
+    public String getComponentVersion() {
+	return componentVersion;
+    }
+
+    public void setComponentVersion(String componentVersion) {
+	this.componentVersion = componentVersion;
     }
 
 

@@ -32,27 +32,11 @@ import java.util.Optional;
 public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private ProjectVersionComponentLicensesLicenseTypeType licenseType;
-    private String spdxId;
     private String license;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private String licenseDisplay;
-
-    public ProjectVersionComponentLicensesLicenseTypeType getLicenseType() {
-	return licenseType;
-    }
-
-    public void setLicenseType(ProjectVersionComponentLicensesLicenseTypeType licenseType) {
-	this.licenseType = licenseType;
-    }
-
-    public String getSpdxId() {
-	return spdxId;
-    }
-
-    public void setSpdxId(String spdxId) {
-	this.spdxId = spdxId;
-    }
+    private ProjectVersionComponentLicensesLicenseTypeType licenseType;
+    private String spdxId;
 
     public String getLicense() {
 	return license;
@@ -76,6 +60,22 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 
     public void setLicenseDisplay(String licenseDisplay) {
 	this.licenseDisplay = licenseDisplay;
+    }
+
+    public ProjectVersionComponentLicensesLicenseTypeType getLicenseType() {
+	return licenseType;
+    }
+
+    public void setLicenseType(ProjectVersionComponentLicensesLicenseTypeType licenseType) {
+	this.licenseType = licenseType;
+    }
+
+    public String getSpdxId() {
+	return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+	this.spdxId = spdxId;
     }
 
 

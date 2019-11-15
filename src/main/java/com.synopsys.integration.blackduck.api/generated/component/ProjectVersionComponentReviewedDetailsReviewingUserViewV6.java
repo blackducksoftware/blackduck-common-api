@@ -29,26 +29,10 @@ import java.util.Optional;
 public class ProjectVersionComponentReviewedDetailsReviewingUserViewV6 extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
-    private String user;
-    private String firstName;
     private String username;
     private String lastName;
-
-    public String getUser() {
-	return user;
-    }
-
-    public void setUser(String user) {
-	this.user = user;
-    }
-
-    public String getFirstName() {
-	return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-	this.firstName = firstName;
-    }
+    private String firstName;
+    private String user;
 
     public String getUsername() {
 	return username;
@@ -64,6 +48,22 @@ public class ProjectVersionComponentReviewedDetailsReviewingUserViewV6 extends B
 
     public void setLastName(String lastName) {
 	this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+	return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+	this.firstName = firstName;
+    }
+
+    public String getUser() {
+	return user;
+    }
+
+    public void setUser(String user) {
+	this.user = user;
     }
 
 

@@ -33,30 +33,22 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.FieldsCustom
 public class FieldsCustomFieldViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.admin-4+json";
 
-    private String label;
-    private String updatedAt;
-    private BigDecimal position;
-    private Object createdBy;
     private Object updatedBy;
+    private BigDecimal position;
     private String description;
     private FieldsCustomFieldTypeType type;
-    private Boolean active;
+    private Object createdBy;
     private String createdAt;
+    private Boolean active;
+    private String label;
+    private String updatedAt;
 
-    public String getLabel() {
-	return label;
+    public Object getUpdatedBy() {
+	return updatedBy;
     }
 
-    public void setLabel(String label) {
-	this.label = label;
-    }
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
+    public void setUpdatedBy(Object updatedBy) {
+	this.updatedBy = updatedBy;
     }
 
     public BigDecimal getPosition() {
@@ -65,22 +57,6 @@ public class FieldsCustomFieldViewV4 extends BlackDuckView {
 
     public void setPosition(BigDecimal position) {
 	this.position = position;
-    }
-
-    public Object getCreatedBy() {
-	return createdBy;
-    }
-
-    public void setCreatedBy(Object createdBy) {
-	this.createdBy = createdBy;
-    }
-
-    public Object getUpdatedBy() {
-	return updatedBy;
-    }
-
-    public void setUpdatedBy(Object updatedBy) {
-	this.updatedBy = updatedBy;
     }
 
     public String getDescription() {
@@ -99,12 +75,12 @@ public class FieldsCustomFieldViewV4 extends BlackDuckView {
 	this.type = type;
     }
 
-    public Boolean getActive() {
-	return active;
+    public Object getCreatedBy() {
+	return createdBy;
     }
 
-    public void setActive(Boolean active) {
-	this.active = active;
+    public void setCreatedBy(Object createdBy) {
+	this.createdBy = createdBy;
     }
 
     public String getCreatedAt() {
@@ -113,6 +89,30 @@ public class FieldsCustomFieldViewV4 extends BlackDuckView {
 
     public void setCreatedAt(String createdAt) {
 	this.createdAt = createdAt;
+    }
+
+    public Boolean getActive() {
+	return active;
+    }
+
+    public void setActive(Boolean active) {
+	this.active = active;
+    }
+
+    public String getLabel() {
+	return label;
+    }
+
+    public void setLabel(String label) {
+	this.label = label;
+    }
+
+    public String getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
 

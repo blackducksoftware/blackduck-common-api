@@ -28,17 +28,9 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 public class ReportContentsReportContentView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.report-4+json";
 
-    private String fileName;
     private String fileContent;
+    private String fileName;
     private String fileNamePrefix;
-
-    public String getFileName() {
-	return fileName;
-    }
-
-    public void setFileName(String fileName) {
-	this.fileName = fileName;
-    }
 
     public String getFileContent() {
 	return fileContent;
@@ -46,6 +38,14 @@ public class ReportContentsReportContentView extends BlackDuckComponent {
 
     public void setFileContent(String fileContent) {
 	this.fileContent = fileContent;
+    }
+
+    public String getFileName() {
+	return fileName;
+    }
+
+    public void setFileName(String fileName) {
+	this.fileName = fileName;
     }
 
     public String getFileNamePrefix() {

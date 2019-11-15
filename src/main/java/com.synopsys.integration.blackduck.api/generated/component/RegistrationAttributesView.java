@@ -31,10 +31,18 @@ import java.util.Optional;
 public class RegistrationAttributesView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
 
+    private BigDecimal limitValue;
     private BigDecimal currentValue;
     private BigDecimal warningValue;
-    private BigDecimal limitValue;
     private RegistrationAttributesAttributeType attribute;
+
+    public BigDecimal getLimitValue() {
+	return limitValue;
+    }
+
+    public void setLimitValue(BigDecimal limitValue) {
+	this.limitValue = limitValue;
+    }
 
     public BigDecimal getCurrentValue() {
 	return currentValue;
@@ -50,14 +58,6 @@ public class RegistrationAttributesView extends BlackDuckComponent {
 
     public void setWarningValue(BigDecimal warningValue) {
 	this.warningValue = warningValue;
-    }
-
-    public BigDecimal getLimitValue() {
-	return limitValue;
-    }
-
-    public void setLimitValue(BigDecimal limitValue) {
-	this.limitValue = limitValue;
     }
 
     public RegistrationAttributesAttributeType getAttribute() {

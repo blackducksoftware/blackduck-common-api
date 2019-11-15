@@ -30,9 +30,9 @@ public class LicenseFamilyCreatedByView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private String userName;
-    private String user;
-    private String firstName;
     private String lastName;
+    private String firstName;
+    private String user;
 
     public String getUserName() {
 	return userName;
@@ -42,12 +42,12 @@ public class LicenseFamilyCreatedByView extends BlackDuckComponent {
 	this.userName = userName;
     }
 
-    public String getUser() {
-	return user;
+    public String getLastName() {
+	return lastName;
     }
 
-    public void setUser(String user) {
-	this.user = user;
+    public void setLastName(String lastName) {
+	this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -58,12 +58,12 @@ public class LicenseFamilyCreatedByView extends BlackDuckComponent {
 	this.firstName = firstName;
     }
 
-    public String getLastName() {
-	return lastName;
+    public String getUser() {
+	return user;
     }
 
-    public void setLastName(String lastName) {
-	this.lastName = lastName;
+    public void setUser(String user) {
+	this.user = user;
     }
 
 

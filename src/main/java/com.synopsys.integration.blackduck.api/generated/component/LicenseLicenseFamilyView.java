@@ -28,16 +28,8 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 public class LicenseLicenseFamilyView extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
-    private String name;
     private String href;
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
+    private String name;
 
     public String getHref() {
 	return href;
@@ -45,6 +37,14 @@ public class LicenseLicenseFamilyView extends BlackDuckComponent {
 
     public void setHref(String href) {
 	this.href = href;
+    }
+
+    public String getName() {
+	return name;
+    }
+
+    public void setName(String name) {
+	this.name = name;
     }
 
 

@@ -45,10 +45,18 @@ public class RoleAssignmentViewV4 extends BlackDuckView {
 	links.put(USER_LINK, USER_LINK_RESPONSE);
     }
 
-    private String name;
-    private String description;
-    private String role;
     private String scope;
+    private String name;
+    private String role;
+    private String description;
+
+    public String getScope() {
+	return scope;
+    }
+
+    public void setScope(String scope) {
+	this.scope = scope;
+    }
 
     public String getName() {
 	return name;
@@ -56,14 +64,6 @@ public class RoleAssignmentViewV4 extends BlackDuckView {
 
     public void setName(String name) {
 	this.name = name;
-    }
-
-    public String getDescription() {
-	return description;
-    }
-
-    public void setDescription(String description) {
-	this.description = description;
     }
 
     public String getRole() {
@@ -74,12 +74,12 @@ public class RoleAssignmentViewV4 extends BlackDuckView {
 	this.role = role;
     }
 
-    public String getScope() {
-	return scope;
+    public String getDescription() {
+	return description;
     }
 
-    public void setScope(String scope) {
-	this.scope = scope;
+    public void setDescription(String description) {
+	this.description = description;
     }
 
 
