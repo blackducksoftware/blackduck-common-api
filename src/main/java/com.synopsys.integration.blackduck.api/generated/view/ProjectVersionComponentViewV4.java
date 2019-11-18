@@ -35,7 +35,6 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumera
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionBomOriginView;
 import java.math.BigDecimal;
 import java.util.List;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VersionBomPolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;

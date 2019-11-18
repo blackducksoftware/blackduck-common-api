@@ -20,38 +20,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.generated.component;
 
-import java.util.List;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import java.util.Optional;
-import com.synopsys.integration.blackduck.api.generated.component.CweCommonConsequencesView;
 
+@Deprecated
+// CustomFieldTypeView is now called TypesView
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class CweViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.vulnerability-4+json";
+public class CustomFieldTypeView extends BlackDuckComponent {
+	public static final String mediaType = "application/vnd.blackducksoftware.admin-4+json";
 
-    private String id;
-    private String description;
+    private Boolean supportsOptions;
     private String name;
-    private String extendedDescription;
-    private java.util.List<CweCommonConsequencesView> commonConsequences;
+    private String type;
 
-    public String getId() {
-	return id;
+    public Boolean getSupportsOptions() {
+	return supportsOptions;
     }
 
-    public void setId(String id) {
-	this.id = id;
-    }
-
-    public String getDescription() {
-	return description;
-    }
-
-    public void setDescription(String description) {
-	this.description = description;
+    public void setSupportsOptions(Boolean supportsOptions) {
+	this.supportsOptions = supportsOptions;
     }
 
     public String getName() {
@@ -62,20 +51,12 @@ public class CweViewV4 extends BlackDuckView {
 	this.name = name;
     }
 
-    public String getExtendedDescription() {
-	return extendedDescription;
+    public String getType() {
+	return type;
     }
 
-    public void setExtendedDescription(String extendedDescription) {
-	this.extendedDescription = extendedDescription;
-    }
-
-    public java.util.List<CweCommonConsequencesView> getCommonConsequences() {
-	return commonConsequences;
-    }
-
-    public void setCommonConsequences(java.util.List<CweCommonConsequencesView> commonConsequences) {
-	this.commonConsequences = commonConsequences;
+    public void setType(String type) {
+	this.type = type;
     }
 
 

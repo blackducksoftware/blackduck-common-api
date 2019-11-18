@@ -20,46 +20,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.generated.response;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class TypesViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.admin-4+json";
-
-    private Boolean supportsOptions;
-    private String name;
-    private String type;
-
-    public Boolean getSupportsOptions() {
-	return supportsOptions;
-    }
-
-    public void setSupportsOptions(Boolean supportsOptions) {
-	this.supportsOptions = supportsOptions;
-    }
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
-
-    public String getType() {
-	return type;
-    }
-
-    public void setType(String type) {
-	this.type = type;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
-    }
+public class ComponentsView extends ComponentsViewV4 {
 
 }
