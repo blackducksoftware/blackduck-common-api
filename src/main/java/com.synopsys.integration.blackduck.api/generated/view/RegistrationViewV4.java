@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.List;
@@ -16,9 +38,9 @@ public class RegistrationViewV4 extends BlackDuckView {
     private java.util.List<RegistrationAttributesView> attributes;
     private String registrationId;
     private java.util.List<RegistrationMessagesView> messages;
+    private java.util.Date expirationWarningDate;
     private RegistrationStateType state;
-    private String expirationWarningDate;
-    private String expirationDate;
+    private java.util.Date expirationDate;
     private java.util.List<RegistrationFeaturesView> features;
 
     public java.util.List<RegistrationAttributesView> getAttributes() {
@@ -45,6 +67,14 @@ public class RegistrationViewV4 extends BlackDuckView {
 	this.messages = messages;
     }
 
+    public java.util.Date getExpirationWarningDate() {
+	return expirationWarningDate;
+    }
+
+    public void setExpirationWarningDate(java.util.Date expirationWarningDate) {
+	this.expirationWarningDate = expirationWarningDate;
+    }
+
     public RegistrationStateType getState() {
 	return state;
     }
@@ -53,19 +83,11 @@ public class RegistrationViewV4 extends BlackDuckView {
 	this.state = state;
     }
 
-    public String getExpirationWarningDate() {
-	return expirationWarningDate;
-    }
-
-    public void setExpirationWarningDate(String expirationWarningDate) {
-	this.expirationWarningDate = expirationWarningDate;
-    }
-
-    public String getExpirationDate() {
+    public java.util.Date getExpirationDate() {
 	return expirationDate;
     }
 
-    public void setExpirationDate(String expirationDate) {
+    public void setExpirationDate(java.util.Date expirationDate) {
 	this.expirationDate = expirationDate;
     }
 

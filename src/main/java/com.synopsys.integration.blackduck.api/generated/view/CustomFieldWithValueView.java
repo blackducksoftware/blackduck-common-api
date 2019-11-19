@@ -23,32 +23,32 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
+import java.util.List;
 import com.synopsys.integration.blackduck.api.generated.enumeration.CustomFieldTypeType;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 
+@Deprecated
+// CustomFieldWithValueView is now called CustomFieldView
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class FieldsCustomFieldViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.admin-4+json";
+public class CustomFieldWithValueView extends BlackDuckView {
+	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
-    private Object updatedBy;
+    private java.util.List<String> values;
     private CustomFieldTypeType type;
     private BigDecimal position;
     private String description;
-    private Object createdBy;
-    private java.util.Date createdAt;
-    private java.util.Date updatedAt;
     private Boolean active;
     private String label;
 
-    public Object getUpdatedBy() {
-	return updatedBy;
+    public java.util.List<String> getValues() {
+	return values;
     }
 
-    public void setUpdatedBy(Object updatedBy) {
-	this.updatedBy = updatedBy;
+    public void setValues(java.util.List<String> values) {
+	this.values = values;
     }
 
     public CustomFieldTypeType getType() {
@@ -73,30 +73,6 @@ public class FieldsCustomFieldViewV4 extends BlackDuckView {
 
     public void setDescription(String description) {
 	this.description = description;
-    }
-
-    public Object getCreatedBy() {
-	return createdBy;
-    }
-
-    public void setCreatedBy(Object createdBy) {
-	this.createdBy = createdBy;
-    }
-
-    public java.util.Date getCreatedAt() {
-	return createdAt;
-    }
-
-    public void setCreatedAt(java.util.Date createdAt) {
-	this.createdAt = createdAt;
-    }
-
-    public java.util.Date getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(java.util.Date updatedAt) {
-	this.updatedAt = updatedAt;
     }
 
     public Boolean getActive() {

@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.generated.enumeration.JobStatusType;
@@ -10,29 +32,21 @@ import java.util.Optional;
 public class JobViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
 
-    private String updatedAt;
-    private String finishedAt;
+    private java.util.Date scheduledAt;
     private JobStatusType status;
     private String progressData;
     private String type;
-    private String startedAt;
+    private java.util.Date startedAt;
     private String errorText;
-    private String scheduledAt;
+    private java.util.Date updatedAt;
+    private java.util.Date finishedAt;
 
-    public String getUpdatedAt() {
-	return updatedAt;
+    public java.util.Date getScheduledAt() {
+	return scheduledAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-    public String getFinishedAt() {
-	return finishedAt;
-    }
-
-    public void setFinishedAt(String finishedAt) {
-	this.finishedAt = finishedAt;
+    public void setScheduledAt(java.util.Date scheduledAt) {
+	this.scheduledAt = scheduledAt;
     }
 
     public JobStatusType getStatus() {
@@ -59,11 +73,11 @@ public class JobViewV4 extends BlackDuckView {
 	this.type = type;
     }
 
-    public String getStartedAt() {
+    public java.util.Date getStartedAt() {
 	return startedAt;
     }
 
-    public void setStartedAt(String startedAt) {
+    public void setStartedAt(java.util.Date startedAt) {
 	this.startedAt = startedAt;
     }
 
@@ -75,12 +89,20 @@ public class JobViewV4 extends BlackDuckView {
 	this.errorText = errorText;
     }
 
-    public String getScheduledAt() {
-	return scheduledAt;
+    public java.util.Date getUpdatedAt() {
+	return updatedAt;
     }
 
-    public void setScheduledAt(String scheduledAt) {
-	this.scheduledAt = scheduledAt;
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	this.updatedAt = updatedAt;
+    }
+
+    public java.util.Date getFinishedAt() {
+	return finishedAt;
+    }
+
+    public void setFinishedAt(java.util.Date finishedAt) {
+	this.finishedAt = finishedAt;
     }
 
 

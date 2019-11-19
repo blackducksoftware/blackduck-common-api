@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -8,13 +30,13 @@ import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionTypeType;
 import java.util.List;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionSourceType;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentSourceType;
 import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 
@@ -37,14 +59,22 @@ public class ComponentVersionViewV4 extends BlackDuckView {
 	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
     }
 
+    private ProjectVersionLicenseLicensesView license;
     private java.util.List<String> additionalHomepages;
     private ComponentVersionApprovalStatusType approvalStatus;
-    private ComponentVersionSourceType source;
+    private java.util.Date releasedOn;
     private String notes;
-    private String releasedOn;
     private ComponentVersionTypeType type;
-    private ProjectVersionLicenseLicensesView license;
+    private ComponentSourceType source;
     private String versionName;
+
+    public ProjectVersionLicenseLicensesView getLicense() {
+	return license;
+    }
+
+    public void setLicense(ProjectVersionLicenseLicensesView license) {
+	this.license = license;
+    }
 
     public java.util.List<String> getAdditionalHomepages() {
 	return additionalHomepages;
@@ -62,12 +92,12 @@ public class ComponentVersionViewV4 extends BlackDuckView {
 	this.approvalStatus = approvalStatus;
     }
 
-    public ComponentVersionSourceType getSource() {
-	return source;
+    public java.util.Date getReleasedOn() {
+	return releasedOn;
     }
 
-    public void setSource(ComponentVersionSourceType source) {
-	this.source = source;
+    public void setReleasedOn(java.util.Date releasedOn) {
+	this.releasedOn = releasedOn;
     }
 
     public String getNotes() {
@@ -78,14 +108,6 @@ public class ComponentVersionViewV4 extends BlackDuckView {
 	this.notes = notes;
     }
 
-    public String getReleasedOn() {
-	return releasedOn;
-    }
-
-    public void setReleasedOn(String releasedOn) {
-	this.releasedOn = releasedOn;
-    }
-
     public ComponentVersionTypeType getType() {
 	return type;
     }
@@ -94,12 +116,12 @@ public class ComponentVersionViewV4 extends BlackDuckView {
 	this.type = type;
     }
 
-    public ProjectVersionLicenseLicensesView getLicense() {
-	return license;
+    public ComponentSourceType getSource() {
+	return source;
     }
 
-    public void setLicense(ProjectVersionLicenseLicensesView license) {
-	this.license = license;
+    public void setSource(ComponentSourceType source) {
+	this.source = source;
     }
 
     public String getVersionName() {

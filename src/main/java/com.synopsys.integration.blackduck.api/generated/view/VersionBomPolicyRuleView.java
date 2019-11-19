@@ -1,11 +1,33 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentPolicyRulesItemsSeverityType;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentPolicyRulesItemsExpressionView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentPolicyRulesItemsPolicyApprovalStatusType;
+import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleSeverityType;
 
 @Deprecated
 // VersionBomPolicyRuleView is now called ComponentPolicyRulesView
@@ -14,19 +36,19 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private Boolean enabled;
-    private ComponentPolicyRulesItemsExpressionView expression;
-    private String updatedAt;
     private String description;
+    private PolicyRuleExpressionView expression;
     private String name;
     private String updatedBy;
     private String updatedByUser;
+    private java.util.Date createdAt;
     private String comment;
-    private ComponentPolicyRulesItemsSeverityType severity;
+    private PolicyStatusType policyApprovalStatus;
     private Boolean overridable;
     private String createdBy;
     private String createdByUser;
-    private String createdAt;
-    private ComponentPolicyRulesItemsPolicyApprovalStatusType policyApprovalStatus;
+    private PolicyRuleSeverityType severity;
+    private java.util.Date updatedAt;
 
     public Boolean getEnabled() {
 	return enabled;
@@ -36,28 +58,20 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	this.enabled = enabled;
     }
 
-    public ComponentPolicyRulesItemsExpressionView getExpression() {
-	return expression;
-    }
-
-    public void setExpression(ComponentPolicyRulesItemsExpressionView expression) {
-	this.expression = expression;
-    }
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
     public String getDescription() {
 	return description;
     }
 
     public void setDescription(String description) {
 	this.description = description;
+    }
+
+    public PolicyRuleExpressionView getExpression() {
+	return expression;
+    }
+
+    public void setExpression(PolicyRuleExpressionView expression) {
+	this.expression = expression;
     }
 
     public String getName() {
@@ -84,6 +98,14 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	this.updatedByUser = updatedByUser;
     }
 
+    public java.util.Date getCreatedAt() {
+	return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+	this.createdAt = createdAt;
+    }
+
     public String getComment() {
 	return comment;
     }
@@ -92,12 +114,12 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	this.comment = comment;
     }
 
-    public ComponentPolicyRulesItemsSeverityType getSeverity() {
-	return severity;
+    public PolicyStatusType getPolicyApprovalStatus() {
+	return policyApprovalStatus;
     }
 
-    public void setSeverity(ComponentPolicyRulesItemsSeverityType severity) {
-	this.severity = severity;
+    public void setPolicyApprovalStatus(PolicyStatusType policyApprovalStatus) {
+	this.policyApprovalStatus = policyApprovalStatus;
     }
 
     public Boolean getOverridable() {
@@ -124,20 +146,20 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	this.createdByUser = createdByUser;
     }
 
-    public String getCreatedAt() {
-	return createdAt;
+    public PolicyRuleSeverityType getSeverity() {
+	return severity;
     }
 
-    public void setCreatedAt(String createdAt) {
-	this.createdAt = createdAt;
+    public void setSeverity(PolicyRuleSeverityType severity) {
+	this.severity = severity;
     }
 
-    public ComponentPolicyRulesItemsPolicyApprovalStatusType getPolicyApprovalStatus() {
-	return policyApprovalStatus;
+    public java.util.Date getUpdatedAt() {
+	return updatedAt;
     }
 
-    public void setPolicyApprovalStatus(ComponentPolicyRulesItemsPolicyApprovalStatusType policyApprovalStatus) {
-	this.policyApprovalStatus = policyApprovalStatus;
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
 

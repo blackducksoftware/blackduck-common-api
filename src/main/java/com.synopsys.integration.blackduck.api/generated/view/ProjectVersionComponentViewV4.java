@@ -1,10 +1,31 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamilyLicenseFamilyRiskRulesUsageType;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
@@ -13,9 +34,10 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumera
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionBomOriginView;
 import java.math.BigDecimal;
 import java.util.List;
+import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
+import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentReviewStatusType;
@@ -44,20 +66,20 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private String componentName;
     private java.util.List<VersionBomOriginView> origins;
     private String component;
+    private ComponentVersionRiskProfileActivityDataView activityData;
     private String componentVersionName;
     private RiskProfileView versionRiskProfile;
     private RiskProfileView activityRiskProfile;
     private VersionBomComponentReviewStatusType reviewStatus;
     private RiskProfileView licenseRiskProfile;
-    private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private java.util.List<VersionBomComponentMatchType> matchTypes;
-    private ProjectVersionComponentReviewedDetailsView reviewedDetails;
+    private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private java.util.Date releasedOn;
     private String policyStatus;
     private RiskProfileView securityRiskProfile;
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
-    private ProjectVersionComponentActivityDataView activityData;
     private PolicyStatusType approvalStatus;
+    private ProjectVersionComponentReviewedDetailsView reviewedDetails;
     private BigDecimal totalFileMatchCount;
     private String componentVersion;
     private RiskProfileView operationalRiskProfile;
@@ -84,6 +106,14 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 
     public void setComponent(String component) {
 	this.component = component;
+    }
+
+    public ComponentVersionRiskProfileActivityDataView getActivityData() {
+	return activityData;
+    }
+
+    public void setActivityData(ComponentVersionRiskProfileActivityDataView activityData) {
+	this.activityData = activityData;
     }
 
     public String getComponentVersionName() {
@@ -126,14 +156,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.licenseRiskProfile = licenseRiskProfile;
     }
 
-    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	return licenses;
-    }
-
-    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	this.licenses = licenses;
-    }
-
     public java.util.List<VersionBomComponentMatchType> getMatchTypes() {
 	return matchTypes;
     }
@@ -142,12 +164,12 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.matchTypes = matchTypes;
     }
 
-    public ProjectVersionComponentReviewedDetailsView getReviewedDetails() {
-	return reviewedDetails;
+    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
+	return licenses;
     }
 
-    public void setReviewedDetails(ProjectVersionComponentReviewedDetailsView reviewedDetails) {
-	this.reviewedDetails = reviewedDetails;
+    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
+	this.licenses = licenses;
     }
 
     public java.util.Date getReleasedOn() {
@@ -182,20 +204,20 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.usages = usages;
     }
 
-    public ProjectVersionComponentActivityDataView getActivityData() {
-	return activityData;
-    }
-
-    public void setActivityData(ProjectVersionComponentActivityDataView activityData) {
-	this.activityData = activityData;
-    }
-
     public PolicyStatusType getApprovalStatus() {
 	return approvalStatus;
     }
 
     public void setApprovalStatus(PolicyStatusType approvalStatus) {
 	this.approvalStatus = approvalStatus;
+    }
+
+    public ProjectVersionComponentReviewedDetailsView getReviewedDetails() {
+	return reviewedDetails;
+    }
+
+    public void setReviewedDetails(ProjectVersionComponentReviewedDetailsView reviewedDetails) {
+	this.reviewedDetails = reviewedDetails;
     }
 
     public BigDecimal getTotalFileMatchCount() {

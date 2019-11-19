@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
@@ -12,26 +34,10 @@ import java.util.Optional;
 public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
-    private String updatedAt;
-    private PolicyStatusType overallStatus;
     private java.util.List<NameValuePairView> componentVersionStatusCounts;
     private ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails;
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-    public PolicyStatusType getOverallStatus() {
-	return overallStatus;
-    }
-
-    public void setOverallStatus(PolicyStatusType overallStatus) {
-	this.overallStatus = overallStatus;
-    }
+    private PolicyStatusType overallStatus;
+    private java.util.Date updatedAt;
 
     public java.util.List<NameValuePairView> getComponentVersionStatusCounts() {
 	return componentVersionStatusCounts;
@@ -47,6 +53,22 @@ public class ProjectVersionPolicyStatusViewV4 extends BlackDuckView {
 
     public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
 	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
+    }
+
+    public PolicyStatusType getOverallStatus() {
+	return overallStatus;
+    }
+
+    public void setOverallStatus(PolicyStatusType overallStatus) {
+	this.overallStatus = overallStatus;
+    }
+
+    public java.util.Date getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
 

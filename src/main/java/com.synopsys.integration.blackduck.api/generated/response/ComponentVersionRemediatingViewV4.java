@@ -26,66 +26,38 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingFixesPreviousVulnerabilitiesView;
 
-@Deprecated
-// ComponentSearchResultView is now called ComponentsView
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ComponentSearchResultView extends BlackDuckResponse {
+public class ComponentVersionRemediatingViewV4 extends BlackDuckResponse {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
-    private String componentName;
-    private String versionName;
-    private String version;
-    private String component;
-    private String variant;
-    private String originId;
+    private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView latestAfterCurrent;
+    private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities;
+    private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView noVulnerabilities;
 
-    public String getComponentName() {
-	return componentName;
+    public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getLatestAfterCurrent() {
+	return latestAfterCurrent;
     }
 
-    public void setComponentName(String componentName) {
-	this.componentName = componentName;
+    public void setLatestAfterCurrent(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView latestAfterCurrent) {
+	this.latestAfterCurrent = latestAfterCurrent;
     }
 
-    public String getVersionName() {
-	return versionName;
+    public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getFixesPreviousVulnerabilities() {
+	return fixesPreviousVulnerabilities;
     }
 
-    public void setVersionName(String versionName) {
-	this.versionName = versionName;
+    public void setFixesPreviousVulnerabilities(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities) {
+	this.fixesPreviousVulnerabilities = fixesPreviousVulnerabilities;
     }
 
-    public String getVersion() {
-	return version;
+    public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getNoVulnerabilities() {
+	return noVulnerabilities;
     }
 
-    public void setVersion(String version) {
-	this.version = version;
-    }
-
-    public String getComponent() {
-	return component;
-    }
-
-    public void setComponent(String component) {
-	this.component = component;
-    }
-
-    public String getVariant() {
-	return variant;
-    }
-
-    public void setVariant(String variant) {
-	this.variant = variant;
-    }
-
-    public String getOriginId() {
-	return originId;
-    }
-
-    public void setOriginId(String originId) {
-	this.originId = originId;
+    public void setNoVulnerabilities(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView noVulnerabilities) {
+	this.noVulnerabilities = noVulnerabilities;
     }
 
 

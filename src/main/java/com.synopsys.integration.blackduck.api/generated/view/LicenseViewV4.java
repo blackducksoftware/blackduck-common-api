@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -9,7 +31,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseCodeS
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseStatusType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 
@@ -27,22 +49,22 @@ public class LicenseViewV4 extends BlackDuckView {
     }
 
     private String createdBy;
-    private String updatedAt;
+    private java.util.Date statusUpdatedAt;
+    private ComponentVersionApprovalStatusType licenseStatus;
     private String name;
     private String statusUpdatedByUser;
     private LicenseLicenseSourceType licenseSource;
-    private String createdAt;
-    private String statusUpdatedAt;
+    private java.util.Date createdAt;
     private String notes;
     private String updatedByUser;
     private String updatedBy;
-    private String expirationDate;
     private String createdByUser;
     private String statusUpdatedBy;
     private LicenseOwnershipType ownership;
-    private LicenseLicenseStatusType licenseStatus;
     private LicenseCodeSharingType codeSharing;
+    private java.util.Date expirationDate;
     private String spdxId;
+    private java.util.Date updatedAt;
 
     public String getCreatedBy() {
 	return createdBy;
@@ -52,12 +74,20 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.createdBy = createdBy;
     }
 
-    public String getUpdatedAt() {
-	return updatedAt;
+    public java.util.Date getStatusUpdatedAt() {
+	return statusUpdatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
+    public void setStatusUpdatedAt(java.util.Date statusUpdatedAt) {
+	this.statusUpdatedAt = statusUpdatedAt;
+    }
+
+    public ComponentVersionApprovalStatusType getLicenseStatus() {
+	return licenseStatus;
+    }
+
+    public void setLicenseStatus(ComponentVersionApprovalStatusType licenseStatus) {
+	this.licenseStatus = licenseStatus;
     }
 
     public String getName() {
@@ -84,20 +114,12 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.licenseSource = licenseSource;
     }
 
-    public String getCreatedAt() {
+    public java.util.Date getCreatedAt() {
 	return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(java.util.Date createdAt) {
 	this.createdAt = createdAt;
-    }
-
-    public String getStatusUpdatedAt() {
-	return statusUpdatedAt;
-    }
-
-    public void setStatusUpdatedAt(String statusUpdatedAt) {
-	this.statusUpdatedAt = statusUpdatedAt;
     }
 
     public String getNotes() {
@@ -124,14 +146,6 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.updatedBy = updatedBy;
     }
 
-    public String getExpirationDate() {
-	return expirationDate;
-    }
-
-    public void setExpirationDate(String expirationDate) {
-	this.expirationDate = expirationDate;
-    }
-
     public String getCreatedByUser() {
 	return createdByUser;
     }
@@ -156,14 +170,6 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.ownership = ownership;
     }
 
-    public LicenseLicenseStatusType getLicenseStatus() {
-	return licenseStatus;
-    }
-
-    public void setLicenseStatus(LicenseLicenseStatusType licenseStatus) {
-	this.licenseStatus = licenseStatus;
-    }
-
     public LicenseCodeSharingType getCodeSharing() {
 	return codeSharing;
     }
@@ -172,12 +178,28 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.codeSharing = codeSharing;
     }
 
+    public java.util.Date getExpirationDate() {
+	return expirationDate;
+    }
+
+    public void setExpirationDate(java.util.Date expirationDate) {
+	this.expirationDate = expirationDate;
+    }
+
     public String getSpdxId() {
 	return spdxId;
     }
 
     public void setSpdxId(String spdxId) {
 	this.spdxId = spdxId;
+    }
+
+    public java.util.Date getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
 

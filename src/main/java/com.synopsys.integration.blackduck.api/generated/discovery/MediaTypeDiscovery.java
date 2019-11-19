@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.HashMap;
@@ -9,7 +31,6 @@ import com.synopsys.integration.blackduck.api.generated.view.CustomFieldView;
 import com.synopsys.integration.blackduck.api.generated.component.RegistrationAttributesView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsParametersView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingFixesPreviousVulnerabilitiesView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseUpdatedByView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
 import com.synopsys.integration.blackduck.api.generated.component.ReportContentsReportContentView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionLicenseLicensesLicenseFamilySummaryView;
@@ -21,21 +42,18 @@ import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectVi
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.component.CweCommonConsequencesView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityAffectedProjectsView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentPolicyRulesItemsExpressionExpressionsView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss3TemporalMetricsView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.view.RoleAssignmentView;
 import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss2TemporalMetricsView;
 import com.synopsys.integration.blackduck.api.generated.component.CustomFieldOptionsView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingNoVulnerabilitiesView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionView;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyUpdatedByView;
 import com.synopsys.integration.blackduck.api.generated.view.FieldsCustomFieldView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyCreatedByView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss3View;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
@@ -48,32 +66,25 @@ import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsReviewingUserView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentPolicyRulesItemsExpressionExpressionsParametersView;
 import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss2View;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyLicenseFamilyRiskRulesView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataCountsView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseStatusUpdatedByView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingLatestAfterCurrentView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
 import com.synopsys.integration.blackduck.api.generated.component.CommentUserView;
 import com.synopsys.integration.blackduck.api.generated.view.JobView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionRemediatingView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyRulesView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentActivityDataView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentPolicyRulesItemsExpressionView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileVersionDataView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseCreatedByView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
@@ -90,18 +101,12 @@ public class MediaTypeDiscovery {
     			mediaTypeMap.put(CodeLocationView.class, "application/vnd.blackducksoftware.scan-4+json");
     			mediaTypeMap.put(CommentUserView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
     			mediaTypeMap.put(CommentView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentPolicyRulesItemsExpressionExpressionsParametersView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentPolicyRulesItemsExpressionExpressionsView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentPolicyRulesItemsExpressionView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
     			mediaTypeMap.put(ComponentPolicyRulesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ComponentPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ComponentVersionPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRemediatingLatestAfterCurrentView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRemediatingNoVulnerabilitiesView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRemediatingView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(ComponentVersionRiskProfileActivityDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileRiskDataCountsView.class, "application/vnd.blackducksoftware.component-detail-5+json");
+    			mediaTypeMap.put(ComponentVersionRiskProfileRiskDataCountsView.class, "application/vnd.blackducksoftware.component-detail-4+json");
     			mediaTypeMap.put(ComponentVersionRiskProfileRiskDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
     			mediaTypeMap.put(ComponentVersionRiskProfileVersionDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
     			mediaTypeMap.put(ComponentVersionRiskProfileView.class, "application/vnd.blackducksoftware.component-detail-5+json");
@@ -114,25 +119,20 @@ public class MediaTypeDiscovery {
     			mediaTypeMap.put(CweCommonConsequencesView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
     			mediaTypeMap.put(FieldsCustomFieldView.class, "application/vnd.blackducksoftware.admin-4+json");
     			mediaTypeMap.put(JobView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(LicenseCreatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseFamilyCreatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseFamilyLicenseFamilyRiskRulesView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseFamilyUpdatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseFamilyView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseLicenseFamilyView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseReportsReportView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(LicenseStatusUpdatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseTermView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseTextView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseUpdatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
     			mediaTypeMap.put(LicenseView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(PolicyRuleExpressionExpressionsParametersView.class, "application/vnd.blackducksoftware.policy-5+json");
-    			mediaTypeMap.put(PolicyRuleExpressionExpressionsView.class, "application/vnd.blackducksoftware.policy-5+json");
+    			mediaTypeMap.put(PolicyRuleExpressionExpressionsParametersView.class, "application/vnd.blackducksoftware.policy-4+json");
+    			mediaTypeMap.put(PolicyRuleExpressionExpressionsView.class, "application/vnd.blackducksoftware.policy-4+json");
     			mediaTypeMap.put(PolicyRuleExpressionView.class, "application/vnd.blackducksoftware.policy-4+json");
     			mediaTypeMap.put(PolicyRuleView.class, "application/vnd.blackducksoftware.policy-5+json");
-    			mediaTypeMap.put(ProjectVersionComponentActivityDataView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
     			mediaTypeMap.put(ProjectVersionComponentLicensesView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionComponentReviewedDetailsReviewingUserView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
+    			mediaTypeMap.put(ProjectVersionComponentReviewedDetailsReviewingUserView.class, "application/vnd.blackducksoftware.bill-of-materials-5+json");
     			mediaTypeMap.put(ProjectVersionComponentReviewedDetailsView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
     			mediaTypeMap.put(ProjectVersionComponentView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ProjectVersionLicenseLicensesLicenseFamilySummaryView.class, "application/vnd.blackducksoftware.project-detail-5+json");

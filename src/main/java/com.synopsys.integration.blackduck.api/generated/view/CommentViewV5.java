@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2019 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
@@ -10,19 +32,11 @@ import com.synopsys.integration.blackduck.api.generated.component.CommentUserVie
 public class CommentViewV5 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
-    private String updatedAt;
     private CommentUserView user;
-    private String createdAt;
+    private java.util.Date createdAt;
     private String comment;
     private String commentType;
-
-    public String getUpdatedAt() {
-	return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-	this.updatedAt = updatedAt;
-    }
+    private java.util.Date updatedAt;
 
     public CommentUserView getUser() {
 	return user;
@@ -32,11 +46,11 @@ public class CommentViewV5 extends BlackDuckView {
 	this.user = user;
     }
 
-    public String getCreatedAt() {
+    public java.util.Date getCreatedAt() {
 	return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(java.util.Date createdAt) {
 	this.createdAt = createdAt;
     }
 
@@ -54,6 +68,14 @@ public class CommentViewV5 extends BlackDuckView {
 
     public void setCommentType(String commentType) {
 	this.commentType = commentType;
+    }
+
+    public java.util.Date getUpdatedAt() {
+	return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	this.updatedAt = updatedAt;
     }
 
 
