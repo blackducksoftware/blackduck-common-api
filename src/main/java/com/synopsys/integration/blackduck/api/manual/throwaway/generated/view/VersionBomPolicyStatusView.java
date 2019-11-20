@@ -27,7 +27,11 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.compone
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.NameValuePairView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.PolicySummaryStatusType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+* VersionBomPolicyStatusView is now called ProjectVersionPolicyStatusView
+* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+ **/
 public class VersionBomPolicyStatusView extends BlackDuckView {
     private ComponentVersionPolicyViolationDetails componentVersionPolicyViolationDetails;
     private java.util.List<NameValuePairView> componentVersionStatusCounts;

@@ -26,7 +26,11 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.LicenseFamilySummaryView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ComplexLicenseType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+* ComplexLicenseView is now called ProjectVersionLicenseLicensesView
+ * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+* **/
 public class ComplexLicenseView extends BlackDuckView {
     private String license;
     private String licenseDisplay;

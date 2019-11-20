@@ -25,7 +25,11 @@ package com.synopsys.integration.blackduck.api.manual.throwaway.generated.view;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.PolicySummaryStatusType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+* PolicyStatusView is now called ComponentPolicyStatusView
+* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+ **/
 public class PolicyStatusView extends BlackDuckView {
     private PolicySummaryStatusType approvalStatus;
     private String comment;

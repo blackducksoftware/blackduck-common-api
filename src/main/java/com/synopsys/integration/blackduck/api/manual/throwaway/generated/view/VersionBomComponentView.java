@@ -44,7 +44,11 @@ import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.Vu
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerableComponentView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.MatchedFileView;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+ * VersionBomComponentView is now called ProjectVersionComponentView
+* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+ **/
 public class VersionBomComponentView extends BlackDuckView {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 

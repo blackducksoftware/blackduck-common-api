@@ -25,7 +25,11 @@ package com.synopsys.integration.blackduck.api.manual.throwaway.generated.respon
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.RemediatingVersionView;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+ * RemediationOptionsView is now called ComponentVersionRemediatingView
+ * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+ * **/
 public class RemediationOptionsView extends BlackDuckResponse {
     private RemediatingVersionView fixesPreviousVulnerabilities;
     private RemediatingVersionView latestAfterCurrent;

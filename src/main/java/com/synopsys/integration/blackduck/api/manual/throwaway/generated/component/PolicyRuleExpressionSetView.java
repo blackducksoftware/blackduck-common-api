@@ -31,6 +31,8 @@ import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpr
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.PolicyRuleExpressionSetOperatorType;
 
+@Deprecated
+// PolicyRuleExpressionSetView is now called PolicyRuleExpressionView
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class PolicyRuleExpressionSetView extends BlackDuckComponent {
     private java.util.List<PolicyRuleExpressionExpressionsView> expressions;

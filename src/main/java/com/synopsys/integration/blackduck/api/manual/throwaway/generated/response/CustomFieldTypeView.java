@@ -25,7 +25,11 @@ package com.synopsys.integration.blackduck.api.manual.throwaway.generated.respon
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.CustomFieldType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+@Deprecated
+/**
+ * CustomFieldTypeView is now called TypesView
+ * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+ * **/
 public class CustomFieldTypeView extends BlackDuckResponse {
     private String name;
     private Boolean supportsOptions;
