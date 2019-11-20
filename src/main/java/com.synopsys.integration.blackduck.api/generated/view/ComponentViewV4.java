@@ -23,20 +23,20 @@ public class ComponentViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-        public static final String TAGS_LINK = "tags";
         public static final String CUSTOM_FIELDS_LINK = "custom-fields";
         public static final String VERSIONS_LINK = "versions";
+        public static final String TAGS_LINK = "tags";
         public static final String VULNERABILITIES_LINK = "vulnerabilities";
 
-	public static final LinkMultipleResponses<TagView> TAGS_LINK_RESPONSE = new LinkMultipleResponses<TagView>(TAGS_LINK, TagView.class);
 	public static final LinkMultipleResponses<CustomFieldView> CUSTOM_FIELDS_LINK_RESPONSE = new LinkMultipleResponses<CustomFieldView>(CUSTOM_FIELDS_LINK, CustomFieldView.class);
 	public static final LinkMultipleResponses<ComponentVersionView> VERSIONS_LINK_RESPONSE = new LinkMultipleResponses<ComponentVersionView>(VERSIONS_LINK, ComponentVersionView.class);
+	public static final LinkMultipleResponses<TagView> TAGS_LINK_RESPONSE = new LinkMultipleResponses<TagView>(TAGS_LINK, TagView.class);
 	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 
     static {
-	links.put(TAGS_LINK, TAGS_LINK_RESPONSE);
 	links.put(CUSTOM_FIELDS_LINK, CUSTOM_FIELDS_LINK_RESPONSE);
 	links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+	links.put(TAGS_LINK, TAGS_LINK_RESPONSE);
 	links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 

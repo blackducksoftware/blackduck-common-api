@@ -25,27 +25,27 @@ public class ProjectViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.project-detail-4+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-        public static final String CANONICALVERSION_LINK = "canonicalVersion";
-        public static final String PROJECT_MAPPINGS_LINK = "project-mappings";
-        public static final String TAGS_LINK = "tags";
-        public static final String VERSIONS_LINK = "versions";
-        public static final String USERS_LINK = "users";
         public static final String USERGROUPS_LINK = "usergroups";
+        public static final String CANONICALVERSION_LINK = "canonicalVersion";
+        public static final String USERS_LINK = "users";
+        public static final String PROJECT_MAPPINGS_LINK = "project-mappings";
+        public static final String VERSIONS_LINK = "versions";
+        public static final String TAGS_LINK = "tags";
 
-	public static final LinkSingleResponse<ProjectVersionView> CANONICALVERSION_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionView>(CANONICALVERSION_LINK, ProjectVersionView.class);
-	public static final LinkMultipleResponses<ProjectMappingView> PROJECT_MAPPINGS_LINK_RESPONSE = new LinkMultipleResponses<ProjectMappingView>(PROJECT_MAPPINGS_LINK, ProjectMappingView.class);
-	public static final LinkMultipleResponses<TagView> TAGS_LINK_RESPONSE = new LinkMultipleResponses<TagView>(TAGS_LINK, TagView.class);
-	public static final LinkMultipleResponses<ProjectVersionView> VERSIONS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionView>(VERSIONS_LINK, ProjectVersionView.class);
-	public static final LinkMultipleResponses<AssignedUserView> USERS_LINK_RESPONSE = new LinkMultipleResponses<AssignedUserView>(USERS_LINK, AssignedUserView.class);
 	public static final LinkMultipleResponses<AssignedUserGroupView> USERGROUPS_LINK_RESPONSE = new LinkMultipleResponses<AssignedUserGroupView>(USERGROUPS_LINK, AssignedUserGroupView.class);
+	public static final LinkSingleResponse<ProjectVersionView> CANONICALVERSION_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionView>(CANONICALVERSION_LINK, ProjectVersionView.class);
+	public static final LinkMultipleResponses<AssignedUserView> USERS_LINK_RESPONSE = new LinkMultipleResponses<AssignedUserView>(USERS_LINK, AssignedUserView.class);
+	public static final LinkMultipleResponses<ProjectMappingView> PROJECT_MAPPINGS_LINK_RESPONSE = new LinkMultipleResponses<ProjectMappingView>(PROJECT_MAPPINGS_LINK, ProjectMappingView.class);
+	public static final LinkMultipleResponses<ProjectVersionView> VERSIONS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionView>(VERSIONS_LINK, ProjectVersionView.class);
+	public static final LinkMultipleResponses<TagView> TAGS_LINK_RESPONSE = new LinkMultipleResponses<TagView>(TAGS_LINK, TagView.class);
 
     static {
-	links.put(CANONICALVERSION_LINK, CANONICALVERSION_LINK_RESPONSE);
-	links.put(PROJECT_MAPPINGS_LINK, PROJECT_MAPPINGS_LINK_RESPONSE);
-	links.put(TAGS_LINK, TAGS_LINK_RESPONSE);
-	links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
-	links.put(USERS_LINK, USERS_LINK_RESPONSE);
 	links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
+	links.put(CANONICALVERSION_LINK, CANONICALVERSION_LINK_RESPONSE);
+	links.put(USERS_LINK, USERS_LINK_RESPONSE);
+	links.put(PROJECT_MAPPINGS_LINK, PROJECT_MAPPINGS_LINK_RESPONSE);
+	links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+	links.put(TAGS_LINK, TAGS_LINK_RESPONSE);
     }
 
     private Boolean projectLevelAdjustments;
