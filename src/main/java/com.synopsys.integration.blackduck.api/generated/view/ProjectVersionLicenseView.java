@@ -20,22 +20,22 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.List;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseTypeType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
-public class ProjectVersionLicenseView extends BlackDuckComponent {
+public class ProjectVersionLicenseView extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.project-detail-5+json";
 
     private String licenseDisplay;
-    private String type;
+    private ProjectVersionLicenseTypeType type;
     private java.util.List<ProjectVersionLicenseLicensesView> licenses;
 
     public String getLicenseDisplay() {
@@ -46,11 +46,11 @@ public class ProjectVersionLicenseView extends BlackDuckComponent {
 	this.licenseDisplay = licenseDisplay;
     }
 
-    public String getType() {
+    public ProjectVersionLicenseTypeType getType() {
 	return type;
     }
 
-    public void setType(String type) {
+    public void setType(ProjectVersionLicenseTypeType type) {
 	this.type = type;
     }
 

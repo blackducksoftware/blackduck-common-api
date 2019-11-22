@@ -23,7 +23,6 @@
 package com.synopsys.integration.blackduck.api.generated.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
 @Deprecated

@@ -25,7 +25,6 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.math.BigDecimal;
 import java.util.List;
 import com.synopsys.integration.blackduck.api.generated.enumeration.CustomFieldTypeType;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;

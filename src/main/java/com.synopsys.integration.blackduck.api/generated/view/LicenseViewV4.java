@@ -28,7 +28,6 @@ import java.util.Optional;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseSourceType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseCodeSharingType;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;

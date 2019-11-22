@@ -71,9 +71,9 @@ import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyL
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataCountsView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
 import com.synopsys.integration.blackduck.api.generated.component.CommentUserView;
@@ -137,7 +137,7 @@ public class MediaTypeDiscovery {
     			mediaTypeMap.put(ProjectVersionComponentView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ProjectVersionLicenseLicensesLicenseFamilySummaryView.class, "application/vnd.blackducksoftware.project-detail-5+json");
     			mediaTypeMap.put(ProjectVersionLicenseLicensesView.class, "application/vnd.blackducksoftware.project-detail-5+json");
-    			mediaTypeMap.put(ProjectVersionLicenseView.class, "application/vnd.blackducksoftware.project-detail-4+json");
+    			mediaTypeMap.put(ProjectVersionLicenseView.class, "application/vnd.blackducksoftware.component-detail-4+json");
     			mediaTypeMap.put(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
     			mediaTypeMap.put(ProjectVersionPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
     			mediaTypeMap.put(ProjectVersionView.class, "application/vnd.blackducksoftware.project-detail-5+json");

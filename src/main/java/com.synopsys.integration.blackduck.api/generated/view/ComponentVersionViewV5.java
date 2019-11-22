@@ -25,12 +25,11 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionTypeType;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
 import java.util.List;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
@@ -48,21 +47,21 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
         public static final String COMPONENT_LINK = "component";
-        public static final String ORIGINS_LINK = "origins";
         public static final String VULNERABILITIES_LINK = "vulnerabilities";
+        public static final String ORIGINS_LINK = "origins";
 
 	public static final LinkSingleResponse<ComponentView> COMPONENT_LINK_RESPONSE = new LinkSingleResponse<ComponentView>(COMPONENT_LINK, ComponentView.class);
-	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
 	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
+	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
 
     static {
 	links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
-	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
 	links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
     }
 
-    private ProjectVersionLicenseLicensesView license;
     private java.util.List<String> additionalHomepages;
+    private ProjectVersionLicenseView license;
     private ComponentVersionApprovalStatusType approvalStatus;
     private java.util.Date releasedOn;
     private String notes;
@@ -70,20 +69,20 @@ public class ComponentVersionViewV5 extends BlackDuckView {
     private ComponentSourceType source;
     private String versionName;
 
-    public ProjectVersionLicenseLicensesView getLicense() {
-	return license;
-    }
-
-    public void setLicense(ProjectVersionLicenseLicensesView license) {
-	this.license = license;
-    }
-
     public java.util.List<String> getAdditionalHomepages() {
 	return additionalHomepages;
     }
 
     public void setAdditionalHomepages(java.util.List<String> additionalHomepages) {
 	this.additionalHomepages = additionalHomepages;
+    }
+
+    public ProjectVersionLicenseView getLicense() {
+	return license;
+    }
+
+    public void setLicense(ProjectVersionLicenseView license) {
+	this.license = license;
     }
 
     public ComponentVersionApprovalStatusType getApprovalStatus() {

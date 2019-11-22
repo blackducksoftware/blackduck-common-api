@@ -73,9 +73,9 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private RiskProfileView versionRiskProfile;
     private RiskProfileView activityRiskProfile;
     private VersionBomComponentReviewStatusType reviewStatus;
+    private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private RiskProfileView licenseRiskProfile;
     private java.util.List<VersionBomComponentMatchType> matchTypes;
-    private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private java.util.Date releasedOn;
     private String policyStatus;
     private RiskProfileView securityRiskProfile;
@@ -150,6 +150,14 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.reviewStatus = reviewStatus;
     }
 
+    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
+	return licenses;
+    }
+
+    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
+	this.licenses = licenses;
+    }
+
     public RiskProfileView getLicenseRiskProfile() {
 	return licenseRiskProfile;
     }
@@ -164,14 +172,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 
     public void setMatchTypes(java.util.List<VersionBomComponentMatchType> matchTypes) {
 	this.matchTypes = matchTypes;
-    }
-
-    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	return licenses;
-    }
-
-    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	this.licenses = licenses;
     }
 
     public java.util.Date getReleasedOn() {

@@ -22,11 +22,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseLicensesTypeType;
 import java.util.List;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseTypeType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -36,9 +36,9 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 
     private String license;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
-    private ProjectVersionLicenseLicensesTypeType licenseType;
     private String licenseDisplay;
     private String spdxId;
+    private ProjectVersionLicenseTypeType licenseType;
 
     public String getLicense() {
 	return license;
@@ -56,14 +56,6 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 	this.licenses = licenses;
     }
 
-    public ProjectVersionLicenseLicensesTypeType getLicenseType() {
-	return licenseType;
-    }
-
-    public void setLicenseType(ProjectVersionLicenseLicensesTypeType licenseType) {
-	this.licenseType = licenseType;
-    }
-
     public String getLicenseDisplay() {
 	return licenseDisplay;
     }
@@ -78,6 +70,14 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 
     public void setSpdxId(String spdxId) {
 	this.spdxId = spdxId;
+    }
+
+    public ProjectVersionLicenseTypeType getLicenseType() {
+	return licenseType;
+    }
+
+    public void setLicenseType(ProjectVersionLicenseTypeType licenseType) {
+	this.licenseType = licenseType;
     }
 
 
