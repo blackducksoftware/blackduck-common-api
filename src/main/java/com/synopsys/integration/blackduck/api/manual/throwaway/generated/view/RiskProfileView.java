@@ -23,7 +23,7 @@
 package com.synopsys.integration.blackduck.api.manual.throwaway.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.RiskCountView;
+import com.synopsys.integration.blackduck.api.generated.component.RiskCountView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class RiskProfileView extends BlackDuckView {

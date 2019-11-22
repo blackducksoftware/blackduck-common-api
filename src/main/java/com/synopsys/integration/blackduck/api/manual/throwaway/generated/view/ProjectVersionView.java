@@ -29,17 +29,15 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
+import com.synopsys.integration.blackduck.api.generated.view.VersionBomComponentView;
+import com.synopsys.integration.blackduck.api.generated.view.VersionBomPolicyStatusView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.OriginSourceType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ProjectVersionPhaseType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.VersionRiskProfileView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ComplexLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ReportView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VersionBomComponentView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VersionBomPolicyStatusView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerableComponentView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionView extends BlackDuckView {

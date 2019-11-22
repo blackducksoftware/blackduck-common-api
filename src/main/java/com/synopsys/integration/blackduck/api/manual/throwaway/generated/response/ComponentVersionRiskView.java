@@ -23,7 +23,7 @@
 package com.synopsys.integration.blackduck.api.manual.throwaway.generated.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.ActivityDataView;
+import com.synopsys.integration.blackduck.api.generated.component.ActivityDataView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionDataView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.RiskProfileView;
 

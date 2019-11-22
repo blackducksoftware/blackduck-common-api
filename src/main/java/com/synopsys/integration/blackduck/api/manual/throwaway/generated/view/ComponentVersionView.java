@@ -29,15 +29,13 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ComponentType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ComponentVersionApprovalStatusType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.OriginSourceType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.ComponentVersionReferenceView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.ComponentVersionRiskView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ComplexLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.VulnerabilityView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentVersionView extends BlackDuckView {
