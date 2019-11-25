@@ -24,6 +24,7 @@ package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
@@ -164,8 +165,8 @@ public class MediaTypeDiscovery {
     			mediaTypeMap.put(VulnerabilityView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
 	}
 
-	public<T extends BlackDuckComponent> String determineMediaType(T bdClass) {
-    		return mediaTypeMap.get(bdClass);
+	public<T extends BlackDuckComponent> Optional<String> determineMediaType(Class<T> bdClass) {
+    		return Optional.ofNullable(mediaTypeMap.get(bdClass));
     	}
 
 }
