@@ -15,5 +15,5 @@ description = 'A library of mostly generated request/response classes for the Bl
 apply plugin: 'com.blackducksoftware.integration.library'
 
 dependencies {
-    api 'com.blackducksoftware.integration:integration-rest:0.13.3'
+    api 'com.blackducksoftware.integration:integration-rest:0.13.5'
 }
