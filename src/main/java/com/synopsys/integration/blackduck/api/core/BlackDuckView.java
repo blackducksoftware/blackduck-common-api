@@ -22,8 +22,8 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.generated.component.ResourceLink;
-import com.synopsys.integration.blackduck.api.generated.component.ResourceMetadata;
+import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
+import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
 
 import java.util.Collections;
 import java.util.List;
@@ -107,6 +107,10 @@ public class BlackDuckView extends BlackDuckResponse {
         }
 
         return Optional.of(_meta.getHref());
+    }
+
+    public String getMediaType() {
+        return "application/json";
     }
 
 }
