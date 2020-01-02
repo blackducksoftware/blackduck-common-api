@@ -20,7 +20,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
 
