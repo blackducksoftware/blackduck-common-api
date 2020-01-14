@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.math.BigDecimal;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseReportsReportReportTypeType;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
@@ -55,7 +56,7 @@ public class ReportViewV4 extends BlackDuckView {
     private String createdBy;
     private BigDecimal fileSize;
     private String fileName;
-    private String reportType;
+    private LicenseReportsReportReportTypeType reportType;
     private java.util.Date updatedAt;
     private java.util.Date finishedAt;
 
@@ -123,11 +124,11 @@ public class ReportViewV4 extends BlackDuckView {
 	this.fileName = fileName;
     }
 
-    public String getReportType() {
+    public LicenseReportsReportReportTypeType getReportType() {
 	return reportType;
     }
 
-    public void setReportType(String reportType) {
+    public void setReportType(LicenseReportsReportReportTypeType reportType) {
 	this.reportType = reportType;
     }
 

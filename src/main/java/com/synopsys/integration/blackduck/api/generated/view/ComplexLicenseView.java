@@ -23,7 +23,9 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.List;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseTypeType;
 
 @Deprecated
@@ -34,23 +36,23 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 public class ComplexLicenseView extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
-    private String license;
-    private java.util.List<String> licenses;
+    private String licenseDisplay;
+    private java.util.List<ProjectVersionLicenseLicensesView> licenses;
     private ProjectVersionLicenseTypeType type;
 
-    public String getLicense() {
-	return license;
+    public String getLicenseDisplay() {
+	return licenseDisplay;
     }
 
-    public void setLicense(String license) {
-	this.license = license;
+    public void setLicenseDisplay(String licenseDisplay) {
+	this.licenseDisplay = licenseDisplay;
     }
 
-    public java.util.List<String> getLicenses() {
+    public java.util.List<ProjectVersionLicenseLicensesView> getLicenses() {
 	return licenses;
     }
 
-    public void setLicenses(java.util.List<String> licenses) {
+    public void setLicenses(java.util.List<ProjectVersionLicenseLicensesView> licenses) {
 	this.licenses = licenses;
     }
 

@@ -30,7 +30,6 @@ import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentMatchType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionBomOriginView;
 import java.math.BigDecimal;
 import java.util.List;
@@ -40,9 +39,10 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatus
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.VersionBomComponentReviewStatusType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.MatchedFileView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComparisonItemsComponentMatchTypesType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -51,18 +51,18 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
+        public static final String POLICY_RULES_LINK = "policy-rules";
         public static final String MATCHED_FILES_LINK = "matched-files";
         public static final String ORIGINS_LINK = "origins";
-        public static final String POLICY_RULES_LINK = "policy-rules";
 
+	public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 	public static final LinkMultipleResponses<MatchedFileView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<MatchedFileView>(MATCHED_FILES_LINK, MatchedFileView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
-	public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 
     static {
+	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
 	links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
 	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
-	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
     }
 
     private String componentName;
@@ -72,17 +72,17 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private String componentVersionName;
     private RiskProfileView versionRiskProfile;
     private RiskProfileView activityRiskProfile;
-    private VersionBomComponentReviewStatusType reviewStatus;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private RiskProfileView licenseRiskProfile;
     private PolicyStatusType policyStatus;
-    private java.util.List<VersionBomComponentMatchType> matchTypes;
     private java.util.Date releasedOn;
     private RiskProfileView securityRiskProfile;
+    private ProjectVersionComponentReviewStatusType reviewStatus;
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
     private PolicyStatusType approvalStatus;
     private ProjectVersionComponentReviewedDetailsView reviewedDetails;
     private BigDecimal totalFileMatchCount;
+    private java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> matchTypes;
     private String componentVersion;
     private RiskProfileView operationalRiskProfile;
 
@@ -142,14 +142,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.activityRiskProfile = activityRiskProfile;
     }
 
-    public VersionBomComponentReviewStatusType getReviewStatus() {
-	return reviewStatus;
-    }
-
-    public void setReviewStatus(VersionBomComponentReviewStatusType reviewStatus) {
-	this.reviewStatus = reviewStatus;
-    }
-
     public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
 	return licenses;
     }
@@ -174,14 +166,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	this.policyStatus = policyStatus;
     }
 
-    public java.util.List<VersionBomComponentMatchType> getMatchTypes() {
-	return matchTypes;
-    }
-
-    public void setMatchTypes(java.util.List<VersionBomComponentMatchType> matchTypes) {
-	this.matchTypes = matchTypes;
-    }
-
     public java.util.Date getReleasedOn() {
 	return releasedOn;
     }
@@ -196,6 +180,14 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 
     public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
 	this.securityRiskProfile = securityRiskProfile;
+    }
+
+    public ProjectVersionComponentReviewStatusType getReviewStatus() {
+	return reviewStatus;
+    }
+
+    public void setReviewStatus(ProjectVersionComponentReviewStatusType reviewStatus) {
+	this.reviewStatus = reviewStatus;
     }
 
     public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
@@ -228,6 +220,14 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 
     public void setTotalFileMatchCount(BigDecimal totalFileMatchCount) {
 	this.totalFileMatchCount = totalFileMatchCount;
+    }
+
+    public java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> getMatchTypes() {
+	return matchTypes;
+    }
+
+    public void setMatchTypes(java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> matchTypes) {
+	this.matchTypes = matchTypes;
     }
 
     public String getComponentVersion() {

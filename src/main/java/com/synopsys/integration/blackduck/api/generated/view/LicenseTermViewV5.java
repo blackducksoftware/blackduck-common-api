@@ -25,7 +25,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermResponsibilityType;
 import java.util.Optional;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermAssociationSourceType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermSourceType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -37,7 +37,7 @@ public class LicenseTermViewV5 extends BlackDuckView {
     private String description;
     private String name;
     private Boolean fulfillmentRequired;
-    private LicenseTermAssociationSourceType associationSource;
+    private LicenseTermSourceType associationSource;
     private Boolean deactivated;
 
     public LicenseTermResponsibilityType getResponsibility() {
@@ -72,11 +72,11 @@ public class LicenseTermViewV5 extends BlackDuckView {
 	this.fulfillmentRequired = fulfillmentRequired;
     }
 
-    public LicenseTermAssociationSourceType getAssociationSource() {
+    public LicenseTermSourceType getAssociationSource() {
 	return associationSource;
     }
 
-    public void setAssociationSource(LicenseTermAssociationSourceType associationSource) {
+    public void setAssociationSource(LicenseTermSourceType associationSource) {
 	this.associationSource = associationSource;
     }
 

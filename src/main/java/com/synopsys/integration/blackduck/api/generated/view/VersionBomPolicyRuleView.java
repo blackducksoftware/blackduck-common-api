@@ -22,8 +22,8 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
@@ -39,13 +39,13 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 
     private Boolean enabled;
     private String description;
-    private PolicyRuleExpressionView expression;
     private String name;
     private String updatedBy;
     private String updatedByUser;
     private java.util.Date createdAt;
     private String comment;
     private PolicyStatusType policyApprovalStatus;
+    private PolicyRuleExpressionView expression;
     private Boolean overridable;
     private String createdBy;
     private String createdByUser;
@@ -66,14 +66,6 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 
     public void setDescription(String description) {
 	this.description = description;
-    }
-
-    public PolicyRuleExpressionView getExpression() {
-	return expression;
-    }
-
-    public void setExpression(PolicyRuleExpressionView expression) {
-	this.expression = expression;
     }
 
     public String getName() {
@@ -122,6 +114,14 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 
     public void setPolicyApprovalStatus(PolicyStatusType policyApprovalStatus) {
 	this.policyApprovalStatus = policyApprovalStatus;
+    }
+
+    public PolicyRuleExpressionView getExpression() {
+	return expression;
+    }
+
+    public void setExpression(PolicyRuleExpressionView expression) {
+	this.expression = expression;
     }
 
     public Boolean getOverridable() {

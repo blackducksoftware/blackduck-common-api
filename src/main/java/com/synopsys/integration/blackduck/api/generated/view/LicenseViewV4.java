@@ -26,8 +26,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseSourceType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseCodeSharingType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseLicensesOwnershipType;
 import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
@@ -61,9 +61,9 @@ public class LicenseViewV4 extends BlackDuckView {
     private String updatedBy;
     private String createdByUser;
     private String statusUpdatedBy;
-    private LicenseOwnershipType ownership;
     private LicenseCodeSharingType codeSharing;
     private java.util.Date expirationDate;
+    private ProjectVersionLicenseLicensesOwnershipType ownership;
     private String spdxId;
     private java.util.Date updatedAt;
 
@@ -163,14 +163,6 @@ public class LicenseViewV4 extends BlackDuckView {
 	this.statusUpdatedBy = statusUpdatedBy;
     }
 
-    public LicenseOwnershipType getOwnership() {
-	return ownership;
-    }
-
-    public void setOwnership(LicenseOwnershipType ownership) {
-	this.ownership = ownership;
-    }
-
     public LicenseCodeSharingType getCodeSharing() {
 	return codeSharing;
     }
@@ -185,6 +177,14 @@ public class LicenseViewV4 extends BlackDuckView {
 
     public void setExpirationDate(java.util.Date expirationDate) {
 	this.expirationDate = expirationDate;
+    }
+
+    public ProjectVersionLicenseLicensesOwnershipType getOwnership() {
+	return ownership;
+    }
+
+    public void setOwnership(ProjectVersionLicenseLicensesOwnershipType ownership) {
+	this.ownership = ownership;
     }
 
     public String getSpdxId() {

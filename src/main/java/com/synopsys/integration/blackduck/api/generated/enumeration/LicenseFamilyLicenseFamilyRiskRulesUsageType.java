@@ -37,7 +37,7 @@ public enum LicenseFamilyLicenseFamilyRiskRulesUsageType {
 	PREREQUISITE,
 	DEV_TOOL_EXCLUDED;
 
-	private String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
+	private String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
 	public String getMediaType() {
 	return mediaType;

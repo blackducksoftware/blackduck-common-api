@@ -46,27 +46,27 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-        public static final String VULNERABILITIES_LINK = "vulnerabilities";
         public static final String ORIGINS_LINK = "origins";
+        public static final String VULNERABILITIES_LINK = "vulnerabilities";
         public static final String COMPONENT_LINK = "component";
 
-	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 	public static final LinkSingleResponse<ComponentView> COMPONENT_LINK_RESPONSE = new LinkSingleResponse<ComponentView>(COMPONENT_LINK, ComponentView.class);
 
     static {
-	links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
 	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+	links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
 	links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
     }
 
     private java.util.List<String> additionalHomepages;
-    private ProjectVersionLicenseView license;
     private ComponentVersionApprovalStatusType approvalStatus;
     private java.util.Date releasedOn;
     private String notes;
     private ComponentVersionTypeType type;
     private ComponentSourceType source;
+    private ProjectVersionLicenseView license;
     private String versionName;
 
     public java.util.List<String> getAdditionalHomepages() {
@@ -75,14 +75,6 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 
     public void setAdditionalHomepages(java.util.List<String> additionalHomepages) {
 	this.additionalHomepages = additionalHomepages;
-    }
-
-    public ProjectVersionLicenseView getLicense() {
-	return license;
-    }
-
-    public void setLicense(ProjectVersionLicenseView license) {
-	this.license = license;
     }
 
     public ComponentVersionApprovalStatusType getApprovalStatus() {
@@ -123,6 +115,14 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 
     public void setSource(ComponentSourceType source) {
 	this.source = source;
+    }
+
+    public ProjectVersionLicenseView getLicense() {
+	return license;
+    }
+
+    public void setLicense(ProjectVersionLicenseView license) {
+	this.license = license;
     }
 
     public String getVersionName() {
