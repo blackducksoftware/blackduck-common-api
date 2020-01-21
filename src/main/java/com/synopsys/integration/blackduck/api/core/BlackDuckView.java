@@ -22,13 +22,13 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
-import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
+import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
 
 /**
  * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
@@ -50,8 +50,8 @@ public class BlackDuckView extends BlackDuckResponse {
         }
 
         return _meta.getLinks().stream()
-                       .map(ResourceLink::getRel)
-                       .anyMatch(linkKey::equals);
+                   .map(ResourceLink::getRel)
+                   .anyMatch(linkKey::equals);
     }
 
     public Optional<String> getFirstLink(String linkKey) {
@@ -60,15 +60,16 @@ public class BlackDuckView extends BlackDuckResponse {
         }
 
         return _meta.getLinks().stream()
-                       .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
-                       .findFirst()
-                       .map(ResourceLink::getHref);
+                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                   .findFirst()
+                   .map(ResourceLink::getHref);
     }
 
     public List<String> getLinks(String linkKey) {
         return getResourceLinks().stream()
-                       .map(ResourceLink::getHref)
-                       .collect(Collectors.toList());
+                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                   .map(ResourceLink::getHref)
+                   .collect(Collectors.toList());
     }
 
     public Optional<ResourceMetadata> getResourceMetadata() {
@@ -89,8 +90,8 @@ public class BlackDuckView extends BlackDuckResponse {
 
     public List<String> getAvailableLinks() {
         return getResourceLinks().stream()
-                       .map(ResourceLink::getRel)
-                       .collect(Collectors.toList());
+                   .map(ResourceLink::getRel)
+                   .collect(Collectors.toList());
     }
 
     public List<String> getAllowedMethods() {
