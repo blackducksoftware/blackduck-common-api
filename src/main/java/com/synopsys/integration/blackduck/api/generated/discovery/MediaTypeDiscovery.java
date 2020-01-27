@@ -33,7 +33,6 @@ import com.synopsys.integration.blackduck.api.generated.component.RegistrationAt
 import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsParametersView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingFixesPreviousVulnerabilitiesView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.TagView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
 import com.synopsys.integration.blackduck.api.generated.component.ReportContentsReportContentView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionLicenseLicensesLicenseFamilySummaryView;
@@ -44,7 +43,6 @@ import com.synopsys.integration.blackduck.api.generated.view.CommentView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.RegistrationFeaturesView;
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.component.CweCommonConsequencesView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityAffectedProjectsView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
@@ -72,6 +70,7 @@ import com.synopsys.integration.blackduck.api.generated.component.RegistrationMe
 import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsReviewingUserView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
 import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss2View;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionMatchedFilesView;
@@ -83,6 +82,7 @@ import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpr
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
+import com.synopsys.integration.blackduck.api.generated.view.TagView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
 import com.synopsys.integration.blackduck.api.generated.component.CommentUserView;

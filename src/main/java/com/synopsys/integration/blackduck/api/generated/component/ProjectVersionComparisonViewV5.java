@@ -36,11 +36,19 @@ import java.util.Optional;
 public class ProjectVersionComparisonViewV5 extends BlackDuckComponent {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
+    private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> leftUsages;
     private ProjectVersionComparisonItemsComponentView component;
     private java.util.List<String> leftLicenses;
     private ProjectVersionComparisonItemsComponentVersionStateType componentVersionState;
     private ProjectVersionComparisonItemsComponentVersionStateType componentState;
-    private LicenseFamilyLicenseFamilyRiskRulesUsageType leftUsages;
+
+    public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getLeftUsages() {
+	return leftUsages;
+    }
+
+    public void setLeftUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> leftUsages) {
+	this.leftUsages = leftUsages;
+    }
 
     public ProjectVersionComparisonItemsComponentView getComponent() {
 	return component;
@@ -72,14 +80,6 @@ public class ProjectVersionComparisonViewV5 extends BlackDuckComponent {
 
     public void setComponentState(ProjectVersionComparisonItemsComponentVersionStateType componentState) {
 	this.componentState = componentState;
-    }
-
-    public LicenseFamilyLicenseFamilyRiskRulesUsageType getLeftUsages() {
-	return leftUsages;
-    }
-
-    public void setLeftUsages(LicenseFamilyLicenseFamilyRiskRulesUsageType leftUsages) {
-	this.leftUsages = leftUsages;
     }
 
 

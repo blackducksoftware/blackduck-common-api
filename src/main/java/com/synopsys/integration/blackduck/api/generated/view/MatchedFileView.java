@@ -23,6 +23,7 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamilyLicenseFamilyRiskRulesUsageType;
+import java.util.List;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import java.util.Optional;
@@ -37,7 +38,7 @@ public class MatchedFileView extends BlackDuckView {
 	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private ComponentMatchedFilesItemsFilePathView filePath;
-    private LicenseFamilyLicenseFamilyRiskRulesUsageType usages;
+    private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
 
     public ComponentMatchedFilesItemsFilePathView getFilePath() {
 	return filePath;
@@ -47,11 +48,11 @@ public class MatchedFileView extends BlackDuckView {
 	this.filePath = filePath;
     }
 
-    public LicenseFamilyLicenseFamilyRiskRulesUsageType getUsages() {
+    public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
 	return usages;
     }
 
-    public void setUsages(LicenseFamilyLicenseFamilyRiskRulesUsageType usages) {
+    public void setUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages) {
 	this.usages = usages;
     }
 
