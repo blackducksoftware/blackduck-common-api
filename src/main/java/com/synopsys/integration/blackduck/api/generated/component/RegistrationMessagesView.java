@@ -30,30 +30,29 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RegistrationMessagesView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
     private RegistrationMessagesMessageCodeType messageCode;
     private String message;
 
     public RegistrationMessagesMessageCodeType getMessageCode() {
-	return messageCode;
+	    return messageCode;
     }
 
     public void setMessageCode(RegistrationMessagesMessageCodeType messageCode) {
-	this.messageCode = messageCode;
+	    this.messageCode = messageCode;
     }
 
     public String getMessage() {
-	return message;
+	    return message;
     }
 
     public void setMessage(String message) {
-	this.message = message;
+	    this.message = message;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

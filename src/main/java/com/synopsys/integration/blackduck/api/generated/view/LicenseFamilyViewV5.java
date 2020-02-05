@@ -34,7 +34,7 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseFamilyViewV5 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesView> licenseFamilyRiskRules;
     private LicenseFamilyUpdatedByView createdBy;
@@ -46,72 +46,71 @@ public class LicenseFamilyViewV5 extends BlackDuckView {
     private java.util.Date updatedAt;
 
     public java.util.List<LicenseFamilyLicenseFamilyRiskRulesView> getLicenseFamilyRiskRules() {
-	return licenseFamilyRiskRules;
+	    return licenseFamilyRiskRules;
     }
 
     public void setLicenseFamilyRiskRules(java.util.List<LicenseFamilyLicenseFamilyRiskRulesView> licenseFamilyRiskRules) {
-	this.licenseFamilyRiskRules = licenseFamilyRiskRules;
+	    this.licenseFamilyRiskRules = licenseFamilyRiskRules;
     }
 
     public LicenseFamilyUpdatedByView getCreatedBy() {
-	return createdBy;
+	    return createdBy;
     }
 
     public void setCreatedBy(LicenseFamilyUpdatedByView createdBy) {
-	this.createdBy = createdBy;
+	    this.createdBy = createdBy;
     }
 
     public LicenseFamilyUpdatedByView getUpdatedBy() {
-	return updatedBy;
+	    return updatedBy;
     }
 
     public void setUpdatedBy(LicenseFamilyUpdatedByView updatedBy) {
-	this.updatedBy = updatedBy;
+	    this.updatedBy = updatedBy;
     }
 
     public LicenseLicenseSourceType getSource() {
-	return source;
+	    return source;
     }
 
     public void setSource(LicenseLicenseSourceType source) {
-	this.source = source;
+	    this.source = source;
     }
 
     public String getDescription() {
-	return description;
+	    return description;
     }
 
     public void setDescription(String description) {
-	this.description = description;
+	    this.description = description;
     }
 
     public String getName() {
-	return name;
+	    return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public java.util.Date getCreatedAt() {
-	return createdAt;
+	    return createdAt;
     }
 
     public void setCreatedAt(java.util.Date createdAt) {
-	this.createdAt = createdAt;
+	    this.createdAt = createdAt;
     }
 
     public java.util.Date getUpdatedAt() {
-	return updatedAt;
+	    return updatedAt;
     }
 
     public void setUpdatedAt(java.util.Date updatedAt) {
-	this.updatedAt = updatedAt;
+	    this.updatedAt = updatedAt;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

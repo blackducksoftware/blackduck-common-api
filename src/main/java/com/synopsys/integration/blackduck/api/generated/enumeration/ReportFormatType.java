@@ -34,14 +34,13 @@ public enum ReportFormatType {
 	JSON,
 	TEXT;
 
-	private String mediaType = "application/vnd.blackducksoftware.report-4+json";
+	private String MEDIA_TYPE = "application/vnd.blackducksoftware.report-4+json";
 
 	public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
 	}
 
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

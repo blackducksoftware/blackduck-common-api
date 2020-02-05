@@ -46,14 +46,13 @@ public enum RegistrationFeaturesFeatureType {
 	BINARY_ANALYSIS,
 	CUSTOM_SIGNATURES;
 
-	private String mediaType = "application/vnd.blackducksoftware.status-4+json";
+	private String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
 	public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
 	}
 
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

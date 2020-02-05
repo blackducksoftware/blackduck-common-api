@@ -35,7 +35,7 @@ import com.synopsys.integration.blackduck.api.generated.component.RegistrationMe
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RegistrationViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
     private java.util.List<RegistrationAttributesView> attributes;
     private String registrationId;
@@ -46,64 +46,63 @@ public class RegistrationViewV4 extends BlackDuckView {
     private java.util.List<RegistrationFeaturesView> features;
 
     public java.util.List<RegistrationAttributesView> getAttributes() {
-	return attributes;
+	    return attributes;
     }
 
     public void setAttributes(java.util.List<RegistrationAttributesView> attributes) {
-	this.attributes = attributes;
+	    this.attributes = attributes;
     }
 
     public String getRegistrationId() {
-	return registrationId;
+	    return registrationId;
     }
 
     public void setRegistrationId(String registrationId) {
-	this.registrationId = registrationId;
+	    this.registrationId = registrationId;
     }
 
     public java.util.List<RegistrationMessagesView> getMessages() {
-	return messages;
+	    return messages;
     }
 
     public void setMessages(java.util.List<RegistrationMessagesView> messages) {
-	this.messages = messages;
+	    this.messages = messages;
     }
 
     public java.util.Date getExpirationWarningDate() {
-	return expirationWarningDate;
+	    return expirationWarningDate;
     }
 
     public void setExpirationWarningDate(java.util.Date expirationWarningDate) {
-	this.expirationWarningDate = expirationWarningDate;
+	    this.expirationWarningDate = expirationWarningDate;
     }
 
     public RegistrationStateType getState() {
-	return state;
+	    return state;
     }
 
     public void setState(RegistrationStateType state) {
-	this.state = state;
+	    this.state = state;
     }
 
     public java.util.Date getExpirationDate() {
-	return expirationDate;
+	    return expirationDate;
     }
 
     public void setExpirationDate(java.util.Date expirationDate) {
-	this.expirationDate = expirationDate;
+	    this.expirationDate = expirationDate;
     }
 
     public java.util.List<RegistrationFeaturesView> getFeatures() {
-	return features;
+	    return features;
     }
 
     public void setFeatures(java.util.List<RegistrationFeaturesView> features) {
-	this.features = features;
+	    this.features = features;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

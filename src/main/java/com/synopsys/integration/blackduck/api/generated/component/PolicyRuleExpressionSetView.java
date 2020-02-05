@@ -33,30 +33,29 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class PolicyRuleExpressionSetView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.policy-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.policy-4+json";
 
     private PolicyRuleExpressionOperatorType operator;
     private java.util.List<PolicyRuleExpressionExpressionsView> expressions;
 
     public PolicyRuleExpressionOperatorType getOperator() {
-	return operator;
+	    return operator;
     }
 
     public void setOperator(PolicyRuleExpressionOperatorType operator) {
-	this.operator = operator;
+	    this.operator = operator;
     }
 
     public java.util.List<PolicyRuleExpressionExpressionsView> getExpressions() {
-	return expressions;
+	    return expressions;
     }
 
     public void setExpressions(java.util.List<PolicyRuleExpressionExpressionsView> expressions) {
-	this.expressions = expressions;
+	    this.expressions = expressions;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

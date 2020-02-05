@@ -36,7 +36,7 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class VersionBomComponentDiffView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> leftUsages;
     private ProjectVersionComparisonItemsComponentView component;
@@ -45,48 +45,47 @@ public class VersionBomComponentDiffView extends BlackDuckComponent {
     private ProjectVersionComparisonItemsComponentVersionStateType componentState;
 
     public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getLeftUsages() {
-	return leftUsages;
+	    return leftUsages;
     }
 
     public void setLeftUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> leftUsages) {
-	this.leftUsages = leftUsages;
+	    this.leftUsages = leftUsages;
     }
 
     public ProjectVersionComparisonItemsComponentView getComponent() {
-	return component;
+	    return component;
     }
 
     public void setComponent(ProjectVersionComparisonItemsComponentView component) {
-	this.component = component;
+	    this.component = component;
     }
 
     public java.util.List<String> getLeftLicenses() {
-	return leftLicenses;
+	    return leftLicenses;
     }
 
     public void setLeftLicenses(java.util.List<String> leftLicenses) {
-	this.leftLicenses = leftLicenses;
+	    this.leftLicenses = leftLicenses;
     }
 
     public ProjectVersionComparisonItemsComponentVersionStateType getComponentVersionState() {
-	return componentVersionState;
+	    return componentVersionState;
     }
 
     public void setComponentVersionState(ProjectVersionComparisonItemsComponentVersionStateType componentVersionState) {
-	this.componentVersionState = componentVersionState;
+	    this.componentVersionState = componentVersionState;
     }
 
     public ProjectVersionComparisonItemsComponentVersionStateType getComponentState() {
-	return componentState;
+	    return componentState;
     }
 
     public void setComponentState(ProjectVersionComparisonItemsComponentVersionStateType componentState) {
-	this.componentState = componentState;
+	    this.componentState = componentState;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

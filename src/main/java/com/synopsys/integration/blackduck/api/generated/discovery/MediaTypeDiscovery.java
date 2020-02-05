@@ -22,181 +22,117 @@
  */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.view.RoleView;
-import com.synopsys.integration.blackduck.api.generated.view.CustomFieldView;
-import com.synopsys.integration.blackduck.api.generated.component.RegistrationAttributesView;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsParametersView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRemediatingFixesPreviousVulnerabilitiesView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
-import com.synopsys.integration.blackduck.api.generated.component.ReportContentsReportContentView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionLicenseLicensesLicenseFamilySummaryView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView;
-import com.synopsys.integration.blackduck.api.generated.component.OriginLicenseView;
-import com.synopsys.integration.blackduck.api.generated.view.CommentView;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.component.RegistrationFeaturesView;
-import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
-import com.synopsys.integration.blackduck.api.generated.component.CweCommonConsequencesView;
-import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityAffectedProjectsView;
-import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
-import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss3TemporalMetricsView;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.view.RoleAssignmentView;
-import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss2TemporalMetricsView;
-import com.synopsys.integration.blackduck.api.generated.component.CustomFieldOptionsView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentMatchedFilesItemsFilePathView;
-import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionPolicyStatusView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyUpdatedByView;
-import com.synopsys.integration.blackduck.api.generated.view.FieldsCustomFieldView;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionExpressionsView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
-import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss3View;
-import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionRiskProfileView;
-import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseTextView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionMatchedFilesItemsMatchesView;
-import com.synopsys.integration.blackduck.api.generated.view.ReportView;
-import com.synopsys.integration.blackduck.api.generated.component.RegistrationMessagesView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyStatusView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsReviewingUserView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
-import com.synopsys.integration.blackduck.api.generated.component.VulnerabilityCvss2View;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionMatchedFilesView;
-import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyLicenseFamilyRiskRulesView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataCountsView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentOriginMatchedFilesView;
-import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
-import com.synopsys.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
-import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
-import com.synopsys.integration.blackduck.api.generated.view.TagView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
-import com.synopsys.integration.blackduck.api.generated.component.CommentUserView;
-import com.synopsys.integration.blackduck.api.generated.view.JobView;
-import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
-import com.synopsys.integration.blackduck.api.generated.view.ScanView;
-import com.synopsys.integration.blackduck.api.generated.view.UserView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyRulesView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileVersionDataView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComparisonView;
-import com.synopsys.integration.blackduck.api.generated.view.CurrentUserView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComparisonItemsComponentView;
-import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionMatchedFilesView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseReportsReportView;
-import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
-import com.synopsys.integration.blackduck.api.generated.component.NotificationSubscriptionsSubscriptionView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class MediaTypeDiscovery {
-	private final Map<Class<? extends BlackDuckComponent>, String> mediaTypeMap = new HashMap<>();
+    public static final String DEFAULT_MEDIA_TYPE = "application/json";
+    private List<MediaTypeMatcher> mediaTypeMatchers = new LinkedList<>();
 
-	public MediaTypeDiscovery() {
-    			mediaTypeMap.put(CodeLocationView.class, "application/vnd.blackducksoftware.scan-4+json");
-    			mediaTypeMap.put(CommentUserView.class, "application/vnd.blackducksoftware.project-detail-4+json");
-    			mediaTypeMap.put(CommentView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentMatchedFilesItemsFilePathView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ComponentMatchedFilesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentOriginMatchedFilesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentPolicyRulesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentVersionMatchedFilesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentVersionPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileActivityDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileRiskDataCountsView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileRiskDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileVersionDataView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ComponentVersionRiskProfileView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(ComponentVersionView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(ComponentView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(CurrentUserView.class, "application/vnd.blackducksoftware.user-4+json");
-    			mediaTypeMap.put(CustomFieldObjectView.class, "application/vnd.blackducksoftware.admin-4+json");
-    			mediaTypeMap.put(CustomFieldOptionsView.class, "application/vnd.blackducksoftware.admin-4+json");
-    			mediaTypeMap.put(CustomFieldView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(CweCommonConsequencesView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(FieldsCustomFieldView.class, "application/vnd.blackducksoftware.admin-4+json");
-    			mediaTypeMap.put(JobView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(LicenseFamilyLicenseFamilyRiskRulesView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseFamilyUpdatedByView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseFamilyView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseLicenseFamilyView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseReportsReportView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(LicenseTermCategoryView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseTermView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseTextView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(LicenseView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(NotificationSubscriptionsSubscriptionView.class, "application/vnd.blackducksoftware.notification-4+json");
-    			mediaTypeMap.put(OriginLicenseView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(OriginView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(PolicyRuleExpressionExpressionsParametersView.class, "application/vnd.blackducksoftware.policy-4+json");
-    			mediaTypeMap.put(PolicyRuleExpressionExpressionsView.class, "application/vnd.blackducksoftware.policy-4+json");
-    			mediaTypeMap.put(PolicyRuleExpressionView.class, "application/vnd.blackducksoftware.policy-4+json");
-    			mediaTypeMap.put(PolicyRuleView.class, "application/vnd.blackducksoftware.policy-5+json");
-    			mediaTypeMap.put(ProjectVersionComparisonItemsComponentView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionComparisonView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectVersionComponentLicensesView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionComponentReviewedDetailsReviewingUserView.class, "application/vnd.blackducksoftware.bill-of-materials-5+json");
-    			mediaTypeMap.put(ProjectVersionComponentReviewedDetailsView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionComponentView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectVersionLicenseLicensesLicenseFamilySummaryView.class, "application/vnd.blackducksoftware.project-detail-5+json");
-    			mediaTypeMap.put(ProjectVersionLicenseLicensesView.class, "application/vnd.blackducksoftware.project-detail-5+json");
-    			mediaTypeMap.put(ProjectVersionLicenseView.class, "application/vnd.blackducksoftware.component-detail-4+json");
-    			mediaTypeMap.put(ProjectVersionMatchedFilesItemsMatchesView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionMatchedFilesView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(ProjectVersionPolicyStatusView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectVersionView.class, "application/vnd.blackducksoftware.project-detail-5+json");
-    			mediaTypeMap.put(ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectVersionVulnerableBomComponentsView.class, "application/vnd.blackducksoftware.bill-of-materials-6+json");
-    			mediaTypeMap.put(ProjectView.class, "application/vnd.blackducksoftware.project-detail-4+json");
-    			mediaTypeMap.put(RegistrationAttributesView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(RegistrationFeaturesView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(RegistrationMessagesView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(RegistrationView.class, "application/vnd.blackducksoftware.status-4+json");
-    			mediaTypeMap.put(ReportContentsReportContentView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(ReportContentsView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(ReportView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(RiskProfileView.class, "application/vnd.blackducksoftware.bill-of-materials-4+json");
-    			mediaTypeMap.put(RoleAssignmentView.class, "application/vnd.blackducksoftware.user-4+json");
-    			mediaTypeMap.put(RoleView.class, "application/vnd.blackducksoftware.user-4+json");
-    			mediaTypeMap.put(ScanView.class, "application/vnd.blackducksoftware.scan-4+json");
-    			mediaTypeMap.put(TagView.class, "application/vnd.blackducksoftware.component-detail-5+json");
-    			mediaTypeMap.put(UserGroupView.class, "application/vnd.blackducksoftware.project-detail-4+json");
-    			mediaTypeMap.put(UserView.class, "application/vnd.blackducksoftware.project-detail-4+json");
-    			mediaTypeMap.put(VulnerabilityAffectedProjectsView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(VulnerabilityCvss2TemporalMetricsView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(VulnerabilityCvss2View.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(VulnerabilityCvss3TemporalMetricsView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(VulnerabilityCvss3View.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-    			mediaTypeMap.put(VulnerabilityReportsReportView.class, "application/vnd.blackducksoftware.report-4+json");
-    			mediaTypeMap.put(VulnerabilityView.class, "application/vnd.blackducksoftware.vulnerability-4+json");
-	}
+    public MediaTypeDiscovery() {
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/codelocations", "application/vnd.blackducksoftware.scan-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/codelocations/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/scan-summaries", "application/vnd.blackducksoftware.scan-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components", "application/vnd.blackducksoftware.component-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/tags", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/origin/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/vulnerabilities", "application/vnd.blackducksoftware.vulnerability-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/origins", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/origins/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/direct-dependencies", "application/vnd.blackducksoftware.component-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/vulnerabilities", "application/vnd.blackducksoftware.vulnerability-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/vulnerabilities", "application/vnd.blackducksoftware.vulnerability-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/custom-fields/objects/customFieldObject/fields", "application/vnd.blackducksoftware.admin-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/jobs", "application/vnd.blackducksoftware.status-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/license-families", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/license-term-categories", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/license-terms", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/license-terms/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/licenses", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/licenses", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/licenses/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/comments", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/licenses/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/license-terms", "application/vnd.blackducksoftware.component-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/policy-rules", "application/vnd.blackducksoftware.policy-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/assignable-usergroups", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/assignable-users", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.project-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/project-mappings", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/tags", "application/vnd.blackducksoftware.project-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/usergroups", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/users", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions", "application/vnd.blackducksoftware.project-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/code-locations", "application/vnd.blackducksoftware.internal-1+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/comparison", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/comments", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/component-versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/comments", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/matched-files", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/policy-rules", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/matched-files", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/origins/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/matched-files", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/components/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/policy-rules", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/custom-fields", "application/vnd.blackducksoftware.project-detail-5+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/issues", "application/json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/license-reports", "application/vnd.blackducksoftware.report-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/matched-files", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/projects/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/vulnerable-bom-components", "application/vnd.blackducksoftware.bill-of-materials-6+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/roles", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/roles/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/inheriting-users", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/roles/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/users", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/usergroups", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/usergroups/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/projects", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/usergroups/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/users", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/inherited-roles", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/notification-subscriptions", "application/vnd.blackducksoftware.notification-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/notifications", "application/vnd.blackducksoftware.notification-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/projects", "application/vnd.blackducksoftware.project-detail-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/users/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/roles", "application/vnd.blackducksoftware.user-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/license-reports", "application/vnd.blackducksoftware.report-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/versions/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/reports", "application/vnd.blackducksoftware.report-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/vulnerabilities/\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b/affected-projects", "application/vnd.blackducksoftware.vulnerability-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/vulnerability-remediation-reports", "application/vnd.blackducksoftware.report-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/vulnerability-status-reports", "application/vnd.blackducksoftware.report-4+json"));
+        mediaTypeMatchers.add(new MediaTypeMatcher("/api/vulnerability-update-reports", "application/vnd.blackducksoftware.report-4+json"));
+    }
 
-	public<T extends BlackDuckComponent> Optional<String> determineMediaType(Class<T> bdClass) {
-    		return Optional.ofNullable(mediaTypeMap.get(bdClass));
-    	}
+    public String determineMediaType(String url) {
+        try {
+            URL apiUrl = new URL(url);
+            String path = apiUrl.getPath();
+            return mediaTypeMatchers.stream()
+                        .filter(matcher -> matcher.getPattern().matcher(path).matches())
+                        .map(MediaTypeMatcher::getMediaType)
+                        .findFirst()
+                        .orElse(DEFAULT_MEDIA_TYPE);
+        } catch (MalformedURLException ex) {
+            return DEFAULT_MEDIA_TYPE;
+        }
+    }
 
+    private class MediaTypeMatcher {
+        private Pattern pattern;
+        private String mediaType;
+
+        public MediaTypeMatcher(final String pattern, final String mediaType) {
+            this.pattern = Pattern.compile(pattern);
+            this.mediaType = mediaType;
+        }
+
+        public Pattern getPattern() {
+            return pattern;
+        }
+
+        public String getMediaType() {
+            return mediaType;
+        }
+    }
 }

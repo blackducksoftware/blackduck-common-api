@@ -32,39 +32,38 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVer
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseFamilyLicenseFamilyRiskRulesView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private ComponentVersionRiskProfileRiskDataCountsCountTypeType riskPriority;
     private LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType releaseDistribution;
     private LicenseFamilyLicenseFamilyRiskRulesUsageType usage;
 
     public ComponentVersionRiskProfileRiskDataCountsCountTypeType getRiskPriority() {
-	return riskPriority;
+	    return riskPriority;
     }
 
     public void setRiskPriority(ComponentVersionRiskProfileRiskDataCountsCountTypeType riskPriority) {
-	this.riskPriority = riskPriority;
+	    this.riskPriority = riskPriority;
     }
 
     public LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType getReleaseDistribution() {
-	return releaseDistribution;
+	    return releaseDistribution;
     }
 
     public void setReleaseDistribution(LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType releaseDistribution) {
-	this.releaseDistribution = releaseDistribution;
+	    this.releaseDistribution = releaseDistribution;
     }
 
     public LicenseFamilyLicenseFamilyRiskRulesUsageType getUsage() {
-	return usage;
+	    return usage;
     }
 
     public void setUsage(LicenseFamilyLicenseFamilyRiskRulesUsageType usage) {
-	this.usage = usage;
+	    this.usage = usage;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

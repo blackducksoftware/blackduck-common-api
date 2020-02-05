@@ -31,7 +31,7 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class JobViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.status-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
     private java.util.Date scheduledAt;
     private JobStatusType status;
@@ -43,72 +43,71 @@ public class JobViewV4 extends BlackDuckView {
     private java.util.Date finishedAt;
 
     public java.util.Date getScheduledAt() {
-	return scheduledAt;
+	    return scheduledAt;
     }
 
     public void setScheduledAt(java.util.Date scheduledAt) {
-	this.scheduledAt = scheduledAt;
+	    this.scheduledAt = scheduledAt;
     }
 
     public JobStatusType getStatus() {
-	return status;
+	    return status;
     }
 
     public void setStatus(JobStatusType status) {
-	this.status = status;
+	    this.status = status;
     }
 
     public String getProgressData() {
-	return progressData;
+	    return progressData;
     }
 
     public void setProgressData(String progressData) {
-	this.progressData = progressData;
+	    this.progressData = progressData;
     }
 
     public String getType() {
-	return type;
+	    return type;
     }
 
     public void setType(String type) {
-	this.type = type;
+	    this.type = type;
     }
 
     public java.util.Date getStartedAt() {
-	return startedAt;
+	    return startedAt;
     }
 
     public void setStartedAt(java.util.Date startedAt) {
-	this.startedAt = startedAt;
+	    this.startedAt = startedAt;
     }
 
     public String getErrorText() {
-	return errorText;
+	    return errorText;
     }
 
     public void setErrorText(String errorText) {
-	this.errorText = errorText;
+	    this.errorText = errorText;
     }
 
     public java.util.Date getUpdatedAt() {
-	return updatedAt;
+	    return updatedAt;
     }
 
     public void setUpdatedAt(java.util.Date updatedAt) {
-	this.updatedAt = updatedAt;
+	    this.updatedAt = updatedAt;
     }
 
     public java.util.Date getFinishedAt() {
-	return finishedAt;
+	    return finishedAt;
     }
 
     public void setFinishedAt(java.util.Date finishedAt) {
-	this.finishedAt = finishedAt;
+	    this.finishedAt = finishedAt;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

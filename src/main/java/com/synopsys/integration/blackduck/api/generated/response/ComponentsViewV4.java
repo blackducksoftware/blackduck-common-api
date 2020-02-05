@@ -30,7 +30,7 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentsViewV4 extends BlackDuckResponse {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private String componentName;
     private String versionName;
@@ -40,56 +40,55 @@ public class ComponentsViewV4 extends BlackDuckResponse {
     private String originId;
 
     public String getComponentName() {
-	return componentName;
+	    return componentName;
     }
 
     public void setComponentName(String componentName) {
-	this.componentName = componentName;
+	    this.componentName = componentName;
     }
 
     public String getVersionName() {
-	return versionName;
+	    return versionName;
     }
 
     public void setVersionName(String versionName) {
-	this.versionName = versionName;
+	    this.versionName = versionName;
     }
 
     public String getVersion() {
-	return version;
+	    return version;
     }
 
     public void setVersion(String version) {
-	this.version = version;
+	    this.version = version;
     }
 
     public String getComponent() {
-	return component;
+	    return component;
     }
 
     public void setComponent(String component) {
-	this.component = component;
+	    this.component = component;
     }
 
     public String getVariant() {
-	return variant;
+	    return variant;
     }
 
     public void setVariant(String variant) {
-	this.variant = variant;
+	    this.variant = variant;
     }
 
     public String getOriginId() {
-	return originId;
+	    return originId;
     }
 
     public void setOriginId(String originId) {
-	this.originId = originId;
+	    this.originId = originId;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

@@ -34,30 +34,29 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentVersionPolicyViolationDetails extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private PolicyStatusType name;
     private java.util.List<NameValuePairView> severityLevels;
 
     public PolicyStatusType getName() {
-	return name;
+	    return name;
     }
 
     public void setName(PolicyStatusType name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public java.util.List<NameValuePairView> getSeverityLevels() {
-	return severityLevels;
+	    return severityLevels;
     }
 
     public void setSeverityLevels(java.util.List<NameValuePairView> severityLevels) {
-	this.severityLevels = severityLevels;
+	    this.severityLevels = severityLevels;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

@@ -22,9 +22,40 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.LinkResponse;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.OriginView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionTypeType;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
+import java.util.List;
+import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
+import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentSourceType;
+import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+/**
+* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+* **/
 public class ComponentVersionView extends ComponentVersionViewV5 {
 
+	public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final String VULNERABILITIES_LINK = "vulnerabilities";
+    public static final String COMPONENT_LINK = "component";
+    public static final String ORIGINS_LINK = "origins";
+
+	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
+	public static final LinkSingleResponse<ComponentView> COMPONENT_LINK_RESPONSE = new LinkSingleResponse<ComponentView>(COMPONENT_LINK, ComponentView.class);
+	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+
+    static {
+	    links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+	    links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
+	    links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+    }
 }

@@ -33,7 +33,7 @@ import com.synopsys.integration.blackduck.api.generated.component.CweCommonConse
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class CweViewV4 extends BlackDuckResponse {
-	public static final String mediaType = "application/vnd.blackducksoftware.vulnerability-4+json";
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.vulnerability-4+json";
 
     private String id;
     private String description;
@@ -42,48 +42,47 @@ public class CweViewV4 extends BlackDuckResponse {
     private java.util.List<CweCommonConsequencesView> commonConsequences;
 
     public String getId() {
-	return id;
+	    return id;
     }
 
     public void setId(String id) {
-	this.id = id;
+	    this.id = id;
     }
 
     public String getDescription() {
-	return description;
+	    return description;
     }
 
     public void setDescription(String description) {
-	this.description = description;
+	    this.description = description;
     }
 
     public String getName() {
-	return name;
+	    return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public String getExtendedDescription() {
-	return extendedDescription;
+	    return extendedDescription;
     }
 
     public void setExtendedDescription(String extendedDescription) {
-	this.extendedDescription = extendedDescription;
+	    this.extendedDescription = extendedDescription;
     }
 
     public java.util.List<CweCommonConsequencesView> getCommonConsequences() {
-	return commonConsequences;
+	    return commonConsequences;
     }
 
     public void setCommonConsequences(java.util.List<CweCommonConsequencesView> commonConsequences) {
-	this.commonConsequences = commonConsequences;
+	    this.commonConsequences = commonConsequences;
     }
 
 
     public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
     }
-
 }

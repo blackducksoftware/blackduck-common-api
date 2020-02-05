@@ -34,14 +34,13 @@ public enum PolicySummaryStatusType {
 	IN_VIOLATION_OVERRIDDEN,
 	IN_VIOLATION;
 
-	private String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
+	private String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
 	public String getMediaType() {
-	return mediaType;
+	    return MEDIA_TYPE;
 	}
 
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}
