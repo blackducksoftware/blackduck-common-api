@@ -33,11 +33,7 @@ public enum PolicyRuleExpressionSetOperatorType {
 	AND,
 	OR;
 
-	private String MEDIA_TYPE = "application/vnd.blackducksoftware.policy-4+json";
-
-	public String getMediaType() {
-	    return MEDIA_TYPE;
-	}
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.policy-4+json";
 
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);

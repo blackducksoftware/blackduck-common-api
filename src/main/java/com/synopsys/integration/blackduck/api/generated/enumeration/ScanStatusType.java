@@ -46,11 +46,7 @@ public enum ScanStatusType {
 	ERROR_BUILDING_BOM,
 	ERROR;
 
-	private String MEDIA_TYPE = "application/vnd.blackducksoftware.scan-4+json";
-
-	public String getMediaType() {
-	    return MEDIA_TYPE;
-	}
+	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.scan-4+json";
 
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
