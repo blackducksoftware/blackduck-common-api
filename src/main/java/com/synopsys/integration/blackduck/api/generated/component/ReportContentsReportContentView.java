@@ -28,7 +28,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ReportContentsReportContentView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.report-4+json";
 
     private String fileContent;
     private String fileName;
@@ -58,8 +57,4 @@ public class ReportContentsReportContentView extends BlackDuckComponent {
 	    this.fileNamePrefix = fileNamePrefix;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

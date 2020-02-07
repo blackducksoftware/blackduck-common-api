@@ -28,7 +28,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseLicenseFamilyView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private String href;
     private String name;
@@ -49,8 +48,4 @@ public class LicenseLicenseFamilyView extends BlackDuckComponent {
 	    this.name = name;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

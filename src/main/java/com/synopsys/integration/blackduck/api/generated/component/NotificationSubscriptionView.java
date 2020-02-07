@@ -32,7 +32,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class NotificationSubscriptionView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.notification-4+json";
 
     private String subscriptionTargetReleaseName;
     private String subscriptionTarget;
@@ -71,8 +70,4 @@ public class NotificationSubscriptionView extends BlackDuckComponent {
 	    this.subscriptionTargetProjectName = subscriptionTargetProjectName;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

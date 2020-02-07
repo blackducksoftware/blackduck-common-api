@@ -32,8 +32,6 @@ public enum ProjectCloneCategoriesType {
 	VULN_DATA,
 	LICENSE_TERM_FULFILLMENT;
 
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.project-detail-4+json";
-
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
 	}

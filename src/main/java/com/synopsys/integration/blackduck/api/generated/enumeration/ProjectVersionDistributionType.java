@@ -35,8 +35,6 @@ public enum ProjectVersionDistributionType {
 	INTERNAL,
 	OPENSOURCE;
 
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
-
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
 	}

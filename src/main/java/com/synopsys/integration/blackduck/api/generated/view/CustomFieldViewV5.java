@@ -34,7 +34,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class CustomFieldViewV5 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.project-detail-5+json";
 
     private java.util.List<String> values;
     private CustomFieldTypeType type;
@@ -91,8 +90,4 @@ public class CustomFieldViewV5 extends BlackDuckView {
 	    this.label = label;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

@@ -33,7 +33,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVer
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RiskCountView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private ComponentVersionRiskProfileRiskDataCountsCountTypeType countType;
     private BigDecimal count;
@@ -54,8 +53,4 @@ public class RiskCountView extends BlackDuckComponent {
 	    this.count = count;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

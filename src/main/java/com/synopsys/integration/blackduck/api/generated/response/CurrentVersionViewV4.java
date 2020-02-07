@@ -29,7 +29,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class CurrentVersionViewV4 extends BlackDuckResponse {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
     private String version;
 
@@ -41,8 +40,4 @@ public class CurrentVersionViewV4 extends BlackDuckResponse {
 	    this.version = version;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

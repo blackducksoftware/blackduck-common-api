@@ -30,7 +30,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentVersionRiskProfileVersionDataView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private BigDecimal newerReleasesCount;
     private java.util.Date releasedOn;
@@ -51,8 +50,4 @@ public class ComponentVersionRiskProfileVersionDataView extends BlackDuckCompone
 	    this.releasedOn = releasedOn;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

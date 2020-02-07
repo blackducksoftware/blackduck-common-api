@@ -32,7 +32,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private PolicyStatusType name;
     private java.util.List<NameValuePairView> severityLevels;
@@ -53,8 +52,4 @@ public class ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsVie
 	    this.severityLevels = severityLevels;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

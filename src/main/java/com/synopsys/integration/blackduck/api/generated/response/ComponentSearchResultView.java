@@ -32,7 +32,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentSearchResultView extends BlackDuckResponse {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private String componentName;
     private String versionName;
@@ -89,8 +88,4 @@ public class ComponentSearchResultView extends BlackDuckResponse {
 	    this.originId = originId;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

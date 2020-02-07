@@ -29,7 +29,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComponentReviewedDetailsReviewingUserViewV5 extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String username;
     private String lastName;
@@ -68,8 +67,4 @@ public class ProjectVersionComponentReviewedDetailsReviewingUserViewV5 extends B
 	    this.user = user;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

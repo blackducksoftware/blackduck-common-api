@@ -45,17 +45,17 @@ import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 public class ComponentVersionView extends ComponentVersionViewV5 {
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-    public static final String VULNERABILITIES_LINK = "vulnerabilities";
     public static final String COMPONENT_LINK = "component";
     public static final String ORIGINS_LINK = "origins";
+    public static final String VULNERABILITIES_LINK = "vulnerabilities";
 
-	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 	public static final LinkSingleResponse<ComponentView> COMPONENT_LINK_RESPONSE = new LinkSingleResponse<ComponentView>(COMPONENT_LINK, ComponentView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 
     static {
-	    links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
 	    links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
 	    links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+	    links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 }

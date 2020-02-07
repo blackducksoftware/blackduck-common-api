@@ -29,7 +29,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseFamilyUpdatedByView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
     private String userName;
     private String lastName;
@@ -68,8 +67,4 @@ public class LicenseFamilyUpdatedByView extends BlackDuckComponent {
 	    this.user = user;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

@@ -32,7 +32,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String license;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
@@ -80,8 +79,4 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
 	    this.licenseType = licenseType;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

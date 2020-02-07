@@ -32,7 +32,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class PolicyStatusView extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private PolicyStatusType approvalStatus;
 
@@ -44,8 +43,4 @@ public class PolicyStatusView extends BlackDuckView {
 	    this.approvalStatus = approvalStatus;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

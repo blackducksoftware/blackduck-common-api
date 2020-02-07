@@ -30,7 +30,6 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComponentReviewedDetailsView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private java.util.Date reviewedAt;
     private ProjectVersionComponentReviewedDetailsReviewingUserView reviewingUser;
@@ -60,8 +59,4 @@ public class ProjectVersionComponentReviewedDetailsView extends BlackDuckCompone
 	    this.reviewedBy = reviewedBy;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

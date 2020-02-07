@@ -32,7 +32,6 @@ import com.synopsys.integration.blackduck.api.generated.component.CommentUserVie
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class CommentViewV5 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
     private java.util.Date createdAt;
     private CommentUserView user;
@@ -80,8 +79,4 @@ public class CommentViewV5 extends BlackDuckView {
 	    this.updatedAt = updatedAt;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

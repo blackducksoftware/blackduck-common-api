@@ -34,7 +34,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComparisonViewV4 extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> leftUsages;
     private ProjectVersionComparisonItemsComponentView component;
@@ -82,8 +81,4 @@ public class ProjectVersionComparisonViewV4 extends BlackDuckComponent {
 	    this.componentState = componentState;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

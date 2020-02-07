@@ -29,7 +29,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class PolicyRuleExpressionExpressionsParametersViewV4 extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private java.util.List<String> values;
 
@@ -41,8 +40,4 @@ public class PolicyRuleExpressionExpressionsParametersViewV4 extends BlackDuckCo
 	    this.values = values;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

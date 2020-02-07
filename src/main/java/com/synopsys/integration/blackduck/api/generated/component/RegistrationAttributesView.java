@@ -31,7 +31,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RegistrationAttributesView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
 
     private BigDecimal limitValue;
     private BigDecimal currentValue;
@@ -70,8 +69,4 @@ public class RegistrationAttributesView extends BlackDuckComponent {
 	    this.attribute = attribute;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

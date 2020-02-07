@@ -30,7 +30,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionMatchedFilesItemsMatchesView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private ProjectVersionMatchedFilesItemsMatchesMatchTypeType matchType;
     private String component;
@@ -60,8 +59,4 @@ public class ProjectVersionMatchedFilesItemsMatchesView extends BlackDuckCompone
 	    this.snippet = snippet;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

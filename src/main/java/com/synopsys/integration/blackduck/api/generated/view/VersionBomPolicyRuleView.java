@@ -35,7 +35,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleSe
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class VersionBomPolicyRuleView extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private Boolean enabled;
     private String description;
@@ -164,8 +163,4 @@ public class VersionBomPolicyRuleView extends BlackDuckView {
 	    this.updatedAt = updatedAt;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

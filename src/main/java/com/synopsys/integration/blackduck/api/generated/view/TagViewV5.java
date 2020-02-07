@@ -28,7 +28,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class TagViewV5 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.project-detail-5+json";
 
     private String name;
 
@@ -40,8 +39,4 @@ public class TagViewV5 extends BlackDuckView {
 	    this.name = name;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

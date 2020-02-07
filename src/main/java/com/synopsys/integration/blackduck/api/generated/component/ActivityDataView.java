@@ -33,7 +33,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ActivityDataView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private BigDecimal commitCount12Month;
     private BigDecimal newerReleases;
@@ -81,8 +80,4 @@ public class ActivityDataView extends BlackDuckComponent {
 	    this.lastCommitDate = lastCommitDate;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

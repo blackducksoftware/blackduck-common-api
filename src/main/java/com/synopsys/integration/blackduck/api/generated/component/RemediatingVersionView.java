@@ -32,7 +32,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RemediatingVersionView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private java.util.Date releasedOn;
     private BigDecimal vulnerabilityCount;
@@ -71,8 +70,4 @@ public class RemediatingVersionView extends BlackDuckComponent {
 	    this.componentVersion = componentVersion;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

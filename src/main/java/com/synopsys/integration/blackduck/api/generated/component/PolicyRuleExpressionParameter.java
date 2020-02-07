@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class PolicyRuleExpressionParameter extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.policy-4+json";
 
     private java.util.List<String> values;
 
@@ -43,8 +42,4 @@ public class PolicyRuleExpressionParameter extends BlackDuckComponent {
 	    this.values = values;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

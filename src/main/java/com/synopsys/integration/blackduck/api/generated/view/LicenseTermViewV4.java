@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermS
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseTermViewV4 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private LicenseTermResponsibilityType responsibility;
     private String description;
@@ -88,8 +87,4 @@ public class LicenseTermViewV4 extends BlackDuckView {
 	    this.deactivated = deactivated;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

@@ -34,7 +34,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionPolicyStatusViewV6 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private java.util.List<NameValuePairView> componentVersionStatusCounts;
     private PolicyStatusType overallStatus;
@@ -73,8 +72,4 @@ public class ProjectVersionPolicyStatusViewV6 extends BlackDuckView {
 	    this.updatedAt = updatedAt;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

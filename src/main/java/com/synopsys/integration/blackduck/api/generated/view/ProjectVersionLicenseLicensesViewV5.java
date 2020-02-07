@@ -34,7 +34,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionLicenseLicensesViewV5 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.project-detail-5+json";
 
     private String licenseDisplay;
     private ProjectVersionLicenseTypeType type;
@@ -100,8 +99,4 @@ public class ProjectVersionLicenseLicensesViewV5 extends BlackDuckView {
 	    this.licenses = licenses;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

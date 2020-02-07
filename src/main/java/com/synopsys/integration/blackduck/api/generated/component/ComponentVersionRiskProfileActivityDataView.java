@@ -31,7 +31,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentVersionRiskProfileActivityDataView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private BigDecimal commitCount12Month;
     private BigDecimal newerReleases;
@@ -79,8 +78,4 @@ public class ComponentVersionRiskProfileActivityDataView extends BlackDuckCompon
 	    this.lastCommitDate = lastCommitDate;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RiskProfileView extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private java.util.List<ComponentVersionRiskProfileRiskDataCountsView> counts;
 
@@ -43,8 +42,4 @@ public class RiskProfileView extends BlackDuckView {
 	    this.counts = counts;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

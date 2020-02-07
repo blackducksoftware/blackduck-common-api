@@ -37,8 +37,6 @@ public enum RegistrationMessagesMessageCodeType {
 	NETWORK_FAILURE_ERROR,
 	REFRESH_REGISTRATION_ERROR;
 
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
-
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
 	}

@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.CweCommonCon
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class CweCommonConsequencesView extends BlackDuckComponent {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.vulnerability-4+json";
 
     private String note;
     private java.util.List<String> technicalImpacts;
@@ -61,8 +60,4 @@ public class CweCommonConsequencesView extends BlackDuckComponent {
 	    this.scopes = scopes;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

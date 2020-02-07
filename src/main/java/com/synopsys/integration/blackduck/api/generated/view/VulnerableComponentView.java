@@ -34,7 +34,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class VulnerableComponentView extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String componentVersionName;
     private String componentVersionOriginName;
@@ -100,8 +99,4 @@ public class VulnerableComponentView extends BlackDuckView {
 	    this.componentVersion = componentVersion;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }

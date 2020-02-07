@@ -32,8 +32,6 @@ public enum PolicyStatusType {
 	IN_VIOLATION_OVERRIDDEN,
 	IN_VIOLATION;
 
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.bill-of-materials-6+json";
-
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
 	}

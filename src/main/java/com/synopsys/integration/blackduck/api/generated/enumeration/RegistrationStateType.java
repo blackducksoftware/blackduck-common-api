@@ -35,8 +35,6 @@ public enum RegistrationStateType {
 	NETWORK_FAILURE,
 	NOT_SET;
 
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.status-4+json";
-
 	public String prettyPrint() {
 	    return EnumUtils.prettyPrint(this);
 	}

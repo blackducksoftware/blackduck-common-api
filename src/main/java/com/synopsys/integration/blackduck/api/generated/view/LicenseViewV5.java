@@ -40,7 +40,6 @@ import com.synopsys.integration.blackduck.api.core.LinkStringResponse;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseViewV5 extends BlackDuckView {
-	public static final String MEDIA_TYPE = "application/vnd.blackducksoftware.component-detail-5+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
     public static final String TEXT_LINK = "text";
@@ -178,8 +177,4 @@ public class LicenseViewV5 extends BlackDuckView {
 	    this.updatedAt = updatedAt;
     }
 
-
-    public String getMediaType() {
-	    return MEDIA_TYPE;
-    }
 }
