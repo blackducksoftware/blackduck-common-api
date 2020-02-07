@@ -32,14 +32,7 @@ public enum LicenseReportsReportReportFormatType {
 	JSON,
 	TEXT;
 
-	private String mediaType = "application/vnd.blackducksoftware.report-4+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

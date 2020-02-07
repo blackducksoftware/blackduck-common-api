@@ -38,14 +38,7 @@ public enum CweCommonConsequencesScopesType {
 	AUTHORIZATION,
 	OTHER;
 
-	private String mediaType = "application/vnd.blackducksoftware.vulnerability-4+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

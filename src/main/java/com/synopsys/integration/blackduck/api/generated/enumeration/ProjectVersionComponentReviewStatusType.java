@@ -31,14 +31,7 @@ public enum ProjectVersionComponentReviewStatusType {
 	NOT_REVIEWED,
 	REVIEWED;
 
-	private String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

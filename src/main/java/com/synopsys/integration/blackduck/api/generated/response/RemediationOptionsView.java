@@ -34,39 +34,33 @@ import com.synopsys.integration.blackduck.api.generated.component.ComponentVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class RemediationOptionsView extends BlackDuckResponse {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView latestAfterCurrent;
     private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities;
     private ComponentVersionRemediatingFixesPreviousVulnerabilitiesView noVulnerabilities;
 
     public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getLatestAfterCurrent() {
-	return latestAfterCurrent;
+	    return latestAfterCurrent;
     }
 
     public void setLatestAfterCurrent(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView latestAfterCurrent) {
-	this.latestAfterCurrent = latestAfterCurrent;
+	    this.latestAfterCurrent = latestAfterCurrent;
     }
 
     public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getFixesPreviousVulnerabilities() {
-	return fixesPreviousVulnerabilities;
+	    return fixesPreviousVulnerabilities;
     }
 
     public void setFixesPreviousVulnerabilities(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView fixesPreviousVulnerabilities) {
-	this.fixesPreviousVulnerabilities = fixesPreviousVulnerabilities;
+	    this.fixesPreviousVulnerabilities = fixesPreviousVulnerabilities;
     }
 
     public ComponentVersionRemediatingFixesPreviousVulnerabilitiesView getNoVulnerabilities() {
-	return noVulnerabilities;
+	    return noVulnerabilities;
     }
 
     public void setNoVulnerabilities(ComponentVersionRemediatingFixesPreviousVulnerabilitiesView noVulnerabilities) {
-	this.noVulnerabilities = noVulnerabilities;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.noVulnerabilities = noVulnerabilities;
     }
 
 }

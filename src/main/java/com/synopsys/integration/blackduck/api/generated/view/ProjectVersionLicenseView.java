@@ -32,39 +32,33 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionLicenseView extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String licenseDisplay;
     private ProjectVersionLicenseTypeType type;
     private java.util.List<ProjectVersionLicenseLicensesView> licenses;
 
     public String getLicenseDisplay() {
-	return licenseDisplay;
+	    return licenseDisplay;
     }
 
     public void setLicenseDisplay(String licenseDisplay) {
-	this.licenseDisplay = licenseDisplay;
+	    this.licenseDisplay = licenseDisplay;
     }
 
     public ProjectVersionLicenseTypeType getType() {
-	return type;
+	    return type;
     }
 
     public void setType(ProjectVersionLicenseTypeType type) {
-	this.type = type;
+	    this.type = type;
     }
 
     public java.util.List<ProjectVersionLicenseLicensesView> getLicenses() {
-	return licenses;
+	    return licenses;
     }
 
     public void setLicenses(java.util.List<ProjectVersionLicenseLicensesView> licenses) {
-	this.licenses = licenses;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.licenses = licenses;
     }
 
 }

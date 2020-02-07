@@ -22,9 +22,16 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
+import com.synopsys.integration.blackduck.api.generated.component.OriginLicenseView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import java.util.Optional;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentSourceType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+/**
+* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+* **/
 public class OriginView extends OriginViewV5 {
 
 }

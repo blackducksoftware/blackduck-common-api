@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleSe
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class PolicyRuleViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.policy-4+json";
 
     private Boolean enabled;
     private PolicyRuleExpressionView expression;
@@ -41,56 +40,51 @@ public class PolicyRuleViewV4 extends BlackDuckView {
     private PolicyRuleSeverityType severity;
 
     public Boolean getEnabled() {
-	return enabled;
+	    return enabled;
     }
 
     public void setEnabled(Boolean enabled) {
-	this.enabled = enabled;
+	    this.enabled = enabled;
     }
 
     public PolicyRuleExpressionView getExpression() {
-	return expression;
+	    return expression;
     }
 
     public void setExpression(PolicyRuleExpressionView expression) {
-	this.expression = expression;
+	    this.expression = expression;
     }
 
     public String getName() {
-	return name;
+	    return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public Boolean getOverridable() {
-	return overridable;
+	    return overridable;
     }
 
     public void setOverridable(Boolean overridable) {
-	this.overridable = overridable;
+	    this.overridable = overridable;
     }
 
     public String getDescription() {
-	return description;
+	    return description;
     }
 
     public void setDescription(String description) {
-	this.description = description;
+	    this.description = description;
     }
 
     public PolicyRuleSeverityType getSeverity() {
-	return severity;
+	    return severity;
     }
 
     public void setSeverity(PolicyRuleSeverityType severity) {
-	this.severity = severity;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.severity = severity;
     }
 
 }

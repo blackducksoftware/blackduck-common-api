@@ -34,7 +34,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class VulnerableComponentView extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String componentVersionName;
     private String componentVersionOriginName;
@@ -45,64 +44,59 @@ public class VulnerableComponentView extends BlackDuckView {
     private String componentVersion;
 
     public String getComponentVersionName() {
-	return componentVersionName;
+	    return componentVersionName;
     }
 
     public void setComponentVersionName(String componentVersionName) {
-	this.componentVersionName = componentVersionName;
+	    this.componentVersionName = componentVersionName;
     }
 
     public String getComponentVersionOriginName() {
-	return componentVersionOriginName;
+	    return componentVersionOriginName;
     }
 
     public void setComponentVersionOriginName(String componentVersionOriginName) {
-	this.componentVersionOriginName = componentVersionOriginName;
+	    this.componentVersionOriginName = componentVersionOriginName;
     }
 
     public String getComponentName() {
-	return componentName;
+	    return componentName;
     }
 
     public void setComponentName(String componentName) {
-	this.componentName = componentName;
+	    this.componentName = componentName;
     }
 
     public ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView getVulnerabilityWithRemediation() {
-	return vulnerabilityWithRemediation;
+	    return vulnerabilityWithRemediation;
     }
 
     public void setVulnerabilityWithRemediation(ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView vulnerabilityWithRemediation) {
-	this.vulnerabilityWithRemediation = vulnerabilityWithRemediation;
+	    this.vulnerabilityWithRemediation = vulnerabilityWithRemediation;
     }
 
     public String getComponentVersionOriginId() {
-	return componentVersionOriginId;
+	    return componentVersionOriginId;
     }
 
     public void setComponentVersionOriginId(String componentVersionOriginId) {
-	this.componentVersionOriginId = componentVersionOriginId;
+	    this.componentVersionOriginId = componentVersionOriginId;
     }
 
     public ProjectVersionLicenseView getLicense() {
-	return license;
+	    return license;
     }
 
     public void setLicense(ProjectVersionLicenseView license) {
-	this.license = license;
+	    this.license = license;
     }
 
     public String getComponentVersion() {
-	return componentVersion;
+	    return componentVersion;
     }
 
     public void setComponentVersion(String componentVersion) {
-	this.componentVersion = componentVersion;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.componentVersion = componentVersion;
     }
 
 }

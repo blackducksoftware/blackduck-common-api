@@ -36,14 +36,7 @@ public enum ComponentApprovalStatusType {
 	REJECTED,
 	DEPRECATED;
 
-	private String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

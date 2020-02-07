@@ -36,14 +36,7 @@ public enum CustomFieldTypeType {
 	BOOLEAN,
 	DATE;
 
-	private String mediaType = "application/vnd.blackducksoftware.project-detail-5+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

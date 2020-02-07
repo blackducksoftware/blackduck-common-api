@@ -33,30 +33,24 @@ import com.synopsys.integration.blackduck.api.generated.component.ComponentMatch
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentOriginMatchedFilesViewV5 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-5+json";
 
     private ComponentMatchedFilesItemsFilePathView filePath;
     private java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages;
 
     public ComponentMatchedFilesItemsFilePathView getFilePath() {
-	return filePath;
+	    return filePath;
     }
 
     public void setFilePath(ComponentMatchedFilesItemsFilePathView filePath) {
-	this.filePath = filePath;
+	    this.filePath = filePath;
     }
 
     public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
-	return usages;
+	    return usages;
     }
 
     public void setUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages) {
-	this.usages = usages;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.usages = usages;
     }
 
 }

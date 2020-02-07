@@ -47,21 +47,20 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComponentViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
 	public static final Map<String, LinkResponse> links = new HashMap<>();
-        public static final String ORIGINS_LINK = "origins";
-        public static final String MATCHED_FILES_LINK = "matched-files";
-        public static final String POLICY_RULES_LINK = "policy-rules";
+    public static final String POLICY_RULES_LINK = "policy-rules";
+    public static final String ORIGINS_LINK = "origins";
+    public static final String MATCHED_FILES_LINK = "matched-files";
 
+	public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
 	public static final LinkMultipleResponses<ComponentMatchedFilesView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<ComponentMatchedFilesView>(MATCHED_FILES_LINK, ComponentMatchedFilesView.class);
-	public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 
     static {
-	links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
-	links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
-	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+	    links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+	    links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+	    links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
     }
 
     private String componentName;
@@ -86,168 +85,163 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private RiskProfileView operationalRiskProfile;
 
     public String getComponentName() {
-	return componentName;
+	    return componentName;
     }
 
     public void setComponentName(String componentName) {
-	this.componentName = componentName;
+	    this.componentName = componentName;
     }
 
     public java.util.List<VersionBomOriginView> getOrigins() {
-	return origins;
+	    return origins;
     }
 
     public void setOrigins(java.util.List<VersionBomOriginView> origins) {
-	this.origins = origins;
+	    this.origins = origins;
     }
 
     public String getComponent() {
-	return component;
+	    return component;
     }
 
     public void setComponent(String component) {
-	this.component = component;
+	    this.component = component;
     }
 
     public ComponentVersionRiskProfileActivityDataView getActivityData() {
-	return activityData;
+	    return activityData;
     }
 
     public void setActivityData(ComponentVersionRiskProfileActivityDataView activityData) {
-	this.activityData = activityData;
+	    this.activityData = activityData;
     }
 
     public String getComponentVersionName() {
-	return componentVersionName;
+	    return componentVersionName;
     }
 
     public void setComponentVersionName(String componentVersionName) {
-	this.componentVersionName = componentVersionName;
+	    this.componentVersionName = componentVersionName;
     }
 
     public RiskProfileView getVersionRiskProfile() {
-	return versionRiskProfile;
+	    return versionRiskProfile;
     }
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
-	this.versionRiskProfile = versionRiskProfile;
+	    this.versionRiskProfile = versionRiskProfile;
     }
 
     public RiskProfileView getActivityRiskProfile() {
-	return activityRiskProfile;
+	    return activityRiskProfile;
     }
 
     public void setActivityRiskProfile(RiskProfileView activityRiskProfile) {
-	this.activityRiskProfile = activityRiskProfile;
+	    this.activityRiskProfile = activityRiskProfile;
     }
 
     public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	return licenses;
+	    return licenses;
     }
 
     public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	this.licenses = licenses;
+	    this.licenses = licenses;
     }
 
     public RiskProfileView getLicenseRiskProfile() {
-	return licenseRiskProfile;
+	    return licenseRiskProfile;
     }
 
     public void setLicenseRiskProfile(RiskProfileView licenseRiskProfile) {
-	this.licenseRiskProfile = licenseRiskProfile;
+	    this.licenseRiskProfile = licenseRiskProfile;
     }
 
     public PolicyStatusType getPolicyStatus() {
-	return policyStatus;
+	    return policyStatus;
     }
 
     public void setPolicyStatus(PolicyStatusType policyStatus) {
-	this.policyStatus = policyStatus;
+	    this.policyStatus = policyStatus;
     }
 
     public java.util.Date getReleasedOn() {
-	return releasedOn;
+	    return releasedOn;
     }
 
     public void setReleasedOn(java.util.Date releasedOn) {
-	this.releasedOn = releasedOn;
+	    this.releasedOn = releasedOn;
     }
 
     public RiskProfileView getSecurityRiskProfile() {
-	return securityRiskProfile;
+	    return securityRiskProfile;
     }
 
     public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
-	this.securityRiskProfile = securityRiskProfile;
+	    this.securityRiskProfile = securityRiskProfile;
     }
 
     public ProjectVersionComponentReviewStatusType getReviewStatus() {
-	return reviewStatus;
+	    return reviewStatus;
     }
 
     public void setReviewStatus(ProjectVersionComponentReviewStatusType reviewStatus) {
-	this.reviewStatus = reviewStatus;
+	    this.reviewStatus = reviewStatus;
     }
 
     public java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> getUsages() {
-	return usages;
+	    return usages;
     }
 
     public void setUsages(java.util.List<LicenseFamilyLicenseFamilyRiskRulesUsageType> usages) {
-	this.usages = usages;
+	    this.usages = usages;
     }
 
     public PolicyStatusType getApprovalStatus() {
-	return approvalStatus;
+	    return approvalStatus;
     }
 
     public void setApprovalStatus(PolicyStatusType approvalStatus) {
-	this.approvalStatus = approvalStatus;
+	    this.approvalStatus = approvalStatus;
     }
 
     public ProjectVersionComponentReviewedDetailsView getReviewedDetails() {
-	return reviewedDetails;
+	    return reviewedDetails;
     }
 
     public void setReviewedDetails(ProjectVersionComponentReviewedDetailsView reviewedDetails) {
-	this.reviewedDetails = reviewedDetails;
+	    this.reviewedDetails = reviewedDetails;
     }
 
     public BigDecimal getTotalFileMatchCount() {
-	return totalFileMatchCount;
+	    return totalFileMatchCount;
     }
 
     public void setTotalFileMatchCount(BigDecimal totalFileMatchCount) {
-	this.totalFileMatchCount = totalFileMatchCount;
+	    this.totalFileMatchCount = totalFileMatchCount;
     }
 
     public java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> getMatchTypes() {
-	return matchTypes;
+	    return matchTypes;
     }
 
     public void setMatchTypes(java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> matchTypes) {
-	this.matchTypes = matchTypes;
+	    this.matchTypes = matchTypes;
     }
 
     public String getComponentVersion() {
-	return componentVersion;
+	    return componentVersion;
     }
 
     public void setComponentVersion(String componentVersion) {
-	this.componentVersion = componentVersion;
+	    this.componentVersion = componentVersion;
     }
 
     public RiskProfileView getOperationalRiskProfile() {
-	return operationalRiskProfile;
+	    return operationalRiskProfile;
     }
 
     public void setOperationalRiskProfile(RiskProfileView operationalRiskProfile) {
-	this.operationalRiskProfile = operationalRiskProfile;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.operationalRiskProfile = operationalRiskProfile;
     }
 
 }

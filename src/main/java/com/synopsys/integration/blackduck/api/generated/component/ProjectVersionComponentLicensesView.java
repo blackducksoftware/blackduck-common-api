@@ -32,7 +32,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-6+json";
 
     private String license;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
@@ -41,48 +40,43 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
     private ProjectVersionLicenseTypeType licenseType;
 
     public String getLicense() {
-	return license;
+	    return license;
     }
 
     public void setLicense(String license) {
-	this.license = license;
+	    this.license = license;
     }
 
     public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	return licenses;
+	    return licenses;
     }
 
     public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	this.licenses = licenses;
+	    this.licenses = licenses;
     }
 
     public String getLicenseDisplay() {
-	return licenseDisplay;
+	    return licenseDisplay;
     }
 
     public void setLicenseDisplay(String licenseDisplay) {
-	this.licenseDisplay = licenseDisplay;
+	    this.licenseDisplay = licenseDisplay;
     }
 
     public String getSpdxId() {
-	return spdxId;
+	    return spdxId;
     }
 
     public void setSpdxId(String spdxId) {
-	this.spdxId = spdxId;
+	    this.spdxId = spdxId;
     }
 
     public ProjectVersionLicenseTypeType getLicenseType() {
-	return licenseType;
+	    return licenseType;
     }
 
     public void setLicenseType(ProjectVersionLicenseTypeType licenseType) {
-	this.licenseType = licenseType;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.licenseType = licenseType;
     }
 
 }

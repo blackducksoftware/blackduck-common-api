@@ -31,7 +31,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermS
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class LicenseTermViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private LicenseTermResponsibilityType responsibility;
     private String description;
@@ -41,56 +40,51 @@ public class LicenseTermViewV4 extends BlackDuckView {
     private Boolean deactivated;
 
     public LicenseTermResponsibilityType getResponsibility() {
-	return responsibility;
+	    return responsibility;
     }
 
     public void setResponsibility(LicenseTermResponsibilityType responsibility) {
-	this.responsibility = responsibility;
+	    this.responsibility = responsibility;
     }
 
     public String getDescription() {
-	return description;
+	    return description;
     }
 
     public void setDescription(String description) {
-	this.description = description;
+	    this.description = description;
     }
 
     public String getName() {
-	return name;
+	    return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public Boolean getFulfillmentRequired() {
-	return fulfillmentRequired;
+	    return fulfillmentRequired;
     }
 
     public void setFulfillmentRequired(Boolean fulfillmentRequired) {
-	this.fulfillmentRequired = fulfillmentRequired;
+	    this.fulfillmentRequired = fulfillmentRequired;
     }
 
     public LicenseTermSourceType getAssociationSource() {
-	return associationSource;
+	    return associationSource;
     }
 
     public void setAssociationSource(LicenseTermSourceType associationSource) {
-	this.associationSource = associationSource;
+	    this.associationSource = associationSource;
     }
 
     public Boolean getDeactivated() {
-	return deactivated;
+	    return deactivated;
     }
 
     public void setDeactivated(Boolean deactivated) {
-	this.deactivated = deactivated;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.deactivated = deactivated;
     }
 
 }

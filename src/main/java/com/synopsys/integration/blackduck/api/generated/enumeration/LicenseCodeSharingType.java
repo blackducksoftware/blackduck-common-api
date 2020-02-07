@@ -34,14 +34,7 @@ public enum LicenseCodeSharingType {
 	RECIPROCAL_AGPL,
 	UNKNOWN;
 
-	private String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

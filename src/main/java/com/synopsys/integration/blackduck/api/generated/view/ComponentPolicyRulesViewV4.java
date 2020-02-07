@@ -33,7 +33,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyRuleSe
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class ComponentPolicyRulesViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private Boolean enabled;
     private String description;
@@ -51,120 +50,115 @@ public class ComponentPolicyRulesViewV4 extends BlackDuckView {
     private java.util.Date updatedAt;
 
     public Boolean getEnabled() {
-	return enabled;
+	    return enabled;
     }
 
     public void setEnabled(Boolean enabled) {
-	this.enabled = enabled;
+	    this.enabled = enabled;
     }
 
     public String getDescription() {
-	return description;
+	    return description;
     }
 
     public void setDescription(String description) {
-	this.description = description;
+	    this.description = description;
     }
 
     public String getName() {
-	return name;
+	    return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+	    this.name = name;
     }
 
     public String getUpdatedBy() {
-	return updatedBy;
+	    return updatedBy;
     }
 
     public void setUpdatedBy(String updatedBy) {
-	this.updatedBy = updatedBy;
+	    this.updatedBy = updatedBy;
     }
 
     public String getUpdatedByUser() {
-	return updatedByUser;
+	    return updatedByUser;
     }
 
     public void setUpdatedByUser(String updatedByUser) {
-	this.updatedByUser = updatedByUser;
+	    this.updatedByUser = updatedByUser;
     }
 
     public java.util.Date getCreatedAt() {
-	return createdAt;
+	    return createdAt;
     }
 
     public void setCreatedAt(java.util.Date createdAt) {
-	this.createdAt = createdAt;
+	    this.createdAt = createdAt;
     }
 
     public String getComment() {
-	return comment;
+	    return comment;
     }
 
     public void setComment(String comment) {
-	this.comment = comment;
+	    this.comment = comment;
     }
 
     public PolicyStatusType getPolicyApprovalStatus() {
-	return policyApprovalStatus;
+	    return policyApprovalStatus;
     }
 
     public void setPolicyApprovalStatus(PolicyStatusType policyApprovalStatus) {
-	this.policyApprovalStatus = policyApprovalStatus;
+	    this.policyApprovalStatus = policyApprovalStatus;
     }
 
     public PolicyRuleExpressionView getExpression() {
-	return expression;
+	    return expression;
     }
 
     public void setExpression(PolicyRuleExpressionView expression) {
-	this.expression = expression;
+	    this.expression = expression;
     }
 
     public Boolean getOverridable() {
-	return overridable;
+	    return overridable;
     }
 
     public void setOverridable(Boolean overridable) {
-	this.overridable = overridable;
+	    this.overridable = overridable;
     }
 
     public String getCreatedBy() {
-	return createdBy;
+	    return createdBy;
     }
 
     public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
+	    this.createdBy = createdBy;
     }
 
     public String getCreatedByUser() {
-	return createdByUser;
+	    return createdByUser;
     }
 
     public void setCreatedByUser(String createdByUser) {
-	this.createdByUser = createdByUser;
+	    this.createdByUser = createdByUser;
     }
 
     public PolicyRuleSeverityType getSeverity() {
-	return severity;
+	    return severity;
     }
 
     public void setSeverity(PolicyRuleSeverityType severity) {
-	this.severity = severity;
+	    this.severity = severity;
     }
 
     public java.util.Date getUpdatedAt() {
-	return updatedAt;
+	    return updatedAt;
     }
 
     public void setUpdatedAt(java.util.Date updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.updatedAt = updatedAt;
     }
 
 }

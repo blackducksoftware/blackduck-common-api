@@ -33,7 +33,6 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentSou
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class OriginViewV4 extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.component-detail-4+json";
 
     private OriginLicenseView license;
     private String originId;
@@ -43,56 +42,51 @@ public class OriginViewV4 extends BlackDuckView {
     private java.util.Date releasedOn;
 
     public OriginLicenseView getLicense() {
-	return license;
+	    return license;
     }
 
     public void setLicense(OriginLicenseView license) {
-	this.license = license;
+	    this.license = license;
     }
 
     public String getOriginId() {
-	return originId;
+	    return originId;
     }
 
     public void setOriginId(String originId) {
-	this.originId = originId;
+	    this.originId = originId;
     }
 
     public ComponentSourceType getSource() {
-	return source;
+	    return source;
     }
 
     public void setSource(ComponentSourceType source) {
-	this.source = source;
+	    this.source = source;
     }
 
     public String getOriginName() {
-	return originName;
+	    return originName;
     }
 
     public void setOriginName(String originName) {
-	this.originName = originName;
+	    this.originName = originName;
     }
 
     public String getVersionName() {
-	return versionName;
+	    return versionName;
     }
 
     public void setVersionName(String versionName) {
-	this.versionName = versionName;
+	    this.versionName = versionName;
     }
 
     public java.util.Date getReleasedOn() {
-	return releasedOn;
+	    return releasedOn;
     }
 
     public void setReleasedOn(java.util.Date releasedOn) {
-	this.releasedOn = releasedOn;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.releasedOn = releasedOn;
     }
 
 }

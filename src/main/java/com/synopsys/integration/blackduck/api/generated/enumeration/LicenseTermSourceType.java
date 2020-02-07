@@ -31,14 +31,7 @@ public enum LicenseTermSourceType {
 	CUSTOM,
 	KB;
 
-	private String mediaType = "application/vnd.blackducksoftware.component-detail-5+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

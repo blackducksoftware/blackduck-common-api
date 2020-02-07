@@ -43,14 +43,7 @@ public enum VersionBomComponentMatchType {
 	SNIPPET,
 	BINARY;
 
-	private String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
-
-	public String getMediaType() {
-	return mediaType;
-	}
-
 	public String prettyPrint() {
-	return EnumUtils.prettyPrint(this);
+	    return EnumUtils.prettyPrint(this);
 	}
-
-} 
+}

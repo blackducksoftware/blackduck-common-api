@@ -36,7 +36,6 @@ import java.util.Optional;
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
 public class VersionBomPolicyStatusView extends BlackDuckView {
-	public static final String mediaType = "application/vnd.blackducksoftware.bill-of-materials-4+json";
 
     private java.util.List<NameValuePairView> componentVersionStatusCounts;
     private PolicyStatusType overallStatus;
@@ -44,40 +43,35 @@ public class VersionBomPolicyStatusView extends BlackDuckView {
     private java.util.Date updatedAt;
 
     public java.util.List<NameValuePairView> getComponentVersionStatusCounts() {
-	return componentVersionStatusCounts;
+	    return componentVersionStatusCounts;
     }
 
     public void setComponentVersionStatusCounts(java.util.List<NameValuePairView> componentVersionStatusCounts) {
-	this.componentVersionStatusCounts = componentVersionStatusCounts;
+	    this.componentVersionStatusCounts = componentVersionStatusCounts;
     }
 
     public PolicyStatusType getOverallStatus() {
-	return overallStatus;
+	    return overallStatus;
     }
 
     public void setOverallStatus(PolicyStatusType overallStatus) {
-	this.overallStatus = overallStatus;
+	    this.overallStatus = overallStatus;
     }
 
     public ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView getComponentVersionPolicyViolationDetails() {
-	return componentVersionPolicyViolationDetails;
+	    return componentVersionPolicyViolationDetails;
     }
 
     public void setComponentVersionPolicyViolationDetails(ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView componentVersionPolicyViolationDetails) {
-	this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
+	    this.componentVersionPolicyViolationDetails = componentVersionPolicyViolationDetails;
     }
 
     public java.util.Date getUpdatedAt() {
-	return updatedAt;
+	    return updatedAt;
     }
 
     public void setUpdatedAt(java.util.Date updatedAt) {
-	this.updatedAt = updatedAt;
-    }
-
-
-    public String getMediaType() {
-	return mediaType;
+	    this.updatedAt = updatedAt;
     }
 
 }
