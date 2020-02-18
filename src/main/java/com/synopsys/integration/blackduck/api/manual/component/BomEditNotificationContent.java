@@ -23,7 +23,18 @@
 package com.synopsys.integration.blackduck.api.manual.component;
 
 public class BomEditNotificationContent extends NotificationContentComponent {
+    private String projectVersion;
     private String bomComponent;
+    private String componentName;
+    private String componentVersionName;
+
+    public String getProjectVersion() {
+        return projectVersion;
+    }
+
+    public void setProjectVersion(final String projectVersion) {
+        this.projectVersion = projectVersion;
+    }
 
     public String getBomComponent() {
         return bomComponent;
@@ -33,4 +44,19 @@ public class BomEditNotificationContent extends NotificationContentComponent {
         this.bomComponent = bomComponent;
     }
 
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(final String componentName) {
+        this.componentName = componentName;
+    }
+
+    public String getComponentVersionName() {
+        return componentVersionName;
+    }
+
+    public void setComponentVersionName(final String componentVersionName) {
+        this.componentVersionName = componentVersionName;
+    }
 }
