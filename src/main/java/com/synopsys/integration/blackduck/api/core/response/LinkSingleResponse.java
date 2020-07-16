@@ -20,18 +20,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.util.EnumUtils;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
-public enum ProjectVersionLicenseTypeType {
-	CONJUNCTIVE,
-	DISJUNCTIVE;
+public class LinkSingleResponse<T extends BlackDuckResponse> extends LinkBlackDuckResponse<T> {
+    public LinkSingleResponse(String link, Class<T> responseClass) {
+        super(link, responseClass);
+    }
 
-	public String prettyPrint() {
-	    return EnumUtils.prettyPrint(this);
-	}
 }

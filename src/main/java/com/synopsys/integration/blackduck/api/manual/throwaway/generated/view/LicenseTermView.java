@@ -26,13 +26,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.LicenseTermCategorySummaryView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.UserSummaryView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.LicenseTermResponsibilityType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.LicenseTermSourceType;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermAssociationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseTermView extends BlackDuckView {

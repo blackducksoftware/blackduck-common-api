@@ -20,23 +20,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.core.response;
 
-public class BlackDuckPathSingleResponse<T extends BlackDuckResponse> extends LinkResponse {
+import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+
+public abstract class BlackDuckPathResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
     private final BlackDuckPath blackDuckPath;
-    private final Class<T> responseClass;
 
-    public BlackDuckPathSingleResponse(final BlackDuckPath blackDuckPath, final Class<T> responseClass) {
+    public BlackDuckPathResponse(BlackDuckPath blackDuckPath, Class<T> responseClass) {
+        super(responseClass);
         this.blackDuckPath = blackDuckPath;
-        this.responseClass = responseClass;
     }
 
     public BlackDuckPath getBlackDuckPath() {
         return blackDuckPath;
-    }
-
-    public Class<T> getResponseClass() {
-        return responseClass;
     }
 
 }

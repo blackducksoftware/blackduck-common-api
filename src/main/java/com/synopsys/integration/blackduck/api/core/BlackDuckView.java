@@ -1,8 +1,8 @@
 /**
  * blackduck-common-api
- *
+ * <p>
  * Copyright (c) 2020 Synopsys, Inc.
- *
+ * <p>
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements. See the NOTICE file
  * distributed with this work for additional information
@@ -10,9 +10,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License. You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -22,16 +22,17 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
+import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
+import com.synopsys.integration.rest.HttpUrl;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
-import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
-
 /**
- * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
+ * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Black Duck endpoints.
  */
 public class BlackDuckView extends BlackDuckResponse {
     private ResourceMetadata _meta;
@@ -50,26 +51,26 @@ public class BlackDuckView extends BlackDuckResponse {
         }
 
         return _meta.getLinks().stream()
-                   .map(ResourceLink::getRel)
-                   .anyMatch(linkKey::equals);
+                .map(ResourceLink::getRel)
+                .anyMatch(linkKey::equals);
     }
 
-    public Optional<String> getFirstLink(String linkKey) {
+    public Optional<HttpUrl> getFirstLink(String linkKey) {
         if (null == _meta || null == _meta.getLinks()) {
             return Optional.empty();
         }
 
         return _meta.getLinks().stream()
-                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
-                   .findFirst()
-                   .map(ResourceLink::getHref);
+                .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                .findFirst()
+                .map(ResourceLink::getHref);
     }
 
-    public List<String> getLinks(String linkKey) {
+    public List<HttpUrl> getLinks(String linkKey) {
         return getResourceLinks().stream()
-                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
-                   .map(ResourceLink::getHref)
-                   .collect(Collectors.toList());
+                .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                .map(ResourceLink::getHref)
+                .collect(Collectors.toList());
     }
 
     public Optional<ResourceMetadata> getResourceMetadata() {
@@ -90,8 +91,8 @@ public class BlackDuckView extends BlackDuckResponse {
 
     public List<String> getAvailableLinks() {
         return getResourceLinks().stream()
-                   .map(ResourceLink::getRel)
-                   .collect(Collectors.toList());
+                .map(ResourceLink::getRel)
+                .collect(Collectors.toList());
     }
 
     public List<String> getAllowedMethods() {
@@ -102,7 +103,7 @@ public class BlackDuckView extends BlackDuckResponse {
         return _meta.getAllow();
     }
 
-    public Optional<String> getHref() {
+    public Optional<HttpUrl> getHref() {
         if (null == _meta || null == _meta.getHref()) {
             return Optional.empty();
         }
