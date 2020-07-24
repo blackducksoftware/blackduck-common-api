@@ -22,13 +22,11 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
-import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
 import com.synopsys.integration.rest.HttpUrl;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 /**
@@ -55,15 +53,12 @@ public class BlackDuckView extends BlackDuckResponse {
                 .anyMatch(linkKey::equals);
     }
 
-    public Optional<HttpUrl> getFirstLink(String linkKey) {
-        if (null == _meta || null == _meta.getLinks()) {
-            return Optional.empty();
-        }
-
+    public HttpUrl getFirstLink(String linkKey) {
         return _meta.getLinks().stream()
                 .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
                 .findFirst()
-                .map(ResourceLink::getHref);
+                .map(ResourceLink::getHref)
+                .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
     }
 
     public List<HttpUrl> getLinks(String linkKey) {
@@ -73,12 +68,8 @@ public class BlackDuckView extends BlackDuckResponse {
                 .collect(Collectors.toList());
     }
 
-    public Optional<ResourceMetadata> getResourceMetadata() {
-        if (null == _meta) {
-            return Optional.empty();
-        }
-
-        return Optional.of(_meta);
+    public ResourceMetadata getResourceMetadata() {
+        return _meta;
     }
 
     public List<ResourceLink> getResourceLinks() {
@@ -103,12 +94,8 @@ public class BlackDuckView extends BlackDuckResponse {
         return _meta.getAllow();
     }
 
-    public Optional<HttpUrl> getHref() {
-        if (null == _meta || null == _meta.getHref()) {
-            return Optional.empty();
-        }
-
-        return Optional.of(_meta.getHref());
+    public HttpUrl getHref() {
+        return _meta.getHref();
     }
 
     public String getMediaType() {

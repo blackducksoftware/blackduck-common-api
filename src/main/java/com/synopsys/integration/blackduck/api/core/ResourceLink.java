@@ -20,23 +20,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.manual.component;
+package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.google.gson.annotations.JsonAdapter;
 import com.synopsys.integration.rest.HttpUrl;
 
-public class ResourceMetadata extends BlackDuckComponent {
-    private java.util.List<String> allow;
+public class ResourceLink extends BlackDuckComponent {
+    @JsonAdapter(HttpUrlTypeAdapter.class)
     private HttpUrl href;
-    private java.util.List<ResourceLink> links;
 
-    public java.util.List<String> getAllow() {
-        return allow;
-    }
-
-    public void setAllow(java.util.List<String> allow) {
-        this.allow = allow;
-    }
+    private String label;
+    private String name;
+    private String rel;
 
     public HttpUrl getHref() {
         return href;
@@ -46,12 +41,28 @@ public class ResourceMetadata extends BlackDuckComponent {
         this.href = href;
     }
 
-    public java.util.List<ResourceLink> getLinks() {
-        return links;
+    public String getLabel() {
+        return label;
     }
 
-    public void setLinks(java.util.List<ResourceLink> links) {
-        this.links = links;
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRel() {
+        return rel;
+    }
+
+    public void setRel(String rel) {
+        this.rel = rel;
     }
 
 }

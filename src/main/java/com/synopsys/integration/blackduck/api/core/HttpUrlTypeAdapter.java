@@ -20,47 +20,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.manual.component;
+package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.synopsys.integration.exception.IntegrationException;
 import com.synopsys.integration.rest.HttpUrl;
 
-public class ResourceLink extends BlackDuckComponent {
-    private HttpUrl href;
-    private String label;
-    private String name;
-    private String rel;
+import java.io.IOException;
 
-    public HttpUrl getHref() {
-        return href;
+public class HttpUrlTypeAdapter extends TypeAdapter<HttpUrl> {
+    @Override
+    public void write(JsonWriter jsonWriter, HttpUrl httpUrl) throws IOException {
+        jsonWriter.value(httpUrl.string());
     }
 
-    public void setHref(HttpUrl href) {
-        this.href = href;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRel() {
-        return rel;
-    }
-
-    public void setRel(String rel) {
-        this.rel = rel;
+    @Override
+    public HttpUrl read(JsonReader jsonReader) throws IOException {
+        String url = jsonReader.nextString();
+        try {
+            return new HttpUrl(url);
+        } catch (IntegrationException e) {
+            return null;
+        }
     }
 
 }
