@@ -20,20 +20,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.manual.throwaway.generated.view;
+package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectMappingView extends BlackDuckView {
-    private String applicationId;
-
-    public String getApplicationId() {
-        return applicationId;
+public class LinkStringResponse extends LinkResponse<String> {
+    public LinkStringResponse(String link) {
+        super(link, String.class);
     }
 
-    public void setApplicationId(String applicationId) {
-        this.applicationId = applicationId;
+    public LinkStringResponse(String link, Class<String> resultClass) {
+        super(link, resultClass);
     }
 
 }

@@ -20,12 +20,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.core.response;
 
-public class LinkStringResponse extends LinkResponse {
+public abstract class LinkResponse<T> extends ApiResponse<T> {
     private final String link;
 
-    public LinkStringResponse(final String link, final Class<String> stringClass) {
+    public LinkResponse(String link, Class<T> responseClass) {
+        super(responseClass);
         this.link = link;
     }
 

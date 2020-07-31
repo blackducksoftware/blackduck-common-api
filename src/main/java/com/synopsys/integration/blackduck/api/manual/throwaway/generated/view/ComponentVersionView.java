@@ -26,9 +26,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.LinkResponse;
-import com.synopsys.integration.blackduck.api.core.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.view.ComplexLicenseView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ComponentType;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.enumeration.ComponentVersionApprovalStatusType;

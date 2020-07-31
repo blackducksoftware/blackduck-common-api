@@ -20,10 +20,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.core;
+package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.util.Stringable;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
-public abstract class LinkResponse extends Stringable {
+public abstract class LinkBlackDuckResponse<T extends BlackDuckResponse> extends LinkResponse<T> {
+    public LinkBlackDuckResponse(String link, Class<T> responseClass) {
+        super(link, responseClass);
+    }
 
 }

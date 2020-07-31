@@ -20,18 +20,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.enumeration;
+package com.synopsys.integration.blackduck.api.core;
 
-import com.synopsys.integration.util.EnumUtils;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.synopsys.integration.exception.IntegrationException;
+import com.synopsys.integration.rest.HttpUrl;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
-public enum ProjectVersionLicenseTypeType {
-	CONJUNCTIVE,
-	DISJUNCTIVE;
+import java.io.IOException;
 
-	public String prettyPrint() {
-	    return EnumUtils.prettyPrint(this);
-	}
+public class HttpUrlTypeAdapter extends TypeAdapter<HttpUrl> {
+    @Override
+    public void write(JsonWriter jsonWriter, HttpUrl httpUrl) throws IOException {
+        jsonWriter.value(httpUrl.string());
+    }
+
+    @Override
+    public HttpUrl read(JsonReader jsonReader) throws IOException {
+        String url = jsonReader.nextString();
+        try {
+            return new HttpUrl(url);
+        } catch (IntegrationException e) {
+            return null;
+        }
+    }
+
 }

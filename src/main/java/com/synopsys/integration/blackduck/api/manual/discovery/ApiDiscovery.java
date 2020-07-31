@@ -22,38 +22,25 @@
  */
 package com.synopsys.integration.blackduck.api.manual.discovery;
 
+import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
+import com.synopsys.integration.blackduck.api.core.response.BlackDuckPathMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.BlackDuckPathResponse;
+import com.synopsys.integration.blackduck.api.core.response.BlackDuckPathSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.response.ComponentSearchResultView;
+import com.synopsys.integration.blackduck.api.generated.response.CustomFieldTypeView;
+import com.synopsys.integration.blackduck.api.generated.view.*;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.*;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseFamilyView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ReportView;
+import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
-import com.synopsys.integration.blackduck.api.core.BlackDuckPathMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.BlackDuckPathSingleResponse;
-import com.synopsys.integration.blackduck.api.core.LinkResponse;
-import com.synopsys.integration.blackduck.api.generated.response.CustomFieldTypeView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.CurrentVersionView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.DashboardSummaryView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.EndUserLicenseAgreementView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.HealthCheckStatusView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.response.JobStatisticsView;
-import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.generated.response.ComponentSearchResultView;
-import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseFamilyView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
-import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
-import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
-import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
-import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.ReportView;
-import com.synopsys.integration.blackduck.api.generated.view.RoleView;
-import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
-import com.synopsys.integration.blackduck.api.generated.view.UserView;
-import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
-
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ApiDiscovery {
-    public static final Map<BlackDuckPath, LinkResponse> links = new HashMap<>();
+    public static final Map<BlackDuckPath, BlackDuckPathResponse> links = new HashMap<>();
 
     public static final BlackDuckPath CODELOCATIONS_LINK = new BlackDuckPath("/api/codelocations");
     public static final BlackDuckPath COMPONENTS_LINK = new BlackDuckPath("/api/components");
@@ -82,32 +69,32 @@ public class ApiDiscovery {
     public static final BlackDuckPath VULNERABILITY_STATUS_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-status-reports");
     public static final BlackDuckPath VULNERABILITY_UPDATE_REPORTS_LINK = new BlackDuckPath("/api/vulnerability-update-reports");
 
-    public static final BlackDuckPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ComponentSearchResultView>(COMPONENTS_LINK, ComponentSearchResultView.class);
-    public static final BlackDuckPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new BlackDuckPathSingleResponse<UserView>(CURRENT_USER_LINK, UserView.class);
-    public static final BlackDuckPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new BlackDuckPathSingleResponse<CurrentVersionView>(CURRENT_VERSION_LINK, CurrentVersionView.class);
-    public static final BlackDuckPathMultipleResponses<CustomFieldObjectView> CUSTOM_FIELDS_OBJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<CustomFieldObjectView>(CUSTOM_FIELDS_OBJECTS_LINK, CustomFieldObjectView.class);
-    public static final BlackDuckPathMultipleResponses<CustomFieldTypeView> CUSTOM_FIELDS_TYPES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<CustomFieldTypeView>(CUSTOM_FIELDS_TYPES_LINK, CustomFieldTypeView.class);
-    public static final BlackDuckPathSingleResponse<DashboardSummaryView> DASHBOARD_SUMMARY_LINK_RESPONSE = new BlackDuckPathSingleResponse<DashboardSummaryView>(DASHBOARD_SUMMARY_LINK, DashboardSummaryView.class);
-    public static final BlackDuckPathSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new BlackDuckPathSingleResponse<EndUserLicenseAgreementView>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
-    public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
-    public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<HealthCheckStatusView>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
-    public static final BlackDuckPathMultipleResponses<JobStatisticsView> JOB_STATISTICS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<JobStatisticsView>(JOB_STATISTICS_LINK, JobStatisticsView.class);
-    public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseFamilyView>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
-    public static final BlackDuckPathMultipleResponses<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermCategoryView>(LICENSE_TERM_CATEGORIES_LINK, LicenseTermCategoryView.class);
-    public static final BlackDuckPathMultipleResponses<LicenseTermView> LICENSE_TERMS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermView>(LICENSE_TERMS_LINK, LicenseTermView.class);
-    public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
-    public static final BlackDuckPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
-    public static final BlackDuckPathMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<PolicyRuleView>(POLICY_RULES_LINK, PolicyRuleView.class);
-    public static final BlackDuckPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ProjectView>(PROJECTS_LINK, ProjectView.class);
-    public static final BlackDuckPathSingleResponse<RegistrationView> REGISTRATION_LINK_RESPONSE = new BlackDuckPathSingleResponse<RegistrationView>(REGISTRATION_LINK, RegistrationView.class);
-    public static final BlackDuckPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<RoleView>(ROLES_LINK, RoleView.class);
-    public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> SEARCH_COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ComponentSearchResultView>(SEARCH_COMPONENTS_LINK, ComponentSearchResultView.class);
-    public static final BlackDuckPathMultipleResponses<UserGroupView> USERGROUPS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<UserGroupView>(USERGROUPS_LINK, UserGroupView.class);
-    public static final BlackDuckPathMultipleResponses<UserView> USERS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<UserView>(USERS_LINK, UserView.class);
-    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
-    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
-    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<ReportView>(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
+    public static final BlackDuckPathMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(CODELOCATIONS_LINK, CodeLocationView.class);
+    public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final BlackDuckPathSingleResponse<UserView> CURRENT_USER_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(CURRENT_USER_LINK, UserView.class);
+    public static final BlackDuckPathSingleResponse<CurrentVersionView> CURRENT_VERSION_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(CURRENT_VERSION_LINK, CurrentVersionView.class);
+    public static final BlackDuckPathMultipleResponses<CustomFieldObjectView> CUSTOM_FIELDS_OBJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(CUSTOM_FIELDS_OBJECTS_LINK, CustomFieldObjectView.class);
+    public static final BlackDuckPathMultipleResponses<CustomFieldTypeView> CUSTOM_FIELDS_TYPES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(CUSTOM_FIELDS_TYPES_LINK, CustomFieldTypeView.class);
+    public static final BlackDuckPathSingleResponse<DashboardSummaryView> DASHBOARD_SUMMARY_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(DASHBOARD_SUMMARY_LINK, DashboardSummaryView.class);
+    public static final BlackDuckPathSingleResponse<EndUserLicenseAgreementView> ENDUSERLICENSEAGREEMENT_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(ENDUSERLICENSEAGREEMENT_LINK, EndUserLicenseAgreementView.class);
+    public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_LIVENESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(HEALTH_CHECKS_LIVENESS_LINK, HealthCheckStatusView.class);
+    public static final BlackDuckPathSingleResponse<HealthCheckStatusView> HEALTH_CHECKS_READINESS_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(HEALTH_CHECKS_READINESS_LINK, HealthCheckStatusView.class);
+    public static final BlackDuckPathMultipleResponses<JobStatisticsView> JOB_STATISTICS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(JOB_STATISTICS_LINK, JobStatisticsView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(LICENSE_TERM_CATEGORIES_LINK, LicenseTermCategoryView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseTermView> LICENSE_TERMS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(LICENSE_TERMS_LINK, LicenseTermView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(LICENSES_LINK, LicenseView.class);
+    public static final BlackDuckPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(NOTIFICATIONS_LINK, NotificationView.class);
+    public static final BlackDuckPathMultipleResponses<PolicyRuleView> POLICY_RULES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(POLICY_RULES_LINK, PolicyRuleView.class);
+    public static final BlackDuckPathMultipleResponses<ProjectView> PROJECTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(PROJECTS_LINK, ProjectView.class);
+    public static final BlackDuckPathSingleResponse<RegistrationView> REGISTRATION_LINK_RESPONSE = new BlackDuckPathSingleResponse<>(REGISTRATION_LINK, RegistrationView.class);
+    public static final BlackDuckPathMultipleResponses<RoleView> ROLES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(ROLES_LINK, RoleView.class);
+    public static final BlackDuckPathMultipleResponses<ComponentSearchResultView> SEARCH_COMPONENTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(SEARCH_COMPONENTS_LINK, ComponentSearchResultView.class);
+    public static final BlackDuckPathMultipleResponses<UserGroupView> USERGROUPS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(USERGROUPS_LINK, UserGroupView.class);
+    public static final BlackDuckPathMultipleResponses<UserView> USERS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(USERS_LINK, UserView.class);
+    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_REMEDIATION_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(VULNERABILITY_REMEDIATION_REPORTS_LINK, ReportView.class);
+    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_STATUS_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(VULNERABILITY_STATUS_REPORTS_LINK, ReportView.class);
+    public static final BlackDuckPathMultipleResponses<ReportView> VULNERABILITY_UPDATE_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<>(VULNERABILITY_UPDATE_REPORTS_LINK, ReportView.class);
 
     static {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);

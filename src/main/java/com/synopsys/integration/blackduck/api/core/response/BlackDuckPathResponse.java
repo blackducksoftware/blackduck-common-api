@@ -20,18 +20,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.view;
+package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileActivityDataView;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileRiskDataView;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionRiskProfileVersionDataView;
-import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
-public class ComponentVersionRiskProfileView extends ComponentVersionRiskProfileViewV5 {
+public abstract class BlackDuckPathResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
+    private final BlackDuckPath blackDuckPath;
+
+    public BlackDuckPathResponse(BlackDuckPath blackDuckPath, Class<T> responseClass) {
+        super(responseClass);
+        this.blackDuckPath = blackDuckPath;
+    }
+
+    public BlackDuckPath getBlackDuckPath() {
+        return blackDuckPath;
+    }
 
 }
