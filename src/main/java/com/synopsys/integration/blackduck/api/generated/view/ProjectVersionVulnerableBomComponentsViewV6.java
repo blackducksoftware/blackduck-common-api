@@ -25,8 +25,8 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsLicenseView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -37,7 +37,7 @@ public class ProjectVersionVulnerableBomComponentsViewV6 extends BlackDuckView {
     private String componentName;
     private ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView vulnerabilityWithRemediation;
     private String componentVersionOriginId;
-    private ProjectVersionVulnerableBomComponentsItemsLicenseView license;
+    private ProjectVersionLicenseView license;
     private String componentVersion;
 
     public String getComponentVersionName() {
@@ -80,11 +80,11 @@ public class ProjectVersionVulnerableBomComponentsViewV6 extends BlackDuckView {
 	    this.componentVersionOriginId = componentVersionOriginId;
     }
 
-    public ProjectVersionVulnerableBomComponentsItemsLicenseView getLicense() {
+    public ProjectVersionLicenseView getLicense() {
 	    return license;
     }
 
-    public void setLicense(ProjectVersionVulnerableBomComponentsItemsLicenseView license) {
+    public void setLicense(ProjectVersionLicenseView license) {
 	    this.license = license;
     }
 

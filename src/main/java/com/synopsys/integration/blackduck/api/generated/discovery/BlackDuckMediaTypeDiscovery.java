@@ -72,6 +72,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_CWES_WITH_ID = String.format("/api/cwes/%s", UUID_REGEX);
     public static final String API_JOBS_WITH_ID = String.format("/api/jobs/%s", UUID_REGEX);
     public static final String API_LICENSE_FAMILIES_WITH_ID = String.format("/api/license-families/%s", UUID_REGEX);
+    public static final String API_LICENSE_TERM_CATEGORIES_WITH_ID = String.format("/api/license-term-categories/%s", UUID_REGEX);
     public static final String API_LICENSE_TERMS_WITH_ID = String.format("/api/license-terms/%s", UUID_REGEX);
     public static final String API_LICENSE_TERMS_LICENSES_WITH_ID = String.format("/api/license-terms/%s/licenses/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_LICENSES_WITH_ID = String.format("/api/licenses/%s", UUID_REGEX);
@@ -87,6 +88,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECTS_USERS_WITH_ID = String.format("/api/projects/%s/users/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_WITH_ID = String.format("/api/projects/%s/versions/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_CODE_LOCATIONS = String.format("/api/projects/%s/versions/%s/code-locations", UUID_REGEX, UUID_REGEX);
+    public static final String API_PROJECTS_VERSIONS_COMPARISON = String.format("/api/projects/%s/versions/%s/comparison", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_COMMENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s/comments/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_COMPONENT_VERSIONS_COMMENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s/component-versions/%s/comments/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX);
@@ -160,6 +162,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_FAMILIES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERMS_LICENSES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERMS_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERM_CATEGORIES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_POLICY_RULES_WITH_ID, VND_BLACKDUCKSOFTWARE_POLICY_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_PROJECT_MAPPINGS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
@@ -167,6 +170,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERGROUPS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_CODE_LOCATIONS, VND_BLACKDUCKSOFTWARE_INTERNAL_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPARISON, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_COMPONENT_VERSIONS_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));

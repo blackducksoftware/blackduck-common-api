@@ -20,14 +20,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.enumeration;
 
-import java.util.Optional;
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.util.EnumUtils;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
-public class NotificationSubscriptionsSubscriptionView extends NotificationSubscriptionsSubscriptionViewV4 {
+public enum ProjectVersionComparisonItemsComponentVersionStateType {
+	UNCHANGED,
+	ADDED,
+	REMOVED,
+	CHANGED;
+
+	public String prettyPrint() {
+	    return EnumUtils.prettyPrint(this);
+	}
+
 }

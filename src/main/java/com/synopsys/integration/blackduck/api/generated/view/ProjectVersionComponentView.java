@@ -36,7 +36,7 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamilyLicenseFamilyRiskRulesUsageType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentMatchTypesType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComparisonItemsComponentMatchTypesType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionBomOriginView;

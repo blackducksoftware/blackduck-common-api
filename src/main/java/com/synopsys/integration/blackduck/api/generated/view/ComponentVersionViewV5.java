@@ -59,12 +59,12 @@ public class ComponentVersionViewV5 extends BlackDuckView {
     }
 
     private java.util.List<String> additionalHomepages;
-    private ProjectVersionLicenseView license;
     private ComponentVersionApprovalStatusType approvalStatus;
     private java.util.Date releasedOn;
     private String notes;
     private ComponentVersionType type;
     private ComponentSourceType source;
+    private ProjectVersionLicenseView license;
     private String versionName;
 
     public java.util.List<String> getAdditionalHomepages() {
@@ -73,14 +73,6 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 
     public void setAdditionalHomepages(java.util.List<String> additionalHomepages) {
 	    this.additionalHomepages = additionalHomepages;
-    }
-
-    public ProjectVersionLicenseView getLicense() {
-	    return license;
-    }
-
-    public void setLicense(ProjectVersionLicenseView license) {
-	    this.license = license;
     }
 
     public ComponentVersionApprovalStatusType getApprovalStatus() {
@@ -121,6 +113,14 @@ public class ComponentVersionViewV5 extends BlackDuckView {
 
     public void setSource(ComponentSourceType source) {
 	    this.source = source;
+    }
+
+    public ProjectVersionLicenseView getLicense() {
+	    return license;
+    }
+
+    public void setLicense(ProjectVersionLicenseView license) {
+	    this.license = license;
     }
 
     public String getVersionName() {

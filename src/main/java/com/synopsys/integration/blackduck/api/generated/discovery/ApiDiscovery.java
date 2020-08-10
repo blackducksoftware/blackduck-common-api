@@ -49,6 +49,7 @@ import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
+import com.synopsys.integration.blackduck.api.manual.throwaway.generated.view.LicenseTermCategoryView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -63,6 +64,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath CWES_LINK = new BlackDuckPath("/api/cwes");
     public static final BlackDuckPath JOBS_LINK = new BlackDuckPath("/api/jobs");
     public static final BlackDuckPath LICENSE_FAMILIES_LINK = new BlackDuckPath("/api/license-families");
+    public static final BlackDuckPath LICENSE_TERM_CATEGORIES_LINK = new BlackDuckPath("/api/license-term-categories");
     public static final BlackDuckPath LICENSE_TERMS_LINK = new BlackDuckPath("/api/license-terms");
     public static final BlackDuckPath LICENSES_LINK = new BlackDuckPath("/api/licenses");
     public static final BlackDuckPath NOTIFICATIONS_LINK = new BlackDuckPath("/api/notifications");
@@ -86,6 +88,7 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<CweView> CWES_LINK_RESPONSE = new BlackDuckPathSingleResponse<CweView>(CWES_LINK, CweView.class);
     public static final BlackDuckPathMultipleResponses<JobView> JOBS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<JobView>(JOBS_LINK, JobView.class);
     public static final BlackDuckPathMultipleResponses<LicenseFamilyView> LICENSE_FAMILIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseFamilyView>(LICENSE_FAMILIES_LINK, LicenseFamilyView.class);
+    public static final BlackDuckPathMultipleResponses<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermCategoryView>(LICENSE_TERM_CATEGORIES_LINK, LicenseTermCategoryView.class);
     public static final BlackDuckPathMultipleResponses<LicenseTermView> LICENSE_TERMS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseTermView>(LICENSE_TERMS_LINK, LicenseTermView.class);
     public static final BlackDuckPathMultipleResponses<LicenseView> LICENSES_LINK_RESPONSE = new BlackDuckPathMultipleResponses<LicenseView>(LICENSES_LINK, LicenseView.class);
     public static final BlackDuckPathMultipleResponses<NotificationView> NOTIFICATIONS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<NotificationView>(NOTIFICATIONS_LINK, NotificationView.class);
@@ -110,6 +113,7 @@ public class ApiDiscovery {
     	links.put(CWES_LINK, CWES_LINK_RESPONSE);
     	links.put(JOBS_LINK, JOBS_LINK_RESPONSE);
     	links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
+    	links.put(LICENSE_TERM_CATEGORIES_LINK, LICENSE_TERM_CATEGORIES_LINK_RESPONSE);
     	links.put(LICENSE_TERMS_LINK, LICENSE_TERMS_LINK_RESPONSE);
     	links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
     	links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);

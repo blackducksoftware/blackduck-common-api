@@ -74,7 +74,6 @@ public class ProjectVersionViewV4 extends BlackDuckView {
     private String createdBy;
     private String releaseComments;
     private String source;
-    private ProjectVersionLicenseView license;
     private java.util.Date createdAt;
     private String nickname;
     private java.util.Date settingUpdatedAt;
@@ -84,6 +83,7 @@ public class ProjectVersionViewV4 extends BlackDuckView {
     private java.util.Date releasedOn;
     private LicenseFamilyLicenseFamilyRiskRulesReleaseDistributionType distribution;
     private String versionName;
+    private ProjectVersionLicenseView license;
     private ProjectVersionPhaseType phase;
 
     public String getCreatedBy() {
@@ -108,14 +108,6 @@ public class ProjectVersionViewV4 extends BlackDuckView {
 
     public void setSource(String source) {
 	    this.source = source;
-    }
-
-    public ProjectVersionLicenseView getLicense() {
-	    return license;
-    }
-
-    public void setLicense(ProjectVersionLicenseView license) {
-	    this.license = license;
     }
 
     public java.util.Date getCreatedAt() {
@@ -188,6 +180,14 @@ public class ProjectVersionViewV4 extends BlackDuckView {
 
     public void setVersionName(String versionName) {
 	    this.versionName = versionName;
+    }
+
+    public ProjectVersionLicenseView getLicense() {
+	    return license;
+    }
+
+    public void setLicense(ProjectVersionLicenseView license) {
+	    this.license = license;
     }
 
     public ProjectVersionPhaseType getPhase() {

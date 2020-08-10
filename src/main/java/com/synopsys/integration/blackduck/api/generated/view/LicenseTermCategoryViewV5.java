@@ -22,44 +22,66 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
-import java.util.List;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseType;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseLicensesView;
 
-@Deprecated
 /**
-* ComplexLicenseView is now called ProjectVersionLicenseView
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
-public class ComplexLicenseView extends BlackDuckView {
-    private String licenseDisplay;
-    private java.util.List<ProjectVersionLicenseLicensesView> licenses;
-    private ProjectVersionLicenseType type;
+public class LicenseTermCategoryViewV5 extends BlackDuckView {
+    private Object updatedBy;
+    private String description;
+    private String name;
+    private java.util.Date createdAt;
+    private Object createdBy;
+    private java.util.Date updatedAt;
 
-    public String getLicenseDisplay() {
-	    return licenseDisplay;
+    public Object getUpdatedBy() {
+	    return updatedBy;
     }
 
-    public void setLicenseDisplay(String licenseDisplay) {
-	    this.licenseDisplay = licenseDisplay;
+    public void setUpdatedBy(Object updatedBy) {
+	    this.updatedBy = updatedBy;
     }
 
-    public java.util.List<ProjectVersionLicenseLicensesView> getLicenses() {
-	    return licenses;
+    public String getDescription() {
+	    return description;
     }
 
-    public void setLicenses(java.util.List<ProjectVersionLicenseLicensesView> licenses) {
-	    this.licenses = licenses;
+    public void setDescription(String description) {
+	    this.description = description;
     }
 
-    public ProjectVersionLicenseType getType() {
-	    return type;
+    public String getName() {
+	    return name;
     }
 
-    public void setType(ProjectVersionLicenseType type) {
-	    this.type = type;
+    public void setName(String name) {
+	    this.name = name;
+    }
+
+    public java.util.Date getCreatedAt() {
+	    return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+	    this.createdAt = createdAt;
+    }
+
+    public Object getCreatedBy() {
+	    return createdBy;
+    }
+
+    public void setCreatedBy(Object createdBy) {
+	    this.createdBy = createdBy;
+    }
+
+    public java.util.Date getUpdatedAt() {
+	    return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+	    this.updatedAt = updatedAt;
     }
 
 }

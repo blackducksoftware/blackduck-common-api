@@ -33,7 +33,7 @@ import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyU
 import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseSourceType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseLicensesOwnershipType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -57,10 +57,10 @@ public class LicenseViewV5 extends BlackDuckView {
     private java.util.Date createdAt;
     private String notes;
     private LicenseFamilyUpdatedByView statusUpdatedBy;
-    private LicenseOwnershipType ownership;
     private LicenseFamilyUpdatedByView createdBy;
     private LicenseFamilyUpdatedByView updatedBy;
     private java.util.Date expirationDate;
+    private ProjectVersionLicenseLicensesOwnershipType ownership;
     private String spdxId;
     private java.util.Date updatedAt;
 
@@ -128,14 +128,6 @@ public class LicenseViewV5 extends BlackDuckView {
 	    this.statusUpdatedBy = statusUpdatedBy;
     }
 
-    public LicenseOwnershipType getOwnership() {
-	    return ownership;
-    }
-
-    public void setOwnership(LicenseOwnershipType ownership) {
-	    this.ownership = ownership;
-    }
-
     public LicenseFamilyUpdatedByView getCreatedBy() {
 	    return createdBy;
     }
@@ -158,6 +150,14 @@ public class LicenseViewV5 extends BlackDuckView {
 
     public void setExpirationDate(java.util.Date expirationDate) {
 	    this.expirationDate = expirationDate;
+    }
+
+    public ProjectVersionLicenseLicensesOwnershipType getOwnership() {
+	    return ownership;
+    }
+
+    public void setOwnership(ProjectVersionLicenseLicensesOwnershipType ownership) {
+	    this.ownership = ownership;
     }
 
     public String getSpdxId() {
