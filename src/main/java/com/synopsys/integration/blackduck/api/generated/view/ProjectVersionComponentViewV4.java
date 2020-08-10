@@ -1,25 +1,3 @@
-/**
- * blackduck-common-api
- *
- * Copyright (c) 2020 Synopsys, Inc.
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
@@ -36,7 +14,7 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseFamilyLicenseFamilyRiskRulesUsageType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.PolicyStatusType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComparisonItemsComponentMatchTypesType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentMatchTypesType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.manual.throwaway.generated.component.VersionBomOriginView;
@@ -72,6 +50,7 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private RiskProfileView licenseRiskProfile;
     private PolicyStatusType policyStatus;
+    private java.util.List<ProjectVersionComponentMatchTypesType> matchTypes;
     private java.util.Date releasedOn;
     private RiskProfileView securityRiskProfile;
     private ProjectVersionComponentReviewStatusType reviewStatus;
@@ -79,7 +58,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
     private PolicyStatusType approvalStatus;
     private ProjectVersionComponentReviewedDetailsView reviewedDetails;
     private BigDecimal totalFileMatchCount;
-    private java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> matchTypes;
     private String componentVersion;
     private RiskProfileView operationalRiskProfile;
 
@@ -163,6 +141,14 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 	    this.policyStatus = policyStatus;
     }
 
+    public java.util.List<ProjectVersionComponentMatchTypesType> getMatchTypes() {
+	    return matchTypes;
+    }
+
+    public void setMatchTypes(java.util.List<ProjectVersionComponentMatchTypesType> matchTypes) {
+	    this.matchTypes = matchTypes;
+    }
+
     public java.util.Date getReleasedOn() {
 	    return releasedOn;
     }
@@ -217,14 +203,6 @@ public class ProjectVersionComponentViewV4 extends BlackDuckView {
 
     public void setTotalFileMatchCount(BigDecimal totalFileMatchCount) {
 	    this.totalFileMatchCount = totalFileMatchCount;
-    }
-
-    public java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> getMatchTypes() {
-	    return matchTypes;
-    }
-
-    public void setMatchTypes(java.util.List<ProjectVersionComparisonItemsComponentMatchTypesType> matchTypes) {
-	    this.matchTypes = matchTypes;
     }
 
     public String getComponentVersion() {

@@ -1,35 +1,13 @@
-/**
- * blackduck-common-api
- *
- * Copyright (c) 2020 Synopsys, Inc.
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import com.synopsys.integration.rest.HttpUrl;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class MediaTypeDiscovery {
+public class BlackDuckMediaTypeDiscovery {
     public static final String DEFAULT_MEDIA_TYPE = "application/json";
     public static final String UUID_REGEX = "\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b";
 
@@ -72,7 +50,6 @@ public class MediaTypeDiscovery {
     public static final String API_CWES_WITH_ID = String.format("/api/cwes/%s", UUID_REGEX);
     public static final String API_JOBS_WITH_ID = String.format("/api/jobs/%s", UUID_REGEX);
     public static final String API_LICENSE_FAMILIES_WITH_ID = String.format("/api/license-families/%s", UUID_REGEX);
-    public static final String API_LICENSE_TERM_CATEGORIES_WITH_ID = String.format("/api/license-term-categories/%s", UUID_REGEX);
     public static final String API_LICENSE_TERMS_WITH_ID = String.format("/api/license-terms/%s", UUID_REGEX);
     public static final String API_LICENSE_TERMS_LICENSES_WITH_ID = String.format("/api/license-terms/%s/licenses/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_LICENSES_WITH_ID = String.format("/api/licenses/%s", UUID_REGEX);
@@ -88,7 +65,6 @@ public class MediaTypeDiscovery {
     public static final String API_PROJECTS_USERS_WITH_ID = String.format("/api/projects/%s/users/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_WITH_ID = String.format("/api/projects/%s/versions/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_CODE_LOCATIONS = String.format("/api/projects/%s/versions/%s/code-locations", UUID_REGEX, UUID_REGEX);
-    public static final String API_PROJECTS_VERSIONS_COMPARISON = String.format("/api/projects/%s/versions/%s/comparison", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_COMMENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s/comments/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_COMPONENT_VERSIONS_COMMENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s/component-versions/%s/comments/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX);
@@ -134,7 +110,7 @@ public class MediaTypeDiscovery {
 
     // The string to escape forward slash is: \\/
     // The regex pattern for a UUID is: \\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b
-    public MediaTypeDiscovery() {
+    public BlackDuckMediaTypeDiscovery() {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_CODELOCATIONS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_COMPONENTS, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_COMPONENTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
@@ -162,7 +138,6 @@ public class MediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_FAMILIES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERMS_LICENSES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERMS_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_LICENSE_TERM_CATEGORIES_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_POLICY_RULES_WITH_ID, VND_BLACKDUCKSOFTWARE_POLICY_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_PROJECT_MAPPINGS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
@@ -170,7 +145,6 @@ public class MediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERGROUPS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_CODE_LOCATIONS, VND_BLACKDUCKSOFTWARE_INTERNAL_1_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPARISON, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_COMPONENT_VERSIONS_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
@@ -209,18 +183,13 @@ public class MediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_VULNERABILITY_REPORTS_WITH_ID, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
     }
 
-    public String determineMediaType(String url) {
-        try {
-            URL apiUrl = new URL(url);
-            String path = apiUrl.getPath();
-            return mediaTypeMatchers.stream()
-                       .filter(matcher -> matcher.getPattern().matcher(path).matches())
-                       .map(MediaTypeMatcher::getMediaType)
-                       .findFirst()
-                       .orElse(DEFAULT_MEDIA_TYPE);
-        } catch (MalformedURLException ex) {
-            return DEFAULT_MEDIA_TYPE;
-        }
+    public String determineMediaType(HttpUrl url) {
+        String path = url.url().getPath();
+        return mediaTypeMatchers.stream()
+                .filter(matcher -> matcher.getPattern().matcher(path).matches())
+                .map(MediaTypeMatcher::getMediaType)
+                .findFirst()
+                .orElse(DEFAULT_MEDIA_TYPE);
     }
 
     private class MediaTypeMatcher {

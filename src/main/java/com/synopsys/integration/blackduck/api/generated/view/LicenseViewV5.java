@@ -1,25 +1,3 @@
-/**
- * blackduck-common-api
- *
- * Copyright (c) 2020 Synopsys, Inc.
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -33,7 +11,7 @@ import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyU
 import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseLicenseSourceType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionLicenseLicensesOwnershipType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -57,10 +35,10 @@ public class LicenseViewV5 extends BlackDuckView {
     private java.util.Date createdAt;
     private String notes;
     private LicenseFamilyUpdatedByView statusUpdatedBy;
+    private LicenseOwnershipType ownership;
     private LicenseFamilyUpdatedByView createdBy;
     private LicenseFamilyUpdatedByView updatedBy;
     private java.util.Date expirationDate;
-    private ProjectVersionLicenseLicensesOwnershipType ownership;
     private String spdxId;
     private java.util.Date updatedAt;
 
@@ -128,6 +106,14 @@ public class LicenseViewV5 extends BlackDuckView {
 	    this.statusUpdatedBy = statusUpdatedBy;
     }
 
+    public LicenseOwnershipType getOwnership() {
+	    return ownership;
+    }
+
+    public void setOwnership(LicenseOwnershipType ownership) {
+	    this.ownership = ownership;
+    }
+
     public LicenseFamilyUpdatedByView getCreatedBy() {
 	    return createdBy;
     }
@@ -150,14 +136,6 @@ public class LicenseViewV5 extends BlackDuckView {
 
     public void setExpirationDate(java.util.Date expirationDate) {
 	    this.expirationDate = expirationDate;
-    }
-
-    public ProjectVersionLicenseLicensesOwnershipType getOwnership() {
-	    return ownership;
-    }
-
-    public void setOwnership(ProjectVersionLicenseLicensesOwnershipType ownership) {
-	    this.ownership = ownership;
     }
 
     public String getSpdxId() {
