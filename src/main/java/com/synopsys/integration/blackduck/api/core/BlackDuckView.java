@@ -27,6 +27,7 @@ import com.synopsys.integration.rest.HttpUrl;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -54,11 +55,15 @@ public class BlackDuckView extends BlackDuckResponse {
     }
 
     public HttpUrl getFirstLink(String linkKey) {
+        return getFirstLinkSafely(linkKey)
+                .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
+    }
+
+    public Optional<HttpUrl> getFirstLinkSafely(String linkKey) {
         return _meta.getLinks().stream()
                 .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
                 .findFirst()
-                .map(ResourceLink::getHref)
-                .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
+                .map(ResourceLink::getHref);
     }
 
     public List<HttpUrl> getLinks(String linkKey) {
