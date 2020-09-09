@@ -22,14 +22,20 @@
  */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
-import com.synopsys.integration.rest.HttpUrl;
-
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
+
+import com.synopsys.integration.rest.HttpUrl;
+import com.synopsys.integration.rest.request.Request;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {
+    public static final Set<String> VALUES_TO_REPLACE = new HashSet<>(Arrays.asList(null, Request.DEFAULT_ACCEPT_MIME_TYPE));
+
     public static final String DEFAULT_MEDIA_TYPE = "application/json";
     public static final String UUID_REGEX = "\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b";
 
@@ -207,6 +213,14 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_VULNERABILITIES_AFFECTED_PROJECTS, VND_BLACKDUCKSOFTWARE_VULNERABILITY_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_VULNERABILITIES_WITH_ID, VND_BLACKDUCKSOFTWARE_VULNERABILITY_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_VULNERABILITY_REPORTS_WITH_ID, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
+    }
+
+    public String determineMediaType(HttpUrl url, String currentMediaType) {
+        if (null != url && VALUES_TO_REPLACE.contains(currentMediaType)) {
+            return determineMediaType(url);
+        } else {
+            return currentMediaType;
+        }
     }
 
     public String determineMediaType(HttpUrl url) {
