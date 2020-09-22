@@ -8,7 +8,7 @@ project.ext.javaUseAutoModuleName = 'true'
 
 version = '2019.12.0.9-SNAPSHOT'
 
-description = 'A library of mostly generated request/response classes for the Black Duck REST API.'
+description = 'A library of mostly manual request/response classes for the Black Duck REST API.'
 
 apply plugin: 'com.synopsys.integration.library'
 
