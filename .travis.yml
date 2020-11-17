@@ -1,15 +1,10 @@
 ###
-### manual by script
+### temporary by script
 ###
 
 language: java
 sudo: false
 install: true
-
-addons:
-  sonarcloud:
-    token:
-      secure: "APInAF/Sx686n1LFbfsvzOEAastV5b/LkcHjFP6atuIGVkq/+F0nE/JtH9hNv3CfW0+isJGvE/MOxvnTWYgj/trfeJqfFy8xJB4bPqKODmZp5dhhjuD3g/JZPLBFHP/kli1uj/vkSu2e2QpaX4NqtUkLPbwp+bxn37/K0NK4rPiIDOAvKreswI0TIFB0HwefMcwFGl+gOTIUAAulYdD8BtEsNg0OkLJkX7QAuFoTcmb7F/rzjFuBxo9m9F6kRRrYUItzdRxrV42nHD9PndOuBbLLsrY3mxH6MTO05f7j/L9iGe4LWz8ciNra9WkmkH2xAMioVTE8ii6F2JO/KpEu4AT4xMbUM2cbWGRDC9nPJjeYyuYa6H/AnuSsTMMk5ABKEjagKBlOcWCT1t8+M1tzgKnAClhFoje743tBi1C8jhORgMLJAyCZ/Uh2p+xL0tWpDJBxzZZLcfREgfOeEij7hZIbSm1tkrpuwzCZkTToHgrTecsBPStPUnNvAEwrREVF/8Q8+HhEfHRDmIQHs5EfAfmpANtK0UPVNLNb9Z8JR8vVNTSrN5FksZYUQNv0Bwv0+DBZz2hrs/c7yOdPXhU/I0hBNsX7VJSjhsoDTFsVK724isU2Ue3iFRr+Vg3oYu86yMjfuW63B1+7EASLCIZh5qt/sMtj7kL5aM6dm06vonk="
 
 jdk:
 - openjdk8
@@ -20,7 +15,7 @@ notifications:
     - starlabs@synopsys.com
 
 script:
-- "./gradlew clean build jacocoTestReport coveralls sonarqube"
+- "./gradlew clean build"
 
 env:
 - DETECT_GRADLE_INCLUDED_CONFIGURATIONS=compile
@@ -31,6 +26,5 @@ after_success:
 cache:
   directories:
   - "$HOME/.m2/repository"
-  - "$HOME/.sonar/cache"
   - "$HOME/.gradle"
   - ".gradle"

@@ -22,16 +22,16 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.synopsys.integration.rest.HttpUrl;
+
 import java.util.Collections;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.synopsys.integration.blackduck.api.manual.component.ResourceLink;
-import com.synopsys.integration.blackduck.api.manual.component.ResourceMetadata;
-
 /**
- * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Hub endpoints.
+ * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Black Duck endpoints.
  */
 public class BlackDuckView extends BlackDuckResponse {
     private ResourceMetadata _meta;
@@ -50,34 +50,31 @@ public class BlackDuckView extends BlackDuckResponse {
         }
 
         return _meta.getLinks().stream()
-                   .map(ResourceLink::getRel)
-                   .anyMatch(linkKey::equals);
+                .map(ResourceLink::getRel)
+                .anyMatch(linkKey::equals);
     }
 
-    public Optional<String> getFirstLink(String linkKey) {
-        if (null == _meta || null == _meta.getLinks()) {
-            return Optional.empty();
-        }
+    public HttpUrl getFirstLink(String linkKey) {
+        return getFirstLinkSafely(linkKey)
+                .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
+    }
 
+    public Optional<HttpUrl> getFirstLinkSafely(String linkKey) {
         return _meta.getLinks().stream()
-                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
-                   .findFirst()
-                   .map(ResourceLink::getHref);
+                .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                .findFirst()
+                .map(ResourceLink::getHref);
     }
 
-    public List<String> getLinks(String linkKey) {
+    public List<HttpUrl> getLinks(String linkKey) {
         return getResourceLinks().stream()
-                   .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
-                   .map(ResourceLink::getHref)
-                   .collect(Collectors.toList());
+                .filter(resourceLink -> resourceLink.getRel().equals(linkKey))
+                .map(ResourceLink::getHref)
+                .collect(Collectors.toList());
     }
 
-    public Optional<ResourceMetadata> getResourceMetadata() {
-        if (null == _meta) {
-            return Optional.empty();
-        }
-
-        return Optional.of(_meta);
+    public ResourceMetadata getResourceMetadata() {
+        return _meta;
     }
 
     public List<ResourceLink> getResourceLinks() {
@@ -90,8 +87,8 @@ public class BlackDuckView extends BlackDuckResponse {
 
     public List<String> getAvailableLinks() {
         return getResourceLinks().stream()
-                   .map(ResourceLink::getRel)
-                   .collect(Collectors.toList());
+                .map(ResourceLink::getRel)
+                .collect(Collectors.toList());
     }
 
     public List<String> getAllowedMethods() {
@@ -102,12 +99,8 @@ public class BlackDuckView extends BlackDuckResponse {
         return _meta.getAllow();
     }
 
-    public Optional<String> getHref() {
-        if (null == _meta || null == _meta.getHref()) {
-            return Optional.empty();
-        }
-
-        return Optional.of(_meta.getHref());
+    public HttpUrl getHref() {
+        return _meta.getHref();
     }
 
     public String getMediaType() {
