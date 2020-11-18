@@ -1,3 +1,25 @@
+/**
+ * blackduck-common-api
+ *
+ * Copyright (c) 2020 Synopsys, Inc.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
@@ -50,16 +72,16 @@ public class ProjectVersionComponentView extends BlackDuckView {
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private String componentName;
     private String componentModification;
-    private String componentPurpose;
     private String componentVersionName;
     private String attributionStatement;
     private String componentVersion;
+    private String componentPurpose;
     private Boolean manuallyAdjusted;
     private Boolean componentModified;
     private Boolean inAttributionReport;
     private BigDecimal totalFileMatchCount;
-    private RiskProfileView versionRiskProfile;
     private RiskProfileView securityRiskProfile;
+    private RiskProfileView versionRiskProfile;
     private RiskProfileView licenseRiskProfile;
     private RiskProfileView activityRiskProfile;
     private ProjectVersionComponentType componentType;
@@ -142,14 +164,6 @@ public class ProjectVersionComponentView extends BlackDuckView {
 	    this.componentModification = componentModification;
     }
 
-    public String getComponentPurpose() {
-	    return componentPurpose;
-    }
-
-    public void setComponentPurpose(String componentPurpose) {
-	    this.componentPurpose = componentPurpose;
-    }
-
     public String getComponentVersionName() {
 	    return componentVersionName;
     }
@@ -172,6 +186,14 @@ public class ProjectVersionComponentView extends BlackDuckView {
 
     public void setComponentVersion(String componentVersion) {
 	    this.componentVersion = componentVersion;
+    }
+
+    public String getComponentPurpose() {
+	    return componentPurpose;
+    }
+
+    public void setComponentPurpose(String componentPurpose) {
+	    this.componentPurpose = componentPurpose;
     }
 
     public Boolean getManuallyAdjusted() {
@@ -206,20 +228,20 @@ public class ProjectVersionComponentView extends BlackDuckView {
 	    this.totalFileMatchCount = totalFileMatchCount;
     }
 
-    public RiskProfileView getVersionRiskProfile() {
-	    return versionRiskProfile;
-    }
-
-    public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
-	    this.versionRiskProfile = versionRiskProfile;
-    }
-
     public RiskProfileView getSecurityRiskProfile() {
 	    return securityRiskProfile;
     }
 
     public void setSecurityRiskProfile(RiskProfileView securityRiskProfile) {
 	    this.securityRiskProfile = securityRiskProfile;
+    }
+
+    public RiskProfileView getVersionRiskProfile() {
+	    return versionRiskProfile;
+    }
+
+    public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
+	    this.versionRiskProfile = versionRiskProfile;
     }
 
     public RiskProfileView getLicenseRiskProfile() {
