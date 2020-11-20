@@ -1,12 +1,15 @@
 buildscript {
     apply from: 'https://raw.githubusercontent.com/blackducksoftware/integration-resources/master/gradle_common/buildscript-repositories.gradle', to: buildscript
-    apply from: 'https://raw.githubusercontent.com/blackducksoftware/integration-resources/master/gradle_common/buildscript-dependencies.gradle', to: buildscript
+    ////////// START BUILDSCRIPT DEPENDENCY //////////
+dependencies { classpath "com.synopsys.integration:common-gradle-plugin:1.7.0" }
+
+////////// END BUILDSCRIPT DEPENDENCY //////////
 }
 
 project.ext.moduleName = 'com.synopsys.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2020.8.0.4-SNAPSHOT'
+version = '2020.8.0.4'
 
 description = 'A library of mostly temporary request/response classes for the Black Duck REST API.'
 
