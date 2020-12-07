@@ -72,12 +72,12 @@ public class VersionBomComponentView extends BlackDuckView {
     private String component;
     private java.util.List<MatchType> matchTypes;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
-    private String componentName;
     private String componentModification;
-    private String componentVersionName;
-    private String attributionStatement;
-    private String componentVersion;
     private String componentPurpose;
+    private String componentName;
+    private String attributionStatement;
+    private String componentVersionName;
+    private String componentVersion;
     private Boolean manuallyAdjusted;
     private Boolean componentModified;
     private Boolean inAttributionReport;
@@ -150,14 +150,6 @@ public class VersionBomComponentView extends BlackDuckView {
 	    this.licenses = licenses;
     }
 
-    public String getComponentName() {
-	    return componentName;
-    }
-
-    public void setComponentName(String componentName) {
-	    this.componentName = componentName;
-    }
-
     public String getComponentModification() {
 	    return componentModification;
     }
@@ -166,12 +158,20 @@ public class VersionBomComponentView extends BlackDuckView {
 	    this.componentModification = componentModification;
     }
 
-    public String getComponentVersionName() {
-	    return componentVersionName;
+    public String getComponentPurpose() {
+	    return componentPurpose;
     }
 
-    public void setComponentVersionName(String componentVersionName) {
-	    this.componentVersionName = componentVersionName;
+    public void setComponentPurpose(String componentPurpose) {
+	    this.componentPurpose = componentPurpose;
+    }
+
+    public String getComponentName() {
+	    return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+	    this.componentName = componentName;
     }
 
     public String getAttributionStatement() {
@@ -182,20 +182,20 @@ public class VersionBomComponentView extends BlackDuckView {
 	    this.attributionStatement = attributionStatement;
     }
 
+    public String getComponentVersionName() {
+	    return componentVersionName;
+    }
+
+    public void setComponentVersionName(String componentVersionName) {
+	    this.componentVersionName = componentVersionName;
+    }
+
     public String getComponentVersion() {
 	    return componentVersion;
     }
 
     public void setComponentVersion(String componentVersion) {
 	    this.componentVersion = componentVersion;
-    }
-
-    public String getComponentPurpose() {
-	    return componentPurpose;
-    }
-
-    public void setComponentPurpose(String componentPurpose) {
-	    this.componentPurpose = componentPurpose;
     }
 
     public Boolean getManuallyAdjusted() {

@@ -20,16 +20,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionUpgradeGuidanceLongTermView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionUpgradeGuidanceShortTermView;
 
 /**
 * this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 * **/
-public class ComponentVersionUpgradeGuidanceView extends BlackDuckComponent {
+public class ComponentVersionUpgradeGuidanceView extends BlackDuckResponse {
     private String component;
     private String origin;
     private String version;

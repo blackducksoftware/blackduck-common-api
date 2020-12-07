@@ -49,9 +49,9 @@ public class ProjectVersionComponentVersionView extends BlackDuckComponent {
     private String componentModification;
     private String componentName;
     private String approvalStatus;
+    private String componentVersionName;
     private String attributionStatement;
     private String componentPurpose;
-    private String componentVersionName;
     private String componentVersion;
     private Boolean manuallyAdjusted;
     private Boolean componentModified;
@@ -148,6 +148,14 @@ public class ProjectVersionComponentVersionView extends BlackDuckComponent {
 	    this.approvalStatus = approvalStatus;
     }
 
+    public String getComponentVersionName() {
+	    return componentVersionName;
+    }
+
+    public void setComponentVersionName(String componentVersionName) {
+	    this.componentVersionName = componentVersionName;
+    }
+
     public String getAttributionStatement() {
 	    return attributionStatement;
     }
@@ -162,14 +170,6 @@ public class ProjectVersionComponentVersionView extends BlackDuckComponent {
 
     public void setComponentPurpose(String componentPurpose) {
 	    this.componentPurpose = componentPurpose;
-    }
-
-    public String getComponentVersionName() {
-	    return componentVersionName;
-    }
-
-    public void setComponentVersionName(String componentVersionName) {
-	    this.componentVersionName = componentVersionName;
     }
 
     public String getComponentVersion() {

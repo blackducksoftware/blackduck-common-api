@@ -31,6 +31,8 @@ import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
+import com.synopsys.integration.blackduck.api.generated.response.ComponentVersionRemediatingView;
+import com.synopsys.integration.blackduck.api.generated.response.ComponentVersionUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentView;
 import com.synopsys.integration.blackduck.api.generated.view.OriginView;
@@ -44,15 +46,21 @@ public class ComponentVersionView extends BlackDuckView {
 
     public static final String COMPONENT_LINK = "component";
     public static final String ORIGINS_LINK = "origins";
+    public static final String REMEDIATING_LINK = "remediating";
+    public static final String UPGRADE_GUIDANCE_LINK = "upgrade-guidance";
     public static final String VULNERABILITIES_LINK = "vulnerabilities";
 
 	public static final LinkSingleResponse<ComponentView> COMPONENT_LINK_RESPONSE = new LinkSingleResponse<ComponentView>(COMPONENT_LINK, ComponentView.class);
 	public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+	public static final LinkSingleResponse<ComponentVersionRemediatingView> REMEDIATING_LINK_RESPONSE = new LinkSingleResponse<ComponentVersionRemediatingView>(REMEDIATING_LINK, ComponentVersionRemediatingView.class);
+	public static final LinkSingleResponse<ComponentVersionUpgradeGuidanceView> UPGRADE_GUIDANCE_LINK_RESPONSE = new LinkSingleResponse<ComponentVersionUpgradeGuidanceView>(UPGRADE_GUIDANCE_LINK, ComponentVersionUpgradeGuidanceView.class);
 	public static final LinkMultipleResponses<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new LinkMultipleResponses<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
 
     static {
 	    links.put(COMPONENT_LINK, COMPONENT_LINK_RESPONSE);
 	    links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+	    links.put(REMEDIATING_LINK, REMEDIATING_LINK_RESPONSE);
+	    links.put(UPGRADE_GUIDANCE_LINK, UPGRADE_GUIDANCE_LINK_RESPONSE);
 	    links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
     }
 
