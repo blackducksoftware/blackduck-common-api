@@ -1,25 +1,25 @@
 /**
- * blackduck-common-api
- *
- * Copyright (c) 2020 Synopsys, Inc.
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2020 Synopsys, Inc.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements. See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership. The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.HashMap;
@@ -57,9 +57,9 @@ import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReport
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ApiDiscovery {
-	public static final Map<BlackDuckPath, BlackDuckPathResponse> links = new HashMap<>();
+    public static final Map<BlackDuckPath, BlackDuckPathResponse> links = new HashMap<>();
 
     public static final BlackDuckPath ANNOUNCEMENT_LINK = new BlackDuckPath("/api/announcement");
     public static final BlackDuckPath BOM_IMPORT_LINK = new BlackDuckPath("/api/bom-import");
@@ -121,36 +121,36 @@ public class ApiDiscovery {
     public static final BlackDuckPathSingleResponse<VulnerabilityView> VULNERABILITIES_LINK_RESPONSE = new BlackDuckPathSingleResponse<VulnerabilityView>(VULNERABILITIES_LINK, VulnerabilityView.class);
     public static final BlackDuckPathMultipleResponses<VulnerabilityReportsReportView> VULNERABILITY_REPORTS_LINK_RESPONSE = new BlackDuckPathMultipleResponses<VulnerabilityReportsReportView>(VULNERABILITY_REPORTS_LINK, VulnerabilityReportsReportView.class);
 
-	static {
-    	links.put(ANNOUNCEMENT_LINK, ANNOUNCEMENT_LINK_RESPONSE);
-    	links.put(BOM_IMPORT_LINK, BOM_IMPORT_LINK_RESPONSE);
-    	links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
-    	links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
-    	links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
-    	links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
-    	links.put(CUSTOM_FIELDS_LINK, CUSTOM_FIELDS_LINK_RESPONSE);
-    	links.put(CWES_LINK, CWES_LINK_RESPONSE);
-    	links.put(HEALTH_CHECKS_LINK, HEALTH_CHECKS_LINK_RESPONSE);
-    	links.put(JOBS_LINK, JOBS_LINK_RESPONSE);
-    	links.put(JOURNAL_LINK, JOURNAL_LINK_RESPONSE);
-    	links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
-    	links.put(LICENSE_TERM_CATEGORIES_LINK, LICENSE_TERM_CATEGORIES_LINK_RESPONSE);
-    	links.put(LICENSE_TERMS_LINK, LICENSE_TERMS_LINK_RESPONSE);
-    	links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
-    	links.put(MANAGE_ANNOUNCEMENT_LINK, MANAGE_ANNOUNCEMENT_LINK_RESPONSE);
-    	links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
-    	links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
-    	links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
-    	links.put(REGISTRATION_LINK, REGISTRATION_LINK_RESPONSE);
-    	links.put(REPORTS_LINK, REPORTS_LINK_RESPONSE);
-    	links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
-    	links.put(SCAN_LINK, SCAN_LINK_RESPONSE);
-    	links.put(SCAN_SUMMARIES_LINK, SCAN_SUMMARIES_LINK_RESPONSE);
-    	links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
-    	links.put(USERS_LINK, USERS_LINK_RESPONSE);
-    	links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
-    	links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
-    	links.put(VULNERABILITY_REPORTS_LINK, VULNERABILITY_REPORTS_LINK_RESPONSE);
-	}
+    static {
+        links.put(ANNOUNCEMENT_LINK, ANNOUNCEMENT_LINK_RESPONSE);
+        links.put(BOM_IMPORT_LINK, BOM_IMPORT_LINK_RESPONSE);
+        links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
+        links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
+        links.put(CURRENT_USER_LINK, CURRENT_USER_LINK_RESPONSE);
+        links.put(CURRENT_VERSION_LINK, CURRENT_VERSION_LINK_RESPONSE);
+        links.put(CUSTOM_FIELDS_LINK, CUSTOM_FIELDS_LINK_RESPONSE);
+        links.put(CWES_LINK, CWES_LINK_RESPONSE);
+        links.put(HEALTH_CHECKS_LINK, HEALTH_CHECKS_LINK_RESPONSE);
+        links.put(JOBS_LINK, JOBS_LINK_RESPONSE);
+        links.put(JOURNAL_LINK, JOURNAL_LINK_RESPONSE);
+        links.put(LICENSE_FAMILIES_LINK, LICENSE_FAMILIES_LINK_RESPONSE);
+        links.put(LICENSE_TERM_CATEGORIES_LINK, LICENSE_TERM_CATEGORIES_LINK_RESPONSE);
+        links.put(LICENSE_TERMS_LINK, LICENSE_TERMS_LINK_RESPONSE);
+        links.put(LICENSES_LINK, LICENSES_LINK_RESPONSE);
+        links.put(MANAGE_ANNOUNCEMENT_LINK, MANAGE_ANNOUNCEMENT_LINK_RESPONSE);
+        links.put(NOTIFICATIONS_LINK, NOTIFICATIONS_LINK_RESPONSE);
+        links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
+        links.put(PROJECTS_LINK, PROJECTS_LINK_RESPONSE);
+        links.put(REGISTRATION_LINK, REGISTRATION_LINK_RESPONSE);
+        links.put(REPORTS_LINK, REPORTS_LINK_RESPONSE);
+        links.put(ROLES_LINK, ROLES_LINK_RESPONSE);
+        links.put(SCAN_LINK, SCAN_LINK_RESPONSE);
+        links.put(SCAN_SUMMARIES_LINK, SCAN_SUMMARIES_LINK_RESPONSE);
+        links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
+        links.put(USERS_LINK, USERS_LINK_RESPONSE);
+        links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+        links.put(VULNERABILITIES_LINK, VULNERABILITIES_LINK_RESPONSE);
+        links.put(VULNERABILITY_REPORTS_LINK, VULNERABILITY_REPORTS_LINK_RESPONSE);
+    }
 
 }

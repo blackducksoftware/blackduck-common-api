@@ -1,25 +1,25 @@
 /**
- * blackduck-common-api
- *
- * Copyright (c) 2020 Synopsys, Inc.
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2020 Synopsys, Inc.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements. See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership. The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.Arrays;
@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 import com.synopsys.integration.rest.HttpUrl;
 import com.synopsys.integration.rest.request.Request;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {
     public static final Set<String> VALUES_TO_REPLACE = new HashSet<>(Arrays.asList(null, Request.DEFAULT_ACCEPT_MIME_TYPE));
 
@@ -301,10 +301,10 @@ public class BlackDuckMediaTypeDiscovery {
     public String determineMediaType(HttpUrl url) {
         String path = url.url().getPath();
         return mediaTypeMatchers.stream()
-                .filter(matcher -> matcher.getPattern().matcher(path).matches())
-                .map(MediaTypeMatcher::getMediaType)
-                .findFirst()
-                .orElse(DEFAULT_MEDIA_TYPE);
+                   .filter(matcher -> matcher.getPattern().matcher(path).matches())
+                   .map(MediaTypeMatcher::getMediaType)
+                   .findFirst()
+                   .orElse(DEFAULT_MEDIA_TYPE);
     }
 
     private class MediaTypeMatcher {
