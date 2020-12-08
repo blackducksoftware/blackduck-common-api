@@ -26,56 +26,54 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseType;
 
+// VersionBomLicenseView from the previous API is now called ProjectVersionComponentLicensesView
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
-/**
-* VersionBomLicenseView from the previous API is now called ProjectVersionComponentLicensesView
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
 public class VersionBomLicenseView extends BlackDuckComponent {
     private String license;
-    private String spdxId;
-    private java.util.List<ProjectVersionComponentLicensesView> licenses;
     private String licenseDisplay;
     private LicenseType licenseType;
+    private java.util.List<ProjectVersionComponentLicensesView> licenses;
+    private String spdxId;
 
     public String getLicense() {
-	    return license;
+        return license;
     }
 
     public void setLicense(String license) {
-	    this.license = license;
-    }
-
-    public String getSpdxId() {
-	    return spdxId;
-    }
-
-    public void setSpdxId(String spdxId) {
-	    this.spdxId = spdxId;
-    }
-
-    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
-	    return licenses;
-    }
-
-    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
-	    this.licenses = licenses;
+        this.license = license;
     }
 
     public String getLicenseDisplay() {
-	    return licenseDisplay;
+        return licenseDisplay;
     }
 
     public void setLicenseDisplay(String licenseDisplay) {
-	    this.licenseDisplay = licenseDisplay;
+        this.licenseDisplay = licenseDisplay;
     }
 
     public LicenseType getLicenseType() {
-	    return licenseType;
+        return licenseType;
     }
 
     public void setLicenseType(LicenseType licenseType) {
-	    this.licenseType = licenseType;
+        this.licenseType = licenseType;
+    }
+
+    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
+        return licenses;
+    }
+
+    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
+        this.licenses = licenses;
+    }
+
+    public String getSpdxId() {
+        return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+        this.spdxId = spdxId;
     }
 
 }

@@ -20,20 +20,49 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.OriginUpgradeGuidanceLongTermVulnerabilityRiskView;
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionUpgradeGuidanceLongTermView;
+import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionUpgradeGuidanceShortTermView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class OriginUpgradeGuidanceLongTermView extends BlackDuckComponent {
+public class ComponentVersionUpgradeGuidanceView extends BlackDuckResponse {
+    private String component;
+    private String componentName;
+    private ComponentVersionUpgradeGuidanceLongTermView longTerm;
     private String origin;
     private String originExternalId;
     private String originExternalNamespace;
     private String originName;
+    private ComponentVersionUpgradeGuidanceShortTermView shortTerm;
     private String version;
     private String versionName;
-    private OriginUpgradeGuidanceLongTermVulnerabilityRiskView vulnerabilityRisk;
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    public ComponentVersionUpgradeGuidanceLongTermView getLongTerm() {
+        return longTerm;
+    }
+
+    public void setLongTerm(ComponentVersionUpgradeGuidanceLongTermView longTerm) {
+        this.longTerm = longTerm;
+    }
 
     public String getOrigin() {
         return origin;
@@ -67,6 +96,14 @@ public class OriginUpgradeGuidanceLongTermView extends BlackDuckComponent {
         this.originName = originName;
     }
 
+    public ComponentVersionUpgradeGuidanceShortTermView getShortTerm() {
+        return shortTerm;
+    }
+
+    public void setShortTerm(ComponentVersionUpgradeGuidanceShortTermView shortTerm) {
+        this.shortTerm = shortTerm;
+    }
+
     public String getVersion() {
         return version;
     }
@@ -81,14 +118,6 @@ public class OriginUpgradeGuidanceLongTermView extends BlackDuckComponent {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
-    }
-
-    public OriginUpgradeGuidanceLongTermVulnerabilityRiskView getVulnerabilityRisk() {
-        return vulnerabilityRisk;
-    }
-
-    public void setVulnerabilityRisk(OriginUpgradeGuidanceLongTermVulnerabilityRiskView vulnerabilityRisk) {
-        this.vulnerabilityRisk = vulnerabilityRisk;
     }
 
 }

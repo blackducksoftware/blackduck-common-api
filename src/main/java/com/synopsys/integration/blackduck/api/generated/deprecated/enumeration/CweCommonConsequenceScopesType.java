@@ -24,24 +24,22 @@ package com.synopsys.integration.blackduck.api.generated.deprecated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
 
+// CweCommonConsequenceScopesType is now called CweCommonConsequencesScopesType
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
-/**
-* CweCommonConsequenceScopesType is now called CweCommonConsequencesScopesType
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
 public enum CweCommonConsequenceScopesType {
-	CONFIDENTIALITY,
-	INTEGRITY,
-	AVAILABILITY,
-	ACCESS_CONTROL,
-	NON_REPUDIATION,
+    ACCESS_CONTROL,
 	ACCOUNTABILITY,
 	AUTHENTICATION,
 	AUTHORIZATION,
+	AVAILABILITY,
+	CONFIDENTIALITY,
+	INTEGRITY,
+	NON_REPUDIATION,
 	OTHER;
 
-	public String prettyPrint() {
-	    return EnumUtils.prettyPrint(this);
-	}
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
+    }
 
 }

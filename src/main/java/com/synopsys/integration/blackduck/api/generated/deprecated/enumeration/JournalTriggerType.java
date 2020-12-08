@@ -24,18 +24,16 @@ package com.synopsys.integration.blackduck.api.generated.deprecated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
 
+// JournalTriggerType is now called ProjectItemsTriggerDataType
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
-/**
-* JournalTriggerType is now called ProjectItemsTriggerDataType
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
 public enum JournalTriggerType {
-	USER,
-	POLICY,
-	SCAN;
+    POLICY,
+	SCAN,
+	USER;
 
-	public String prettyPrint() {
-	    return EnumUtils.prettyPrint(this);
-	}
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
+    }
 
 }

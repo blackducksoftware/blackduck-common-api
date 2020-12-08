@@ -24,27 +24,25 @@ package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UserLastLoginView extends BlackDuckComponent {
     private String lastLogin;
     private String username;
 
     public String getLastLogin() {
-	    return lastLogin;
+        return lastLogin;
     }
 
     public void setLastLogin(String lastLogin) {
-	    this.lastLogin = lastLogin;
+        this.lastLogin = lastLogin;
     }
 
     public String getUsername() {
-	    return username;
+        return username;
     }
 
     public void setUsername(String username) {
-	    this.username = username;
+        this.username = username;
     }
 
 }

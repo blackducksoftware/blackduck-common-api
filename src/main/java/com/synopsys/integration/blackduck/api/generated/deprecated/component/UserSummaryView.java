@@ -24,47 +24,45 @@ package com.synopsys.integration.blackduck.api.generated.deprecated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
+// UserSummaryView from the previous API is now called LicenseFamilyUpdatedByView
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
-/**
-* UserSummaryView from the previous API is now called LicenseFamilyUpdatedByView
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
 public class UserSummaryView extends BlackDuckComponent {
-    private String userName;
     private String firstName;
     private String lastName;
     private String user;
-
-    public String getUserName() {
-	    return userName;
-    }
-
-    public void setUserName(String userName) {
-	    this.userName = userName;
-    }
+    private String userName;
 
     public String getFirstName() {
-	    return firstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-	    this.firstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-	    return lastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-	    this.lastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getUser() {
-	    return user;
+        return user;
     }
 
     public void setUser(String user) {
-	    this.user = user;
+        this.user = user;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
 }

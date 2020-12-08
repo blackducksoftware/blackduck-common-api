@@ -27,29 +27,27 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentMatchedFilesItemsFilePathView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.UsageType;
 
+// MatchedFileView from the previous API is now called ComponentMatchedFilesView
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
-/**
-* MatchedFileView from the previous API is now called ComponentMatchedFilesView
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
 public class MatchedFileView extends BlackDuckView {
     private ComponentMatchedFilesItemsFilePathView filePath;
     private java.util.List<UsageType> usages;
 
     public ComponentMatchedFilesItemsFilePathView getFilePath() {
-	    return filePath;
+        return filePath;
     }
 
     public void setFilePath(ComponentMatchedFilesItemsFilePathView filePath) {
-	    this.filePath = filePath;
+        this.filePath = filePath;
     }
 
     public java.util.List<UsageType> getUsages() {
-	    return usages;
+        return usages;
     }
 
     public void setUsages(java.util.List<UsageType> usages) {
-	    this.usages = usages;
+        this.usages = usages;
     }
 
 }
