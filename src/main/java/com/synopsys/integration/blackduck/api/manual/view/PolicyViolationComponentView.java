@@ -23,28 +23,17 @@
 package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.VulnerabilitySeverityType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.VulnerabilitySourceType;
 
-public class BomVulnerabilityDeveloperView extends BlackDuckView {
-    private String id;
-    private VulnerabilitySourceType source;
-    private String description;
-    private VulnerabilitySeverityType severity;
+public class PolicyViolationComponentView extends BlackDuckView {
+    private String componentName;
+    private String versionName;
 
-    public String getId() {
-        return id;
+    public String getComponentName() {
+        return componentName;
     }
 
-    public VulnerabilitySourceType getSource() {
-        return source;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public VulnerabilitySeverityType getSeverity() {
-        return severity;
+    public String getVersionName() {
+        return versionName;
     }
 }
+

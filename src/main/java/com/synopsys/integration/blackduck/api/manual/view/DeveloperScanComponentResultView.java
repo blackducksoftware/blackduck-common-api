@@ -22,34 +22,29 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
-import com.synopsys.integration.blackduck.api.manual.enumeration.LicenseCodeSharing;
-import com.synopsys.integration.blackduck.api.manual.enumeration.LicenseRestriction;
+import java.util.Set;
 
-public class LicenseDeveloperView {
-    private String name;
-    private String spdxId;
-    private LicenseCodeSharing codeSharing;
-    private LicenseOwnershipType ownership;
-    private LicenseRestriction restriction;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
-    public String getName() {
-        return name;
+public class DeveloperScanComponentResultView extends BlackDuckView {
+    private String componentName;
+    private String versionName;
+    private Set<PolicyViolationVulnerabilityView> vulnerabilities;
+    private Set<PolicyViolationLicenseView> licenses;
+
+    public String getComponentName() {
+        return componentName;
     }
 
-    public String getSpdxId() {
-        return spdxId;
+    public String getVersionName() {
+        return versionName;
     }
 
-    public LicenseCodeSharing getCodeSharing() {
-        return codeSharing;
+    public Set<PolicyViolationVulnerabilityView> getVulnerabilities() {
+        return vulnerabilities;
     }
 
-    public LicenseOwnershipType getOwnership() {
-        return ownership;
-    }
-
-    public LicenseRestriction getRestriction() {
-        return restriction;
+    public Set<PolicyViolationLicenseView> getLicenses() {
+        return licenses;
     }
 }
