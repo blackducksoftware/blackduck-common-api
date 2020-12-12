@@ -20,12 +20,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.deprecated.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
+// BomComponentIssueView from the previous API is now called ProjectVersionIssuesView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectVersionIssuesView extends BlackDuckComponent {
+@Deprecated
+public class BomComponentIssueView extends BlackDuckView {
     private String issueAssignee;
     private java.util.Date issueCreatedAt;
     private String issueDescription;

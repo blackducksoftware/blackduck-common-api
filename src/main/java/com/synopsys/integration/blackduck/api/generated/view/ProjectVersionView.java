@@ -30,8 +30,8 @@ import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.generated.view.IssueView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionIssuesView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsView;
@@ -52,7 +52,7 @@ public class ProjectVersionView extends BlackDuckView {
 
     public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
     public static final LinkMultipleResponses<ProjectVersionComponentView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionComponentView>(COMPONENTS_LINK, ProjectVersionComponentView.class);
-    public static final LinkMultipleResponses<IssueView> ISSUES_LINK_RESPONSE = new LinkMultipleResponses<IssueView>(ISSUES_LINK, IssueView.class);
+    public static final LinkMultipleResponses<ProjectVersionIssuesView> ISSUES_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionIssuesView>(ISSUES_LINK, ProjectVersionIssuesView.class);
     public static final LinkMultipleResponses<ReportView> LICENSEREPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSEREPORTS_LINK, ReportView.class);
     public static final LinkSingleResponse<ProjectVersionPolicyStatusView> POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionPolicyStatusView>(POLICY_STATUS_LINK, ProjectVersionPolicyStatusView.class);
     public static final LinkSingleResponse<ProjectView> PROJECT_LINK_RESPONSE = new LinkSingleResponse<ProjectView>(PROJECT_LINK, ProjectView.class);
