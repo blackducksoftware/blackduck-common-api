@@ -13,5 +13,5 @@ description = 'A library of mostly temporary request/response classes for the Bl
 apply plugin: 'com.synopsys.integration.library'
 
 dependencies {
-    api 'com.synopsys.integration:integration-rest:6.2.1'
+    api 'com.synopsys.integration:integration-rest:7.0.0-SNAPSHOT'
 }

@@ -20,11 +20,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionLicensesView;
@@ -33,10 +36,21 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.MatchType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentType;
+import com.synopsys.integration.blackduck.api.generated.view.IssueView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectVersionComponentVersionView extends BlackDuckComponent {
+public class ProjectVersionComponentVersionView extends BlackDuckView {
+    public static final Map<String, LinkResponse> links = new HashMap<>();
+
+    public static final String COMPONENT_ISSUES_LINK = "component-issues";
+
+    public static final LinkMultipleResponses<IssueView> COMPONENT_ISSUES_LINK_RESPONSE = new LinkMultipleResponses<IssueView>(COMPONENT_ISSUES_LINK, IssueView.class);
+
+    static {
+        links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
     private ProjectVersionComponentVersionActivityDataView activityData;
     private RiskProfileView activityRiskProfile;
     private String approvalStatus;
