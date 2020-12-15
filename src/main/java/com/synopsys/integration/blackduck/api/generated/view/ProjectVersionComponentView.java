@@ -39,6 +39,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 import com.synopsys.integration.blackduck.api.generated.enumeration.UsageType;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyRulesView;
+import com.synopsys.integration.blackduck.api.generated.view.IssueView;
 import com.synopsys.integration.blackduck.api.generated.view.OriginView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.manual.temporary.component.VersionBomOriginView;
@@ -47,15 +48,18 @@ import com.synopsys.integration.blackduck.api.manual.temporary.component.Version
 public class ProjectVersionComponentView extends BlackDuckView {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
+    public static final String COMPONENT_ISSUES_LINK = "component-issues";
     public static final String MATCHED_FILES_LINK = "matched-files";
     public static final String ORIGINS_LINK = "origins";
     public static final String POLICY_RULES_LINK = "policy-rules";
 
+    public static final LinkMultipleResponses<IssueView> COMPONENT_ISSUES_LINK_RESPONSE = new LinkMultipleResponses<IssueView>(COMPONENT_ISSUES_LINK, IssueView.class);
     public static final LinkMultipleResponses<ComponentMatchedFilesView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<ComponentMatchedFilesView>(MATCHED_FILES_LINK, ComponentMatchedFilesView.class);
     public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
     public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 
     static {
+        links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
         links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
         links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
         links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
