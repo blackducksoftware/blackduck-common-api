@@ -24,54 +24,52 @@ package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionMatchedComponentsView extends BlackDuckComponent {
-    private String name;
-    private String version;
     private String identifier;
+    private String name;
     private String namespace;
     private String originatesFrom;
-
-    public String getName() {
-	    return name;
-    }
-
-    public void setName(String name) {
-	    this.name = name;
-    }
-
-    public String getVersion() {
-	    return version;
-    }
-
-    public void setVersion(String version) {
-	    this.version = version;
-    }
+    private String version;
 
     public String getIdentifier() {
-	    return identifier;
+        return identifier;
     }
 
     public void setIdentifier(String identifier) {
-	    this.identifier = identifier;
+        this.identifier = identifier;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getNamespace() {
-	    return namespace;
+        return namespace;
     }
 
     public void setNamespace(String namespace) {
-	    this.namespace = namespace;
+        this.namespace = namespace;
     }
 
     public String getOriginatesFrom() {
-	    return originatesFrom;
+        return originatesFrom;
     }
 
     public void setOriginatesFrom(String originatesFrom) {
-	    this.originatesFrom = originatesFrom;
+        this.originatesFrom = originatesFrom;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 
 }

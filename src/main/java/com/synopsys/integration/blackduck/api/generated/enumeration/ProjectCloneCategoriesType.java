@@ -24,17 +24,15 @@ package com.synopsys.integration.blackduck.api.generated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
 
-/**
-* this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-* **/
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public enum ProjectCloneCategoriesType {
-	COMPONENT_DATA,
-	VULN_DATA,
+    COMPONENT_DATA,
+	CUSTOM_FIELD_DATA,
 	LICENSE_TERM_FULFILLMENT,
-	CUSTOM_FIELD_DATA;
+	VULN_DATA;
 
-	public String prettyPrint() {
-	    return EnumUtils.prettyPrint(this);
-	}
+    public String prettyPrint() {
+        return EnumUtils.prettyPrint(this);
+    }
 
 }

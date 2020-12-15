@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 import com.synopsys.integration.rest.HttpUrl;
 import com.synopsys.integration.rest.request.Request;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {
     public static final Set<String> VALUES_TO_REPLACE = new HashSet<>(Arrays.asList(null, Request.DEFAULT_ACCEPT_MIME_TYPE));
 
@@ -301,10 +301,10 @@ public class BlackDuckMediaTypeDiscovery {
     public String determineMediaType(HttpUrl url) {
         String path = url.url().getPath();
         return mediaTypeMatchers.stream()
-                .filter(matcher -> matcher.getPattern().matcher(path).matches())
-                .map(MediaTypeMatcher::getMediaType)
-                .findFirst()
-                .orElse(DEFAULT_MEDIA_TYPE);
+                   .filter(matcher -> matcher.getPattern().matcher(path).matches())
+                   .map(MediaTypeMatcher::getMediaType)
+                   .findFirst()
+                   .orElse(DEFAULT_MEDIA_TYPE);
     }
 
     private class MediaTypeMatcher {
