@@ -1,7 +1,7 @@
 /**
  * blackduck-common-api
  *
- * Copyright (c) 2020 Synopsys, Inc.
+ * Copyright (c) 2021 Synopsys, Inc.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements. See the NOTICE file
@@ -29,6 +29,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 public class DeveloperScanComponentResultView extends BlackDuckView {
     private String componentName;
     private String versionName;
+    private Set<String> violatingPolicyNames;
     private Set<PolicyViolationVulnerabilityView> vulnerabilities;
     private Set<PolicyViolationLicenseView> licenses;
 
@@ -38,6 +39,10 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
 
     public String getVersionName() {
         return versionName;
+    }
+
+    public Set<String> getViolatingPolicyNames() {
+        return violatingPolicyNames;
     }
 
     public Set<PolicyViolationVulnerabilityView> getVulnerabilities() {
