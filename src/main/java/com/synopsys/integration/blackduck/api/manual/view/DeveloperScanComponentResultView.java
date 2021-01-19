@@ -30,8 +30,8 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
     private String componentName;
     private String versionName;
     private Set<String> violatingPolicyNames;
-    private Set<PolicyViolationVulnerabilityView> vulnerabilities;
-    private Set<PolicyViolationLicenseView> licenses;
+    private Set<PolicyViolationVulnerabilityView> policyViolationVulnerabilities;
+    private Set<PolicyViolationLicenseView> policyViolationLicenses;
 
     public String getComponentName() {
         return componentName;
@@ -45,11 +45,11 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
         return violatingPolicyNames;
     }
 
-    public Set<PolicyViolationVulnerabilityView> getVulnerabilities() {
-        return vulnerabilities;
+    public Set<PolicyViolationVulnerabilityView> getPolicyViolationVulnerabilities() {
+        return policyViolationVulnerabilities;
     }
 
-    public Set<PolicyViolationLicenseView> getLicenses() {
-        return licenses;
+    public Set<PolicyViolationLicenseView> getPolicyViolationLicenses() {
+        return policyViolationLicenses;
     }
 }
