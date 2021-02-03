@@ -29,6 +29,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 public class DeveloperScanComponentResultView extends BlackDuckView {
     private String componentName;
     private String versionName;
+    private String componentIdentifier;
     private Set<String> violatingPolicyNames;
     private Set<PolicyViolationVulnerabilityView> policyViolationVulnerabilities;
     private Set<PolicyViolationLicenseView> policyViolationLicenses;
@@ -39,6 +40,10 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
 
     public String getVersionName() {
         return versionName;
+    }
+
+    public String getComponentIdentifier() {
+        return componentIdentifier;
     }
 
     public Set<String> getViolatingPolicyNames() {
