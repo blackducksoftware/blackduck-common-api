@@ -23,19 +23,6 @@
 package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.PolicyOverrideNotificationContent;
-import com.synopsys.integration.blackduck.api.manual.contract.NotificationContentData;
 
-public class PolicyOverrideNotificationUserView extends NotificationUserView implements NotificationContentData<PolicyOverrideNotificationContent> {
-    private PolicyOverrideNotificationContent content;
-
-    @Override
-    public PolicyOverrideNotificationContent getContent() {
-        return content;
-    }
-
-    @Override
-    public void setContent(PolicyOverrideNotificationContent content) {
-        this.content = content;
-    }
-
+public class PolicyOverrideNotificationUserView extends NotificationUserView<PolicyOverrideNotificationContent> {
 }

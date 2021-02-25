@@ -22,17 +22,18 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
-
 import java.util.Date;
 
-public class NotificationView extends BlackDuckView implements NotificationViewData {
+import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
+import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
+
+public abstract class NotificationView<T extends NotificationContentComponent> extends BlackDuckView {
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
+    private T content;
 
     @Override
     public boolean hasSubclasses() {
@@ -65,32 +66,34 @@ public class NotificationView extends BlackDuckView implements NotificationViewD
         }
     }
 
-    @Override
+    public T getContent() {
+        return content;
+    }
+
+    public void setContent(T content) {
+        this.content = content;
+    }
+
     public String getContentType() {
         return contentType;
     }
 
-    @Override
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
 
-    @Override
     public Date getCreatedAt() {
         return createdAt;
     }
 
-    @Override
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    @Override
     public NotificationType getType() {
         return type;
     }
 
-    @Override
     public void setType(NotificationType type) {
         this.type = type;
     }
