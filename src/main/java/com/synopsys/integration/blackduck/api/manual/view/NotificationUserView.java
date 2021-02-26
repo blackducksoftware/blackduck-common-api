@@ -7,86 +7,28 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
-import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
-import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationStateRequestStateType;
-import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
-
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NotificationUserView extends BlackDuckView implements NotificationViewData {
+import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
+import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationStateRequestStateType;
+
+public class NotificationUserView<T extends NotificationContentComponent> extends NotificationView<T> {
     public static final Map<String, LinkResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";
 
     public static final LinkSingleResponse<NotificationUserView> NOTIFICATIONS_LINK_RESPONSE = new LinkSingleResponse<>(
-            NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.class);
+        NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.class);
 
     static {
         NotificationUserView.links.put(
-                NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.NOTIFICATIONS_LINK_RESPONSE);
+            NotificationUserView.NOTIFICATIONS_LINK, NotificationUserView.NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    private String contentType;
-    private java.util.Date createdAt;
     private NotificationStateRequestStateType notificationState;
-    private NotificationType type;
-
-    @Override
-    public boolean hasSubclasses() {
-        return true;
-    }
-
-    @Override
-    public Class<? extends BlackDuckResponse> getSubclass() {
-        switch (type) {
-            case BOM_EDIT:
-                return BomEditNotificationUserView.class;
-            case LICENSE_LIMIT:
-                return LicenseLimitNotificationUserView.class;
-            case PROJECT:
-                return ProjectNotificationUserView.class;
-            case PROJECT_VERSION:
-                return ProjectVersionNotificationUserView.class;
-            case POLICY_OVERRIDE:
-                return PolicyOverrideNotificationUserView.class;
-            case RULE_VIOLATION_CLEARED:
-                return RuleViolationClearedNotificationUserView.class;
-            case RULE_VIOLATION:
-                return RuleViolationNotificationUserView.class;
-            case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
-                return VersionBomCodeLocationBomComputedNotificationUserView.class;
-            case VULNERABILITY:
-                return VulnerabilityNotificationUserView.class;
-            default:
-                return NotificationUserView.class;
-        }
-    }
-
-    @Override
-    public String getContentType() {
-        return contentType;
-    }
-
-    @Override
-    public void setContentType(String contentType) {
-        this.contentType = contentType;
-    }
-
-    @Override
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    @Override
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 
     public NotificationStateRequestStateType getNotificationState() {
         return notificationState;
@@ -94,16 +36,6 @@ public class NotificationUserView extends BlackDuckView implements NotificationV
 
     public void setNotificationState(NotificationStateRequestStateType notificationState) {
         this.notificationState = notificationState;
-    }
-
-    @Override
-    public NotificationType getType() {
-        return type;
-    }
-
-    @Override
-    public void setType(NotificationType type) {
-        this.type = type;
     }
 
 }

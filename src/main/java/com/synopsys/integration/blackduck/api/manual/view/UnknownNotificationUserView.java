@@ -7,7 +7,7 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.manual.component.ProjectNotificationContent;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-public class ProjectNotificationUserView extends NotificationUserView<ProjectNotificationContent> {
+public class UnknownNotificationUserView extends NotificationUserView<NotificationContentComponent> {
 }

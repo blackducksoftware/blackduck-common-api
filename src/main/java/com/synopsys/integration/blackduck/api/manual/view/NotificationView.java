@@ -7,75 +7,46 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
-import com.synopsys.integration.blackduck.api.manual.contract.NotificationViewData;
-
 import java.util.Date;
 
-public class NotificationView extends BlackDuckView implements NotificationViewData {
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
+import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationType;
+
+public class NotificationView<T extends NotificationContentComponent> extends BlackDuckView {
     private String contentType;
     private java.util.Date createdAt;
     private NotificationType type;
+    private T content;
 
-    @Override
-    public boolean hasSubclasses() {
-        return true;
+    public T getContent() {
+        return content;
     }
 
-    @Override
-    public Class<? extends BlackDuckResponse> getSubclass() {
-        switch (type) {
-            case BOM_EDIT:
-                return BomEditNotificationView.class;
-            case LICENSE_LIMIT:
-                return LicenseLimitNotificationView.class;
-            case POLICY_OVERRIDE:
-                return PolicyOverrideNotificationView.class;
-            case PROJECT:
-                return ProjectNotificationView.class;
-            case PROJECT_VERSION:
-                return ProjectVersionNotificationView.class;
-            case RULE_VIOLATION_CLEARED:
-                return RuleViolationClearedNotificationView.class;
-            case RULE_VIOLATION:
-                return RuleViolationNotificationView.class;
-            case VERSION_BOM_CODE_LOCATION_BOM_COMPUTED:
-                return VersionBomCodeLocationBomComputedNotificationView.class;
-            case VULNERABILITY:
-                return VulnerabilityNotificationView.class;
-            default:
-                return NotificationView.class;
-        }
+    public void setContent(T content) {
+        this.content = content;
     }
 
-    @Override
     public String getContentType() {
         return contentType;
     }
 
-    @Override
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
 
-    @Override
     public Date getCreatedAt() {
         return createdAt;
     }
 
-    @Override
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    @Override
     public NotificationType getType() {
         return type;
     }
 
-    @Override
     public void setType(NotificationType type) {
         this.type = type;
     }

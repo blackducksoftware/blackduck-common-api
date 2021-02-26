@@ -5,13 +5,9 @@
  *
  * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
  */
-package com.synopsys.integration.blackduck.api.manual.contract;
+package com.synopsys.integration.blackduck.api.manual.view;
 
 import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 
-public interface NotificationContentData<T extends NotificationContentComponent> extends NotificationViewData {
-    T getContent();
-
-    void setContent(T content);
-
+public class UnknownNotificationView extends NotificationView<NotificationContentComponent> {
 }

@@ -21,10 +21,6 @@ public class BlackDuckResponse extends BlackDuckComponent {
     private transient Gson gson;
     private transient JsonNode patch;
 
-    public boolean hasSubclasses() {
-        return false;
-    }
-
     public Class<? extends BlackDuckResponse> getSubclass() {
         throw new UnsupportedOperationException("A subclass must implement this with its specific behavior");
     }
