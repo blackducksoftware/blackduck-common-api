@@ -18,6 +18,8 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
     private Set<String> violatingPolicyNames;
     private Set<PolicyViolationVulnerabilityView> policyViolationVulnerabilities;
     private Set<PolicyViolationLicenseView> policyViolationLicenses;
+    private String errorMessage;
+    private String warningMessage;
 
     public String getComponentName() {
         return componentName;
@@ -41,5 +43,13 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
 
     public Set<PolicyViolationLicenseView> getPolicyViolationLicenses() {
         return policyViolationLicenses;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public String getWarningMessage() {
+        return warningMessage;
     }
 }

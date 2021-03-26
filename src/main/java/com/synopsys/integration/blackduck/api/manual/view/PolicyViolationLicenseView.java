@@ -14,7 +14,6 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 public class PolicyViolationLicenseView extends BlackDuckView {
     private String licenseName;
     private Set<String> violatingPolicyNames;
-    private Set<PolicyViolationComponentView> components;
     private String errorMessage;
     private String warningMessage;
 
@@ -24,10 +23,6 @@ public class PolicyViolationLicenseView extends BlackDuckView {
 
     public Set<String> getViolatingPolicyNames() {
         return violatingPolicyNames;
-    }
-
-    public Set<PolicyViolationComponentView> getComponents() {
-        return components;
     }
 
     public String getErrorMessage() {
