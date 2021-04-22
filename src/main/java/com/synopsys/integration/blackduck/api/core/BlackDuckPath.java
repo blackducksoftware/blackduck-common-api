@@ -16,6 +16,7 @@ import com.synopsys.integration.rest.HttpUrl;
 public class BlackDuckPath {
     private final String path;
 
+    //add multiplicity and response class
     public BlackDuckPath(final String path) {
         this.path = path;
     }

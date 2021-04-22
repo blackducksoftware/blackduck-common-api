@@ -14,9 +14,8 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionView;
-import com.synopsys.integration.blackduck.api.generated.view.TagView;
 import com.synopsys.integration.blackduck.api.manual.temporary.response.AssignedUserGroupView;
 import com.synopsys.integration.blackduck.api.manual.temporary.view.AssignedUserView;
 import com.synopsys.integration.blackduck.api.manual.view.ProjectMappingView;
@@ -46,6 +45,10 @@ public class ProjectView extends BlackDuckView {
         links.put(USERGROUPS_LINK, USERGROUPS_LINK_RESPONSE);
         links.put(USERS_LINK, USERS_LINK_RESPONSE);
         links.put(VERSIONS_LINK, VERSIONS_LINK_RESPONSE);
+    }
+
+    public UrlSingleResponse<ProjectVersionView> metaCanaonicalVersion() {
+        return metaSingleResponse(CANONICALVERSION_LINK_RESPONSE);
     }
 
     private java.util.List<ProjectCloneCategoriesType> cloneCategories;
