@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
@@ -186,27 +186,27 @@ public class ProjectView extends BlackDuckView {
         this.updatedByUser = updatedByUser;
     }
 
-    public UrlSingleResponse<ProjectVersionView> metaCanonicalVersion() {
+    public UrlSingleResponse<ProjectVersionView> canonicalVersionLink() {
         return metaSingleResponse(CANONICAL_VERSION_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectMappingView> metaProjectMappings() {
+    public UrlMultipleResponses<ProjectMappingView> projectMappingsLink() {
         return metaMultipleResponses(PROJECT_MAPPINGS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<TagView> metaTags() {
+    public UrlMultipleResponses<TagView> tagsLink() {
         return metaMultipleResponses(TAGS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedUserGroupView> metaUsergroups() {
+    public UrlMultipleResponses<AssignedUserGroupView> usergroupsLink() {
         return metaMultipleResponses(USERGROUPS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedUserView> metaUsers() {
+    public UrlMultipleResponses<AssignedUserView> usersLink() {
         return metaMultipleResponses(USERS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionView> metaVersions() {
+    public UrlMultipleResponses<ProjectVersionView> versionsLink() {
         return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
     }
 

@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -102,19 +102,19 @@ public class UserView extends BlackDuckView {
         this.userName = userName;
     }
 
-    public UrlMultipleResponses<RoleAssignmentView> metaInheritedRoles() {
+    public UrlMultipleResponses<RoleAssignmentView> inheritedRolesLink() {
         return metaMultipleResponses(INHERITED_ROLES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<NotificationUserView> metaNotifications() {
+    public UrlMultipleResponses<NotificationUserView> notificationsLink() {
         return metaMultipleResponses(NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedProjectView> metaProjects() {
+    public UrlMultipleResponses<AssignedProjectView> projectsLink() {
         return metaMultipleResponses(PROJECTS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<RoleAssignmentView> metaRoles() {
+    public UrlMultipleResponses<RoleAssignmentView> rolesLink() {
         return metaMultipleResponses(ROLES_LINK_RESPONSE);
     }
 

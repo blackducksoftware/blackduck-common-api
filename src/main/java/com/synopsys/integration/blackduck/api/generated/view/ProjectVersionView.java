@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -183,31 +183,31 @@ public class ProjectVersionView extends BlackDuckView {
         this.versionName = versionName;
     }
 
-    public UrlMultipleResponses<CodeLocationView> metaCodelocations() {
+    public UrlMultipleResponses<CodeLocationView> codelocationsLink() {
         return metaMultipleResponses(CODELOCATIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionComponentView> metaComponents() {
+    public UrlMultipleResponses<ProjectVersionComponentView> componentsLink() {
         return metaMultipleResponses(COMPONENTS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionIssuesView> metaIssues() {
+    public UrlMultipleResponses<ProjectVersionIssuesView> issuesLink() {
         return metaMultipleResponses(ISSUES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ReportView> metaLicenseReports() {
+    public UrlMultipleResponses<ReportView> licenseReportsLink() {
         return metaMultipleResponses(LICENSE_REPORTS_LINK_RESPONSE);
     }
 
-    public UrlSingleResponse<ProjectVersionPolicyStatusView> metaPolicyStatus() {
+    public UrlSingleResponse<ProjectVersionPolicyStatusView> policyStatusLink() {
         return metaSingleResponse(POLICY_STATUS_LINK_RESPONSE);
     }
 
-    public UrlSingleResponse<ProjectView> metaProject() {
+    public UrlSingleResponse<ProjectView> projectLink() {
         return metaSingleResponse(PROJECT_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> metaVulnerableComponents() {
+    public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> vulnerableComponentsLink() {
         return metaMultipleResponses(VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 

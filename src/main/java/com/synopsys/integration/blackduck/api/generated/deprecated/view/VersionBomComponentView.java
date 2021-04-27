@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.deprecated.view;
 
 import java.math.BigDecimal;
@@ -306,19 +306,19 @@ public class VersionBomComponentView extends BlackDuckView {
         this.versionRiskProfile = versionRiskProfile;
     }
 
-    public UrlMultipleResponses<IssueView> metaComponentIssues() {
+    public UrlMultipleResponses<IssueView> componentIssuesLink() {
         return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFiles() {
+    public UrlMultipleResponses<ComponentMatchedFilesView> matchedFilesLink() {
         return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<OriginView> metaOrigins() {
+    public UrlMultipleResponses<OriginView> originsLink() {
         return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ComponentPolicyRulesView> metaPolicyRules() {
+    public UrlMultipleResponses<ComponentPolicyRulesView> policyRulesLink() {
         return metaMultipleResponses(POLICY_RULES_LINK_RESPONSE);
     }
 

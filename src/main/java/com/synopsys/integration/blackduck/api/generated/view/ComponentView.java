@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -134,19 +134,19 @@ public class ComponentView extends BlackDuckView {
         this.url = url;
     }
 
-    public UrlMultipleResponses<CustomFieldView> metaCustomFields() {
+    public UrlMultipleResponses<CustomFieldView> customFieldsLink() {
         return metaMultipleResponses(CUSTOM_FIELDS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<TagView> metaTags() {
+    public UrlMultipleResponses<TagView> tagsLink() {
         return metaMultipleResponses(TAGS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ComponentVersionView> metaVersions() {
+    public UrlMultipleResponses<ComponentVersionView> versionsLink() {
         return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilities() {
+    public UrlMultipleResponses<VulnerabilityView> vulnerabilitiesLink() {
         return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
     }
 

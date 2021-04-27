@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -162,7 +162,7 @@ public class LicenseView extends BlackDuckView {
         this.updatedBy = updatedBy;
     }
 
-    public UrlSingleResponse<BlackDuckStringResponse> metaText() {
+    public UrlSingleResponse<BlackDuckStringResponse> textLink() {
         return metaSingleResponse(TEXT_LINK_RESPONSE);
     }
 

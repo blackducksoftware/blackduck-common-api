@@ -1,10 +1,10 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
+* blackduck-common-api
+*
+* Copyright (c) 2021 Synopsys, Inc.
+*
+* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+*/
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -64,7 +64,7 @@ public class RoleAssignmentView extends BlackDuckView {
         this.scope = scope;
     }
 
-    public UrlSingleResponse<UserView> metaUser() {
+    public UrlSingleResponse<UserView> userLink() {
         return metaSingleResponse(USER_LINK_RESPONSE);
     }
 
