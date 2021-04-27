@@ -9,9 +9,16 @@ package com.synopsys.integration.blackduck.api.core.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 
-public abstract class LinkBlackDuckResponse<T extends BlackDuckResponse> extends LinkResponse<T> {
+public abstract class LinkBlackDuckResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
+    private final String link;
+
     public LinkBlackDuckResponse(String link, Class<T> responseClass) {
-        super(link, responseClass);
+        super(responseClass);
+        this.link = link;
+    }
+
+    public String getLink() {
+        return link;
     }
 
 }

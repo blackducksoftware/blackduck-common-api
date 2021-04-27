@@ -1,11 +1,4 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
-/*
 * blackduck-common-api
 *
 * Copyright (c) 2021 Synopsys, Inc.
@@ -109,19 +102,19 @@ public class UserView extends BlackDuckView {
         this.userName = userName;
     }
 
-    public UrlMultipleResponses<RoleAssignmentView> inheritedRolesLink() {
+    public UrlMultipleResponses<RoleAssignmentView> metaInheritedRolesLink() {
         return metaMultipleResponses(INHERITED_ROLES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<NotificationUserView> notificationsLink() {
+    public UrlMultipleResponses<NotificationUserView> metaNotificationsLink() {
         return metaMultipleResponses(NOTIFICATIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedProjectView> projectsLink() {
+    public UrlMultipleResponses<AssignedProjectView> metaProjectsLink() {
         return metaMultipleResponses(PROJECTS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<RoleAssignmentView> rolesLink() {
+    public UrlMultipleResponses<RoleAssignmentView> metaRolesLink() {
         return metaMultipleResponses(ROLES_LINK_RESPONSE);
     }
 

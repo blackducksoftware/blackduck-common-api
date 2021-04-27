@@ -13,16 +13,35 @@ import com.synopsys.integration.rest.HttpUrl;
 /**
  * This will represent a starting point for a REST conversation with Black Duck, such as '/api/codelocations' or '/api/projects'
  */
-public class BlackDuckPath {
+public class BlackDuckPath<T extends BlackDuckResponse> {
     private final String path;
+    private final Class<T> responseClass;
+    private final boolean isMultiple;
 
-    //add multiplicity and response class
-    public BlackDuckPath(final String path) {
+    public static <T extends BlackDuckResponse> BlackDuckPath<T> single(String path, Class<T> responseClass) {
+        return new BlackDuckPath<>(path, responseClass, false);
+    }
+
+    public static <T extends BlackDuckResponse> BlackDuckPath<T> multiple(String path, Class<T> responseClass) {
+        return new BlackDuckPath<>(path, responseClass, true);
+    }
+
+    public BlackDuckPath(String path, Class<T> responseClass, boolean isMultiple) {
         this.path = path;
+        this.responseClass = responseClass;
+        this.isMultiple = isMultiple;
     }
 
     public String getPath() {
         return path;
+    }
+
+    public Class<T> getResponseClass() {
+        return responseClass;
+    }
+
+    public boolean isMultiple() {
+        return isMultiple;
     }
 
     public HttpUrl getFullBlackDuckUrl(HttpUrl blackDuckUrl) throws IntegrationException {

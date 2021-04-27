@@ -1,11 +1,4 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
-/*
 * blackduck-common-api
 *
 * Copyright (c) 2021 Synopsys, Inc.
@@ -134,19 +127,19 @@ public class ComponentVersionView extends BlackDuckView {
         this.versionName = versionName;
     }
 
-    public UrlSingleResponse<ComponentView> componentLink() {
+    public UrlSingleResponse<ComponentView> metaComponentLink() {
         return metaSingleResponse(COMPONENT_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<OriginView> originsLink() {
+    public UrlMultipleResponses<OriginView> metaOriginsLink() {
         return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
     }
 
-    public UrlSingleResponse<ComponentVersionUpgradeGuidanceView> upgradeGuidanceLink() {
+    public UrlSingleResponse<ComponentVersionUpgradeGuidanceView> metaUpgradeGuidanceLink() {
         return metaSingleResponse(UPGRADE_GUIDANCE_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<VulnerabilityView> vulnerabilitiesLink() {
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilitiesLink() {
         return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
     }
 

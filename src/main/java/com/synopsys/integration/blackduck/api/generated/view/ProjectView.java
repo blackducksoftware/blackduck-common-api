@@ -1,11 +1,4 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
-/*
 * blackduck-common-api
 *
 * Copyright (c) 2021 Synopsys, Inc.
@@ -193,27 +186,27 @@ public class ProjectView extends BlackDuckView {
         this.updatedByUser = updatedByUser;
     }
 
-    public UrlSingleResponse<ProjectVersionView> canonicalVersionLink() {
+    public UrlSingleResponse<ProjectVersionView> metaCanonicalVersionLink() {
         return metaSingleResponse(CANONICAL_VERSION_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectMappingView> projectMappingsLink() {
+    public UrlMultipleResponses<ProjectMappingView> metaProjectMappingsLink() {
         return metaMultipleResponses(PROJECT_MAPPINGS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<TagView> tagsLink() {
+    public UrlMultipleResponses<TagView> metaTagsLink() {
         return metaMultipleResponses(TAGS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedUserGroupView> usergroupsLink() {
+    public UrlMultipleResponses<AssignedUserGroupView> metaUsergroupsLink() {
         return metaMultipleResponses(USERGROUPS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<AssignedUserView> usersLink() {
+    public UrlMultipleResponses<AssignedUserView> metaUsersLink() {
         return metaMultipleResponses(USERS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionView> versionsLink() {
+    public UrlMultipleResponses<ProjectVersionView> metaVersionsLink() {
         return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
     }
 

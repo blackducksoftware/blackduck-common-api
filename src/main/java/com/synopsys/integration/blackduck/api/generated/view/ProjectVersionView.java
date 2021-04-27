@@ -1,11 +1,4 @@
 /*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
-/*
 * blackduck-common-api
 *
 * Copyright (c) 2021 Synopsys, Inc.
@@ -190,31 +183,31 @@ public class ProjectVersionView extends BlackDuckView {
         this.versionName = versionName;
     }
 
-    public UrlMultipleResponses<CodeLocationView> codelocationsLink() {
+    public UrlMultipleResponses<CodeLocationView> metaCodelocationsLink() {
         return metaMultipleResponses(CODELOCATIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionComponentView> componentsLink() {
+    public UrlMultipleResponses<ProjectVersionComponentView> metaComponentsLink() {
         return metaMultipleResponses(COMPONENTS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionIssuesView> issuesLink() {
+    public UrlMultipleResponses<ProjectVersionIssuesView> metaIssuesLink() {
         return metaMultipleResponses(ISSUES_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ReportView> licenseReportsLink() {
+    public UrlMultipleResponses<ReportView> metaLicenseReportsLink() {
         return metaMultipleResponses(LICENSE_REPORTS_LINK_RESPONSE);
     }
 
-    public UrlSingleResponse<ProjectVersionPolicyStatusView> policyStatusLink() {
+    public UrlSingleResponse<ProjectVersionPolicyStatusView> metaPolicyStatusLink() {
         return metaSingleResponse(POLICY_STATUS_LINK_RESPONSE);
     }
 
-    public UrlSingleResponse<ProjectView> projectLink() {
+    public UrlSingleResponse<ProjectView> metaProjectLink() {
         return metaSingleResponse(PROJECT_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> vulnerableComponentsLink() {
+    public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> metaVulnerableComponentsLink() {
         return metaMultipleResponses(VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
