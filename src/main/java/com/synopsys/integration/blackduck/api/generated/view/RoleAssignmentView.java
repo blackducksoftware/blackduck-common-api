@@ -12,6 +12,7 @@ import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -61,6 +62,10 @@ public class RoleAssignmentView extends BlackDuckView {
 
     public void setScope(String scope) {
         this.scope = scope;
+    }
+
+    public UrlSingleResponse<UserView> metaUser() {
+        return metaSingleResponse(USER_LINK_RESPONSE);
     }
 
 }

@@ -13,6 +13,8 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
@@ -123,6 +125,22 @@ public class ComponentVersionView extends BlackDuckView {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
+    }
+
+    public UrlSingleResponse<ComponentView> metaComponent() {
+        return metaSingleResponse(COMPONENT_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<OriginView> metaOrigins() {
+        return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
+    }
+
+    public UrlSingleResponse<ComponentVersionUpgradeGuidanceView> metaUpgradeGuidance() {
+        return metaSingleResponse(UPGRADE_GUIDANCE_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilities() {
+        return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

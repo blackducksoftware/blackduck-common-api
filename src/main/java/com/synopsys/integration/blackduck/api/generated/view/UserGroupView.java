@@ -12,6 +12,7 @@ import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -79,6 +80,10 @@ public class UserGroupView extends BlackDuckView {
 
     public void setUserGroup(String userGroup) {
         this.userGroup = userGroup;
+    }
+
+    public UrlMultipleResponses<UserView> metaUsers() {
+        return metaMultipleResponses(USERS_LINK_RESPONSE);
     }
 
 }

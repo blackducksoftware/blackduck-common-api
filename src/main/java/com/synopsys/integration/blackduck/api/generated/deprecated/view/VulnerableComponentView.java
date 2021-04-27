@@ -13,6 +13,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView;
@@ -106,6 +107,14 @@ public class VulnerableComponentView extends BlackDuckView {
 
     public void setVulnerabilityWithRemediation(ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView vulnerabilityWithRemediation) {
         this.vulnerabilityWithRemediation = vulnerabilityWithRemediation;
+    }
+
+    public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFiles() {
+        return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilities() {
+        return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

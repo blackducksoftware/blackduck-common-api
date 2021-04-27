@@ -1,23 +1,25 @@
+/*
+ * blackduck-common-api
+ *
+ * Copyright (c) 2021 Synopsys, Inc.
+ *
+ * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+ */
 package com.synopsys.integration.blackduck.api.core.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
 import com.synopsys.integration.rest.HttpUrl;
 
-public class UrlResponse<T extends BlackDuckResponse> {
+public class UrlResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
     private final HttpUrl url;
-    private final Class<T> responseClass;
 
     public UrlResponse(HttpUrl url, Class<T> responseClass) {
+        super(responseClass);
         this.url = url;
-        this.responseClass = responseClass;
     }
 
     public HttpUrl getUrl() {
         return url;
-    }
-
-    public Class<T> getResponseClass() {
-        return responseClass;
     }
 
 }

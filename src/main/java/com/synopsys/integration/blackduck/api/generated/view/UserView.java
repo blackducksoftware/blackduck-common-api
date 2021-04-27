@@ -12,6 +12,7 @@ import java.util.Map;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.response.AssignedProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleAssignmentView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationUserView;
@@ -99,6 +100,22 @@ public class UserView extends BlackDuckView {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public UrlMultipleResponses<RoleAssignmentView> metaInheritedRoles() {
+        return metaMultipleResponses(INHERITED_ROLES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<NotificationUserView> metaNotifications() {
+        return metaMultipleResponses(NOTIFICATIONS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<AssignedProjectView> metaProjects() {
+        return metaMultipleResponses(PROJECTS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<RoleAssignmentView> metaRoles() {
+        return metaMultipleResponses(ROLES_LINK_RESPONSE);
     }
 
 }

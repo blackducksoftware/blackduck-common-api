@@ -14,6 +14,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionReviewedDetailsView;
@@ -287,6 +288,10 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
         this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public UrlMultipleResponses<IssueView> metaComponentIssues() {
+        return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
     }
 
 }

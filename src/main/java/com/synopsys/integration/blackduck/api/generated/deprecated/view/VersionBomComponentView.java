@@ -14,6 +14,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
@@ -303,6 +304,22 @@ public class VersionBomComponentView extends BlackDuckView {
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
         this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public UrlMultipleResponses<IssueView> metaComponentIssues() {
+        return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFiles() {
+        return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<OriginView> metaOrigins() {
+        return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentPolicyRulesView> metaPolicyRules() {
+        return metaMultipleResponses(POLICY_RULES_LINK_RESPONSE);
     }
 
 }

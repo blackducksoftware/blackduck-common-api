@@ -13,6 +13,8 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentView;
@@ -21,6 +23,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicen
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.ReportView;
 import com.synopsys.integration.blackduck.api.manual.temporary.enumeration.ProjectVersionPhaseType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -30,7 +33,7 @@ public class ProjectVersionView extends BlackDuckView {
     public static final String CODELOCATIONS_LINK = "codelocations";
     public static final String COMPONENTS_LINK = "components";
     public static final String ISSUES_LINK = "issues";
-    public static final String LICENSEREPORTS_LINK = "licenseReports";
+    public static final String LICENSE_REPORTS_LINK = "licenseReports";
     public static final String POLICY_STATUS_LINK = "policy-status";
     public static final String PROJECT_LINK = "project";
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
@@ -38,7 +41,7 @@ public class ProjectVersionView extends BlackDuckView {
     public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
     public static final LinkMultipleResponses<ProjectVersionComponentView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionComponentView>(COMPONENTS_LINK, ProjectVersionComponentView.class);
     public static final LinkMultipleResponses<ProjectVersionIssuesView> ISSUES_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionIssuesView>(ISSUES_LINK, ProjectVersionIssuesView.class);
-    public static final LinkMultipleResponses<ReportView> LICENSEREPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSEREPORTS_LINK, ReportView.class);
+    public static final LinkMultipleResponses<ReportView> LICENSE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSE_REPORTS_LINK, ReportView.class);
     public static final LinkSingleResponse<ProjectVersionPolicyStatusView> POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionPolicyStatusView>(POLICY_STATUS_LINK, ProjectVersionPolicyStatusView.class);
     public static final LinkSingleResponse<ProjectView> PROJECT_LINK_RESPONSE = new LinkSingleResponse<ProjectView>(PROJECT_LINK, ProjectView.class);
     public static final LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView> VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView>(VULNERABLE_COMPONENTS_LINK, ProjectVersionVulnerableBomComponentsView.class);
@@ -47,7 +50,7 @@ public class ProjectVersionView extends BlackDuckView {
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
         links.put(ISSUES_LINK, ISSUES_LINK_RESPONSE);
-        links.put(LICENSEREPORTS_LINK, LICENSEREPORTS_LINK_RESPONSE);
+        links.put(LICENSE_REPORTS_LINK, LICENSE_REPORTS_LINK_RESPONSE);
         links.put(POLICY_STATUS_LINK, POLICY_STATUS_LINK_RESPONSE);
         links.put(PROJECT_LINK, PROJECT_LINK_RESPONSE);
         links.put(VULNERABLE_COMPONENTS_LINK, VULNERABLE_COMPONENTS_LINK_RESPONSE);
@@ -178,6 +181,34 @@ public class ProjectVersionView extends BlackDuckView {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
+    }
+
+    public UrlMultipleResponses<CodeLocationView> metaCodelocations() {
+        return metaMultipleResponses(CODELOCATIONS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ProjectVersionComponentView> metaComponents() {
+        return metaMultipleResponses(COMPONENTS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ProjectVersionIssuesView> metaIssues() {
+        return metaMultipleResponses(ISSUES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ReportView> metaLicenseReports() {
+        return metaMultipleResponses(LICENSE_REPORTS_LINK_RESPONSE);
+    }
+
+    public UrlSingleResponse<ProjectVersionPolicyStatusView> metaPolicyStatus() {
+        return metaSingleResponse(POLICY_STATUS_LINK_RESPONSE);
+    }
+
+    public UrlSingleResponse<ProjectView> metaProject() {
+        return metaSingleResponse(PROJECT_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> metaVulnerableComponents() {
+        return metaMultipleResponses(VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
 }

@@ -13,6 +13,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentLogoView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
@@ -131,6 +132,22 @@ public class ComponentView extends BlackDuckView {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public UrlMultipleResponses<CustomFieldView> metaCustomFields() {
+        return metaMultipleResponses(CUSTOM_FIELDS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<TagView> metaTags() {
+        return metaMultipleResponses(TAGS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentVersionView> metaVersions() {
+        return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilities() {
+        return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }
