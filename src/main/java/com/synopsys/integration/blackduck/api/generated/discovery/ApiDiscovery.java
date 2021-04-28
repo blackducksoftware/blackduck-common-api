@@ -5,13 +5,6 @@
  *
  * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
  */
-/*
-* blackduck-common-api
-*
-* Copyright (c) 2021 Synopsys, Inc.
-*
-* Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
-*/
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
@@ -87,13 +80,17 @@ public class ApiDiscovery {
     }
 
     public <T extends BlackDuckResponse> UrlSingleResponse<T> metaSingleResponse(BlackDuckPath<T> blackDuckPath) throws IntegrationException {
-        HttpUrl url = blackDuckPath.getFullBlackDuckUrl(blackDuckUrl);
+        HttpUrl url = getUrl(blackDuckPath);
         return new UrlSingleResponse<>(url, blackDuckPath.getResponseClass());
     }
 
     public <T extends BlackDuckResponse> UrlMultipleResponses<T> metaMultipleResponses(BlackDuckPath<T> blackDuckPath) throws IntegrationException {
-        HttpUrl url = blackDuckPath.getFullBlackDuckUrl(blackDuckUrl);
+        HttpUrl url = getUrl(blackDuckPath);
         return new UrlMultipleResponses<>(url, blackDuckPath.getResponseClass());
+    }
+
+    public HttpUrl getUrl(BlackDuckPath blackDuckPath) throws IntegrationException {
+        return blackDuckPath.getFullBlackDuckUrl(blackDuckUrl);
     }
 
 }
