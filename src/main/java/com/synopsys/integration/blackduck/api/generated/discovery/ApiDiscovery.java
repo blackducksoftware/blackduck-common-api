@@ -78,6 +78,122 @@ public class ApiDiscovery {
         this.blackDuckUrl = blackDuckUrl;
     }
 
+    public UrlSingleResponse<AnnouncementBannerView> metaAnnouncementLink() {
+        return metaSingleResponse(ANNOUNCEMENT_PATH);
+    }
+
+    public UrlSingleResponse<GraphComponentImportEventsView> metaBomImportLink() {
+        return metaSingleResponse(BOM_IMPORT_PATH);
+    }
+
+    public UrlMultipleResponses<CodeLocationView> metaCodelocationsLink() {
+        return metaMultipleResponses(CODELOCATIONS_PATH);
+    }
+
+    public UrlMultipleResponses<ComponentsView> metaComponentsLink() {
+        return metaMultipleResponses(COMPONENTS_PATH);
+    }
+
+    public UrlSingleResponse<UserView> metaCurrentUserLink() {
+        return metaSingleResponse(CURRENT_USER_PATH);
+    }
+
+    public UrlSingleResponse<CurrentVersionView> metaCurrentVersionLink() {
+        return metaSingleResponse(CURRENT_VERSION_PATH);
+    }
+
+    public UrlMultipleResponses<CustomFieldObjectView> metaCustomFieldsLink() {
+        return metaMultipleResponses(CUSTOM_FIELDS_PATH);
+    }
+
+    public UrlSingleResponse<CweView> metaCwesLink() {
+        return metaSingleResponse(CWES_PATH);
+    }
+
+    public UrlSingleResponse<HealthChecksLivenessView> metaHealthChecksLink() {
+        return metaSingleResponse(HEALTH_CHECKS_PATH);
+    }
+
+    public UrlMultipleResponses<JobView> metaJobsLink() {
+        return metaMultipleResponses(JOBS_PATH);
+    }
+
+    public UrlSingleResponse<ProjectView> metaJournalLink() {
+        return metaSingleResponse(JOURNAL_PATH);
+    }
+
+    public UrlMultipleResponses<LicenseFamilyView> metaLicenseFamiliesLink() {
+        return metaMultipleResponses(LICENSE_FAMILIES_PATH);
+    }
+
+    public UrlMultipleResponses<LicenseTermCategoryView> metaLicenseTermCategoriesLink() {
+        return metaMultipleResponses(LICENSE_TERM_CATEGORIES_PATH);
+    }
+
+    public UrlMultipleResponses<LicenseTermView> metaLicenseTermsLink() {
+        return metaMultipleResponses(LICENSE_TERMS_PATH);
+    }
+
+    public UrlMultipleResponses<LicenseView> metaLicensesLink() {
+        return metaMultipleResponses(LICENSES_PATH);
+    }
+
+    public UrlSingleResponse<ManageAnnouncementBannerView> metaManageAnnouncementLink() {
+        return metaSingleResponse(MANAGE_ANNOUNCEMENT_PATH);
+    }
+
+    public UrlMultipleResponses<NotificationView> metaNotificationsLink() {
+        return metaMultipleResponses(NOTIFICATIONS_PATH);
+    }
+
+    public UrlMultipleResponses<PolicyRuleView> metaPolicyRulesLink() {
+        return metaMultipleResponses(POLICY_RULES_PATH);
+    }
+
+    public UrlMultipleResponses<ProjectView> metaProjectsLink() {
+        return metaMultipleResponses(PROJECTS_PATH);
+    }
+
+    public UrlSingleResponse<RegistrationView> metaRegistrationLink() {
+        return metaSingleResponse(REGISTRATION_PATH);
+    }
+
+    public UrlSingleResponse<ReportContentsView> metaReportsLink() {
+        return metaSingleResponse(REPORTS_PATH);
+    }
+
+    public UrlMultipleResponses<RoleView> metaRolesLink() {
+        return metaMultipleResponses(ROLES_PATH);
+    }
+
+    public UrlSingleResponse<ScanBomEntriesView> metaScanLink() {
+        return metaSingleResponse(SCAN_PATH);
+    }
+
+    public UrlSingleResponse<ScanView> metaScanSummariesLink() {
+        return metaSingleResponse(SCAN_SUMMARIES_PATH);
+    }
+
+    public UrlMultipleResponses<UserGroupView> metaUsergroupsLink() {
+        return metaMultipleResponses(USERGROUPS_PATH);
+    }
+
+    public UrlMultipleResponses<UserView> metaUsersLink() {
+        return metaMultipleResponses(USERS_PATH);
+    }
+
+    public UrlMultipleResponses<LicenseReportsReportView> metaVersionsLink() {
+        return metaMultipleResponses(VERSIONS_PATH);
+    }
+
+    public UrlSingleResponse<VulnerabilityView> metaVulnerabilitiesLink() {
+        return metaSingleResponse(VULNERABILITIES_PATH);
+    }
+
+    public UrlMultipleResponses<VulnerabilityReportsReportView> metaVulnerabilityReportsLink() {
+        return metaMultipleResponses(VULNERABILITY_REPORTS_PATH);
+    }
+
     public <T extends BlackDuckResponse> UrlSingleResponse<T> metaSingleResponse(BlackDuckPath<T> blackDuckPath) {
         HttpUrl url = getUrl(blackDuckPath);
         return new UrlSingleResponse<>(url, blackDuckPath.getResponseClass());
