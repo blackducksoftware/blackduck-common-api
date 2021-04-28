@@ -38,7 +38,6 @@ import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
-import com.synopsys.integration.exception.IntegrationException;
 import com.synopsys.integration.rest.HttpUrl;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -79,17 +78,17 @@ public class ApiDiscovery {
         this.blackDuckUrl = blackDuckUrl;
     }
 
-    public <T extends BlackDuckResponse> UrlSingleResponse<T> metaSingleResponse(BlackDuckPath<T> blackDuckPath) throws IntegrationException {
+    public <T extends BlackDuckResponse> UrlSingleResponse<T> metaSingleResponse(BlackDuckPath<T> blackDuckPath) {
         HttpUrl url = getUrl(blackDuckPath);
         return new UrlSingleResponse<>(url, blackDuckPath.getResponseClass());
     }
 
-    public <T extends BlackDuckResponse> UrlMultipleResponses<T> metaMultipleResponses(BlackDuckPath<T> blackDuckPath) throws IntegrationException {
+    public <T extends BlackDuckResponse> UrlMultipleResponses<T> metaMultipleResponses(BlackDuckPath<T> blackDuckPath) {
         HttpUrl url = getUrl(blackDuckPath);
         return new UrlMultipleResponses<>(url, blackDuckPath.getResponseClass());
     }
 
-    public HttpUrl getUrl(BlackDuckPath blackDuckPath) throws IntegrationException {
+    public HttpUrl getUrl(BlackDuckPath blackDuckPath) {
         return blackDuckPath.getFullBlackDuckUrl(blackDuckUrl);
     }
 

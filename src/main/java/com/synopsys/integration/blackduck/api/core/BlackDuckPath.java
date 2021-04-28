@@ -44,8 +44,13 @@ public class BlackDuckPath<T extends BlackDuckResponse> {
         return isMultiple;
     }
 
-    public HttpUrl getFullBlackDuckUrl(HttpUrl blackDuckUrl) throws IntegrationException {
-        return blackDuckUrl.appendRelativeUrl(path);
+    public HttpUrl getFullBlackDuckUrl(HttpUrl blackDuckUrl) {
+        try {
+            return blackDuckUrl.appendRelativeUrl(path);
+        } catch (IntegrationException e) {
+            // ejk - in this case, appending should never cause an issue as all pieces have already been vetted
+            throw new IllegalArgumentException(String.format("The supplied path: %s could not be appended to the Black Duck url: %s", blackDuckUrl.string(), path), e);
+        }
     }
 
     @Override
