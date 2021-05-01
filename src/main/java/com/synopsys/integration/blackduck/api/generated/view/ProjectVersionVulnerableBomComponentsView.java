@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
@@ -111,8 +112,16 @@ public class ProjectVersionVulnerableBomComponentsView extends BlackDuckView {
         return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<ComponentMatchedFilesView>> metaMatchedFilesLinkSafely() {
+        return metaMultipleResponsesSafely(MATCHED_FILES_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<VulnerabilityView> metaVulnerabilitiesLink() {
         return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<VulnerabilityView>> metaVulnerabilitiesLinkSafely() {
+        return metaMultipleResponsesSafely(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

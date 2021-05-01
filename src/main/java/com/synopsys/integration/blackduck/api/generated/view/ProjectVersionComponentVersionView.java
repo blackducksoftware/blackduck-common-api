@@ -10,6 +10,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
@@ -292,6 +293,10 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public UrlMultipleResponses<IssueView> metaComponentIssuesLink() {
         return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<IssueView>> metaComponentIssuesLinkSafely() {
+        return metaMultipleResponsesSafely(COMPONENT_ISSUES_LINK_RESPONSE);
     }
 
 }

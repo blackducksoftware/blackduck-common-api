@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -84,6 +85,10 @@ public class UserGroupView extends BlackDuckView {
 
     public UrlMultipleResponses<UserView> metaUsersLink() {
         return metaMultipleResponses(USERS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<UserView>> metaUsersLinkSafely() {
+        return metaMultipleResponsesSafely(USERS_LINK_RESPONSE);
     }
 
 }

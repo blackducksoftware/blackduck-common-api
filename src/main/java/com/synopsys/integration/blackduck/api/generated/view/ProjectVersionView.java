@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -187,28 +188,56 @@ public class ProjectVersionView extends BlackDuckView {
         return metaMultipleResponses(CODELOCATIONS_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<CodeLocationView>> metaCodelocationsLinkSafely() {
+        return metaMultipleResponsesSafely(CODELOCATIONS_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ProjectVersionComponentView> metaComponentsLink() {
         return metaMultipleResponses(COMPONENTS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ProjectVersionComponentView>> metaComponentsLinkSafely() {
+        return metaMultipleResponsesSafely(COMPONENTS_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<ProjectVersionIssuesView> metaIssuesLink() {
         return metaMultipleResponses(ISSUES_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<ProjectVersionIssuesView>> metaIssuesLinkSafely() {
+        return metaMultipleResponsesSafely(ISSUES_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ReportView> metaLicenseReportsLink() {
         return metaMultipleResponses(LICENSE_REPORTS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ReportView>> metaLicenseReportsLinkSafely() {
+        return metaMultipleResponsesSafely(LICENSE_REPORTS_LINK_RESPONSE);
     }
 
     public UrlSingleResponse<ProjectVersionPolicyStatusView> metaPolicyStatusLink() {
         return metaSingleResponse(POLICY_STATUS_LINK_RESPONSE);
     }
 
+    public Optional<UrlSingleResponse<ProjectVersionPolicyStatusView>> metaPolicyStatusLinkSafely() {
+        return metaSingleResponseSafely(POLICY_STATUS_LINK_RESPONSE);
+    }
+
     public UrlSingleResponse<ProjectView> metaProjectLink() {
         return metaSingleResponse(PROJECT_LINK_RESPONSE);
     }
 
+    public Optional<UrlSingleResponse<ProjectView>> metaProjectLinkSafely() {
+        return metaSingleResponseSafely(PROJECT_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> metaVulnerableComponentsLink() {
         return metaMultipleResponses(VULNERABLE_COMPONENTS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView>> metaVulnerableComponentsLinkSafely() {
+        return metaMultipleResponsesSafely(VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
 }

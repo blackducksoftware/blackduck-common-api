@@ -8,6 +8,7 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportFormatType;

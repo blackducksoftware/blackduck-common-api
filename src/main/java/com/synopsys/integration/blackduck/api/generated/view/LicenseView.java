@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
@@ -164,6 +165,10 @@ public class LicenseView extends BlackDuckView {
 
     public UrlSingleResponse<BlackDuckStringResponse> metaTextLink() {
         return metaSingleResponse(TEXT_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<BlackDuckStringResponse>> metaTextLinkSafely() {
+        return metaSingleResponseSafely(TEXT_LINK_RESPONSE);
     }
 
 }

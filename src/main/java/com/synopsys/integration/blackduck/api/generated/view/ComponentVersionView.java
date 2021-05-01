@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -131,16 +132,32 @@ public class ComponentVersionView extends BlackDuckView {
         return metaSingleResponse(COMPONENT_LINK_RESPONSE);
     }
 
+    public Optional<UrlSingleResponse<ComponentView>> metaComponentLinkSafely() {
+        return metaSingleResponseSafely(COMPONENT_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<OriginView> metaOriginsLink() {
         return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<OriginView>> metaOriginsLinkSafely() {
+        return metaMultipleResponsesSafely(ORIGINS_LINK_RESPONSE);
     }
 
     public UrlSingleResponse<ComponentVersionUpgradeGuidanceView> metaUpgradeGuidanceLink() {
         return metaSingleResponse(UPGRADE_GUIDANCE_LINK_RESPONSE);
     }
 
+    public Optional<UrlSingleResponse<ComponentVersionUpgradeGuidanceView>> metaUpgradeGuidanceLinkSafely() {
+        return metaSingleResponseSafely(UPGRADE_GUIDANCE_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<VulnerabilityView> metaVulnerabilitiesLink() {
         return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<VulnerabilityView>> metaVulnerabilitiesLinkSafely() {
+        return metaMultipleResponsesSafely(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

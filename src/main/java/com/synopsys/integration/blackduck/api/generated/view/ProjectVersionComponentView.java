@@ -10,6 +10,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
@@ -308,16 +309,32 @@ public class ProjectVersionComponentView extends BlackDuckView {
         return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<IssueView>> metaComponentIssuesLinkSafely() {
+        return metaMultipleResponsesSafely(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFilesLink() {
         return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentMatchedFilesView>> metaMatchedFilesLinkSafely() {
+        return metaMultipleResponsesSafely(MATCHED_FILES_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<OriginView> metaOriginsLink() {
         return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<OriginView>> metaOriginsLinkSafely() {
+        return metaMultipleResponsesSafely(ORIGINS_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ComponentPolicyRulesView> metaPolicyRulesLink() {
         return metaMultipleResponses(POLICY_RULES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentPolicyRulesView>> metaPolicyRulesLinkSafely() {
+        return metaMultipleResponsesSafely(POLICY_RULES_LINK_RESPONSE);
     }
 
 }

@@ -10,6 +10,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -190,24 +191,48 @@ public class ProjectView extends BlackDuckView {
         return metaSingleResponse(CANONICAL_VERSION_LINK_RESPONSE);
     }
 
+    public Optional<UrlSingleResponse<ProjectVersionView>> metaCanonicalVersionLinkSafely() {
+        return metaSingleResponseSafely(CANONICAL_VERSION_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ProjectMappingView> metaProjectMappingsLink() {
         return metaMultipleResponses(PROJECT_MAPPINGS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ProjectMappingView>> metaProjectMappingsLinkSafely() {
+        return metaMultipleResponsesSafely(PROJECT_MAPPINGS_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<TagView> metaTagsLink() {
         return metaMultipleResponses(TAGS_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<TagView>> metaTagsLinkSafely() {
+        return metaMultipleResponsesSafely(TAGS_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<AssignedUserGroupView> metaUsergroupsLink() {
         return metaMultipleResponses(USERGROUPS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<AssignedUserGroupView>> metaUsergroupsLinkSafely() {
+        return metaMultipleResponsesSafely(USERGROUPS_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<AssignedUserView> metaUsersLink() {
         return metaMultipleResponses(USERS_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<AssignedUserView>> metaUsersLinkSafely() {
+        return metaMultipleResponsesSafely(USERS_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<ProjectVersionView> metaVersionsLink() {
         return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ProjectVersionView>> metaVersionsLinkSafely() {
+        return metaMultipleResponsesSafely(VERSIONS_LINK_RESPONSE);
     }
 
 }

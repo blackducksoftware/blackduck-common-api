@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
@@ -66,6 +67,10 @@ public class RoleAssignmentView extends BlackDuckView {
 
     public UrlSingleResponse<UserView> metaUserLink() {
         return metaSingleResponse(USER_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<UserView>> metaUserLinkSafely() {
+        return metaSingleResponseSafely(USER_LINK_RESPONSE);
     }
 
 }

@@ -7,6 +7,7 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentCommentUserView;

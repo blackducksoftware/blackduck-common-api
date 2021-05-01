@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -106,16 +107,32 @@ public class UserView extends BlackDuckView {
         return metaMultipleResponses(INHERITED_ROLES_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<RoleAssignmentView>> metaInheritedRolesLinkSafely() {
+        return metaMultipleResponsesSafely(INHERITED_ROLES_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<NotificationUserView> metaNotificationsLink() {
         return metaMultipleResponses(NOTIFICATIONS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<NotificationUserView>> metaNotificationsLinkSafely() {
+        return metaMultipleResponsesSafely(NOTIFICATIONS_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<AssignedProjectView> metaProjectsLink() {
         return metaMultipleResponses(PROJECTS_LINK_RESPONSE);
     }
 
+    public Optional<UrlMultipleResponses<AssignedProjectView>> metaProjectsLinkSafely() {
+        return metaMultipleResponsesSafely(PROJECTS_LINK_RESPONSE);
+    }
+
     public UrlMultipleResponses<RoleAssignmentView> metaRolesLink() {
         return metaMultipleResponses(ROLES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<RoleAssignmentView>> metaRolesLinkSafely() {
+        return metaMultipleResponsesSafely(ROLES_LINK_RESPONSE);
     }
 
 }
