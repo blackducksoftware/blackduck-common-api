@@ -37,6 +37,7 @@ import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
+import com.synopsys.integration.blackduck.api.manual.response.BlackDuckStringResponse;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationView;
 import com.synopsys.integration.rest.HttpUrl;
 
@@ -50,7 +51,9 @@ public class ApiDiscovery {
     public static final BlackDuckPath<CurrentVersionView> CURRENT_VERSION_PATH = new BlackDuckPath("/api/current-version", CurrentVersionView.class, false);
     public static final BlackDuckPath<CustomFieldObjectView> CUSTOM_FIELDS_PATH = new BlackDuckPath("/api/custom-fields", CustomFieldObjectView.class, true);
     public static final BlackDuckPath<CweView> CWES_PATH = new BlackDuckPath("/api/cwes", CweView.class, false);
+    public static final BlackDuckPath<BlackDuckResponse> DEVELOPER_SCANS_PATH = new BlackDuckPath("/api/developer-scans", BlackDuckResponse.class, false);
     public static final BlackDuckPath<HealthChecksLivenessView> HEALTH_CHECKS_PATH = new BlackDuckPath("/api/health-checks", HealthChecksLivenessView.class, false);
+    public static final BlackDuckPath<BlackDuckResponse> INTELLIGENT_PERSISTENCE_SCANS_PATH = new BlackDuckPath("/api/intelligent-persistence-scans", BlackDuckResponse.class, false);
     public static final BlackDuckPath<JobView> JOBS_PATH = new BlackDuckPath("/api/jobs", JobView.class, true);
     public static final BlackDuckPath<ProjectView> JOURNAL_PATH = new BlackDuckPath("/api/journal", ProjectView.class, false);
     public static final BlackDuckPath<LicenseFamilyView> LICENSE_FAMILIES_PATH = new BlackDuckPath("/api/license-families", LicenseFamilyView.class, true);
@@ -66,6 +69,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<RoleView> ROLES_PATH = new BlackDuckPath("/api/roles", RoleView.class, true);
     public static final BlackDuckPath<ScanBomEntriesView> SCAN_PATH = new BlackDuckPath("/api/scan", ScanBomEntriesView.class, false);
     public static final BlackDuckPath<ScanView> SCAN_SUMMARIES_PATH = new BlackDuckPath("/api/scan-summaries", ScanView.class, false);
+    public static final BlackDuckPath<BlackDuckStringResponse> UPLOADS_PATH = new BlackDuckPath("/api/uploads", BlackDuckStringResponse.class, false);
     public static final BlackDuckPath<UserGroupView> USERGROUPS_PATH = new BlackDuckPath("/api/usergroups", UserGroupView.class, true);
     public static final BlackDuckPath<UserView> USERS_PATH = new BlackDuckPath("/api/users", UserView.class, true);
     public static final BlackDuckPath<LicenseReportsReportView> VERSIONS_PATH = new BlackDuckPath("/api/versions", LicenseReportsReportView.class, true);
@@ -110,8 +114,16 @@ public class ApiDiscovery {
         return metaSingleResponse(CWES_PATH);
     }
 
+    public UrlSingleResponse<BlackDuckResponse> metaDeveloperScansLink() {
+        return metaSingleResponse(DEVELOPER_SCANS_PATH);
+    }
+
     public UrlSingleResponse<HealthChecksLivenessView> metaHealthChecksLink() {
         return metaSingleResponse(HEALTH_CHECKS_PATH);
+    }
+
+    public UrlSingleResponse<BlackDuckResponse> metaIntelligentPersistenceScansLink() {
+        return metaSingleResponse(INTELLIGENT_PERSISTENCE_SCANS_PATH);
     }
 
     public UrlMultipleResponses<JobView> metaJobsLink() {
@@ -172,6 +184,10 @@ public class ApiDiscovery {
 
     public UrlSingleResponse<ScanView> metaScanSummariesLink() {
         return metaSingleResponse(SCAN_SUMMARIES_PATH);
+    }
+
+    public UrlSingleResponse<BlackDuckStringResponse> metaUploadsLink() {
+        return metaSingleResponse(UPLOADS_PATH);
     }
 
     public UrlMultipleResponses<UserGroupView> metaUsergroupsLink() {
