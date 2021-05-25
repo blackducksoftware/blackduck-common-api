@@ -1,3 +1,10 @@
+/*
+ * blackduck-common-api
+ *
+ * Copyright (c) 2021 Synopsys, Inc.
+ *
+ * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+ */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.Arrays;
@@ -12,10 +19,9 @@ import com.synopsys.integration.rest.request.Request;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {
-    public static final Set<String> VALUES_TO_REPLACE = new HashSet<>(Arrays.asList(null, Request.DEFAULT_ACCEPT_MIME_TYPE));
-
     public static final String DEFAULT_MEDIA_TYPE = "application/json";
     public static final String UUID_REGEX = "\\b[a-f0-9]{8}\\b-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-\\b[a-f0-9]{12}\\b";
+    public static final Set<String> VALUES_TO_REPLACE = new HashSet<>(Arrays.asList(null, DEFAULT_MEDIA_TYPE));
 
     public static final String VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON = "application/vnd.blackducksoftware.admin-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON = "application/vnd.blackducksoftware.bill-of-materials-6+json";
