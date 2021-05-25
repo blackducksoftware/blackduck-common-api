@@ -7,12 +7,19 @@
  */
 package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+import com.synopsys.integration.rest.HttpUrl;
 
-public class BlackDuckPathMultipleResponses<T extends BlackDuckResponse> extends BlackDuckPathResponse<T> {
-    public BlackDuckPathMultipleResponses(BlackDuckPath blackDuckPath, Class<T> responseClass) {
-        super(blackDuckPath, responseClass);
+public class UrlResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
+    private final HttpUrl url;
+
+    public UrlResponse(HttpUrl url, Class<T> responseClass) {
+        super(responseClass);
+        this.url = url;
+    }
+
+    public HttpUrl getUrl() {
+        return url;
     }
 
 }

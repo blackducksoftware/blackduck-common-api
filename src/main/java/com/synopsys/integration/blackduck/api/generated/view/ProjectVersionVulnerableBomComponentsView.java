@@ -9,10 +9,12 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView;
@@ -20,7 +22,7 @@ import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionVulnerableBomComponentsView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String MATCHED_FILES_LINK = "matched-files";
     public static final String VULNERABILITIES_LINK = "vulnerabilities";
@@ -104,6 +106,22 @@ public class ProjectVersionVulnerableBomComponentsView extends BlackDuckView {
 
     public void setVulnerabilityWithRemediation(ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView vulnerabilityWithRemediation) {
         this.vulnerabilityWithRemediation = vulnerabilityWithRemediation;
+    }
+
+    public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFilesLink() {
+        return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentMatchedFilesView>> metaMatchedFilesLinkSafely() {
+        return metaMultipleResponsesSafely(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilitiesLink() {
+        return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<VulnerabilityView>> metaVulnerabilitiesLinkSafely() {
+        return metaMultipleResponsesSafely(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

@@ -10,10 +10,12 @@ package com.synopsys.integration.blackduck.api.generated.deprecated.view;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
@@ -33,7 +35,7 @@ import com.synopsys.integration.blackduck.api.manual.temporary.component.Version
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
 public class VersionBomComponentView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String COMPONENT_ISSUES_LINK = "component-issues";
     public static final String MATCHED_FILES_LINK = "matched-files";
@@ -303,6 +305,38 @@ public class VersionBomComponentView extends BlackDuckView {
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
         this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public UrlMultipleResponses<IssueView> metaComponentIssuesLink() {
+        return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<IssueView>> metaComponentIssuesLinkSafely() {
+        return metaMultipleResponsesSafely(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentMatchedFilesView> metaMatchedFilesLink() {
+        return metaMultipleResponses(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentMatchedFilesView>> metaMatchedFilesLinkSafely() {
+        return metaMultipleResponsesSafely(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<OriginView> metaOriginsLink() {
+        return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<OriginView>> metaOriginsLinkSafely() {
+        return metaMultipleResponsesSafely(ORIGINS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentPolicyRulesView> metaPolicyRulesLink() {
+        return metaMultipleResponses(POLICY_RULES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentPolicyRulesView>> metaPolicyRulesLinkSafely() {
+        return metaMultipleResponsesSafely(POLICY_RULES_LINK_RESPONSE);
     }
 
 }

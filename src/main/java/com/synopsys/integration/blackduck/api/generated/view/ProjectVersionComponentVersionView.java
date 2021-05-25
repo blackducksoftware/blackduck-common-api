@@ -10,10 +10,12 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionReviewedDetailsView;
@@ -26,7 +28,7 @@ import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionComponentVersionView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String COMPONENT_ISSUES_LINK = "component-issues";
 
@@ -287,6 +289,14 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
         this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public UrlMultipleResponses<IssueView> metaComponentIssuesLink() {
+        return metaMultipleResponses(COMPONENT_ISSUES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<IssueView>> metaComponentIssuesLinkSafely() {
+        return metaMultipleResponsesSafely(COMPONENT_ISSUES_LINK_RESPONSE);
     }
 
 }

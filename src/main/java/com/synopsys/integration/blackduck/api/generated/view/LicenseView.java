@@ -9,10 +9,12 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
-import com.synopsys.integration.blackduck.api.core.response.LinkStringResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseCreatedByView;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseStatusUpdatedByView;
@@ -20,14 +22,15 @@ import com.synopsys.integration.blackduck.api.generated.component.LicenseUpdated
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseSourceType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseStatusType;
+import com.synopsys.integration.blackduck.api.manual.response.BlackDuckStringResponse;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String TEXT_LINK = "text";
 
-    public static final LinkStringResponse TEXT_LINK_RESPONSE = new LinkStringResponse(TEXT_LINK, String.class);
+    public static final LinkSingleResponse<BlackDuckStringResponse> TEXT_LINK_RESPONSE = new LinkSingleResponse<BlackDuckStringResponse>(TEXT_LINK, BlackDuckStringResponse.class);
 
     static {
         links.put(TEXT_LINK, TEXT_LINK_RESPONSE);
@@ -158,6 +161,14 @@ public class LicenseView extends BlackDuckView {
 
     public void setUpdatedBy(LicenseUpdatedByView updatedBy) {
         this.updatedBy = updatedBy;
+    }
+
+    public UrlSingleResponse<BlackDuckStringResponse> metaTextLink() {
+        return metaSingleResponse(TEXT_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<BlackDuckStringResponse>> metaTextLinkSafely() {
+        return metaSingleResponseSafely(TEXT_LINK_RESPONSE);
     }
 
 }

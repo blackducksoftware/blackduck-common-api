@@ -8,8 +8,9 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ScanStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ScanType;
 

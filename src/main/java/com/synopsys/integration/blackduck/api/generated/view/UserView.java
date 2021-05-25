@@ -9,16 +9,18 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.response.AssignedProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleAssignmentView;
 import com.synopsys.integration.blackduck.api.manual.view.NotificationUserView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UserView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String INHERITED_ROLES_LINK = "inherited-roles";
     public static final String NOTIFICATIONS_LINK = "notifications";
@@ -99,6 +101,38 @@ public class UserView extends BlackDuckView {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public UrlMultipleResponses<RoleAssignmentView> metaInheritedRolesLink() {
+        return metaMultipleResponses(INHERITED_ROLES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<RoleAssignmentView>> metaInheritedRolesLinkSafely() {
+        return metaMultipleResponsesSafely(INHERITED_ROLES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<NotificationUserView> metaNotificationsLink() {
+        return metaMultipleResponses(NOTIFICATIONS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<NotificationUserView>> metaNotificationsLinkSafely() {
+        return metaMultipleResponsesSafely(NOTIFICATIONS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<AssignedProjectView> metaProjectsLink() {
+        return metaMultipleResponses(PROJECTS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<AssignedProjectView>> metaProjectsLinkSafely() {
+        return metaMultipleResponsesSafely(PROJECTS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<RoleAssignmentView> metaRolesLink() {
+        return metaMultipleResponses(ROLES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<RoleAssignmentView>> metaRolesLinkSafely() {
+        return metaMultipleResponsesSafely(ROLES_LINK_RESPONSE);
     }
 
 }

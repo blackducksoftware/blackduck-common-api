@@ -7,8 +7,9 @@
  */
 package com.synopsys.integration.blackduck.api.generated.deprecated.view;
 
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
 
 // PolicyStatusView from the previous API is now called ComponentPolicyStatusView

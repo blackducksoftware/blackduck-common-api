@@ -9,10 +9,12 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentLogoView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentApprovalStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
@@ -23,7 +25,7 @@ import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String CUSTOM_FIELDS_LINK = "custom-fields";
     public static final String TAGS_LINK = "tags";
@@ -131,6 +133,38 @@ public class ComponentView extends BlackDuckView {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public UrlMultipleResponses<CustomFieldView> metaCustomFieldsLink() {
+        return metaMultipleResponses(CUSTOM_FIELDS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<CustomFieldView>> metaCustomFieldsLinkSafely() {
+        return metaMultipleResponsesSafely(CUSTOM_FIELDS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<TagView> metaTagsLink() {
+        return metaMultipleResponses(TAGS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<TagView>> metaTagsLinkSafely() {
+        return metaMultipleResponsesSafely(TAGS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentVersionView> metaVersionsLink() {
+        return metaMultipleResponses(VERSIONS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentVersionView>> metaVersionsLinkSafely() {
+        return metaMultipleResponsesSafely(VERSIONS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<VulnerabilityView> metaVulnerabilitiesLink() {
+        return metaMultipleResponses(VULNERABILITIES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<VulnerabilityView>> metaVulnerabilitiesLinkSafely() {
+        return metaMultipleResponsesSafely(VULNERABILITIES_LINK_RESPONSE);
     }
 
 }

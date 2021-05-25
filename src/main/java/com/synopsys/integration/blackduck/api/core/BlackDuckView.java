@@ -7,6 +7,10 @@
  */
 package com.synopsys.integration.blackduck.api.core;
 
+import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.rest.HttpUrl;
 
 import java.util.Collections;
@@ -39,9 +43,29 @@ public class BlackDuckView extends BlackDuckResponse {
                 .anyMatch(linkKey::equals);
     }
 
+    public <T extends BlackDuckResponse> UrlSingleResponse<T> metaSingleResponse(LinkSingleResponse<T> linkSingleResponse) {
+        HttpUrl url = getFirstLink(linkSingleResponse.getLink());
+        return new UrlSingleResponse<>(url, linkSingleResponse.getResponseClass());
+    }
+
+    public <T extends BlackDuckResponse> UrlMultipleResponses<T> metaMultipleResponses(LinkMultipleResponses<T> linkMultipleResponses) {
+        HttpUrl url = getFirstLink(linkMultipleResponses.getLink());
+        return new UrlMultipleResponses<>(url, linkMultipleResponses.getResponseClass());
+    }
+
     public HttpUrl getFirstLink(String linkKey) {
         return getFirstLinkSafely(linkKey)
-                .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
+                   .orElseThrow(() -> new NoSuchElementException(String.format("The link key %s was not found.", linkKey)));
+    }
+
+    public <T extends BlackDuckResponse> Optional<UrlSingleResponse<T>> metaSingleResponseSafely(LinkSingleResponse<T> linkSingleResponse) {
+        return getFirstLinkSafely(linkSingleResponse.getLink())
+            .map(url -> new UrlSingleResponse<>(url, linkSingleResponse.getResponseClass()));
+    }
+
+    public <T extends BlackDuckResponse> Optional<UrlMultipleResponses<T>> metaMultipleResponsesSafely(LinkMultipleResponses<T> linkMultipleResponses) {
+        return getFirstLinkSafely(linkMultipleResponses.getLink())
+                   .map(url -> new UrlMultipleResponses<>(url, linkMultipleResponses.getResponseClass()));
     }
 
     public Optional<HttpUrl> getFirstLinkSafely(String linkKey) {

@@ -10,13 +10,13 @@ package com.synopsys.integration.blackduck.api.manual.view;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.synopsys.integration.blackduck.api.manual.enumeration.NotificationStateRequestStateType;
 
 public class NotificationUserView<T extends NotificationContentComponent> extends NotificationView<T> {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String NOTIFICATIONS_LINK = "notifications";
 

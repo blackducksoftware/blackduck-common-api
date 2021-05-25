@@ -8,17 +8,11 @@
 package com.synopsys.integration.blackduck.api.core.response;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+import com.synopsys.integration.rest.HttpUrl;
 
-public abstract class LinkBlackDuckResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
-    private final String link;
-
-    public LinkBlackDuckResponse(String link, Class<T> responseClass) {
-        super(responseClass);
-        this.link = link;
-    }
-
-    public String getLink() {
-        return link;
+public class UrlSingleResponse<T extends BlackDuckResponse> extends UrlResponse<T> {
+    public UrlSingleResponse(HttpUrl url, Class<T> responseClass) {
+        super(url, responseClass);
     }
 
 }

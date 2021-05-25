@@ -11,8 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
 import com.synopsys.integration.blackduck.api.generated.component.ComponentVersionLicenseLicensesLicenseFamilySummaryView;
 import com.synopsys.integration.blackduck.api.generated.component.LicenseFamilyUpdatedByView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseResponsibilityType;
@@ -20,7 +20,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseTermS
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseTermView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String LICENSE_TERM_LICENSES_LINK = "license-term-licenses";
 

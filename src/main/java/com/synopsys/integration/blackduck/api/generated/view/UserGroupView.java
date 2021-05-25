@@ -9,14 +9,16 @@ package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class UserGroupView extends BlackDuckView {
-    public static final Map<String, LinkResponse> links = new HashMap<>();
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
     public static final String USERS_LINK = "users";
 
@@ -79,6 +81,14 @@ public class UserGroupView extends BlackDuckView {
 
     public void setUserGroup(String userGroup) {
         this.userGroup = userGroup;
+    }
+
+    public UrlMultipleResponses<UserView> metaUsersLink() {
+        return metaMultipleResponses(USERS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<UserView>> metaUsersLinkSafely() {
+        return metaMultipleResponsesSafely(USERS_LINK_RESPONSE);
     }
 
 }

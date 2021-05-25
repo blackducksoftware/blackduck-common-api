@@ -7,12 +7,12 @@
  */
 package com.synopsys.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
+import com.synopsys.integration.rest.HttpUrl;
 
-public class BlackDuckPathSingleResponse<T extends BlackDuckResponse> extends BlackDuckPathResponse<T> {
-    public BlackDuckPathSingleResponse(BlackDuckPath blackDuckPath, Class<T> responseClass) {
-        super(blackDuckPath, responseClass);
+public class UrlMultipleResponses<T extends BlackDuckResponse> extends UrlResponse<T> {
+    public UrlMultipleResponses(HttpUrl url, Class<T> responseClass) {
+        super(url, responseClass);
     }
 
 }

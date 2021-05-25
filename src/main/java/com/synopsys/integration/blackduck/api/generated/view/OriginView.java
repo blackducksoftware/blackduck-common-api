@@ -7,9 +7,10 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.OriginLicenseView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.OriginSourceType;
 

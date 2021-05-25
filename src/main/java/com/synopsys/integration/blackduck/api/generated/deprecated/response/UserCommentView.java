@@ -7,9 +7,10 @@
  */
 package com.synopsys.integration.blackduck.api.generated.deprecated.response;
 
+import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.blackduck.api.core.response.LinkResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.generated.component.CommentUserView;
 
 // UserCommentView from the previous API is now called CommentView
