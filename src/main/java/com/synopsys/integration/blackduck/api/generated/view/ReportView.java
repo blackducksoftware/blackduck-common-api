@@ -1,22 +1,30 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportFormatType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportType;
+import com.synopsys.integration.blackduck.api.manual.response.BlackDuckStringResponse;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ReportView extends BlackDuckView {
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
+
+    public static final String CONTENT_LINK = "content";
+
+    public static final LinkSingleResponse<BlackDuckStringResponse> CONTENT_LINK_RESPONSE = new LinkSingleResponse<BlackDuckStringResponse>(CONTENT_LINK, BlackDuckStringResponse.class);
+
+    static {
+        links.put(CONTENT_LINK, CONTENT_LINK_RESPONSE);
+    }
+
     private java.util.Date createdAt;
     private String createdBy;
     private String createdByUser;
@@ -124,6 +132,14 @@ public class ReportView extends BlackDuckView {
 
     public void setUpdatedAt(java.util.Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public UrlSingleResponse<BlackDuckStringResponse> metaContentLink() {
+        return metaSingleResponse(CONTENT_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<BlackDuckStringResponse>> metaContentLinkSafely() {
+        return metaSingleResponseSafely(CONTENT_LINK_RESPONSE);
     }
 
 }

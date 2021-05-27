@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -26,6 +19,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulne
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportView;
 import com.synopsys.integration.blackduck.api.manual.temporary.enumeration.ProjectVersionPhaseType;
+import com.synopsys.integration.blackduck.api.manual.temporary.response.VersionRiskProfileView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionView extends BlackDuckView {
@@ -37,6 +31,8 @@ public class ProjectVersionView extends BlackDuckView {
     public static final String LICENSE_REPORTS_LINK = "licenseReports";
     public static final String POLICY_STATUS_LINK = "policy-status";
     public static final String PROJECT_LINK = "project";
+    public static final String RISK_PROFILE_LINK = "riskProfile";
+    public static final String VERSION_REPORT_LINK = "versionReport";
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
 
     public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
@@ -45,6 +41,8 @@ public class ProjectVersionView extends BlackDuckView {
     public static final LinkMultipleResponses<ReportView> LICENSE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSE_REPORTS_LINK, ReportView.class);
     public static final LinkSingleResponse<ProjectVersionPolicyStatusView> POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionPolicyStatusView>(POLICY_STATUS_LINK, ProjectVersionPolicyStatusView.class);
     public static final LinkSingleResponse<ProjectView> PROJECT_LINK_RESPONSE = new LinkSingleResponse<ProjectView>(PROJECT_LINK, ProjectView.class);
+    public static final LinkSingleResponse<VersionRiskProfileView> RISK_PROFILE_LINK_RESPONSE = new LinkSingleResponse<VersionRiskProfileView>(RISK_PROFILE_LINK, VersionRiskProfileView.class);
+    public static final LinkMultipleResponses<ReportView> VERSION_REPORT_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(VERSION_REPORT_LINK, ReportView.class);
     public static final LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView> VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView>(VULNERABLE_COMPONENTS_LINK, ProjectVersionVulnerableBomComponentsView.class);
 
     static {
@@ -54,6 +52,8 @@ public class ProjectVersionView extends BlackDuckView {
         links.put(LICENSE_REPORTS_LINK, LICENSE_REPORTS_LINK_RESPONSE);
         links.put(POLICY_STATUS_LINK, POLICY_STATUS_LINK_RESPONSE);
         links.put(PROJECT_LINK, PROJECT_LINK_RESPONSE);
+        links.put(RISK_PROFILE_LINK, RISK_PROFILE_LINK_RESPONSE);
+        links.put(VERSION_REPORT_LINK, VERSION_REPORT_LINK_RESPONSE);
         links.put(VULNERABLE_COMPONENTS_LINK, VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
@@ -230,6 +230,22 @@ public class ProjectVersionView extends BlackDuckView {
 
     public Optional<UrlSingleResponse<ProjectView>> metaProjectLinkSafely() {
         return metaSingleResponseSafely(PROJECT_LINK_RESPONSE);
+    }
+
+    public UrlSingleResponse<VersionRiskProfileView> metaRiskProfileLink() {
+        return metaSingleResponse(RISK_PROFILE_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<VersionRiskProfileView>> metaRiskProfileLinkSafely() {
+        return metaSingleResponseSafely(RISK_PROFILE_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ReportView> metaVersionReportLink() {
+        return metaMultipleResponses(VERSION_REPORT_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ReportView>> metaVersionReportLinkSafely() {
+        return metaMultipleResponsesSafely(VERSION_REPORT_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<ProjectVersionVulnerableBomComponentsView> metaVulnerableComponentsLink() {

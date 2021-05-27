@@ -1,19 +1,27 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
+import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.synopsys.integration.blackduck.api.manual.response.BlackDuckStringResponse;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CodeLocationView extends BlackDuckView {
+    public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
+
+    public static final String SCANS_LINK = "scans";
+
+    public static final LinkSingleResponse<BlackDuckStringResponse> SCANS_LINK_RESPONSE = new LinkSingleResponse<BlackDuckStringResponse>(SCANS_LINK, BlackDuckStringResponse.class);
+
+    static {
+        links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
+    }
+
     private java.util.Date createdAt;
     private String mappedProjectVersion;
     private String name;
@@ -67,6 +75,14 @@ public class CodeLocationView extends BlackDuckView {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public UrlSingleResponse<BlackDuckStringResponse> metaScansLink() {
+        return metaSingleResponse(SCANS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlSingleResponse<BlackDuckStringResponse>> metaScansLinkSafely() {
+        return metaSingleResponseSafely(SCANS_LINK_RESPONSE);
     }
 
 }
