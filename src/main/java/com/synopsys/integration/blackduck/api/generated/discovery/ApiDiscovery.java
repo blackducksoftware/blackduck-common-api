@@ -66,7 +66,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<ManageAnnouncementBannerView> MANAGE_ANNOUNCEMENT_PATH = new BlackDuckPath("/api/manage-announcement", ManageAnnouncementBannerView.class, false);
     public static final BlackDuckPath<NotificationView> NOTIFICATIONS_PATH = new BlackDuckPath("/api/notifications", NotificationView.class, true);
     public static final BlackDuckPath<PolicyRuleView> POLICY_RULES_PATH = new BlackDuckPath("/api/policy-rules", PolicyRuleView.class, true);
-    public static final BlackDuckPath<ProjectView> PROJECTS_PATH = new BlackDuckPath("/api/projects", ProjectView.class, false);
+    public static final BlackDuckPath<ProjectView> PROJECTS_PATH = new BlackDuckPath("/api/projects", ProjectView.class, true);
     public static final BlackDuckPath<RegistrationView> REGISTRATION_PATH = new BlackDuckPath("/api/registration", RegistrationView.class, false);
     public static final BlackDuckPath<ReportContentsView> REPORTS_PATH = new BlackDuckPath("/api/reports", ReportContentsView.class, false);
     public static final BlackDuckPath<RoleView> ROLES_PATH = new BlackDuckPath("/api/roles", RoleView.class, true);
