@@ -12,6 +12,7 @@ import com.synopsys.integration.util.EnumUtils;
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public enum MatchType {
     BINARY,
+	DIRECT_DEPENDENCY_BINARY,
 	FILE_DEPENDENCY,
 	FILE_DEPENDENCY_DIRECT,
 	FILE_DEPENDENCY_TRANSITIVE,
@@ -22,7 +23,8 @@ public enum MatchType {
 	MANUAL_BOM_COMPONENT,
 	MANUAL_BOM_FILE,
 	PARTIAL_FILE,
-	SNIPPET;
+	SNIPPET,
+	TRANSITIVE_DEPENDENCY_BINARY;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);

@@ -62,8 +62,6 @@ public class ProjectVersionComponentView extends BlackDuckView {
     private String componentName;
     private String componentPurpose;
     private ProjectVersionComponentType componentType;
-    private String componentVersion;
-    private String componentVersionName;
     private Boolean ignored;
     private Boolean inAttributionReport;
     private RiskProfileView licenseRiskProfile;
@@ -159,22 +157,6 @@ public class ProjectVersionComponentView extends BlackDuckView {
 
     public void setComponentType(ProjectVersionComponentType componentType) {
         this.componentType = componentType;
-    }
-
-    public String getComponentVersion() {
-        return componentVersion;
-    }
-
-    public void setComponentVersion(String componentVersion) {
-        this.componentVersion = componentVersion;
-    }
-
-    public String getComponentVersionName() {
-        return componentVersionName;
-    }
-
-    public void setComponentVersionName(String componentVersionName) {
-        this.componentVersionName = componentVersionName;
     }
 
     public Boolean getIgnored() {

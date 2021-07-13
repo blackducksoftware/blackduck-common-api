@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.deprecated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseType;
 
 // VersionBomLicenseView from the previous API is now called ProjectVersionComponentLicensesView
@@ -19,6 +20,7 @@ public class VersionBomLicenseView extends BlackDuckComponent {
     private String licenseDisplay;
     private LicenseType licenseType;
     private java.util.List<ProjectVersionComponentLicensesView> licenses;
+    private LicenseOwnershipType ownership;
     private String spdxId;
 
     public String getLicense() {
@@ -51,6 +53,14 @@ public class VersionBomLicenseView extends BlackDuckComponent {
 
     public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
         this.licenses = licenses;
+    }
+
+    public LicenseOwnershipType getOwnership() {
+        return ownership;
+    }
+
+    public void setOwnership(LicenseOwnershipType ownership) {
+        this.ownership = ownership;
     }
 
     public String getSpdxId() {

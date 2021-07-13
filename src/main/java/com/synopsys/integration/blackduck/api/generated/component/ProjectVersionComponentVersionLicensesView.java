@@ -8,6 +8,7 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -16,6 +17,7 @@ public class ProjectVersionComponentVersionLicensesView extends BlackDuckCompone
     private String licenseDisplay;
     private LicenseType licenseType;
     private java.util.List<String> licenses;
+    private LicenseOwnershipType ownership;
     private String spdxId;
 
     public String getLicense() {
@@ -48,6 +50,14 @@ public class ProjectVersionComponentVersionLicensesView extends BlackDuckCompone
 
     public void setLicenses(java.util.List<String> licenses) {
         this.licenses = licenses;
+    }
+
+    public LicenseOwnershipType getOwnership() {
+        return ownership;
+    }
+
+    public void setOwnership(LicenseOwnershipType ownership) {
+        this.ownership = ownership;
     }
 
     public String getSpdxId() {

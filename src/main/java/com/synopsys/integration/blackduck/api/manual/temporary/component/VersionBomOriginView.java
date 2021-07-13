@@ -8,6 +8,7 @@
 package com.synopsys.integration.blackduck.api.manual.temporary.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.ResourceMetadata;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VersionBomOriginView extends BlackDuckComponent {
@@ -16,6 +17,7 @@ public class VersionBomOriginView extends BlackDuckComponent {
     private Boolean externalNamespaceDistribution;
     private String name;
     private String origin;
+    private ResourceMetadata _meta;
 
     public String getExternalId() {
         return externalId;
@@ -55,6 +57,14 @@ public class VersionBomOriginView extends BlackDuckComponent {
 
     public void setOrigin(String origin) {
         this.origin = origin;
+    }
+
+    public ResourceMetadata getMeta() {
+        return _meta;
+    }
+
+    public void setMeta(ResourceMetadata meta) {
+        _meta = meta;
     }
 
 }

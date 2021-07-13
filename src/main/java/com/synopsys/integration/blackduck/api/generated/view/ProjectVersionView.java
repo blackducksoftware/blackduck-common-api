@@ -71,8 +71,10 @@ public class ProjectVersionView extends BlackDuckView {
     private ProjectVersionLicenseView license;
     private String nickname;
     private ProjectVersionPhaseType phase;
+    private Boolean protectedFromDeletion;
     private String releaseComments;
     private java.util.Date releasedOn;
+    private java.util.Date scheduledDeletionDate;
     private java.util.Date settingUpdatedAt;
     private String settingUpdatedBy;
     private String settingUpdatedByUser;
@@ -135,6 +137,14 @@ public class ProjectVersionView extends BlackDuckView {
         this.phase = phase;
     }
 
+    public Boolean getProtectedFromDeletion() {
+        return protectedFromDeletion;
+    }
+
+    public void setProtectedFromDeletion(Boolean protectedFromDeletion) {
+        this.protectedFromDeletion = protectedFromDeletion;
+    }
+
     public String getReleaseComments() {
         return releaseComments;
     }
@@ -149,6 +159,14 @@ public class ProjectVersionView extends BlackDuckView {
 
     public void setReleasedOn(java.util.Date releasedOn) {
         this.releasedOn = releasedOn;
+    }
+
+    public java.util.Date getScheduledDeletionDate() {
+        return scheduledDeletionDate;
+    }
+
+    public void setScheduledDeletionDate(java.util.Date scheduledDeletionDate) {
+        this.scheduledDeletionDate = scheduledDeletionDate;
     }
 
     public java.util.Date getSettingUpdatedAt() {

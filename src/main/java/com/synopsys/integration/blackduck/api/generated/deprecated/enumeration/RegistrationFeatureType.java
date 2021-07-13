@@ -19,6 +19,8 @@ public enum RegistrationFeatureType {
 	CRYPTO_ALGORITHMS,
 	CUSTOM_SIGNATURES,
 	DEEP_VULNERABILITY_INTELLIGENCE,
+	DEPENDENCY_SCANNING,
+	ENHANCED_VULNERABILITY_ANALYSIS,
 	ISCAN,
 	NOTIFICATIONS,
 	OPSSIGHT,
@@ -28,8 +30,8 @@ public enum RegistrationFeatureType {
 	PROJECT_MANAGEMENT,
 	REST_API,
 	RISK_MANAGEMENT,
-	SNIPPET,
-	THREAT_CHECKER;
+	SIGNATURE_SCANNING,
+	SNIPPET;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);
