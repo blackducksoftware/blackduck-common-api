@@ -18,7 +18,7 @@ import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses
 import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionComponentVersionView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionIssuesView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionLicenseView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionPolicyStatusView;
@@ -43,7 +43,7 @@ public class ProjectVersionView extends BlackDuckView {
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
 
     public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
-    public static final LinkMultipleResponses<ProjectVersionComponentView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionComponentView>(COMPONENTS_LINK, ProjectVersionComponentView.class);
+    public static final LinkMultipleResponses<ProjectVersionComponentVersionView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionComponentVersionView>(COMPONENTS_LINK, ProjectVersionComponentVersionView.class);
     public static final LinkMultipleResponses<ProjectVersionIssuesView> ISSUES_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionIssuesView>(ISSUES_LINK, ProjectVersionIssuesView.class);
     public static final LinkMultipleResponses<ReportView> LICENSE_REPORTS_LINK_RESPONSE = new LinkMultipleResponses<ReportView>(LICENSE_REPORTS_LINK, ReportView.class);
     public static final LinkSingleResponse<ProjectVersionPolicyStatusView> POLICY_STATUS_LINK_RESPONSE = new LinkSingleResponse<ProjectVersionPolicyStatusView>(POLICY_STATUS_LINK, ProjectVersionPolicyStatusView.class);
@@ -71,8 +71,10 @@ public class ProjectVersionView extends BlackDuckView {
     private ProjectVersionLicenseView license;
     private String nickname;
     private ProjectVersionPhaseType phase;
+    private Boolean protectedFromDeletion;
     private String releaseComments;
     private java.util.Date releasedOn;
+    private java.util.Date scheduledDeletionDate;
     private java.util.Date settingUpdatedAt;
     private String settingUpdatedBy;
     private String settingUpdatedByUser;
@@ -135,6 +137,14 @@ public class ProjectVersionView extends BlackDuckView {
         this.phase = phase;
     }
 
+    public Boolean getProtectedFromDeletion() {
+        return protectedFromDeletion;
+    }
+
+    public void setProtectedFromDeletion(Boolean protectedFromDeletion) {
+        this.protectedFromDeletion = protectedFromDeletion;
+    }
+
     public String getReleaseComments() {
         return releaseComments;
     }
@@ -149,6 +159,14 @@ public class ProjectVersionView extends BlackDuckView {
 
     public void setReleasedOn(java.util.Date releasedOn) {
         this.releasedOn = releasedOn;
+    }
+
+    public java.util.Date getScheduledDeletionDate() {
+        return scheduledDeletionDate;
+    }
+
+    public void setScheduledDeletionDate(java.util.Date scheduledDeletionDate) {
+        this.scheduledDeletionDate = scheduledDeletionDate;
     }
 
     public java.util.Date getSettingUpdatedAt() {
@@ -199,11 +217,11 @@ public class ProjectVersionView extends BlackDuckView {
         return metaMultipleResponsesSafely(CODELOCATIONS_LINK_RESPONSE);
     }
 
-    public UrlMultipleResponses<ProjectVersionComponentView> metaComponentsLink() {
+    public UrlMultipleResponses<ProjectVersionComponentVersionView> metaComponentsLink() {
         return metaMultipleResponses(COMPONENTS_LINK_RESPONSE);
     }
 
-    public Optional<UrlMultipleResponses<ProjectVersionComponentView>> metaComponentsLinkSafely() {
+    public Optional<UrlMultipleResponses<ProjectVersionComponentVersionView>> metaComponentsLinkSafely() {
         return metaMultipleResponsesSafely(COMPONENTS_LINK_RESPONSE);
     }
 

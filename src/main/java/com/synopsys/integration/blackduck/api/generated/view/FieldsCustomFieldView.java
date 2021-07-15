@@ -21,6 +21,7 @@ public class FieldsCustomFieldView extends BlackDuckView {
     private String description;
     private String label;
     private BigDecimal position;
+    private Boolean required;
     private CustomFieldType type;
     private java.util.Date updatedAt;
     private Object updatedBy;
@@ -71,6 +72,14 @@ public class FieldsCustomFieldView extends BlackDuckView {
 
     public void setPosition(BigDecimal position) {
         this.position = position;
+    }
+
+    public Boolean getRequired() {
+        return required;
+    }
+
+    public void setRequired(Boolean required) {
+        this.required = required;
     }
 
     public CustomFieldType getType() {

@@ -14,6 +14,7 @@ public enum ProjectCloneCategoriesType {
     COMPONENT_DATA,
 	CUSTOM_FIELD_DATA,
 	LICENSE_TERM_FULFILLMENT,
+	VERSION_SETTINGS,
 	VULN_DATA;
 
     public String prettyPrint() {

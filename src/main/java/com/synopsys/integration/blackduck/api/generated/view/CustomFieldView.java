@@ -19,6 +19,7 @@ public class CustomFieldView extends BlackDuckView {
     private String description;
     private String label;
     private BigDecimal position;
+    private Boolean required;
     private CustomFieldType type;
     private java.util.List<String> values;
 
@@ -52,6 +53,14 @@ public class CustomFieldView extends BlackDuckView {
 
     public void setPosition(BigDecimal position) {
         this.position = position;
+    }
+
+    public Boolean getRequired() {
+        return required;
+    }
+
+    public void setRequired(Boolean required) {
+        this.required = required;
     }
 
     public CustomFieldType getType() {

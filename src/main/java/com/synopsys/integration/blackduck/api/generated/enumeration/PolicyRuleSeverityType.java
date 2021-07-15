@@ -15,6 +15,7 @@ public enum PolicyRuleSeverityType {
 	CRITICAL,
 	MAJOR,
 	MINOR,
+	OK,
 	TRIVIAL,
 	UNSPECIFIED;
 

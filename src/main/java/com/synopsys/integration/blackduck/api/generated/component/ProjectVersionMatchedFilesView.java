@@ -12,9 +12,18 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionMatchedFilesView extends BlackDuckComponent {
+    private String declaredComponentPath;
     private java.util.List<ProjectVersionMatchedFilesItemsMatchesView> matches;
     private String sha1;
     private String uri;
+
+    public String getDeclaredComponentPath() {
+        return declaredComponentPath;
+    }
+
+    public void setDeclaredComponentPath(String declaredComponentPath) {
+        this.declaredComponentPath = declaredComponentPath;
+    }
 
     public java.util.List<ProjectVersionMatchedFilesItemsMatchesView> getMatches() {
         return matches;

@@ -19,6 +19,8 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.http.entity.ContentType;
+
 /**
  * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Black Duck endpoints.
  */
@@ -113,7 +115,7 @@ public class BlackDuckView extends BlackDuckResponse {
     }
 
     public String getMediaType() {
-        return "application/json";
+        return ContentType.APPLICATION_JSON.getMimeType();
     }
 
 }

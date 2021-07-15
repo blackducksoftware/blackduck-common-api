@@ -8,14 +8,18 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.component.OriginLicenseLicensesLicenseFamilySummaryView;
+import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ScanBomEntriesItemsLicenseLicensesView extends BlackDuckComponent {
+public class OriginLicenseLicensesView extends BlackDuckComponent {
     private String license;
     private String licenseDisplay;
+    private OriginLicenseLicensesLicenseFamilySummaryView licenseFamilySummary;
     private java.util.List<String> licenses;
     private String name;
+    private LicenseOwnershipType ownership;
     private LicenseType type;
 
     public String getLicense() {
@@ -34,6 +38,14 @@ public class ScanBomEntriesItemsLicenseLicensesView extends BlackDuckComponent {
         this.licenseDisplay = licenseDisplay;
     }
 
+    public OriginLicenseLicensesLicenseFamilySummaryView getLicenseFamilySummary() {
+        return licenseFamilySummary;
+    }
+
+    public void setLicenseFamilySummary(OriginLicenseLicensesLicenseFamilySummaryView licenseFamilySummary) {
+        this.licenseFamilySummary = licenseFamilySummary;
+    }
+
     public java.util.List<String> getLicenses() {
         return licenses;
     }
@@ -48,6 +60,14 @@ public class ScanBomEntriesItemsLicenseLicensesView extends BlackDuckComponent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LicenseOwnershipType getOwnership() {
+        return ownership;
+    }
+
+    public void setOwnership(LicenseOwnershipType ownership) {
+        this.ownership = ownership;
     }
 
     public LicenseType getType() {

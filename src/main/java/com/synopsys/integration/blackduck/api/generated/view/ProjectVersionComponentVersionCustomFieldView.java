@@ -19,6 +19,8 @@ public class ProjectVersionComponentVersionCustomFieldView extends BlackDuckView
     private String description;
     private String label;
     private BigDecimal position;
+    private Boolean recommended;
+    private Boolean required;
     private CustomFieldType type;
     private java.util.List<String> values;
 
@@ -52,6 +54,22 @@ public class ProjectVersionComponentVersionCustomFieldView extends BlackDuckView
 
     public void setPosition(BigDecimal position) {
         this.position = position;
+    }
+
+    public Boolean getRecommended() {
+        return recommended;
+    }
+
+    public void setRecommended(Boolean recommended) {
+        this.recommended = recommended;
+    }
+
+    public Boolean getRequired() {
+        return required;
+    }
+
+    public void setRequired(Boolean required) {
+        this.required = required;
     }
 
     public CustomFieldType getType() {

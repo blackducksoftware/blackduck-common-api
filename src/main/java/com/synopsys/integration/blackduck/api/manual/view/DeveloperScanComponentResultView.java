@@ -13,6 +13,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
 public class DeveloperScanComponentResultView extends BlackDuckView {
     public static final String CURRENT_MEDIA_TYPE = "application/vnd.blackducksoftware.scan-4+json";
+
     private String componentName;
     private String versionName;
     private String componentIdentifier;

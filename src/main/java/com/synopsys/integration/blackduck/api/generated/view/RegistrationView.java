@@ -22,6 +22,8 @@ public class RegistrationView extends BlackDuckView {
     private java.util.List<RegistrationFeaturesView> features;
     private java.util.List<RegistrationMessagesView> messages;
     private String registrationId;
+    private String serviceStatus;
+    private java.util.Date startDate;
     private RegistrationStateType state;
 
     public java.util.List<RegistrationAttributesView> getAttributes() {
@@ -70,6 +72,22 @@ public class RegistrationView extends BlackDuckView {
 
     public void setRegistrationId(String registrationId) {
         this.registrationId = registrationId;
+    }
+
+    public String getServiceStatus() {
+        return serviceStatus;
+    }
+
+    public void setServiceStatus(String serviceStatus) {
+        this.serviceStatus = serviceStatus;
+    }
+
+    public java.util.Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(java.util.Date startDate) {
+        this.startDate = startDate;
     }
 
     public RegistrationStateType getState() {

@@ -17,9 +17,11 @@ import com.synopsys.integration.blackduck.api.generated.response.CweView;
 import com.synopsys.integration.blackduck.api.generated.response.HealthChecksLivenessView;
 import com.synopsys.integration.blackduck.api.generated.view.AnnouncementBannerView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
+import com.synopsys.integration.blackduck.api.generated.view.ComponentMigrationsView;
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
 import com.synopsys.integration.blackduck.api.generated.view.GraphComponentImportEventsView;
 import com.synopsys.integration.blackduck.api.generated.view.JobView;
+import com.synopsys.integration.blackduck.api.generated.view.LicenseDashboardView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseReportsReportView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermCategoryView;
@@ -31,7 +33,6 @@ import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
-import com.synopsys.integration.blackduck.api.generated.view.ScanBomEntriesView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
@@ -46,6 +47,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<AnnouncementBannerView> ANNOUNCEMENT_PATH = new BlackDuckPath("/api/announcement", AnnouncementBannerView.class, false);
     public static final BlackDuckPath<GraphComponentImportEventsView> BOM_IMPORT_PATH = new BlackDuckPath("/api/bom-import", GraphComponentImportEventsView.class, false);
     public static final BlackDuckPath<CodeLocationView> CODELOCATIONS_PATH = new BlackDuckPath("/api/codelocations", CodeLocationView.class, true);
+    public static final BlackDuckPath<ComponentMigrationsView> COMPONENT_MIGRATIONS_PATH = new BlackDuckPath("/api/component-migrations", ComponentMigrationsView.class, false);
     public static final BlackDuckPath<ComponentsView> COMPONENTS_PATH = new BlackDuckPath("/api/components", ComponentsView.class, true);
     public static final BlackDuckPath<UserView> CURRENT_USER_PATH = new BlackDuckPath("/api/current-user", UserView.class, false);
     public static final BlackDuckPath<CurrentVersionView> CURRENT_VERSION_PATH = new BlackDuckPath("/api/current-version", CurrentVersionView.class, false);
@@ -56,6 +58,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<BlackDuckResponse> INTELLIGENT_PERSISTENCE_SCANS_PATH = new BlackDuckPath("/api/intelligent-persistence-scans", BlackDuckResponse.class, false);
     public static final BlackDuckPath<JobView> JOBS_PATH = new BlackDuckPath("/api/jobs", JobView.class, true);
     public static final BlackDuckPath<ProjectView> JOURNAL_PATH = new BlackDuckPath("/api/journal", ProjectView.class, false);
+    public static final BlackDuckPath<LicenseDashboardView> LICENSE_DASHBOARD_PATH = new BlackDuckPath("/api/license-dashboard", LicenseDashboardView.class, false);
     public static final BlackDuckPath<LicenseFamilyView> LICENSE_FAMILIES_PATH = new BlackDuckPath("/api/license-families", LicenseFamilyView.class, true);
     public static final BlackDuckPath<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_PATH = new BlackDuckPath("/api/license-term-categories", LicenseTermCategoryView.class, true);
     public static final BlackDuckPath<LicenseTermView> LICENSE_TERMS_PATH = new BlackDuckPath("/api/license-terms", LicenseTermView.class, true);
@@ -67,7 +70,6 @@ public class ApiDiscovery {
     public static final BlackDuckPath<RegistrationView> REGISTRATION_PATH = new BlackDuckPath("/api/registration", RegistrationView.class, false);
     public static final BlackDuckPath<ReportContentsView> REPORTS_PATH = new BlackDuckPath("/api/reports", ReportContentsView.class, false);
     public static final BlackDuckPath<RoleView> ROLES_PATH = new BlackDuckPath("/api/roles", RoleView.class, true);
-    public static final BlackDuckPath<ScanBomEntriesView> SCAN_PATH = new BlackDuckPath("/api/scan", ScanBomEntriesView.class, false);
     public static final BlackDuckPath<ScanView> SCAN_SUMMARIES_PATH = new BlackDuckPath("/api/scan-summaries", ScanView.class, false);
     public static final BlackDuckPath<BlackDuckStringResponse> UPLOADS_PATH = new BlackDuckPath("/api/uploads", BlackDuckStringResponse.class, false);
     public static final BlackDuckPath<UserGroupView> USERGROUPS_PATH = new BlackDuckPath("/api/usergroups", UserGroupView.class, true);
@@ -92,6 +94,10 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<CodeLocationView> metaCodelocationsLink() {
         return metaMultipleResponses(CODELOCATIONS_PATH);
+    }
+
+    public UrlSingleResponse<ComponentMigrationsView> metaComponentMigrationsLink() {
+        return metaSingleResponse(COMPONENT_MIGRATIONS_PATH);
     }
 
     public UrlMultipleResponses<ComponentsView> metaComponentsLink() {
@@ -132,6 +138,10 @@ public class ApiDiscovery {
 
     public UrlSingleResponse<ProjectView> metaJournalLink() {
         return metaSingleResponse(JOURNAL_PATH);
+    }
+
+    public UrlSingleResponse<LicenseDashboardView> metaLicenseDashboardLink() {
+        return metaSingleResponse(LICENSE_DASHBOARD_PATH);
     }
 
     public UrlMultipleResponses<LicenseFamilyView> metaLicenseFamiliesLink() {
@@ -176,10 +186,6 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<RoleView> metaRolesLink() {
         return metaMultipleResponses(ROLES_PATH);
-    }
-
-    public UrlSingleResponse<ScanBomEntriesView> metaScanLink() {
-        return metaSingleResponse(SCAN_PATH);
     }
 
     public UrlSingleResponse<ScanView> metaScanSummariesLink() {

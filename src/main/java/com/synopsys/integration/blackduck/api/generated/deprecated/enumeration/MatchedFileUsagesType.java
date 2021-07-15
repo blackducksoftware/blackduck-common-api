@@ -20,7 +20,8 @@ public enum MatchedFileUsagesType {
 	PREREQUISITE,
 	SEPARATE_WORK,
 	SOURCE_CODE,
-	STATICALLY_LINKED;
+	STATICALLY_LINKED,
+	UNSPECIFIED;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);
