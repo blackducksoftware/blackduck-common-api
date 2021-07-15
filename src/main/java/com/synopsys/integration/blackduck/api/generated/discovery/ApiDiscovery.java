@@ -172,8 +172,8 @@ public class ApiDiscovery {
         return metaMultipleResponses(POLICY_RULES_PATH);
     }
 
-    public UrlSingleResponse<ProjectView> metaProjectsLink() {
-        return metaSingleResponse(PROJECTS_PATH);
+    public UrlMultipleResponses<ProjectView> metaProjectsLink() {
+        return metaMultipleResponses(PROJECTS_PATH);
     }
 
     public UrlSingleResponse<RegistrationView> metaRegistrationLink() {
