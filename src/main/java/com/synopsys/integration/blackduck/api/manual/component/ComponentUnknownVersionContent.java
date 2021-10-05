@@ -7,6 +7,8 @@
  */
 package com.synopsys.integration.blackduck.api.manual.component;
 
+import com.synopsys.integration.blackduck.api.manual.enumeration.ComponentUnknownVersionStatus;
+
 public class ComponentUnknownVersionContent extends NotificationContentComponent {
     private String projectName;
     private String projectVersionName;
@@ -24,7 +26,7 @@ public class ComponentUnknownVersionContent extends NotificationContentComponent
     private int lowVulnerabilityCount;
     private String lowVulnerabilityVersion;
     private String lowVulnerabilityVersionName;
-    private ComponentVersionStatus status;
+    private ComponentUnknownVersionStatus status;
 
     public String getProjectName() {
         return projectName;
@@ -154,11 +156,11 @@ public class ComponentUnknownVersionContent extends NotificationContentComponent
         this.lowVulnerabilityVersionName = lowVulnerabilityVersionName;
     }
 
-    public ComponentVersionStatus getStatus() {
+    public ComponentUnknownVersionStatus getStatus() {
         return status;
     }
 
-    public void setStatus(final ComponentVersionStatus status) {
+    public void setStatus(final ComponentUnknownVersionStatus status) {
         this.status = status;
     }
 }
