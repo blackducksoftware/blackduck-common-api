@@ -17,6 +17,8 @@ public class ComponentUnknownVersionContent extends NotificationContentComponent
     private String bomComponent;
     private String component;
     private int criticalVulnerabilityCount;
+    private String criticalVulnerabilityVersion;
+    private String criticalVulnerabilityName;
     private int highVulnerabilityCount;
     private String highVulnerabilityVersion;
     private String highVulnerabilityVersionName;
@@ -82,6 +84,22 @@ public class ComponentUnknownVersionContent extends NotificationContentComponent
 
     public void setCriticalVulnerabilityCount(final int criticalVulnerabilityCount) {
         this.criticalVulnerabilityCount = criticalVulnerabilityCount;
+    }
+
+    public String getCriticalVulnerabilityVersion() {
+        return criticalVulnerabilityVersion;
+    }
+
+    public void setCriticalVulnerabilityVersion(final String criticalVulnerabilityVersion) {
+        this.criticalVulnerabilityVersion = criticalVulnerabilityVersion;
+    }
+
+    public String getCriticalVulnerabilityName() {
+        return criticalVulnerabilityName;
+    }
+
+    public void setCriticalVulnerabilityName(final String criticalVulnerabilityName) {
+        this.criticalVulnerabilityName = criticalVulnerabilityName;
     }
 
     public int getHighVulnerabilityCount() {
