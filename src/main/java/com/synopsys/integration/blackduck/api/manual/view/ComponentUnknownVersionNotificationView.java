@@ -7,8 +7,8 @@
  */
 package com.synopsys.integration.blackduck.api.manual.view;
 
-import com.synopsys.integration.blackduck.api.manual.component.ComponentUnknownVersionContent;
+import com.synopsys.integration.blackduck.api.manual.component.ComponentUnknownVersionNotificationContent;
 
-public class ComponentUnknownVersionView extends NotificationView<ComponentUnknownVersionContent> {
+public class ComponentUnknownVersionNotificationView extends NotificationView<ComponentUnknownVersionNotificationContent> {
 
 }
