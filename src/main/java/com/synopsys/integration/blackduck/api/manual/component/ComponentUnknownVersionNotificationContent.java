@@ -9,7 +9,7 @@ package com.synopsys.integration.blackduck.api.manual.component;
 
 import com.synopsys.integration.blackduck.api.manual.enumeration.ComponentUnknownVersionStatus;
 
-public class ComponentUnknownVersionContent extends NotificationContentComponent {
+public class ComponentUnknownVersionNotificationContent extends NotificationContentComponent {
     private String projectName;
     private String projectVersionName;
     private String projectVersion;
