@@ -18,7 +18,7 @@ public class ComponentUnknownVersionNotificationContent extends NotificationCont
     private String component;
     private int criticalVulnerabilityCount;
     private String criticalVulnerabilityVersion;
-    private String criticalVulnerabilityName;
+    private String criticalVulnerabilityVersionName;
     private int highVulnerabilityCount;
     private String highVulnerabilityVersion;
     private String highVulnerabilityVersionName;
@@ -94,12 +94,12 @@ public class ComponentUnknownVersionNotificationContent extends NotificationCont
         this.criticalVulnerabilityVersion = criticalVulnerabilityVersion;
     }
 
-    public String getCriticalVulnerabilityName() {
-        return criticalVulnerabilityName;
+    public String getCriticalVulnerabilityVersionName() {
+        return criticalVulnerabilityVersionName;
     }
 
-    public void setCriticalVulnerabilityName(final String criticalVulnerabilityName) {
-        this.criticalVulnerabilityName = criticalVulnerabilityName;
+    public void setCriticalVulnerabilityVersionName(final String criticalVulnerabilityVersionName) {
+        this.criticalVulnerabilityVersionName = criticalVulnerabilityVersionName;
     }
 
     public int getHighVulnerabilityCount() {
