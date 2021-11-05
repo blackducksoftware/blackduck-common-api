@@ -19,6 +19,7 @@ public class ProjectRequest extends BlackDuckComponent {
     private Boolean projectLevelAdjustments;
     private String projectOwner;
     private Integer projectTier;
+    private String projectGroup;
     private ProjectVersionRequest versionRequest;
 
     public java.util.List<ProjectCloneCategoriesType> getCloneCategories() {
@@ -75,6 +76,14 @@ public class ProjectRequest extends BlackDuckComponent {
 
     public void setProjectTier(Integer projectTier) {
         this.projectTier = projectTier;
+    }
+
+    public String getProjectGroup() {
+        return projectGroup;
+    }
+
+    public void setProjectGroup(final String projectGroup) {
+        this.projectGroup = projectGroup;
     }
 
     public ProjectVersionRequest getVersionRequest() {
