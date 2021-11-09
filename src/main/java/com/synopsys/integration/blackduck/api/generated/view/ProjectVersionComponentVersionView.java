@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2021 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
@@ -25,7 +18,9 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.UsageType;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
+import com.synopsys.integration.blackduck.api.generated.view.ComponentPolicyRulesView;
 import com.synopsys.integration.blackduck.api.generated.view.IssueView;
+import com.synopsys.integration.blackduck.api.generated.view.OriginView;
 import com.synopsys.integration.blackduck.api.generated.view.RiskProfileView;
 import com.synopsys.integration.blackduck.api.manual.temporary.component.VersionBomOriginView;
 
@@ -35,13 +30,19 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public static final String COMPONENT_ISSUES_LINK = "component-issues";
     public static final String MATCHED_FILES_LINK = "matched-files";
+    public static final String ORIGINS_LINK = "origins";
+    public static final String POLICY_RULES_LINK = "policy-rules";
 
     public static final LinkMultipleResponses<IssueView> COMPONENT_ISSUES_LINK_RESPONSE = new LinkMultipleResponses<IssueView>(COMPONENT_ISSUES_LINK, IssueView.class);
     public static final LinkMultipleResponses<ComponentMatchedFilesView> MATCHED_FILES_LINK_RESPONSE = new LinkMultipleResponses<ComponentMatchedFilesView>(MATCHED_FILES_LINK, ComponentMatchedFilesView.class);
+    public static final LinkMultipleResponses<OriginView> ORIGINS_LINK_RESPONSE = new LinkMultipleResponses<OriginView>(ORIGINS_LINK, OriginView.class);
+    public static final LinkMultipleResponses<ComponentPolicyRulesView> POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<ComponentPolicyRulesView>(POLICY_RULES_LINK, ComponentPolicyRulesView.class);
 
     static {
         links.put(COMPONENT_ISSUES_LINK, COMPONENT_ISSUES_LINK_RESPONSE);
         links.put(MATCHED_FILES_LINK, MATCHED_FILES_LINK_RESPONSE);
+        links.put(ORIGINS_LINK, ORIGINS_LINK_RESPONSE);
+        links.put(POLICY_RULES_LINK, POLICY_RULES_LINK_RESPONSE);
     }
 
     private ProjectVersionComponentVersionActivityDataView activityData;
@@ -311,6 +312,22 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public Optional<UrlMultipleResponses<ComponentMatchedFilesView>> metaMatchedFilesLinkSafely() {
         return metaMultipleResponsesSafely(MATCHED_FILES_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<OriginView> metaOriginsLink() {
+        return metaMultipleResponses(ORIGINS_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<OriginView>> metaOriginsLinkSafely() {
+        return metaMultipleResponsesSafely(ORIGINS_LINK_RESPONSE);
+    }
+
+    public UrlMultipleResponses<ComponentPolicyRulesView> metaPolicyRulesLink() {
+        return metaMultipleResponses(POLICY_RULES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<ComponentPolicyRulesView>> metaPolicyRulesLinkSafely() {
+        return metaMultipleResponsesSafely(POLICY_RULES_LINK_RESPONSE);
     }
 
 }
