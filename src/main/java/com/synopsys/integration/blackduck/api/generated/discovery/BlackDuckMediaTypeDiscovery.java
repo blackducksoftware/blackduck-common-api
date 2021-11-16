@@ -1,3 +1,10 @@
+/*
+ * blackduck-common-api
+ *
+ * Copyright (c) 2021 Synopsys, Inc.
+ *
+ * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+ */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import java.util.Arrays;
@@ -28,7 +35,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON = "application/vnd.blackducksoftware.project-detail-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON = "application/vnd.blackducksoftware.project-detail-5+json";
     public static final String VND_BLACKDUCKSOFTWARE_REPORT_4_JSON = "application/vnd.blackducksoftware.report-4+json";
-    public static final String VND_BLACKDUCKSOFTWARE_SCAN_5_JSON = "application/vnd.blackducksoftware.scan-5+json";
+    public static final String VND_BLACKDUCKSOFTWARE_SCAN_4_JSON = "application/vnd.blackducksoftware.scan-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_STATUS_4_JSON = "application/vnd.blackducksoftware.status-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_SYSTEM_ANNOUNCEMENT_1_JSON = "application/vnd.blackducksoftware.system-announcement-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_USER_4_JSON = "application/vnd.blackducksoftware.user-4+json";
@@ -205,10 +212,10 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_ANNOUNCEMENT_LOGIN_WITH_ID, VND_BLACKDUCKSOFTWARE_SYSTEM_ANNOUNCEMENT_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_ANNOUNCEMENT_WELCOME, VND_BLACKDUCKSOFTWARE_SYSTEM_ANNOUNCEMENT_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_ANNOUNCEMENT_WELCOME_WITH_ID, VND_BLACKDUCKSOFTWARE_SYSTEM_ANNOUNCEMENT_1_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_BOM_IMPORT_COMPONENT_IMPORT_EVENTS, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_BOM_IMPORT_COMPONENT_IMPORT_EVENTS_COUNT, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_CODELOCATIONS_LATEST_SCAN_SUMMARY, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_CODELOCATIONS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_BOM_IMPORT_COMPONENT_IMPORT_EVENTS, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_BOM_IMPORT_COMPONENT_IMPORT_EVENTS_COUNT, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_CODELOCATIONS_LATEST_SCAN_SUMMARY, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_CODELOCATIONS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_COMPONENTS, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_COMPONENTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_COMPONENTS_TAGS_WITH_ID, VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON));
@@ -236,10 +243,10 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_CUSTOM_FIELDS_OBJECTS_CUSTOMFIELDOBJECT_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_CUSTOM_FIELDS_TYPES, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_CWES_WITH_ID, VND_BLACKDUCKSOFTWARE_VULNERABILITY_4_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_DEVELOPER_SCANS_FULL_RESULT, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_DEVELOPER_SCANS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_DEVELOPER_SCANS_FULL_RESULT, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_DEVELOPER_SCANS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_EXTERNAL_CONFIG_DETECT_URI, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_FILE_SOURCE_CONTENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_FILE_SOURCE_CONTENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_HEALTH_CHECKS_LIVENESS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_HEALTH_CHECKS_READINESS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_VULNERABILITY_PRIORITY_STATUS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
@@ -316,7 +323,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_REGISTRATION, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_REPORTS_CONTENTS, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_ROLES_WITH_ID, VND_BLACKDUCKSOFTWARE_USER_4_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_SCAN_SUMMARIES_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_SCAN_SUMMARIES_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_ANALYSIS, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_BRANDING, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_CUSTOM_FIELDS, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
