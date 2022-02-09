@@ -1,20 +1,15 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.component.ReportCreatedByView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportFormatType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ReportType;
@@ -33,8 +28,7 @@ public class ReportView extends BlackDuckView {
     }
 
     private java.util.Date createdAt;
-    private String createdBy;
-    private String createdByUser;
+    private ReportCreatedByView createdBy;
     private String fileName;
     private String fileNamePrefix;
     private BigDecimal fileSize;
@@ -53,20 +47,12 @@ public class ReportView extends BlackDuckView {
         this.createdAt = createdAt;
     }
 
-    public String getCreatedBy() {
+    public ReportCreatedByView getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(String createdBy) {
+    public void setCreatedBy(ReportCreatedByView createdBy) {
         this.createdBy = createdBy;
-    }
-
-    public String getCreatedByUser() {
-        return createdByUser;
-    }
-
-    public void setCreatedByUser(String createdByUser) {
-        this.createdByUser = createdByUser;
     }
 
     public String getFileName() {

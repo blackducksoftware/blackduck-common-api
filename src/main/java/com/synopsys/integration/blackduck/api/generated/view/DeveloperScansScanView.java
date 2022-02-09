@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
@@ -20,9 +13,11 @@ public class DeveloperScansScanView extends BlackDuckView {
     private String componentIdentifier;
     private String componentName;
     private java.util.List<DeveloperScansScanItemsComponentViolatingPoliciesView> componentViolatingPolicies;
+    private java.util.List<String> dependencyTrees;
     private String externalId;
     private java.util.List<DeveloperScansScanItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
     private String originId;
+    private java.util.List<String> policyStatuses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationLicensesView> policyViolationLicenses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities;
     private String versionName;
@@ -52,6 +47,14 @@ public class DeveloperScansScanView extends BlackDuckView {
         this.componentViolatingPolicies = componentViolatingPolicies;
     }
 
+    public java.util.List<String> getDependencyTrees() {
+        return dependencyTrees;
+    }
+
+    public void setDependencyTrees(java.util.List<String> dependencyTrees) {
+        this.dependencyTrees = dependencyTrees;
+    }
+
     public String getExternalId() {
         return externalId;
     }
@@ -74,6 +77,14 @@ public class DeveloperScansScanView extends BlackDuckView {
 
     public void setOriginId(String originId) {
         this.originId = originId;
+    }
+
+    public java.util.List<String> getPolicyStatuses() {
+        return policyStatuses;
+    }
+
+    public void setPolicyStatuses(java.util.List<String> policyStatuses) {
+        this.policyStatuses = policyStatuses;
     }
 
     public java.util.List<DeveloperScansScanItemsPolicyViolationLicensesView> getPolicyViolationLicenses() {

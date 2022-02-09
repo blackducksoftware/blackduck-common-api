@@ -1,19 +1,11 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
-package com.synopsys.integration.blackduck.api.manual.temporary.component;
+package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
 
-//this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class PolicySummaryView extends BlackDuckComponent {
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public class ProjectVersionPolicyRulesView extends BlackDuckComponent {
     private String description;
-    private String id;
     private String name;
     private ProjectVersionComponentPolicyStatusType status;
 
@@ -23,14 +15,6 @@ public class PolicySummaryView extends BlackDuckComponent {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
@@ -19,6 +12,7 @@ public enum ProjectItemsObjectDataType {
 	PROJECT,
 	SCAN,
 	SNIPPET,
+	SOURCE,
 	SOURCE_FILE,
 	USER,
 	USER_GROUP,

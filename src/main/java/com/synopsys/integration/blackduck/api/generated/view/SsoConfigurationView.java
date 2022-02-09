@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.Optional;
@@ -18,6 +11,7 @@ public class SsoConfigurationView extends BlackDuckView {
     private String idpMetadataUrl;
     private Boolean localLogoutEnabled;
     private String samlMetadataUrl;
+    private Boolean sendSignedAuthenticationRequest;
     private String spEntityId;
     private String spExternalUrl;
     private Boolean ssoEnabled;
@@ -61,6 +55,14 @@ public class SsoConfigurationView extends BlackDuckView {
 
     public void setSamlMetadataUrl(String samlMetadataUrl) {
         this.samlMetadataUrl = samlMetadataUrl;
+    }
+
+    public Boolean getSendSignedAuthenticationRequest() {
+        return sendSignedAuthenticationRequest;
+    }
+
+    public void setSendSignedAuthenticationRequest(Boolean sendSignedAuthenticationRequest) {
+        this.sendSignedAuthenticationRequest = sendSignedAuthenticationRequest;
     }
 
     public String getSpEntityId() {

@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
@@ -14,6 +7,7 @@ public class DeveloperScansScanItemsPolicyViolationLicensesViolatingPoliciesView
     private String description;
     private String policyName;
     private String policySeverity;
+    private String policyStatus;
 
     public String getDescription() {
         return description;
@@ -37,6 +31,14 @@ public class DeveloperScansScanItemsPolicyViolationLicensesViolatingPoliciesView
 
     public void setPolicySeverity(String policySeverity) {
         this.policySeverity = policySeverity;
+    }
+
+    public String getPolicyStatus() {
+        return policyStatus;
+    }
+
+    public void setPolicyStatus(String policyStatus) {
+        this.policyStatus = policyStatus;
     }
 
 }

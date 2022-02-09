@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.enumeration;
 
 import com.synopsys.integration.util.EnumUtils;
@@ -22,6 +15,7 @@ public enum MatchType {
 	FILE_SOME_FILES_MODIFIED,
 	MANUAL_BOM_COMPONENT,
 	MANUAL_BOM_FILE,
+	MANUAL_BOM_PACKAGE,
 	PARTIAL_FILE,
 	SNIPPET,
 	TRANSITIVE_DEPENDENCY_BINARY;

@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.discovery;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckPath;
@@ -18,6 +11,7 @@ import com.synopsys.integration.blackduck.api.generated.response.HealthChecksLiv
 import com.synopsys.integration.blackduck.api.generated.view.AnnouncementBannerView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMigrationsView;
+import com.synopsys.integration.blackduck.api.generated.view.CpesView;
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
 import com.synopsys.integration.blackduck.api.generated.view.DeveloperScansScanView;
 import com.synopsys.integration.blackduck.api.generated.view.ExternalConfigDetectUriView;
@@ -58,6 +52,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<CodeLocationView> CODELOCATIONS_PATH = new BlackDuckPath("/api/codelocations", CodeLocationView.class, true);
     public static final BlackDuckPath<ComponentMigrationsView> COMPONENT_MIGRATIONS_PATH = new BlackDuckPath("/api/component-migrations", ComponentMigrationsView.class, false);
     public static final BlackDuckPath<ComponentsView> COMPONENTS_PATH = new BlackDuckPath("/api/components", ComponentsView.class, true);
+    public static final BlackDuckPath<CpesView> CPES_PATH = new BlackDuckPath("/api/cpes", CpesView.class, false);
     public static final BlackDuckPath<UserView> CURRENT_USER_PATH = new BlackDuckPath("/api/current-user", UserView.class, false);
     public static final BlackDuckPath<CurrentVersionView> CURRENT_VERSION_PATH = new BlackDuckPath("/api/current-version", CurrentVersionView.class, false);
     public static final BlackDuckPath<CustomFieldObjectView> CUSTOM_FIELDS_PATH = new BlackDuckPath("/api/custom-fields", CustomFieldObjectView.class, true);
@@ -119,6 +114,10 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<ComponentsView> metaComponentsLink() {
         return metaMultipleResponses(COMPONENTS_PATH);
+    }
+
+    public UrlSingleResponse<CpesView> metaCpesLink() {
+        return metaSingleResponse(CPES_PATH);
     }
 
     public UrlSingleResponse<UserView> metaCurrentUserLink() {

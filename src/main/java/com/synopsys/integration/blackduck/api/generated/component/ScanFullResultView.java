@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
@@ -23,6 +16,7 @@ public class ScanFullResultView extends BlackDuckComponent {
     private String componentIdentifier;
     private String componentName;
     private java.util.List<ScanFullResultItemsComponentViolatingPoliciesView> componentViolatingPolicies;
+    private java.util.List<String> dependencyTrees;
     private String externalId;
     private java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
     private java.util.List<String> nonEvaluatedPolicies;
@@ -71,6 +65,14 @@ public class ScanFullResultView extends BlackDuckComponent {
 
     public void setComponentViolatingPolicies(java.util.List<ScanFullResultItemsComponentViolatingPoliciesView> componentViolatingPolicies) {
         this.componentViolatingPolicies = componentViolatingPolicies;
+    }
+
+    public java.util.List<String> getDependencyTrees() {
+        return dependencyTrees;
+    }
+
+    public void setDependencyTrees(java.util.List<String> dependencyTrees) {
+        this.dependencyTrees = dependencyTrees;
     }
 
     public String getExternalId() {

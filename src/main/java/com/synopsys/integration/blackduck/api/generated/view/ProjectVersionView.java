@@ -1,10 +1,3 @@
-/*
- * blackduck-common-api
- *
- * Copyright (c) 2022 Synopsys, Inc.
- *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
- */
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.util.HashMap;
@@ -26,12 +19,14 @@ import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionVulne
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportView;
 import com.synopsys.integration.blackduck.api.manual.temporary.enumeration.ProjectVersionPhaseType;
+import com.synopsys.integration.blackduck.api.manual.temporary.response.PolicySummaryView;
 import com.synopsys.integration.blackduck.api.manual.temporary.response.VersionRiskProfileView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionView extends BlackDuckView {
     public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();
 
+    public static final String ACTIVE_POLICY_RULES_LINK = "active-policy-rules";
     public static final String CODELOCATIONS_LINK = "codelocations";
     public static final String COMPONENTS_LINK = "components";
     public static final String ISSUES_LINK = "issues";
@@ -42,6 +37,7 @@ public class ProjectVersionView extends BlackDuckView {
     public static final String VERSION_REPORT_LINK = "versionReport";
     public static final String VULNERABLE_COMPONENTS_LINK = "vulnerable-components";
 
+    public static final LinkMultipleResponses<PolicySummaryView> ACTIVE_POLICY_RULES_LINK_RESPONSE = new LinkMultipleResponses<PolicySummaryView>(ACTIVE_POLICY_RULES_LINK, PolicySummaryView.class);
     public static final LinkMultipleResponses<CodeLocationView> CODELOCATIONS_LINK_RESPONSE = new LinkMultipleResponses<CodeLocationView>(CODELOCATIONS_LINK, CodeLocationView.class);
     public static final LinkMultipleResponses<ProjectVersionComponentVersionView> COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionComponentVersionView>(COMPONENTS_LINK, ProjectVersionComponentVersionView.class);
     public static final LinkMultipleResponses<ProjectVersionIssuesView> ISSUES_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionIssuesView>(ISSUES_LINK, ProjectVersionIssuesView.class);
@@ -53,6 +49,7 @@ public class ProjectVersionView extends BlackDuckView {
     public static final LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView> VULNERABLE_COMPONENTS_LINK_RESPONSE = new LinkMultipleResponses<ProjectVersionVulnerableBomComponentsView>(VULNERABLE_COMPONENTS_LINK, ProjectVersionVulnerableBomComponentsView.class);
 
     static {
+        links.put(ACTIVE_POLICY_RULES_LINK, ACTIVE_POLICY_RULES_LINK_RESPONSE);
         links.put(CODELOCATIONS_LINK, CODELOCATIONS_LINK_RESPONSE);
         links.put(COMPONENTS_LINK, COMPONENTS_LINK_RESPONSE);
         links.put(ISSUES_LINK, ISSUES_LINK_RESPONSE);
@@ -207,6 +204,14 @@ public class ProjectVersionView extends BlackDuckView {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
+    }
+
+    public UrlMultipleResponses<PolicySummaryView> metaActivePolicyRulesLink() {
+        return metaMultipleResponses(ACTIVE_POLICY_RULES_LINK_RESPONSE);
+    }
+
+    public Optional<UrlMultipleResponses<PolicySummaryView>> metaActivePolicyRulesLinkSafely() {
+        return metaMultipleResponsesSafely(ACTIVE_POLICY_RULES_LINK_RESPONSE);
     }
 
     public UrlMultipleResponses<CodeLocationView> metaCodelocationsLink() {
