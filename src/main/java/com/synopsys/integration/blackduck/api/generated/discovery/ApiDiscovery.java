@@ -40,6 +40,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
+import com.synopsys.integration.blackduck.api.generated.view.ScanReadinessView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanView;
 import com.synopsys.integration.blackduck.api.generated.view.SettingsAnalysisView;
 import com.synopsys.integration.blackduck.api.generated.view.SsoConfigurationView;
@@ -86,6 +87,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<RegistrationView> REGISTRATION_PATH = new BlackDuckPath("/api/registration", RegistrationView.class, false);
     public static final BlackDuckPath<ReportContentsView> REPORTS_PATH = new BlackDuckPath("/api/reports", ReportContentsView.class, false);
     public static final BlackDuckPath<RoleView> ROLES_PATH = new BlackDuckPath("/api/roles", RoleView.class, true);
+    public static final BlackDuckPath<ScanReadinessView> SCAN_READINESS_PATH = new BlackDuckPath("/api/scan-readiness", ScanReadinessView.class, false);
     public static final BlackDuckPath<ScanView> SCAN_SUMMARIES_PATH = new BlackDuckPath("/api/scan-summaries", ScanView.class, false);
     public static final BlackDuckPath<SettingsAnalysisView> SETTINGS_PATH = new BlackDuckPath("/api/settings", SettingsAnalysisView.class, false);
     public static final BlackDuckPath<SsoConfigurationView> SSO_PATH = new BlackDuckPath("/api/sso", SsoConfigurationView.class, false);
@@ -229,6 +231,10 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<RoleView> metaRolesLink() {
         return metaMultipleResponses(ROLES_PATH);
+    }
+
+    public UrlSingleResponse<ScanReadinessView> metaScanReadinessLink() {
+        return metaSingleResponse(SCAN_READINESS_PATH);
     }
 
     public UrlSingleResponse<ScanView> metaScanSummariesLink() {

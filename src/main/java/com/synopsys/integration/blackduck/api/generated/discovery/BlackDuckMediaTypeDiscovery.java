@@ -36,6 +36,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON = "application/vnd.blackducksoftware.project-detail-5+json";
     public static final String VND_BLACKDUCKSOFTWARE_REPORT_4_JSON = "application/vnd.blackducksoftware.report-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_SCAN_4_JSON = "application/vnd.blackducksoftware.scan-4+json";
+    public static final String VND_BLACKDUCKSOFTWARE_SCAN_READINESS_1_JSON = "application/vnd.blackducksoftware.scan-readiness-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_SOURCE_VIEW_1_JSON = "application/vnd.blackducksoftware.source-view-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_STATUS_4_JSON = "application/vnd.blackducksoftware.status-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_SYSTEM_ANNOUNCEMENT_1_JSON = "application/vnd.blackducksoftware.system-announcement-1+json";
@@ -172,6 +173,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_REGISTRATION = String.format("/api/registration");
     public static final String API_REPORTS_CONTENTS = String.format("/api/reports/%s/contents", UUID_REGEX);
     public static final String API_ROLES_WITH_ID = String.format("/api/roles/%s", UUID_REGEX);
+    public static final String API_SCAN_READINESS = String.format("/api/scan-readiness");
     public static final String API_SCAN_SUMMARIES_WITH_ID = String.format("/api/scan-summaries/%s", UUID_REGEX);
     public static final String API_SETTINGS_ANALYSIS = String.format("/api/settings/analysis");
     public static final String API_SETTINGS_BRANDING = String.format("/api/settings/branding");
@@ -345,6 +347,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_REGISTRATION, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_REPORTS_CONTENTS, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_ROLES_WITH_ID, VND_BLACKDUCKSOFTWARE_USER_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_SCAN_READINESS, VND_BLACKDUCKSOFTWARE_SCAN_READINESS_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SCAN_SUMMARIES_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_ANALYSIS, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_BRANDING, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
