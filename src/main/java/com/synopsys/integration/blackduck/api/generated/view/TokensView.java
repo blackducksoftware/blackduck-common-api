@@ -5,18 +5,21 @@
  *
  * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
  */
-package com.synopsys.integration.blackduck.api.generated.component;
+package com.synopsys.integration.blackduck.api.generated.view;
 
 import java.math.BigDecimal;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.generated.component.TokensItemsOwnerView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class TokensTokenView extends BlackDuckComponent {
+public class TokensView extends BlackDuckView {
     private java.util.Date createdAt;
     private String description;
     private java.util.Date lastGeneratedAt;
     private String lastUsed;
     private String name;
+    private TokensItemsOwnerView owner;
     private java.util.List<String> scopes;
     private java.util.Date updatedAt;
     private BigDecimal usageCount;
@@ -59,6 +62,14 @@ public class TokensTokenView extends BlackDuckComponent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public TokensItemsOwnerView getOwner() {
+        return owner;
+    }
+
+    public void setOwner(TokensItemsOwnerView owner) {
+        this.owner = owner;
     }
 
     public java.util.List<String> getScopes() {

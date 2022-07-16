@@ -12,8 +12,12 @@ import com.synopsys.integration.blackduck.api.generated.component.ScanFullResult
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsAllVulnerabilitiesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsComponentViolatingPoliciesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsFailedEvaluationPoliciesView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsLongTermUpgradeGuidanceView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsOverriddenPoliciesPartialView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsOverriddenPoliciesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsPolicyViolationLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsPolicyViolationVulnerabilitiesView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsShortTermUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsViolatingPoliciesView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -26,11 +30,14 @@ public class ScanFullResultView extends BlackDuckComponent {
     private java.util.List<String> dependencyTrees;
     private String externalId;
     private java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
+    private ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
     private java.util.List<String> nonEvaluatedPolicies;
-    private java.util.List<String> overriddenPolicies;
+    private java.util.List<ScanFullResultItemsOverriddenPoliciesView> overriddenPolicies;
+    private java.util.List<ScanFullResultItemsOverriddenPoliciesPartialView> overriddenPoliciesPartial;
     private java.util.List<String> partiallyEvaluatedPolicies;
     private java.util.List<ScanFullResultItemsPolicyViolationLicensesView> policyViolationLicenses;
     private java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities;
+    private ScanFullResultItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance;
     private String versionName;
     private java.util.List<ScanFullResultItemsViolatingPoliciesView> violatingPolicies;
 
@@ -98,6 +105,14 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.failedEvaluationPolicies = failedEvaluationPolicies;
     }
 
+    public ScanFullResultItemsLongTermUpgradeGuidanceView getLongTermUpgradeGuidance() {
+        return longTermUpgradeGuidance;
+    }
+
+    public void setLongTermUpgradeGuidance(ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance) {
+        this.longTermUpgradeGuidance = longTermUpgradeGuidance;
+    }
+
     public java.util.List<String> getNonEvaluatedPolicies() {
         return nonEvaluatedPolicies;
     }
@@ -106,12 +121,20 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.nonEvaluatedPolicies = nonEvaluatedPolicies;
     }
 
-    public java.util.List<String> getOverriddenPolicies() {
+    public java.util.List<ScanFullResultItemsOverriddenPoliciesView> getOverriddenPolicies() {
         return overriddenPolicies;
     }
 
-    public void setOverriddenPolicies(java.util.List<String> overriddenPolicies) {
+    public void setOverriddenPolicies(java.util.List<ScanFullResultItemsOverriddenPoliciesView> overriddenPolicies) {
         this.overriddenPolicies = overriddenPolicies;
+    }
+
+    public java.util.List<ScanFullResultItemsOverriddenPoliciesPartialView> getOverriddenPoliciesPartial() {
+        return overriddenPoliciesPartial;
+    }
+
+    public void setOverriddenPoliciesPartial(java.util.List<ScanFullResultItemsOverriddenPoliciesPartialView> overriddenPoliciesPartial) {
+        this.overriddenPoliciesPartial = overriddenPoliciesPartial;
     }
 
     public java.util.List<String> getPartiallyEvaluatedPolicies() {
@@ -136,6 +159,14 @@ public class ScanFullResultView extends BlackDuckComponent {
 
     public void setPolicyViolationVulnerabilities(java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities) {
         this.policyViolationVulnerabilities = policyViolationVulnerabilities;
+    }
+
+    public ScanFullResultItemsShortTermUpgradeGuidanceView getShortTermUpgradeGuidance() {
+        return shortTermUpgradeGuidance;
+    }
+
+    public void setShortTermUpgradeGuidance(ScanFullResultItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance) {
+        this.shortTermUpgradeGuidance = shortTermUpgradeGuidance;
     }
 
     public String getVersionName() {

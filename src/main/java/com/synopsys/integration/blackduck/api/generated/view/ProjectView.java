@@ -63,6 +63,7 @@ public class ProjectView extends BlackDuckView {
     private Boolean projectLevelAdjustments;
     private String projectOwner;
     private Integer projectTier;
+    private String repository;
     private Boolean snippetAdjustmentApplied;
     private java.util.Date updatedAt;
     private String updatedBy;
@@ -162,6 +163,14 @@ public class ProjectView extends BlackDuckView {
 
     public void setProjectTier(Integer projectTier) {
         this.projectTier = projectTier;
+    }
+
+    public String getRepository() {
+        return repository;
+    }
+
+    public void setRepository(String repository) {
+        this.repository = repository;
     }
 
     public Boolean getSnippetAdjustmentApplied() {

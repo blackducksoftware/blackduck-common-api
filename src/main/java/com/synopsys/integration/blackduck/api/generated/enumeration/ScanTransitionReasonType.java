@@ -10,10 +10,8 @@ package com.synopsys.integration.blackduck.api.generated.enumeration;
 import com.synopsys.integration.util.EnumUtils;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public enum ScanStatusType {
-    BOM_VERSION_CHECK,
-	BUILDING_BOM,
-	CANCELLED,
+public enum ScanTransitionReasonType {
+    CANCELLED,
 	CLONED,
 	COMPLETE,
 	ERROR,
@@ -21,14 +19,11 @@ public enum ScanStatusType {
 	ERROR_MATCHING,
 	ERROR_SAVING_SCAN_DATA,
 	ERROR_SCANNING,
+	ERROR_TOOL,
 	IDENTICAL_RESCAN,
-	MATCHING,
-	REQUESTED_MATCH_JOB,
-	SAVING_SCAN_DATA,
-	SCANNING,
-	SCAN_DATA_SAVE_COMPLETE,
 	SKIPPED,
-	UNSTARTED;
+	TOOL_SUBMISSION,
+	USER_UPLOAD;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);

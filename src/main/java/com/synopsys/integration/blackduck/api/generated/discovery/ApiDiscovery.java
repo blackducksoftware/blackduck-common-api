@@ -37,6 +37,7 @@ import com.synopsys.integration.blackduck.api.generated.view.OriginDependencyPat
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectGroupsView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.PurgeTokensView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
@@ -45,6 +46,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ScanView;
 import com.synopsys.integration.blackduck.api.generated.view.SettingsAnalysisView;
 import com.synopsys.integration.blackduck.api.generated.view.SsoConfigurationView;
 import com.synopsys.integration.blackduck.api.generated.view.SystemOauthClientView;
+import com.synopsys.integration.blackduck.api.generated.view.TokensView;
 import com.synopsys.integration.blackduck.api.generated.view.UserGroupView;
 import com.synopsys.integration.blackduck.api.generated.view.UserView;
 import com.synopsys.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
@@ -84,6 +86,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<OriginDependencyPathsView> PROJECT_PATH = new BlackDuckPath("/api/project", OriginDependencyPathsView.class, false);
     public static final BlackDuckPath<ProjectGroupsView> PROJECT_GROUPS_PATH = new BlackDuckPath("/api/project-groups", ProjectGroupsView.class, false);
     public static final BlackDuckPath<ProjectView> PROJECTS_PATH = new BlackDuckPath("/api/projects", ProjectView.class, true);
+    public static final BlackDuckPath<PurgeTokensView> PURGE_TOKENS_PATH = new BlackDuckPath("/api/purge-tokens", PurgeTokensView.class, false);
     public static final BlackDuckPath<RegistrationView> REGISTRATION_PATH = new BlackDuckPath("/api/registration", RegistrationView.class, false);
     public static final BlackDuckPath<ReportContentsView> REPORTS_PATH = new BlackDuckPath("/api/reports", ReportContentsView.class, false);
     public static final BlackDuckPath<RoleView> ROLES_PATH = new BlackDuckPath("/api/roles", RoleView.class, true);
@@ -92,6 +95,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<SettingsAnalysisView> SETTINGS_PATH = new BlackDuckPath("/api/settings", SettingsAnalysisView.class, false);
     public static final BlackDuckPath<SsoConfigurationView> SSO_PATH = new BlackDuckPath("/api/sso", SsoConfigurationView.class, false);
     public static final BlackDuckPath<SystemOauthClientView> SYSTEM_OAUTH_CLIENT_PATH = new BlackDuckPath("/api/system-oauth-client", SystemOauthClientView.class, false);
+    public static final BlackDuckPath<TokensView> TOKENS_PATH = new BlackDuckPath("/api/tokens", TokensView.class, false);
     public static final BlackDuckPath<BlackDuckStringResponse> UPLOADS_PATH = new BlackDuckPath("/api/uploads", BlackDuckStringResponse.class, false);
     public static final BlackDuckPath<UserGroupView> USERGROUPS_PATH = new BlackDuckPath("/api/usergroups", UserGroupView.class, true);
     public static final BlackDuckPath<UserView> USERS_PATH = new BlackDuckPath("/api/users", UserView.class, true);
@@ -221,6 +225,10 @@ public class ApiDiscovery {
         return metaMultipleResponses(PROJECTS_PATH);
     }
 
+    public UrlSingleResponse<PurgeTokensView> metaPurgeTokensLink() {
+        return metaSingleResponse(PURGE_TOKENS_PATH);
+    }
+
     public UrlSingleResponse<RegistrationView> metaRegistrationLink() {
         return metaSingleResponse(REGISTRATION_PATH);
     }
@@ -251,6 +259,10 @@ public class ApiDiscovery {
 
     public UrlSingleResponse<SystemOauthClientView> metaSystemOauthClientLink() {
         return metaSingleResponse(SYSTEM_OAUTH_CLIENT_PATH);
+    }
+
+    public UrlSingleResponse<TokensView> metaTokensLink() {
+        return metaSingleResponse(TOKENS_PATH);
     }
 
     public UrlSingleResponse<BlackDuckStringResponse> metaUploadsLink() {

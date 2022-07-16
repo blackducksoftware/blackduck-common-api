@@ -13,7 +13,10 @@ import com.synopsys.integration.util.EnumUtils;
 public enum ReportFormatType {
     CSV,
 	JSON,
-	TEXT;
+	RDF,
+	TAGVALUE,
+	TEXT,
+	YAML;
 
     public String prettyPrint() {
         return EnumUtils.prettyPrint(this);

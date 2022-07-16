@@ -11,7 +11,8 @@ import java.math.BigDecimal;
 import java.util.Optional;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ScanStatusType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ScanStateType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ScanTransitionReasonType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ScanType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -20,14 +21,16 @@ public class CodeLocationLatestScanSummaryView extends BlackDuckComponent {
     private java.util.Date createdAt;
     private String createdByUserName;
     private BigDecimal directoryCount;
+    private String errorCode;
     private BigDecimal fileCount;
     private String hostName;
     private BigDecimal matchCount;
     private BigDecimal scanSize;
+    private ScanStateType scanState;
     private ScanType scanType;
     private String serverVersion;
-    private ScanStatusType status;
     private String statusMessage;
+    private ScanTransitionReasonType transitionReason;
     private java.util.Date updatedAt;
 
     public String getBaseDirectory() {
@@ -62,6 +65,14 @@ public class CodeLocationLatestScanSummaryView extends BlackDuckComponent {
         this.directoryCount = directoryCount;
     }
 
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
     public BigDecimal getFileCount() {
         return fileCount;
     }
@@ -94,6 +105,14 @@ public class CodeLocationLatestScanSummaryView extends BlackDuckComponent {
         this.scanSize = scanSize;
     }
 
+    public ScanStateType getScanState() {
+        return scanState;
+    }
+
+    public void setScanState(ScanStateType scanState) {
+        this.scanState = scanState;
+    }
+
     public ScanType getScanType() {
         return scanType;
     }
@@ -110,20 +129,20 @@ public class CodeLocationLatestScanSummaryView extends BlackDuckComponent {
         this.serverVersion = serverVersion;
     }
 
-    public ScanStatusType getStatus() {
-        return status;
-    }
-
-    public void setStatus(ScanStatusType status) {
-        this.status = status;
-    }
-
     public String getStatusMessage() {
         return statusMessage;
     }
 
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
+    }
+
+    public ScanTransitionReasonType getTransitionReason() {
+        return transitionReason;
+    }
+
+    public void setTransitionReason(ScanTransitionReasonType transitionReason) {
+        this.transitionReason = transitionReason;
     }
 
     public java.util.Date getUpdatedAt() {

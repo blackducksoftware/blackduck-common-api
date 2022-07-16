@@ -11,8 +11,10 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsComponentViolatingPoliciesView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsFailedEvaluationPoliciesView;
+import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsLongTermUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationVulnerabilitiesView;
+import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsShortTermUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsViolatingPoliciesView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -23,10 +25,12 @@ public class DeveloperScansScanView extends BlackDuckView {
     private java.util.List<String> dependencyTrees;
     private String externalId;
     private java.util.List<DeveloperScansScanItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
+    private DeveloperScansScanItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
     private String originId;
     private java.util.List<String> policyStatuses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationLicensesView> policyViolationLicenses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities;
+    private DeveloperScansScanItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance;
     private String versionName;
     private java.util.List<DeveloperScansScanItemsViolatingPoliciesView> violatingPolicies;
 
@@ -78,6 +82,14 @@ public class DeveloperScansScanView extends BlackDuckView {
         this.failedEvaluationPolicies = failedEvaluationPolicies;
     }
 
+    public DeveloperScansScanItemsLongTermUpgradeGuidanceView getLongTermUpgradeGuidance() {
+        return longTermUpgradeGuidance;
+    }
+
+    public void setLongTermUpgradeGuidance(DeveloperScansScanItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance) {
+        this.longTermUpgradeGuidance = longTermUpgradeGuidance;
+    }
+
     public String getOriginId() {
         return originId;
     }
@@ -108,6 +120,14 @@ public class DeveloperScansScanView extends BlackDuckView {
 
     public void setPolicyViolationVulnerabilities(java.util.List<DeveloperScansScanItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities) {
         this.policyViolationVulnerabilities = policyViolationVulnerabilities;
+    }
+
+    public DeveloperScansScanItemsShortTermUpgradeGuidanceView getShortTermUpgradeGuidance() {
+        return shortTermUpgradeGuidance;
+    }
+
+    public void setShortTermUpgradeGuidance(DeveloperScansScanItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance) {
+        this.shortTermUpgradeGuidance = shortTermUpgradeGuidance;
     }
 
     public String getVersionName() {

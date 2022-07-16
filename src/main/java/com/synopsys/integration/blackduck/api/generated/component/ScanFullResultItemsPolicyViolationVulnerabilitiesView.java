@@ -13,11 +13,24 @@ import com.synopsys.integration.blackduck.api.generated.component.ScanFullResult
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ScanFullResultItemsPolicyViolationVulnerabilitiesView extends BlackDuckComponent {
+    private java.util.List<String> cweIds;
     private String description;
     private String name;
     private BigDecimal overallScore;
+    private java.util.Date publishedDate;
+    private String solution;
+    private java.util.Date vendorFixDate;
     private java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesViolatingPoliciesView> violatingPolicies;
     private String vulnSeverity;
+    private String workaround;
+
+    public java.util.List<String> getCweIds() {
+        return cweIds;
+    }
+
+    public void setCweIds(java.util.List<String> cweIds) {
+        this.cweIds = cweIds;
+    }
 
     public String getDescription() {
         return description;
@@ -43,6 +56,30 @@ public class ScanFullResultItemsPolicyViolationVulnerabilitiesView extends Black
         this.overallScore = overallScore;
     }
 
+    public java.util.Date getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublishedDate(java.util.Date publishedDate) {
+        this.publishedDate = publishedDate;
+    }
+
+    public String getSolution() {
+        return solution;
+    }
+
+    public void setSolution(String solution) {
+        this.solution = solution;
+    }
+
+    public java.util.Date getVendorFixDate() {
+        return vendorFixDate;
+    }
+
+    public void setVendorFixDate(java.util.Date vendorFixDate) {
+        this.vendorFixDate = vendorFixDate;
+    }
+
     public java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesViolatingPoliciesView> getViolatingPolicies() {
         return violatingPolicies;
     }
@@ -57,6 +94,14 @@ public class ScanFullResultItemsPolicyViolationVulnerabilitiesView extends Black
 
     public void setVulnSeverity(String vulnSeverity) {
         this.vulnSeverity = vulnSeverity;
+    }
+
+    public String getWorkaround() {
+        return workaround;
+    }
+
+    public void setWorkaround(String workaround) {
+        this.workaround = workaround;
     }
 
 }

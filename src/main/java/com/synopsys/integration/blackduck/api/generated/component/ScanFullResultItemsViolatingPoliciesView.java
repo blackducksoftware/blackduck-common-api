@@ -14,6 +14,7 @@ public class ScanFullResultItemsViolatingPoliciesView extends BlackDuckComponent
     private String description;
     private String policyName;
     private String policySeverity;
+    private String policyStatus;
 
     public String getDescription() {
         return description;
@@ -37,6 +38,14 @@ public class ScanFullResultItemsViolatingPoliciesView extends BlackDuckComponent
 
     public void setPolicySeverity(String policySeverity) {
         this.policySeverity = policySeverity;
+    }
+
+    public String getPolicyStatus() {
+        return policyStatus;
+    }
+
+    public void setPolicyStatus(String policyStatus) {
+        this.policyStatus = policyStatus;
     }
 
 }
