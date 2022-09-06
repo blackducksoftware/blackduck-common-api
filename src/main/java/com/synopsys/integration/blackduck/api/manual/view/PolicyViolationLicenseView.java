@@ -10,10 +10,11 @@ package com.synopsys.integration.blackduck.api.manual.view;
 import java.util.Set;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.manual.temporary.view.PolicyViolationView;
 
 public class PolicyViolationLicenseView extends BlackDuckView {
     private String licenseName;
-    private Set<String> violatingPolicyNames;
+    private Set<PolicyViolationView> violatingPolicies;
     private String errorMessage;
     private String warningMessage;
 
@@ -21,8 +22,8 @@ public class PolicyViolationLicenseView extends BlackDuckView {
         return licenseName;
     }
 
-    public Set<String> getViolatingPolicyNames() {
-        return violatingPolicyNames;
+    public Set<PolicyViolationView> getViolatingPolicies() {
+        return violatingPolicies;
     }
 
     public String getErrorMessage() {

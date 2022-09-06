@@ -10,6 +10,7 @@ package com.synopsys.integration.blackduck.api.manual.view;
 import java.util.Set;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
+import com.synopsys.integration.blackduck.api.manual.temporary.view.PolicyViolationView;
 
 public class DeveloperScanComponentResultView extends BlackDuckView {
     public static final String CURRENT_MEDIA_TYPE = "application/vnd.blackducksoftware.scan-4+json";
@@ -17,7 +18,7 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
     private String componentName;
     private String versionName;
     private String componentIdentifier;
-    private Set<String> violatingPolicyNames;
+    private Set<PolicyViolationView> violatingPolicies;
     private Set<PolicyViolationVulnerabilityView> policyViolationVulnerabilities;
     private Set<PolicyViolationLicenseView> policyViolationLicenses;
     private String errorMessage;
@@ -35,8 +36,8 @@ public class DeveloperScanComponentResultView extends BlackDuckView {
         return componentIdentifier;
     }
 
-    public Set<String> getViolatingPolicyNames() {
-        return violatingPolicyNames;
+    public Set<PolicyViolationView> getViolatingPolicies() {
+        return violatingPolicies;
     }
 
     public Set<PolicyViolationVulnerabilityView> getPolicyViolationVulnerabilities() {
