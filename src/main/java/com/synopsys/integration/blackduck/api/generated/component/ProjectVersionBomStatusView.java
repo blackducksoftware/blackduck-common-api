@@ -12,8 +12,17 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersi
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionBomStatusView extends BlackDuckComponent {
+    private java.util.Date lastBomUpdateDate;
     private java.util.Date lastScanDate;
     private ProjectVersionBomStatusType status;
+
+    public java.util.Date getLastBomUpdateDate() {
+        return lastBomUpdateDate;
+    }
+
+    public void setLastBomUpdateDate(java.util.Date lastBomUpdateDate) {
+        this.lastBomUpdateDate = lastBomUpdateDate;
+    }
 
     public java.util.Date getLastScanDate() {
         return lastScanDate;

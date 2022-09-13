@@ -27,7 +27,7 @@ public class ScanFullResultView extends BlackDuckComponent {
     private String componentIdentifier;
     private String componentName;
     private java.util.List<ScanFullResultItemsComponentViolatingPoliciesView> componentViolatingPolicies;
-    private java.util.List<String> dependencyTrees;
+    private java.util.List<java.util.List<String>> dependencyTrees;
     private String externalId;
     private java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
     private ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
@@ -81,11 +81,11 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.componentViolatingPolicies = componentViolatingPolicies;
     }
 
-    public java.util.List<String> getDependencyTrees() {
+    public java.util.List<java.util.List<String>> getDependencyTrees() {
         return dependencyTrees;
     }
 
-    public void setDependencyTrees(java.util.List<String> dependencyTrees) {
+    public void setDependencyTrees(java.util.List<java.util.List<String>> dependencyTrees) {
         this.dependencyTrees = dependencyTrees;
     }
 

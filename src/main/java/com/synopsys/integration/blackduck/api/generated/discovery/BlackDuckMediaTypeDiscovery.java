@@ -132,6 +132,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECTS_WITH_ID = String.format("/api/projects/%s", UUID_REGEX);
     public static final String API_PROJECTS_CUSTOM_FIELDS_WITH_ID = String.format("/api/projects/%s/custom-fields/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_PROJECT_MAPPINGS_WITH_ID = String.format("/api/projects/%s/project-mappings/%s", UUID_REGEX, UUID_REGEX);
+    public static final String API_PROJECTS_SCM = String.format("/api/projects/%s/scm", UUID_REGEX);
     public static final String API_PROJECTS_TAGS_WITH_ID = String.format("/api/projects/%s/tags/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_USERGROUPS_WITH_ID = String.format("/api/projects/%s/usergroups/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_USERS_WITH_ID = String.format("/api/projects/%s/users/%s", UUID_REGEX, UUID_REGEX);
@@ -185,6 +186,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_SETTINGS_DATA_RETENTION = String.format("/api/settings/data-retention");
     public static final String API_SETTINGS_LICENSE_REVIEW = String.format("/api/settings/license-review");
     public static final String API_SETTINGS_ROLE = String.format("/api/settings/role");
+    public static final String API_SETTINGS_UNMATCHED_FILE_RETENTION = String.format("/api/settings/unmatched-file-retention");
     public static final String API_SSO_CONFIGURATION = String.format("/api/sso/configuration");
     public static final String API_SSO_STATUS = String.format("/api/sso/status");
     public static final String API_SYSTEM_OAUTH_CLIENT = String.format("/api/system-oauth-client");
@@ -300,6 +302,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_POLICY_RULES_WITH_ID, VND_BLACKDUCKSOFTWARE_POLICY_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_PROJECT_MAPPINGS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_SCM, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_TAGS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERGROUPS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
@@ -365,6 +368,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_DATA_RETENTION, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_LICENSE_REVIEW, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_ROLE, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_SETTINGS_UNMATCHED_FILE_RETENTION, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SSO_CONFIGURATION, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SSO_STATUS, VND_BLACKDUCKSOFTWARE_ADMIN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_SYSTEM_OAUTH_CLIENT, VND_BLACKDUCKSOFTWARE_USER_4_JSON));

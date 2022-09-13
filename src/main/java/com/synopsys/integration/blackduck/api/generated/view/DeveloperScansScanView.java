@@ -22,7 +22,7 @@ public class DeveloperScansScanView extends BlackDuckView {
     private String componentIdentifier;
     private String componentName;
     private java.util.List<DeveloperScansScanItemsComponentViolatingPoliciesView> componentViolatingPolicies;
-    private java.util.List<String> dependencyTrees;
+    private java.util.List<java.util.List<String>> dependencyTrees;
     private String externalId;
     private java.util.List<DeveloperScansScanItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
     private DeveloperScansScanItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
@@ -58,11 +58,11 @@ public class DeveloperScansScanView extends BlackDuckView {
         this.componentViolatingPolicies = componentViolatingPolicies;
     }
 
-    public java.util.List<String> getDependencyTrees() {
+    public java.util.List<java.util.List<String>> getDependencyTrees() {
         return dependencyTrees;
     }
 
-    public void setDependencyTrees(java.util.List<String> dependencyTrees) {
+    public void setDependencyTrees(java.util.List<java.util.List<String>> dependencyTrees) {
         this.dependencyTrees = dependencyTrees;
     }
 
