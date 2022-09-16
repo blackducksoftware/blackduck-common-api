@@ -11,6 +11,8 @@ import java.util.Set;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 
+// DeveloperScanComponentResultView now has generated class available through the DeveloperScansScanView
+@Deprecated
 public class DeveloperScanComponentResultView extends BlackDuckView {
     public static final String CURRENT_MEDIA_TYPE = "application/vnd.blackducksoftware.scan-4+json";
 

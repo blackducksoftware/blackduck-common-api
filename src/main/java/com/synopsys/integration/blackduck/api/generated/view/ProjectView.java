@@ -63,8 +63,12 @@ public class ProjectView extends BlackDuckView {
     private Boolean projectLevelAdjustments;
     private String projectOwner;
     private Integer projectTier;
+    private Boolean purgeUnmatchedFilesEnabled;
     private String repository;
+    private String repositoryGroupId;
+    private String repositoryName;
     private Boolean snippetAdjustmentApplied;
+    private Boolean unmatchedFileRetentionEnabled;
     private java.util.Date updatedAt;
     private String updatedBy;
     private String updatedByUser;
@@ -165,6 +169,14 @@ public class ProjectView extends BlackDuckView {
         this.projectTier = projectTier;
     }
 
+    public Boolean getPurgeUnmatchedFilesEnabled() {
+        return purgeUnmatchedFilesEnabled;
+    }
+
+    public void setPurgeUnmatchedFilesEnabled(Boolean purgeUnmatchedFilesEnabled) {
+        this.purgeUnmatchedFilesEnabled = purgeUnmatchedFilesEnabled;
+    }
+
     public String getRepository() {
         return repository;
     }
@@ -173,12 +185,36 @@ public class ProjectView extends BlackDuckView {
         this.repository = repository;
     }
 
+    public String getRepositoryGroupId() {
+        return repositoryGroupId;
+    }
+
+    public void setRepositoryGroupId(String repositoryGroupId) {
+        this.repositoryGroupId = repositoryGroupId;
+    }
+
+    public String getRepositoryName() {
+        return repositoryName;
+    }
+
+    public void setRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+    }
+
     public Boolean getSnippetAdjustmentApplied() {
         return snippetAdjustmentApplied;
     }
 
     public void setSnippetAdjustmentApplied(Boolean snippetAdjustmentApplied) {
         this.snippetAdjustmentApplied = snippetAdjustmentApplied;
+    }
+
+    public Boolean getUnmatchedFileRetentionEnabled() {
+        return unmatchedFileRetentionEnabled;
+    }
+
+    public void setUnmatchedFileRetentionEnabled(Boolean unmatchedFileRetentionEnabled) {
+        this.unmatchedFileRetentionEnabled = unmatchedFileRetentionEnabled;
     }
 
     public java.util.Date getUpdatedAt() {
