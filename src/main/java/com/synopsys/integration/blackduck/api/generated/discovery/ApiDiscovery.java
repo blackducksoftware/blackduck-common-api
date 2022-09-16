@@ -59,7 +59,7 @@ import com.synopsys.integration.rest.HttpUrl;
 public class ApiDiscovery {
     public static final BlackDuckPath<AnnouncementBannerView> ANNOUNCEMENT_PATH = new BlackDuckPath("/api/announcement", AnnouncementBannerView.class, false);
     public static final BlackDuckPath<GraphComponentImportEventsView> BOM_IMPORT_PATH = new BlackDuckPath("/api/bom-import", GraphComponentImportEventsView.class, false);
-    public static final BlackDuckPath<CodeLocationView> CODELOCATIONS_PATH = new BlackDuckPath("/api/codelocations", CodeLocationView.class, false);
+    public static final BlackDuckPath<CodeLocationView> CODELOCATIONS_PATH = new BlackDuckPath("/api/codelocations", CodeLocationView.class, true);
     public static final BlackDuckPath<ComponentMigrationsView> COMPONENT_MIGRATIONS_PATH = new BlackDuckPath("/api/component-migrations", ComponentMigrationsView.class, false);
     public static final BlackDuckPath<ComponentsView> COMPONENTS_PATH = new BlackDuckPath("/api/components", ComponentsView.class, true);
     public static final BlackDuckPath<CpesView> CPES_PATH = new BlackDuckPath("/api/cpes", CpesView.class, false);
@@ -97,8 +97,8 @@ public class ApiDiscovery {
     public static final BlackDuckPath<SystemOauthClientView> SYSTEM_OAUTH_CLIENT_PATH = new BlackDuckPath("/api/system-oauth-client", SystemOauthClientView.class, false);
     public static final BlackDuckPath<TokensView> TOKENS_PATH = new BlackDuckPath("/api/tokens", TokensView.class, false);
     public static final BlackDuckPath<BlackDuckStringResponse> UPLOADS_PATH = new BlackDuckPath("/api/uploads", BlackDuckStringResponse.class, false);
-    public static final BlackDuckPath<UserGroupView> USERGROUPS_PATH = new BlackDuckPath("/api/usergroups", UserGroupView.class, false);
-    public static final BlackDuckPath<UserView> USERS_PATH = new BlackDuckPath("/api/users", UserView.class, false);
+    public static final BlackDuckPath<UserGroupView> USERGROUPS_PATH = new BlackDuckPath("/api/usergroups", UserGroupView.class, true);
+    public static final BlackDuckPath<UserView> USERS_PATH = new BlackDuckPath("/api/users", UserView.class, true);
     public static final BlackDuckPath<LicenseReportsReportView> VERSIONS_PATH = new BlackDuckPath("/api/versions", LicenseReportsReportView.class, true);
     public static final BlackDuckPath<VulnerabilityView> VULNERABILITIES_PATH = new BlackDuckPath("/api/vulnerabilities", VulnerabilityView.class, false);
     public static final BlackDuckPath<VulnerabilityReportsReportView> VULNERABILITY_REPORTS_PATH = new BlackDuckPath("/api/vulnerability-reports", VulnerabilityReportsReportView.class, true);
@@ -117,8 +117,8 @@ public class ApiDiscovery {
         return metaSingleResponse(BOM_IMPORT_PATH);
     }
 
-    public UrlSingleResponse<CodeLocationView> metaCodelocationsLink() {
-        return metaSingleResponse(CODELOCATIONS_PATH);
+    public UrlMultipleResponses<CodeLocationView> metaCodelocationsLink() {
+        return metaMultipleResponses(CODELOCATIONS_PATH);
     }
 
     public UrlSingleResponse<ComponentMigrationsView> metaComponentMigrationsLink() {
@@ -269,12 +269,12 @@ public class ApiDiscovery {
         return metaSingleResponse(UPLOADS_PATH);
     }
 
-    public UrlSingleResponse<UserGroupView> metaUsergroupsLink() {
-        return metaSingleResponse(USERGROUPS_PATH);
+    public UrlMultipleResponses<UserGroupView> metaUsergroupsLink() {
+        return metaMultipleResponses(USERGROUPS_PATH);
     }
 
-    public UrlSingleResponse<UserView> metaUsersLink() {
-        return metaSingleResponse(USERS_PATH);
+    public UrlMultipleResponses<UserView> metaUsersLink() {
+        return metaMultipleResponses(USERS_PATH);
     }
 
     public UrlMultipleResponses<LicenseReportsReportView> metaVersionsLink() {
