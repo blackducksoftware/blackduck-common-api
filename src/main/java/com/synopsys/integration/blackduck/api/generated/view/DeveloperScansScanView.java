@@ -7,6 +7,7 @@
  */
 package com.synopsys.integration.blackduck.api.generated.view;
 
+import java.math.BigDecimal;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsComponentViolatingPoliciesView;
@@ -25,7 +26,9 @@ public class DeveloperScansScanView extends BlackDuckView {
     private java.util.List<java.util.List<String>> dependencyTrees;
     private String externalId;
     private java.util.List<DeveloperScansScanItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
+    private String filePath;
     private DeveloperScansScanItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
+    private BigDecimal matchConfidence;
     private String originId;
     private java.util.List<String> policyStatuses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationLicensesView> policyViolationLicenses;
@@ -82,12 +85,28 @@ public class DeveloperScansScanView extends BlackDuckView {
         this.failedEvaluationPolicies = failedEvaluationPolicies;
     }
 
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
     public DeveloperScansScanItemsLongTermUpgradeGuidanceView getLongTermUpgradeGuidance() {
         return longTermUpgradeGuidance;
     }
 
     public void setLongTermUpgradeGuidance(DeveloperScansScanItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance) {
         this.longTermUpgradeGuidance = longTermUpgradeGuidance;
+    }
+
+    public BigDecimal getMatchConfidence() {
+        return matchConfidence;
+    }
+
+    public void setMatchConfidence(BigDecimal matchConfidence) {
+        this.matchConfidence = matchConfidence;
     }
 
     public String getOriginId() {

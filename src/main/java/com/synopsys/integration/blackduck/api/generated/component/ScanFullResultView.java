@@ -7,6 +7,7 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
+import java.math.BigDecimal;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsAllLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsAllVulnerabilitiesView;
@@ -30,7 +31,9 @@ public class ScanFullResultView extends BlackDuckComponent {
     private java.util.List<java.util.List<String>> dependencyTrees;
     private String externalId;
     private java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
+    private String filePath;
     private ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
+    private BigDecimal matchConfidence;
     private java.util.List<String> nonEvaluatedPolicies;
     private java.util.List<ScanFullResultItemsOverriddenPoliciesView> overriddenPolicies;
     private java.util.List<ScanFullResultItemsOverriddenPoliciesPartialView> overriddenPoliciesPartial;
@@ -105,12 +108,28 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.failedEvaluationPolicies = failedEvaluationPolicies;
     }
 
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
     public ScanFullResultItemsLongTermUpgradeGuidanceView getLongTermUpgradeGuidance() {
         return longTermUpgradeGuidance;
     }
 
     public void setLongTermUpgradeGuidance(ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance) {
         this.longTermUpgradeGuidance = longTermUpgradeGuidance;
+    }
+
+    public BigDecimal getMatchConfidence() {
+        return matchConfidence;
+    }
+
+    public void setMatchConfidence(BigDecimal matchConfidence) {
+        this.matchConfidence = matchConfidence;
     }
 
     public java.util.List<String> getNonEvaluatedPolicies() {

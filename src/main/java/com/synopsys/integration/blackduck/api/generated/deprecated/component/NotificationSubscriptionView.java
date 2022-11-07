@@ -14,6 +14,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 @Deprecated
 public class NotificationSubscriptionView extends BlackDuckComponent {
     private java.util.Date createdAt;
+    private Boolean notifyUser;
     private String subscriptionTarget;
     private String subscriptionTargetProjectName;
     private String subscriptionTargetReleaseName;
@@ -24,6 +25,14 @@ public class NotificationSubscriptionView extends BlackDuckComponent {
 
     public void setCreatedAt(java.util.Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Boolean getNotifyUser() {
+        return notifyUser;
+    }
+
+    public void setNotifyUser(Boolean notifyUser) {
+        this.notifyUser = notifyUser;
     }
 
     public String getSubscriptionTarget() {
