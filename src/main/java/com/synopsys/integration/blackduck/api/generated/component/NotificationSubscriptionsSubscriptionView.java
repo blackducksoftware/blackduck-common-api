@@ -12,6 +12,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class NotificationSubscriptionsSubscriptionView extends BlackDuckComponent {
     private java.util.Date createdAt;
+    private Boolean notifyUser;
     private String subscriptionTarget;
     private String subscriptionTargetProjectName;
     private String subscriptionTargetReleaseName;
@@ -22,6 +23,14 @@ public class NotificationSubscriptionsSubscriptionView extends BlackDuckComponen
 
     public void setCreatedAt(java.util.Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Boolean getNotifyUser() {
+        return notifyUser;
+    }
+
+    public void setNotifyUser(Boolean notifyUser) {
+        this.notifyUser = notifyUser;
     }
 
     public String getSubscriptionTarget() {
