@@ -7,11 +7,11 @@
  */
 package com.synopsys.integration.blackduck.api.generated.component;
 
-import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.BomStatusScanStatusType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class BomStatusScanView extends BlackDuckComponent {
+public class BomStatusScanView extends BlackDuckView {
     private BomStatusScanStatusType status;
 
     public BomStatusScanStatusType getStatus() {
