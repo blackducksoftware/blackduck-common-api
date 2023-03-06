@@ -16,6 +16,7 @@ import com.synopsys.integration.blackduck.api.generated.component.DeveloperScans
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationVulnerabilitiesView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsShortTermUpgradeGuidanceView;
+import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsTransitiveUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.DeveloperScansScanItemsViolatingPoliciesView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -34,6 +35,7 @@ public class DeveloperScansScanView extends BlackDuckView {
     private java.util.List<DeveloperScansScanItemsPolicyViolationLicensesView> policyViolationLicenses;
     private java.util.List<DeveloperScansScanItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities;
     private DeveloperScansScanItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance;
+    private java.util.List<DeveloperScansScanItemsTransitiveUpgradeGuidanceView> transitiveUpgradeGuidance;
     private String versionName;
     private java.util.List<DeveloperScansScanItemsViolatingPoliciesView> violatingPolicies;
 
@@ -147,6 +149,14 @@ public class DeveloperScansScanView extends BlackDuckView {
 
     public void setShortTermUpgradeGuidance(DeveloperScansScanItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance) {
         this.shortTermUpgradeGuidance = shortTermUpgradeGuidance;
+    }
+
+    public java.util.List<DeveloperScansScanItemsTransitiveUpgradeGuidanceView> getTransitiveUpgradeGuidance() {
+        return transitiveUpgradeGuidance;
+    }
+
+    public void setTransitiveUpgradeGuidance(java.util.List<DeveloperScansScanItemsTransitiveUpgradeGuidanceView> transitiveUpgradeGuidance) {
+        this.transitiveUpgradeGuidance = transitiveUpgradeGuidance;
     }
 
     public String getVersionName() {

@@ -11,12 +11,14 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.component.Varies;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionView;
 import com.synopsys.integration.blackduck.api.generated.view.TagView;
@@ -63,7 +65,7 @@ public class ProjectView extends BlackDuckView {
     private Boolean projectLevelAdjustments;
     private String projectOwner;
     private Integer projectTier;
-    private Boolean purgeUnmatchedFilesEnabled;
+    private Varies purgeUnmatchedFilesEnabled;
     private String repository;
     private String repositoryGroupId;
     private String repositoryName;
@@ -169,11 +171,11 @@ public class ProjectView extends BlackDuckView {
         this.projectTier = projectTier;
     }
 
-    public Boolean getPurgeUnmatchedFilesEnabled() {
+    public Varies getPurgeUnmatchedFilesEnabled() {
         return purgeUnmatchedFilesEnabled;
     }
 
-    public void setPurgeUnmatchedFilesEnabled(Boolean purgeUnmatchedFilesEnabled) {
+    public void setPurgeUnmatchedFilesEnabled(Varies purgeUnmatchedFilesEnabled) {
         this.purgeUnmatchedFilesEnabled = purgeUnmatchedFilesEnabled;
     }
 

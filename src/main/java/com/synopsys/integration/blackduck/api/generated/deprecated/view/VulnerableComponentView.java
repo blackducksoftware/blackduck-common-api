@@ -44,6 +44,7 @@ public class VulnerableComponentView extends BlackDuckView {
     private String componentVersionOriginName;
     private Boolean ignored;
     private ProjectVersionVulnerableBomComponentsItemsLicenseView license;
+    private String packageUrl;
     private ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView vulnerabilityWithRemediation;
 
     public String getComponentName() {
@@ -100,6 +101,14 @@ public class VulnerableComponentView extends BlackDuckView {
 
     public void setLicense(ProjectVersionVulnerableBomComponentsItemsLicenseView license) {
         this.license = license;
+    }
+
+    public String getPackageUrl() {
+        return packageUrl;
+    }
+
+    public void setPackageUrl(String packageUrl) {
+        this.packageUrl = packageUrl;
     }
 
     public ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView getVulnerabilityWithRemediation() {
