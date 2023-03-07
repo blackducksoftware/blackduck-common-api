@@ -10,12 +10,14 @@ package com.synopsys.integration.blackduck.api.generated.component;
 import java.math.BigDecimal;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.MatchType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionMatchedFilesItemsMatchesMatchTypeFilterValueType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionMatchedFilesItemsMatchesView extends BlackDuckComponent {
     private String component;
     private BigDecimal matchConfidencePercentage;
     private java.util.List<MatchType> matchType;
+    private ProjectVersionMatchedFilesItemsMatchesMatchTypeFilterValueType matchTypeFilterValue;
     private String snippet;
 
     public String getComponent() {
@@ -40,6 +42,14 @@ public class ProjectVersionMatchedFilesItemsMatchesView extends BlackDuckCompone
 
     public void setMatchType(java.util.List<MatchType> matchType) {
         this.matchType = matchType;
+    }
+
+    public ProjectVersionMatchedFilesItemsMatchesMatchTypeFilterValueType getMatchTypeFilterValue() {
+        return matchTypeFilterValue;
+    }
+
+    public void setMatchTypeFilterValue(ProjectVersionMatchedFilesItemsMatchesMatchTypeFilterValueType matchTypeFilterValue) {
+        this.matchTypeFilterValue = matchTypeFilterValue;
     }
 
     public String getSnippet() {

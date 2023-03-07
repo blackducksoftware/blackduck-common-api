@@ -14,11 +14,21 @@ import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckRespons
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectGroupsProjectGroupView extends BlackDuckComponent {
+    private java.util.Date createdAt;
     private BigDecimal depth;
     private String description;
     private BigDecimal directChildProjectCount;
     private BigDecimal directChildProjectGroupCount;
     private String name;
+    private java.util.Date updatedAt;
+
+    public java.util.Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
 
     public BigDecimal getDepth() {
         return depth;
@@ -58,6 +68,14 @@ public class ProjectGroupsProjectGroupView extends BlackDuckComponent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 }

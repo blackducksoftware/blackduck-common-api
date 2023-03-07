@@ -25,6 +25,7 @@ public class ScanView extends BlackDuckView {
     private BigDecimal fileCount;
     private String hostName;
     private BigDecimal matchCount;
+    private Boolean retainUnmatchedFiles;
     private BigDecimal scanSize;
     private ScanStateType scanState;
     private ScanType scanType;
@@ -95,6 +96,14 @@ public class ScanView extends BlackDuckView {
 
     public void setMatchCount(BigDecimal matchCount) {
         this.matchCount = matchCount;
+    }
+
+    public Boolean getRetainUnmatchedFiles() {
+        return retainUnmatchedFiles;
+    }
+
+    public void setRetainUnmatchedFiles(Boolean retainUnmatchedFiles) {
+        this.retainUnmatchedFiles = retainUnmatchedFiles;
     }
 
     public BigDecimal getScanSize() {

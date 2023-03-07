@@ -16,6 +16,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.JobStatusTyp
 public class JobView extends BlackDuckView {
     private String errorText;
     private java.util.Date finishedAt;
+    private String jobEntityDescription;
     private String progressData;
     private java.util.Date scheduledAt;
     private java.util.Date startedAt;
@@ -37,6 +38,14 @@ public class JobView extends BlackDuckView {
 
     public void setFinishedAt(java.util.Date finishedAt) {
         this.finishedAt = finishedAt;
+    }
+
+    public String getJobEntityDescription() {
+        return jobEntityDescription;
+    }
+
+    public void setJobEntityDescription(String jobEntityDescription) {
+        this.jobEntityDescription = jobEntityDescription;
     }
 
     public String getProgressData() {

@@ -11,14 +11,14 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SettingsUnmatchedFileRetentionView extends BlackDuckComponent {
-    private Boolean purgeUnmatchedFilesEnabled;
+    private String purgeUnmatchedFilesEnabled;
     private Boolean unmatchedFileRetentionEnabled;
 
-    public Boolean getPurgeUnmatchedFilesEnabled() {
+    public String getPurgeUnmatchedFilesEnabled() {
         return purgeUnmatchedFilesEnabled;
     }
 
-    public void setPurgeUnmatchedFilesEnabled(Boolean purgeUnmatchedFilesEnabled) {
+    public void setPurgeUnmatchedFilesEnabled(String purgeUnmatchedFilesEnabled) {
         this.purgeUnmatchedFilesEnabled = purgeUnmatchedFilesEnabled;
     }
 
