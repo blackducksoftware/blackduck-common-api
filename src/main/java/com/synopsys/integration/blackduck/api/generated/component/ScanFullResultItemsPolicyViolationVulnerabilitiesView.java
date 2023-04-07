@@ -19,6 +19,7 @@ public class ScanFullResultItemsPolicyViolationVulnerabilitiesView extends Black
     private BigDecimal overallScore;
     private java.util.Date publishedDate;
     private String solution;
+    private String source;
     private java.util.Date vendorFixDate;
     private java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesViolatingPoliciesView> violatingPolicies;
     private String vulnSeverity;
@@ -70,6 +71,14 @@ public class ScanFullResultItemsPolicyViolationVulnerabilitiesView extends Black
 
     public void setSolution(String solution) {
         this.solution = solution;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public java.util.Date getVendorFixDate() {
