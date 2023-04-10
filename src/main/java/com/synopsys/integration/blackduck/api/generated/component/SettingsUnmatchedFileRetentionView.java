@@ -8,17 +8,18 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.enumeration.SettingsUnmatchedFileRetentionPurgeUnmatchedFilesEnabledType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SettingsUnmatchedFileRetentionView extends BlackDuckComponent {
-    private String purgeUnmatchedFilesEnabled;
+    private SettingsUnmatchedFileRetentionPurgeUnmatchedFilesEnabledType purgeUnmatchedFilesEnabled;
     private Boolean unmatchedFileRetentionEnabled;
 
-    public String getPurgeUnmatchedFilesEnabled() {
+    public SettingsUnmatchedFileRetentionPurgeUnmatchedFilesEnabledType getPurgeUnmatchedFilesEnabled() {
         return purgeUnmatchedFilesEnabled;
     }
 
-    public void setPurgeUnmatchedFilesEnabled(String purgeUnmatchedFilesEnabled) {
+    public void setPurgeUnmatchedFilesEnabled(SettingsUnmatchedFileRetentionPurgeUnmatchedFilesEnabledType purgeUnmatchedFilesEnabled) {
         this.purgeUnmatchedFilesEnabled = purgeUnmatchedFilesEnabled;
     }
 

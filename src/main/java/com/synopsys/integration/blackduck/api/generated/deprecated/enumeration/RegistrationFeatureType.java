@@ -13,9 +13,11 @@ import com.synopsys.integration.util.EnumUtils;
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 @Deprecated
 public enum RegistrationFeatureType {
-    BDSA,
+    ARTIFACTORY_INTEGRATION,
+	BDSA,
 	BINARY_ANALYSIS,
 	CONNECT_AND_SHARE,
+	CONTAINER_ANALYSIS,
 	CRYPTO_ALGORITHMS,
 	CUSTOM_SIGNATURES,
 	DEEP_VULNERABILITY_INTELLIGENCE,

@@ -18,6 +18,7 @@ public class ScanFullResultItemsAllVulnerabilitiesView extends BlackDuckComponen
     private BigDecimal overallScore;
     private java.util.Date publishedDate;
     private String solution;
+    private String source;
     private java.util.Date vendorFixDate;
     private String vulnSeverity;
     private String workaround;
@@ -68,6 +69,14 @@ public class ScanFullResultItemsAllVulnerabilitiesView extends BlackDuckComponen
 
     public void setSolution(String solution) {
         this.solution = solution;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public java.util.Date getVendorFixDate() {

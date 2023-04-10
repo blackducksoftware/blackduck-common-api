@@ -24,6 +24,7 @@ public class ComponentPolicyRulesView extends BlackDuckView {
     private PolicyRuleExpressionView expression;
     private String name;
     private Boolean overridable;
+    private String overrideExpiresAt;
     private ProjectVersionComponentPolicyStatusType policyApprovalStatus;
     private PolicyRuleSeverityType severity;
     private java.util.Date updatedAt;
@@ -100,6 +101,14 @@ public class ComponentPolicyRulesView extends BlackDuckView {
 
     public void setOverridable(Boolean overridable) {
         this.overridable = overridable;
+    }
+
+    public String getOverrideExpiresAt() {
+        return overrideExpiresAt;
+    }
+
+    public void setOverrideExpiresAt(String overrideExpiresAt) {
+        this.overrideExpiresAt = overrideExpiresAt;
     }
 
     public ProjectVersionComponentPolicyStatusType getPolicyApprovalStatus() {
