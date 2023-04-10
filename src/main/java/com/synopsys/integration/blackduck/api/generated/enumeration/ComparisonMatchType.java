@@ -15,6 +15,7 @@ public enum ComparisonMatchType {
 	FILE,
 	MANUAL,
 	PARTIAL_FILE,
+	SBOM,
 	SNIPPET;
 
     public String prettyPrint() {

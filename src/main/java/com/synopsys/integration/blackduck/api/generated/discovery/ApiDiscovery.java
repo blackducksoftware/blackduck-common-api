@@ -24,6 +24,7 @@ import com.synopsys.integration.blackduck.api.generated.view.DeveloperScansScanV
 import com.synopsys.integration.blackduck.api.generated.view.ExternalConfigDetectUriView;
 import com.synopsys.integration.blackduck.api.generated.view.FileSourceContentsSha1View;
 import com.synopsys.integration.blackduck.api.generated.view.GraphComponentImportEventsView;
+import com.synopsys.integration.blackduck.api.generated.view.HistoriesView;
 import com.synopsys.integration.blackduck.api.generated.view.JobView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseDashboardView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
@@ -41,6 +42,7 @@ import com.synopsys.integration.blackduck.api.generated.view.PurgeTokensView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
 import com.synopsys.integration.blackduck.api.generated.view.RoleView;
+import com.synopsys.integration.blackduck.api.generated.view.RuntimesView;
 import com.synopsys.integration.blackduck.api.generated.view.SbomFieldsScopesView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanMonitorView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanReadinessView;
@@ -76,6 +78,8 @@ public class ApiDiscovery {
     public static final BlackDuckPath<HealthChecksLivenessView> HEALTH_CHECKS_PATH = new BlackDuckPath("/api/health-checks", HealthChecksLivenessView.class, false);
     public static final BlackDuckPath<BlackDuckResponse> INTELLIGENT_PERSISTENCE_SCANS_PATH = new BlackDuckPath("/api/intelligent-persistence-scans", BlackDuckResponse.class, false);
     public static final BlackDuckPath<JobView> JOBS_PATH = new BlackDuckPath("/api/jobs", JobView.class, true);
+    public static final BlackDuckPath<HistoriesView> JOBS_HISTORIES_PATH = new BlackDuckPath("/api/jobs-histories", HistoriesView.class, false);
+    public static final BlackDuckPath<RuntimesView> JOBS_RUNTIMES_PATH = new BlackDuckPath("/api/jobs-runtimes", RuntimesView.class, false);
     public static final BlackDuckPath<ProjectView> JOURNAL_PATH = new BlackDuckPath("/api/journal", ProjectView.class, false);
     public static final BlackDuckPath<LicenseDashboardView> LICENSE_DASHBOARD_PATH = new BlackDuckPath("/api/license-dashboard", LicenseDashboardView.class, false);
     public static final BlackDuckPath<LicenseFamilyView> LICENSE_FAMILIES_PATH = new BlackDuckPath("/api/license-families", LicenseFamilyView.class, true);
@@ -177,6 +181,14 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<JobView> metaJobsLink() {
         return metaMultipleResponses(JOBS_PATH);
+    }
+
+    public UrlSingleResponse<HistoriesView> metaJobsHistoriesLink() {
+        return metaSingleResponse(JOBS_HISTORIES_PATH);
+    }
+
+    public UrlSingleResponse<RuntimesView> metaJobsRuntimesLink() {
+        return metaSingleResponse(JOBS_RUNTIMES_PATH);
     }
 
     public UrlSingleResponse<ProjectView> metaJournalLink() {

@@ -13,9 +13,11 @@ import com.synopsys.integration.util.EnumUtils;
 public enum ScanType {
     BDIO,
 	BINARY,
+	CONTAINER,
 	FS,
 	INFRASTRUCTURE_AS_CODE,
 	PACKAGE_MANAGER,
+	SBOM,
 	SIGNATURE,
 	SNIPPET,
 	STRING_SEARCH,

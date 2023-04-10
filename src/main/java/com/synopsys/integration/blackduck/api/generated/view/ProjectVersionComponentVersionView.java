@@ -18,8 +18,10 @@ import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponse
 import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionActivityDataView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionLicensesView;
+import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionMatchAmbiguityView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentVersionReviewedDetailsView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.MatchType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentMatchConfidenceStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionComponentType;
@@ -69,6 +71,9 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
     private RiskProfileView licenseRiskProfile;
     private java.util.List<ProjectVersionComponentVersionLicensesView> licenses;
     private Boolean manuallyAdjusted;
+    private ProjectVersionComponentVersionMatchAmbiguityView matchAmbiguity;
+    private BigDecimal matchConfidence;
+    private ProjectVersionComponentMatchConfidenceStatusType matchConfidenceStatus;
     private java.util.List<MatchType> matchTypes;
     private RiskProfileView operationalRiskProfile;
     private java.util.List<VersionBomOriginView> origins;
@@ -215,6 +220,30 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setManuallyAdjusted(Boolean manuallyAdjusted) {
         this.manuallyAdjusted = manuallyAdjusted;
+    }
+
+    public ProjectVersionComponentVersionMatchAmbiguityView getMatchAmbiguity() {
+        return matchAmbiguity;
+    }
+
+    public void setMatchAmbiguity(ProjectVersionComponentVersionMatchAmbiguityView matchAmbiguity) {
+        this.matchAmbiguity = matchAmbiguity;
+    }
+
+    public BigDecimal getMatchConfidence() {
+        return matchConfidence;
+    }
+
+    public void setMatchConfidence(BigDecimal matchConfidence) {
+        this.matchConfidence = matchConfidence;
+    }
+
+    public ProjectVersionComponentMatchConfidenceStatusType getMatchConfidenceStatus() {
+        return matchConfidenceStatus;
+    }
+
+    public void setMatchConfidenceStatus(ProjectVersionComponentMatchConfidenceStatusType matchConfidenceStatus) {
+        this.matchConfidenceStatus = matchConfidenceStatus;
     }
 
     public java.util.List<MatchType> getMatchTypes() {

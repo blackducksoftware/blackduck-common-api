@@ -10,15 +10,15 @@ package com.synopsys.integration.blackduck.api.generated.component;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class FeaturesAutoVersionRemoval extends BlackDuckComponent {
-    private Boolean enabled;
+public class HistoriesItemsPropertiesView extends BlackDuckComponent {
+    private String property;
 
-    public Boolean getEnabled() {
-        return enabled;
+    public String getProperty() {
+        return property;
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public void setProperty(String property) {
+        this.property = property;
     }
 
 }

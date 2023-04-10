@@ -12,8 +12,35 @@ import com.synopsys.integration.blackduck.api.generated.component.ScanFullResult
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ScanFullResultItemsTransitiveUpgradeGuidanceLongTermUpgradeGuidanceView extends BlackDuckComponent {
+    private String externalId;
+    private String origin;
+    private String version;
     private String versionName;
     private ScanFullResultItemsTransitiveUpgradeGuidanceLongTermUpgradeGuidanceVulnerabilityRiskView vulnerabilityRisk;
+
+    public String getExternalId() {
+        return externalId;
+    }
+
+    public void setExternalId(String externalId) {
+        this.externalId = externalId;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
 
     public String getVersionName() {
         return versionName;

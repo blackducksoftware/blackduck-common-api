@@ -8,19 +8,16 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
-import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseType;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ScanFullResultItemsLicensesLicenseFamilyNameType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
+public class ScanFullResultItemsLicensesView extends BlackDuckComponent {
     private String license;
     private String licenseDisplay;
     private ScanFullResultItemsLicensesLicenseFamilyNameType licenseFamilyName;
-    private LicenseType licenseType;
-    private java.util.List<ProjectVersionComponentLicensesView> licenses;
-    private LicenseOwnershipType ownership;
+    private String licenseType;
+    private java.util.List<String> licenses;
+    private String ownership;
     private String spdxId;
 
     public String getLicense() {
@@ -47,27 +44,27 @@ public class ProjectVersionComponentLicensesView extends BlackDuckComponent {
         this.licenseFamilyName = licenseFamilyName;
     }
 
-    public LicenseType getLicenseType() {
+    public String getLicenseType() {
         return licenseType;
     }
 
-    public void setLicenseType(LicenseType licenseType) {
+    public void setLicenseType(String licenseType) {
         this.licenseType = licenseType;
     }
 
-    public java.util.List<ProjectVersionComponentLicensesView> getLicenses() {
+    public java.util.List<String> getLicenses() {
         return licenses;
     }
 
-    public void setLicenses(java.util.List<ProjectVersionComponentLicensesView> licenses) {
+    public void setLicenses(java.util.List<String> licenses) {
         this.licenses = licenses;
     }
 
-    public LicenseOwnershipType getOwnership() {
+    public String getOwnership() {
         return ownership;
     }
 
-    public void setOwnership(LicenseOwnershipType ownership) {
+    public void setOwnership(String ownership) {
         this.ownership = ownership;
     }
 

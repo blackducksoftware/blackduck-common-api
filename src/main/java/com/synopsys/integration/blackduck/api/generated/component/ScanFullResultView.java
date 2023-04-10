@@ -13,34 +13,43 @@ import com.synopsys.integration.blackduck.api.generated.component.ScanFullResult
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsAllVulnerabilitiesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsComponentViolatingPoliciesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsFailedEvaluationPoliciesView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsLongTermUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsOverriddenPoliciesPartialView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsOverriddenPoliciesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsPolicyViolationLicensesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsPolicyViolationVulnerabilitiesView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsShortTermUpgradeGuidanceView;
+import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsTransitiveUpgradeGuidanceView;
 import com.synopsys.integration.blackduck.api.generated.component.ScanFullResultItemsViolatingPoliciesView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ScanFullResultView extends BlackDuckComponent {
     private java.util.List<ScanFullResultItemsAllLicensesView> allLicenses;
     private java.util.List<ScanFullResultItemsAllVulnerabilitiesView> allVulnerabilities;
+    private String componentDescription;
     private String componentIdentifier;
     private String componentName;
     private java.util.List<ScanFullResultItemsComponentViolatingPoliciesView> componentViolatingPolicies;
     private java.util.List<java.util.List<String>> dependencyTrees;
     private String externalId;
+    private String externalNamespace;
     private java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> failedEvaluationPolicies;
     private String filePath;
+    private ScanFullResultItemsLicensesView licenses;
     private ScanFullResultItemsLongTermUpgradeGuidanceView longTermUpgradeGuidance;
     private BigDecimal matchConfidence;
+    private java.util.List<String> matchTypes;
     private java.util.List<String> nonEvaluatedPolicies;
     private java.util.List<ScanFullResultItemsOverriddenPoliciesView> overriddenPolicies;
     private java.util.List<ScanFullResultItemsOverriddenPoliciesPartialView> overriddenPoliciesPartial;
+    private String packageUrl;
     private java.util.List<String> partiallyEvaluatedPolicies;
     private java.util.List<ScanFullResultItemsPolicyViolationLicensesView> policyViolationLicenses;
     private java.util.List<ScanFullResultItemsPolicyViolationVulnerabilitiesView> policyViolationVulnerabilities;
+    private java.util.Date releaseDate;
     private ScanFullResultItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance;
+    private java.util.List<ScanFullResultItemsTransitiveUpgradeGuidanceView> transitiveUpgradeGuidance;
     private String versionName;
     private java.util.List<ScanFullResultItemsViolatingPoliciesView> violatingPolicies;
 
@@ -58,6 +67,14 @@ public class ScanFullResultView extends BlackDuckComponent {
 
     public void setAllVulnerabilities(java.util.List<ScanFullResultItemsAllVulnerabilitiesView> allVulnerabilities) {
         this.allVulnerabilities = allVulnerabilities;
+    }
+
+    public String getComponentDescription() {
+        return componentDescription;
+    }
+
+    public void setComponentDescription(String componentDescription) {
+        this.componentDescription = componentDescription;
     }
 
     public String getComponentIdentifier() {
@@ -100,6 +117,14 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.externalId = externalId;
     }
 
+    public String getExternalNamespace() {
+        return externalNamespace;
+    }
+
+    public void setExternalNamespace(String externalNamespace) {
+        this.externalNamespace = externalNamespace;
+    }
+
     public java.util.List<ScanFullResultItemsFailedEvaluationPoliciesView> getFailedEvaluationPolicies() {
         return failedEvaluationPolicies;
     }
@@ -116,6 +141,14 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.filePath = filePath;
     }
 
+    public ScanFullResultItemsLicensesView getLicenses() {
+        return licenses;
+    }
+
+    public void setLicenses(ScanFullResultItemsLicensesView licenses) {
+        this.licenses = licenses;
+    }
+
     public ScanFullResultItemsLongTermUpgradeGuidanceView getLongTermUpgradeGuidance() {
         return longTermUpgradeGuidance;
     }
@@ -130,6 +163,14 @@ public class ScanFullResultView extends BlackDuckComponent {
 
     public void setMatchConfidence(BigDecimal matchConfidence) {
         this.matchConfidence = matchConfidence;
+    }
+
+    public java.util.List<String> getMatchTypes() {
+        return matchTypes;
+    }
+
+    public void setMatchTypes(java.util.List<String> matchTypes) {
+        this.matchTypes = matchTypes;
     }
 
     public java.util.List<String> getNonEvaluatedPolicies() {
@@ -156,6 +197,14 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.overriddenPoliciesPartial = overriddenPoliciesPartial;
     }
 
+    public String getPackageUrl() {
+        return packageUrl;
+    }
+
+    public void setPackageUrl(String packageUrl) {
+        this.packageUrl = packageUrl;
+    }
+
     public java.util.List<String> getPartiallyEvaluatedPolicies() {
         return partiallyEvaluatedPolicies;
     }
@@ -180,12 +229,28 @@ public class ScanFullResultView extends BlackDuckComponent {
         this.policyViolationVulnerabilities = policyViolationVulnerabilities;
     }
 
+    public java.util.Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(java.util.Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
     public ScanFullResultItemsShortTermUpgradeGuidanceView getShortTermUpgradeGuidance() {
         return shortTermUpgradeGuidance;
     }
 
     public void setShortTermUpgradeGuidance(ScanFullResultItemsShortTermUpgradeGuidanceView shortTermUpgradeGuidance) {
         this.shortTermUpgradeGuidance = shortTermUpgradeGuidance;
+    }
+
+    public java.util.List<ScanFullResultItemsTransitiveUpgradeGuidanceView> getTransitiveUpgradeGuidance() {
+        return transitiveUpgradeGuidance;
+    }
+
+    public void setTransitiveUpgradeGuidance(java.util.List<ScanFullResultItemsTransitiveUpgradeGuidanceView> transitiveUpgradeGuidance) {
+        this.transitiveUpgradeGuidance = transitiveUpgradeGuidance;
     }
 
     public String getVersionName() {
