@@ -9,13 +9,16 @@ package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ScanFullResultItemsLicensesLicenseFamilyNameType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionHierarchicalComponentsItemsLicensesView extends BlackDuckComponent {
     private String license;
     private String licenseDisplay;
+    private ScanFullResultItemsLicensesLicenseFamilyNameType licenseFamilyName;
     private java.util.List<String> licenses;
     private LicenseOwnershipType ownership;
+    private String spdxId;
 
     public String getLicense() {
         return license;
@@ -33,6 +36,14 @@ public class ProjectVersionHierarchicalComponentsItemsLicensesView extends Black
         this.licenseDisplay = licenseDisplay;
     }
 
+    public ScanFullResultItemsLicensesLicenseFamilyNameType getLicenseFamilyName() {
+        return licenseFamilyName;
+    }
+
+    public void setLicenseFamilyName(ScanFullResultItemsLicensesLicenseFamilyNameType licenseFamilyName) {
+        this.licenseFamilyName = licenseFamilyName;
+    }
+
     public java.util.List<String> getLicenses() {
         return licenses;
     }
@@ -47,6 +58,14 @@ public class ProjectVersionHierarchicalComponentsItemsLicensesView extends Black
 
     public void setOwnership(LicenseOwnershipType ownership) {
         this.ownership = ownership;
+    }
+
+    public String getSpdxId() {
+        return spdxId;
+    }
+
+    public void setSpdxId(String spdxId) {
+        this.spdxId = spdxId;
     }
 
 }

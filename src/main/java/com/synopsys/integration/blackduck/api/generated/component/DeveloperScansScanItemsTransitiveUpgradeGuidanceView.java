@@ -13,9 +13,30 @@ import com.synopsys.integration.blackduck.api.generated.component.DeveloperScans
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class DeveloperScansScanItemsTransitiveUpgradeGuidanceView extends BlackDuckComponent {
+    private String component;
+    private String componentName;
     private String externalId;
     private DeveloperScansScanItemsTransitiveUpgradeGuidanceLongTermUpgradeGuidanceView longTermUpgradeGuidance;
+    private String originExternalId;
+    private String originExternalNamespace;
     private DeveloperScansScanItemsTransitiveUpgradeGuidanceShortTermUpgradeGuidanceView shortTermUpgradeGuidance;
+    private String versionName;
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getComponentName() {
+        return componentName;
+    }
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
 
     public String getExternalId() {
         return externalId;
@@ -33,12 +54,36 @@ public class DeveloperScansScanItemsTransitiveUpgradeGuidanceView extends BlackD
         this.longTermUpgradeGuidance = longTermUpgradeGuidance;
     }
 
+    public String getOriginExternalId() {
+        return originExternalId;
+    }
+
+    public void setOriginExternalId(String originExternalId) {
+        this.originExternalId = originExternalId;
+    }
+
+    public String getOriginExternalNamespace() {
+        return originExternalNamespace;
+    }
+
+    public void setOriginExternalNamespace(String originExternalNamespace) {
+        this.originExternalNamespace = originExternalNamespace;
+    }
+
     public DeveloperScansScanItemsTransitiveUpgradeGuidanceShortTermUpgradeGuidanceView getShortTermUpgradeGuidance() {
         return shortTermUpgradeGuidance;
     }
 
     public void setShortTermUpgradeGuidance(DeveloperScansScanItemsTransitiveUpgradeGuidanceShortTermUpgradeGuidanceView shortTermUpgradeGuidance) {
         this.shortTermUpgradeGuidance = shortTermUpgradeGuidance;
+    }
+
+    public String getVersionName() {
+        return versionName;
+    }
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
     }
 
 }

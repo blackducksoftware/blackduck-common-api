@@ -25,6 +25,7 @@ public enum ProjectVersionMatchedFilesItemsMatchesMatchTypeFilterValueType {
 	MANUALLY_IDENTIFIED,
 	MANUAL_BOM_PACKAGE,
 	PARTIAL,
+	SBOM,
 	SNIPPET,
 	UNMATCHED;
 
