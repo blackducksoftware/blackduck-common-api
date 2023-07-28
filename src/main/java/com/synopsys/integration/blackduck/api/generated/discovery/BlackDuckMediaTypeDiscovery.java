@@ -141,6 +141,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECT_GROUPS_HIERARCHY = String.format("/api/project-groups/%s/hierarchy", UUID_REGEX);
     public static final String API_PROJECT_GROUPS_POSSIBLE_CHILD_PROJECT_GROUPS = String.format("/api/project-groups/%s/possible-child-project-groups", UUID_REGEX);
     public static final String API_PROJECT_GROUPS_PROJECT_GROUPS = String.format("/api/project-groups/%s/project-groups", UUID_REGEX);
+    public static final String API_PROJECT_GROUPS_REPORT_SETTINGS = String.format("/api/project-groups/%s/report-settings", UUID_REGEX);
     public static final String API_PROJECT_GROUPS_SBOM_FIELDS = String.format("/api/project-groups/%s/sbom-fields", UUID_REGEX);
     public static final String API_PROJECT_GROUPS_USERGROUPS_WITH_ID = String.format("/api/project-groups/%s/usergroups/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECT_GROUPS_USERS_WITH_ID = String.format("/api/project-groups/%s/users/%s", UUID_REGEX, UUID_REGEX);
@@ -148,6 +149,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECTS_WITH_ID = String.format("/api/projects/%s", UUID_REGEX);
     public static final String API_PROJECTS_CUSTOM_FIELDS_WITH_ID = String.format("/api/projects/%s/custom-fields/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_PROJECT_MAPPINGS_WITH_ID = String.format("/api/projects/%s/project-mappings/%s", UUID_REGEX, UUID_REGEX);
+    public static final String API_PROJECTS_SBOM_FIELDS = String.format("/api/projects/%s/sbom-fields", UUID_REGEX);
     public static final String API_PROJECTS_SCM = String.format("/api/projects/%s/scm", UUID_REGEX);
     public static final String API_PROJECTS_TAGS_WITH_ID = String.format("/api/projects/%s/tags/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_USERGROUPS_WITH_ID = String.format("/api/projects/%s/usergroups/%s", UUID_REGEX, UUID_REGEX);
@@ -155,6 +157,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECTS_VERSIONS_WITH_ID = String.format("/api/projects/%s/versions/%s", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_BOM_EVENTS = String.format("/api/projects/%s/versions/%s/bom-events", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_BOM_STATUS = String.format("/api/projects/%s/versions/%s/bom-status", UUID_REGEX, UUID_REGEX);
+    public static final String API_PROJECTS_VERSIONS_BOM_STATUS_WITH_ID = String.format("/api/projects/%s/versions/%s/bom-status/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_CODE_LOCATIONS = String.format("/api/projects/%s/versions/%s/code-locations", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPARISON = String.format("/api/projects/%s/versions/%s/comparison", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_COMPONENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/components/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX);
@@ -186,6 +189,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_PROJECTS_VERSIONS_POLICY_STATUS = String.format("/api/projects/%s/versions/%s/policy-status", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_REPORTS_WITH_ID = String.format("/api/projects/%s/versions/%s/reports/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_REPORTS_CONTENTS = String.format("/api/projects/%s/versions/%s/reports/%s/contents", UUID_REGEX, UUID_REGEX, UUID_REGEX);
+    public static final String API_PROJECTS_VERSIONS_REPORTS_CAN_GENERATE_SBOM_REPORT = String.format("/api/projects/%s/versions/%s/reports/can-generate-sbom-report", UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_SOURCE_VIEW_COMMENTS_WITH_ID = String.format("/api/projects/%s/versions/%s/source-view/%s/comments/%s", UUID_REGEX, UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_VULNERABILITIES_VULNERABILITY_MATCHES = String.format("/api/projects/%s/versions/%s/vulnerabilities/%s/vulnerability-matches", UUID_REGEX, UUID_REGEX, UUID_REGEX);
     public static final String API_PROJECTS_VERSIONS_VULNERABLE_BOM_COMPONENTS = String.format("/api/projects/%s/versions/%s/vulnerable-bom-components", UUID_REGEX, UUID_REGEX);
@@ -333,12 +337,14 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_POLICY_RULES_WITH_ID, VND_BLACKDUCKSOFTWARE_POLICY_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_CUSTOM_FIELDS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_PROJECT_MAPPINGS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_SBOM_FIELDS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_SCM, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_TAGS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERGROUPS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_USERS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_BOM_EVENTS, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_BOM_STATUS, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_BOM_STATUS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_CODE_LOCATIONS, VND_BLACKDUCKSOFTWARE_INTERNAL_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPARISON, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_COMPONENTS_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
@@ -368,6 +374,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_MATCHED_FILES, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_POLICY_RULES, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_POLICY_STATUS, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_REPORTS_CAN_GENERATE_SBOM_REPORT, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_REPORTS_CONTENTS, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_REPORTS_WITH_ID, VND_BLACKDUCKSOFTWARE_REPORT_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_SOURCE_VIEW_COMMENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_SOURCE_VIEW_1_JSON));
@@ -382,6 +389,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_HIERARCHY, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_POSSIBLE_CHILD_PROJECT_GROUPS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_PROJECT_GROUPS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_REPORT_SETTINGS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_SBOM_FIELDS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_USERGROUPS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_USERS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
