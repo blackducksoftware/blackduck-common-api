@@ -14,6 +14,7 @@ public class SettingsDetectView extends BlackDuckComponent {
     private java.util.List<String> allVersions;
     private Boolean allowDowngrade;
     private String detectUri;
+    private String errorMessage;
     private java.util.List<String> majorVersions;
     private String selectedVersion;
     private Boolean useInternalHosting;
@@ -41,6 +42,14 @@ public class SettingsDetectView extends BlackDuckComponent {
 
     public void setDetectUri(String detectUri) {
         this.detectUri = detectUri;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     public java.util.List<String> getMajorVersions() {
