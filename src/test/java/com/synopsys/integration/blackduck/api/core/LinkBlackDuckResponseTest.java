@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.manual.view.ProjectView;
 
 public class LinkBlackDuckResponseTest {
     @Test
