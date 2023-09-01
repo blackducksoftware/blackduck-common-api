@@ -37,7 +37,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ManagementSettingsV
 import com.synopsys.integration.blackduck.api.generated.view.OriginDependencyPathsView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectGroupsView;
-import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
+import com.synopsys.integration.blackduck.api.manual.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.PurgeTokensView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
