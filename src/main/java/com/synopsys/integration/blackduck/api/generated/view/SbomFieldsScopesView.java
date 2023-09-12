@@ -8,12 +8,11 @@
 package com.synopsys.integration.blackduck.api.generated.view;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
-import com.synopsys.integration.blackduck.api.generated.enumeration.SbomFieldsScopesItemsScopeNameType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SbomFieldsScopesView extends BlackDuckView {
     private String name;
-    private SbomFieldsScopesItemsScopeNameType scopeName;
+    private String scopeName;
 
     public String getName() {
         return name;
@@ -23,11 +22,11 @@ public class SbomFieldsScopesView extends BlackDuckView {
         this.name = name;
     }
 
-    public SbomFieldsScopesItemsScopeNameType getScopeName() {
+    public String getScopeName() {
         return scopeName;
     }
 
-    public void setScopeName(SbomFieldsScopesItemsScopeNameType scopeName) {
+    public void setScopeName(String scopeName) {
         this.scopeName = scopeName;
     }
 

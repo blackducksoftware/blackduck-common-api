@@ -11,10 +11,12 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.component.CodeLocationAutoUnmappingStatusView;
 import com.synopsys.integration.blackduck.api.manual.response.BlackDuckStringResponse;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
@@ -29,12 +31,21 @@ public class CodeLocationView extends BlackDuckView {
         links.put(SCANS_LINK, SCANS_LINK_RESPONSE);
     }
 
+    private CodeLocationAutoUnmappingStatusView autoUnmappingStatus;
     private java.util.Date createdAt;
     private String mappedProjectVersion;
     private String name;
     private BigDecimal scanSize;
     private java.util.Date updatedAt;
     private String url;
+
+    public CodeLocationAutoUnmappingStatusView getAutoUnmappingStatus() {
+        return autoUnmappingStatus;
+    }
+
+    public void setAutoUnmappingStatus(CodeLocationAutoUnmappingStatusView autoUnmappingStatus) {
+        this.autoUnmappingStatus = autoUnmappingStatus;
+    }
 
     public java.util.Date getCreatedAt() {
         return createdAt;

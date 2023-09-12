@@ -17,6 +17,7 @@ import com.synopsys.integration.blackduck.api.generated.enumeration.Registration
 @Deprecated
 public class RegistrationFeatureView extends BlackDuckComponent {
     private RegistrationFeaturesFeatureType feature;
+    private Boolean hidden;
     private BigDecimal limitValue;
     private RegistrationFeaturesStateType state;
     private BigDecimal warningValue;
@@ -27,6 +28,14 @@ public class RegistrationFeatureView extends BlackDuckComponent {
 
     public void setFeature(RegistrationFeaturesFeatureType feature) {
         this.feature = feature;
+    }
+
+    public Boolean getHidden() {
+        return hidden;
+    }
+
+    public void setHidden(Boolean hidden) {
+        this.hidden = hidden;
     }
 
     public BigDecimal getLimitValue() {

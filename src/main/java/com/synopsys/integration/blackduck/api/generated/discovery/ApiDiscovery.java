@@ -18,6 +18,7 @@ import com.synopsys.integration.blackduck.api.generated.response.HealthChecksLiv
 import com.synopsys.integration.blackduck.api.generated.view.AnnouncementBannerView;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ComponentMigrationsView;
+import com.synopsys.integration.blackduck.api.generated.view.ComponentVulnerabilityBomView;
 import com.synopsys.integration.blackduck.api.generated.view.CpesView;
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
 import com.synopsys.integration.blackduck.api.generated.view.DeveloperScansScanView;
@@ -25,6 +26,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ExternalConfigDetec
 import com.synopsys.integration.blackduck.api.generated.view.FileSourceContentsSha1View;
 import com.synopsys.integration.blackduck.api.generated.view.GraphComponentImportEventsView;
 import com.synopsys.integration.blackduck.api.generated.view.HistoriesView;
+import com.synopsys.integration.blackduck.api.generated.view.IntegrationGithubView;
 import com.synopsys.integration.blackduck.api.generated.view.JobView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseDashboardView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseFamilyView;
@@ -32,12 +34,18 @@ import com.synopsys.integration.blackduck.api.generated.view.LicenseReportsRepor
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermCategoryView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseTermView;
 import com.synopsys.integration.blackduck.api.generated.view.LicenseView;
+import com.synopsys.integration.blackduck.api.generated.view.LiteDashboardView;
+import com.synopsys.integration.blackduck.api.generated.view.LiteProjectsProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.LiteVersionsProjectVersionView;
+import com.synopsys.integration.blackduck.api.generated.view.LwBomProjectVersionsProjectVersionView;
+import com.synopsys.integration.blackduck.api.generated.view.LwBomProjectsView;
+import com.synopsys.integration.blackduck.api.generated.view.LwBomsView;
 import com.synopsys.integration.blackduck.api.generated.view.ManageAnnouncementBannerView;
 import com.synopsys.integration.blackduck.api.generated.view.ManagementSettingsView;
 import com.synopsys.integration.blackduck.api.generated.view.OriginDependencyPathsView;
 import com.synopsys.integration.blackduck.api.generated.view.PolicyRuleView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectGroupsView;
-import com.synopsys.integration.blackduck.api.manual.view.ProjectView;
+import com.synopsys.integration.blackduck.api.generated.view.ProjectView;
 import com.synopsys.integration.blackduck.api.generated.view.PurgeTokensView;
 import com.synopsys.integration.blackduck.api.generated.view.RegistrationView;
 import com.synopsys.integration.blackduck.api.generated.view.ReportContentsView;
@@ -47,6 +55,7 @@ import com.synopsys.integration.blackduck.api.generated.view.SbomFieldsScopesVie
 import com.synopsys.integration.blackduck.api.generated.view.ScanMonitorView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanReadinessView;
 import com.synopsys.integration.blackduck.api.generated.view.ScanView;
+import com.synopsys.integration.blackduck.api.generated.view.SearchKbPurlComponentView;
 import com.synopsys.integration.blackduck.api.generated.view.SettingsAnalysisView;
 import com.synopsys.integration.blackduck.api.generated.view.SsoConfigurationView;
 import com.synopsys.integration.blackduck.api.generated.view.SystemOauthClientView;
@@ -76,6 +85,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<ExternalConfigDetectUriView> EXTERNAL_CONFIG_PATH = new BlackDuckPath("/api/external-config", ExternalConfigDetectUriView.class, false);
     public static final BlackDuckPath<FileSourceContentsSha1View> FILE_SOURCE_CONTENTS_PATH = new BlackDuckPath("/api/file-source-contents", FileSourceContentsSha1View.class, false);
     public static final BlackDuckPath<HealthChecksLivenessView> HEALTH_CHECKS_PATH = new BlackDuckPath("/api/health-checks", HealthChecksLivenessView.class, false);
+    public static final BlackDuckPath<IntegrationGithubView> INTEGRATION_PATH = new BlackDuckPath("/api/integration", IntegrationGithubView.class, false);
     public static final BlackDuckPath<BlackDuckResponse> INTELLIGENT_PERSISTENCE_SCANS_PATH = new BlackDuckPath("/api/intelligent-persistence-scans", BlackDuckResponse.class, false);
     public static final BlackDuckPath<JobView> JOBS_PATH = new BlackDuckPath("/api/jobs", JobView.class, true);
     public static final BlackDuckPath<HistoriesView> JOBS_HISTORIES_PATH = new BlackDuckPath("/api/jobs-histories", HistoriesView.class, false);
@@ -86,6 +96,13 @@ public class ApiDiscovery {
     public static final BlackDuckPath<LicenseTermCategoryView> LICENSE_TERM_CATEGORIES_PATH = new BlackDuckPath("/api/license-term-categories", LicenseTermCategoryView.class, true);
     public static final BlackDuckPath<LicenseTermView> LICENSE_TERMS_PATH = new BlackDuckPath("/api/license-terms", LicenseTermView.class, true);
     public static final BlackDuckPath<LicenseView> LICENSES_PATH = new BlackDuckPath("/api/licenses", LicenseView.class, true);
+    public static final BlackDuckPath<ComponentVulnerabilityBomView> LITE_COMPONENTS_PATH = new BlackDuckPath("/api/lite-components", ComponentVulnerabilityBomView.class, false);
+    public static final BlackDuckPath<LiteDashboardView> LITE_DASHBOARD_PATH = new BlackDuckPath("/api/lite-dashboard", LiteDashboardView.class, false);
+    public static final BlackDuckPath<LiteProjectsProjectView> LITE_PROJECTS_PATH = new BlackDuckPath("/api/lite-projects", LiteProjectsProjectView.class, false);
+    public static final BlackDuckPath<LiteVersionsProjectVersionView> LITE_VERSIONS_PATH = new BlackDuckPath("/api/lite-versions", LiteVersionsProjectVersionView.class, false);
+    public static final BlackDuckPath<LwBomProjectVersionsProjectVersionView> LW_BOM_PROJECT_VERSIONS_PATH = new BlackDuckPath("/api/lw-bom-project-versions", LwBomProjectVersionsProjectVersionView.class, false);
+    public static final BlackDuckPath<LwBomProjectsView> LW_BOM_PROJECTS_PATH = new BlackDuckPath("/api/lw-bom-projects", LwBomProjectsView.class, false);
+    public static final BlackDuckPath<LwBomsView> LW_BOMS_PATH = new BlackDuckPath("/api/lw-boms", LwBomsView.class, false);
     public static final BlackDuckPath<ManageAnnouncementBannerView> MANAGE_ANNOUNCEMENT_PATH = new BlackDuckPath("/api/manage-announcement", ManageAnnouncementBannerView.class, false);
     public static final BlackDuckPath<NotificationView> NOTIFICATIONS_PATH = new BlackDuckPath("/api/notifications", NotificationView.class, true);
     public static final BlackDuckPath<ManagementSettingsView> PASSWORD_PATH = new BlackDuckPath("/api/password", ManagementSettingsView.class, false);
@@ -101,6 +118,7 @@ public class ApiDiscovery {
     public static final BlackDuckPath<ScanMonitorView> SCAN_MONITOR_PATH = new BlackDuckPath("/api/scan-monitor", ScanMonitorView.class, false);
     public static final BlackDuckPath<ScanReadinessView> SCAN_READINESS_PATH = new BlackDuckPath("/api/scan-readiness", ScanReadinessView.class, false);
     public static final BlackDuckPath<ScanView> SCAN_SUMMARIES_PATH = new BlackDuckPath("/api/scan-summaries", ScanView.class, false);
+    public static final BlackDuckPath<SearchKbPurlComponentView> SEARCH_PATH = new BlackDuckPath("/api/search", SearchKbPurlComponentView.class, false);
     public static final BlackDuckPath<SettingsAnalysisView> SETTINGS_PATH = new BlackDuckPath("/api/settings", SettingsAnalysisView.class, false);
     public static final BlackDuckPath<SsoConfigurationView> SSO_PATH = new BlackDuckPath("/api/sso", SsoConfigurationView.class, false);
     public static final BlackDuckPath<SystemOauthClientView> SYSTEM_OAUTH_CLIENT_PATH = new BlackDuckPath("/api/system-oauth-client", SystemOauthClientView.class, false);
@@ -175,6 +193,10 @@ public class ApiDiscovery {
         return metaSingleResponse(HEALTH_CHECKS_PATH);
     }
 
+    public UrlSingleResponse<IntegrationGithubView> metaIntegrationLink() {
+        return metaSingleResponse(INTEGRATION_PATH);
+    }
+
     public UrlSingleResponse<BlackDuckResponse> metaIntelligentPersistenceScansLink() {
         return metaSingleResponse(INTELLIGENT_PERSISTENCE_SCANS_PATH);
     }
@@ -213,6 +235,34 @@ public class ApiDiscovery {
 
     public UrlMultipleResponses<LicenseView> metaLicensesLink() {
         return metaMultipleResponses(LICENSES_PATH);
+    }
+
+    public UrlSingleResponse<ComponentVulnerabilityBomView> metaLiteComponentsLink() {
+        return metaSingleResponse(LITE_COMPONENTS_PATH);
+    }
+
+    public UrlSingleResponse<LiteDashboardView> metaLiteDashboardLink() {
+        return metaSingleResponse(LITE_DASHBOARD_PATH);
+    }
+
+    public UrlSingleResponse<LiteProjectsProjectView> metaLiteProjectsLink() {
+        return metaSingleResponse(LITE_PROJECTS_PATH);
+    }
+
+    public UrlSingleResponse<LiteVersionsProjectVersionView> metaLiteVersionsLink() {
+        return metaSingleResponse(LITE_VERSIONS_PATH);
+    }
+
+    public UrlSingleResponse<LwBomProjectVersionsProjectVersionView> metaLwBomProjectVersionsLink() {
+        return metaSingleResponse(LW_BOM_PROJECT_VERSIONS_PATH);
+    }
+
+    public UrlSingleResponse<LwBomProjectsView> metaLwBomProjectsLink() {
+        return metaSingleResponse(LW_BOM_PROJECTS_PATH);
+    }
+
+    public UrlSingleResponse<LwBomsView> metaLwBomsLink() {
+        return metaSingleResponse(LW_BOMS_PATH);
     }
 
     public UrlSingleResponse<ManageAnnouncementBannerView> metaManageAnnouncementLink() {
@@ -273,6 +323,10 @@ public class ApiDiscovery {
 
     public UrlSingleResponse<ScanView> metaScanSummariesLink() {
         return metaSingleResponse(SCAN_SUMMARIES_PATH);
+    }
+
+    public UrlSingleResponse<SearchKbPurlComponentView> metaSearchLink() {
+        return metaSingleResponse(SEARCH_PATH);
     }
 
     public UrlSingleResponse<SettingsAnalysisView> metaSettingsLink() {
