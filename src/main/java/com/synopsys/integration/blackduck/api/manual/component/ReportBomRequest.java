@@ -7,7 +7,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
  * for a HTTP POST request, e.g.
  *   {"reportFormat":"JSON","reportType":"SBOM","sbomType":"SPDX_22"}
  */
-public class BomReportRequest extends BlackDuckComponent {
+public class ReportBomRequest extends BlackDuckComponent {
     private String reportFormat;
     private String reportType;
     private String sbomType;

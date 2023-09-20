@@ -7,7 +7,7 @@ import com.synopsys.integration.blackduck.api.core.BlackDuckResponse;
  * Class representing an entry on the BDH reponse for a Bill of Materials report 
  * download request. The blackduck API uses this to map the JSON response into it.
  */
-public class BomReportContentView extends BlackDuckResponse {
+public class ReportBomContentView extends BlackDuckResponse {
   private String fileName;
   private JsonObject fileContent;
   private String fileNamePrefix;
