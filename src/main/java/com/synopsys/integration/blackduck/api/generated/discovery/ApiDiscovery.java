@@ -21,7 +21,7 @@ import com.synopsys.integration.blackduck.api.generated.view.ComponentMigrations
 import com.synopsys.integration.blackduck.api.generated.view.ComponentVulnerabilityBomView;
 import com.synopsys.integration.blackduck.api.generated.view.CpesView;
 import com.synopsys.integration.blackduck.api.generated.view.CustomFieldObjectView;
-import com.synopsys.integration.blackduck.api.generated.view.DeveloperScansScanView;
+import com.synopsys.integration.blackduck.api.manual.view.DeveloperScansScanView;
 import com.synopsys.integration.blackduck.api.generated.view.ExternalConfigDetectUriView;
 import com.synopsys.integration.blackduck.api.generated.view.FileSourceContentsSha1View;
 import com.synopsys.integration.blackduck.api.generated.view.GraphComponentImportEventsView;

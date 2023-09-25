@@ -6,7 +6,7 @@ buildscript {
 project.ext.moduleName = 'com.synopsys.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2023.10.0.1-SNAPSHOT-c'
+version = '2023.10.0.1-SNAPSHOT-d'
 
 description = 'A library of mostly temporary request/response classes for the Black Duck REST API.'
 
