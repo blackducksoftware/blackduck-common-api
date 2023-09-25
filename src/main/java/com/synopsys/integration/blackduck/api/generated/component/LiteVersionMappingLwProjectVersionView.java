@@ -10,7 +10,7 @@ package com.synopsys.integration.blackduck.api.generated.component;
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-public class RepositoriesRepoView extends BlackDuckComponent {
+public class LiteVersionMappingLwProjectVersionView extends BlackDuckComponent {
     private String branch;
     private String commitHash;
     private String lastScanStatus;

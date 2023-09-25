@@ -35,6 +35,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_PAGE_1_JSON = "application/vnd.blackducksoftware.job-schedule-page-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_JOURNAL_4_JSON = "application/vnd.blackducksoftware.journal-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON = "application/vnd.blackducksoftware.lw-bill-of-materials-1+json";
+    public static final String VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_2_JSON = "application/vnd.blackducksoftware.lw-bill-of-materials-2+json";
     public static final String VND_BLACKDUCKSOFTWARE_NOTIFICATION_4_JSON = "application/vnd.blackducksoftware.notification-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_POLICY_5_JSON = "application/vnd.blackducksoftware.policy-5+json";
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON = "application/vnd.blackducksoftware.project-detail-4+json";
@@ -110,6 +111,8 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String API_INTEGRATION_GITHUB = String.format("/api/integration/github");
     public static final String API_INTEGRATION_GITHUB_WITH_ID = String.format("/api/integration/github/%s", UUID_REGEX);
     public static final String API_INTEGRATION_GITHUB_REPOSITORIES_WITH_ID = String.format("/api/integration/github/%s/repositories/%s", UUID_REGEX, UUID_REGEX);
+    public static final String API_INTEGRATION_GITHUB_SCAN_SUMMARIES = String.format("/api/integration/github/scan-summaries");
+    public static final String API_INTEGRATION_SCM_LITE_VERSION_MAPPING_WITH_ID = String.format("/api/integration/scm/lite-version-mapping/%s", UUID_REGEX);
     public static final String API_JOBS_HISTORIES = String.format("/api/jobs-histories");
     public static final String API_JOBS_RUNTIMES = String.format("/api/jobs-runtimes");
     public static final String API_JOBS_WITH_ID = String.format("/api/jobs/%s", UUID_REGEX);
@@ -330,7 +333,9 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_HEALTH_CHECKS_READINESS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB, DEFAULT_MEDIA_TYPE));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_REPOSITORIES_WITH_ID, DEFAULT_MEDIA_TYPE));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_SCAN_SUMMARIES, DEFAULT_MEDIA_TYPE));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_WITH_ID, DEFAULT_MEDIA_TYPE));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_SCM_LITE_VERSION_MAPPING_WITH_ID, DEFAULT_MEDIA_TYPE));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_HISTORIES, VND_BLACKDUCKSOFTWARE_JOB_HISTORY_PAGE_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_RUNTIMES, VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_PAGE_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_SCHEDULERS_SCHEDULER_TRIGGER_GROUPS_TRIGGERGROUP_TRIGGERS_WITH_ID, VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_1_JSON));
@@ -351,7 +356,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_DASHBOARD, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_PROJECTS_LITE_VERSIONS, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_PROJECTS_WITH_ID, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_VERSIONS_COMPONENTS, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_VERSIONS_COMPONENTS, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_2_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LITE_VERSIONS_WITH_ID, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LW_BOMS, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_LW_BOM_PROJECTS, VND_BLACKDUCKSOFTWARE_LW_BILL_OF_MATERIALS_1_JSON));

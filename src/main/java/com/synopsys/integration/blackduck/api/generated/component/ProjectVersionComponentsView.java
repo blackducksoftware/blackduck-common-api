@@ -9,6 +9,7 @@ package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentsItemsLicenseDefinitionView;
+import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentsItemsOriginsView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentsItemsPolicyResultsView;
 import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionComponentsItemsVulnCountView;
 
@@ -16,11 +17,9 @@ import com.synopsys.integration.blackduck.api.generated.component.ProjectVersion
 public class ProjectVersionComponentsView extends BlackDuckComponent {
     private String componentId;
     private String componentName;
-    private String externalId;
-    private String externalNamespace;
     private Boolean ignored;
     private ProjectVersionComponentsItemsLicenseDefinitionView licenseDefinition;
-    private String originId;
+    private java.util.List<ProjectVersionComponentsItemsOriginsView> origins;
     private java.util.List<ProjectVersionComponentsItemsPolicyResultsView> policyResults;
     private String source;
     private String versionId;
@@ -44,22 +43,6 @@ public class ProjectVersionComponentsView extends BlackDuckComponent {
         this.componentName = componentName;
     }
 
-    public String getExternalId() {
-        return externalId;
-    }
-
-    public void setExternalId(String externalId) {
-        this.externalId = externalId;
-    }
-
-    public String getExternalNamespace() {
-        return externalNamespace;
-    }
-
-    public void setExternalNamespace(String externalNamespace) {
-        this.externalNamespace = externalNamespace;
-    }
-
     public Boolean getIgnored() {
         return ignored;
     }
@@ -76,12 +59,12 @@ public class ProjectVersionComponentsView extends BlackDuckComponent {
         this.licenseDefinition = licenseDefinition;
     }
 
-    public String getOriginId() {
-        return originId;
+    public java.util.List<ProjectVersionComponentsItemsOriginsView> getOrigins() {
+        return origins;
     }
 
-    public void setOriginId(String originId) {
-        this.originId = originId;
+    public void setOrigins(java.util.List<ProjectVersionComponentsItemsOriginsView> origins) {
+        this.origins = origins;
     }
 
     public java.util.List<ProjectVersionComponentsItemsPolicyResultsView> getPolicyResults() {
