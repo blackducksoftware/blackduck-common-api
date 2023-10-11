@@ -15,7 +15,9 @@ public class LiteProjectsProjectView extends BlackDuckView {
     private java.util.Date createdAt;
     private String integrationServer;
     private String name;
+    private String orgName;
     private String serverType;
+    private java.util.Date updatedAt;
     private String userId;
     private BigDecimal versionCount;
 
@@ -43,12 +45,28 @@ public class LiteProjectsProjectView extends BlackDuckView {
         this.name = name;
     }
 
+    public String getOrgName() {
+        return orgName;
+    }
+
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
+    }
+
     public String getServerType() {
         return serverType;
     }
 
     public void setServerType(String serverType) {
         this.serverType = serverType;
+    }
+
+    public java.util.Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public String getUserId() {

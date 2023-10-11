@@ -29,6 +29,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_4_JSON = "application/vnd.blackducksoftware.component-detail-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_COMPONENT_DETAIL_5_JSON = "application/vnd.blackducksoftware.component-detail-5+json";
     public static final String VND_BLACKDUCKSOFTWARE_COPYRIGHT_4_JSON = "application/vnd.blackducksoftware.copyright-4+json";
+    public static final String VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON = "application/vnd.blackducksoftware.integration-scm-configuration-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_INTERNAL_1_JSON = "application/vnd.blackducksoftware.internal-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_JOB_HISTORY_PAGE_1_JSON = "application/vnd.blackducksoftware.job-history-page-1+json";
     public static final String VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_1_JSON = "application/vnd.blackducksoftware.job-schedule-1+json";
@@ -331,11 +332,11 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_FILE_SOURCE_CONTENTS_WITH_ID, VND_BLACKDUCKSOFTWARE_SCAN_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_HEALTH_CHECKS_LIVENESS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_HEALTH_CHECKS_READINESS, VND_BLACKDUCKSOFTWARE_STATUS_4_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB, DEFAULT_MEDIA_TYPE));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_REPOSITORIES_WITH_ID, DEFAULT_MEDIA_TYPE));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_SCAN_SUMMARIES, DEFAULT_MEDIA_TYPE));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_WITH_ID, DEFAULT_MEDIA_TYPE));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_SCM_LITE_VERSION_MAPPING_WITH_ID, DEFAULT_MEDIA_TYPE));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB, VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_REPOSITORIES_WITH_ID, VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_SCAN_SUMMARIES, VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_GITHUB_WITH_ID, VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_INTEGRATION_SCM_LITE_VERSION_MAPPING_WITH_ID, VND_BLACKDUCKSOFTWARE_INTEGRATION_SCM_CONFIGURATION_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_HISTORIES, VND_BLACKDUCKSOFTWARE_JOB_HISTORY_PAGE_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_RUNTIMES, VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_PAGE_1_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_JOBS_SCHEDULERS_SCHEDULER_TRIGGER_GROUPS_TRIGGERGROUP_TRIGGERS_WITH_ID, VND_BLACKDUCKSOFTWARE_JOB_SCHEDULE_1_JSON));

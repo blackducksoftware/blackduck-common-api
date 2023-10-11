@@ -18,6 +18,7 @@ public class RepositoriesRepoView extends BlackDuckComponent {
     private Boolean lwBom;
     private String lwProjectVersion;
     private String name;
+    private String orgName;
     private String scmServerId;
     private String userId;
 
@@ -75,6 +76,14 @@ public class RepositoriesRepoView extends BlackDuckComponent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getOrgName() {
+        return orgName;
+    }
+
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
     public String getScmServerId() {

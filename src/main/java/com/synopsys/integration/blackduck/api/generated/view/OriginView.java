@@ -22,6 +22,7 @@ public class OriginView extends BlackDuckView {
     private String originId;
     private String originName;
     private String originUrl;
+    private String packageUrl;
     private java.util.Date releasedOn;
     private OriginSourceType source;
     private String versionName;
@@ -72,6 +73,14 @@ public class OriginView extends BlackDuckView {
 
     public void setOriginUrl(String originUrl) {
         this.originUrl = originUrl;
+    }
+
+    public String getPackageUrl() {
+        return packageUrl;
+    }
+
+    public void setPackageUrl(String packageUrl) {
+        this.packageUrl = packageUrl;
     }
 
     public java.util.Date getReleasedOn() {

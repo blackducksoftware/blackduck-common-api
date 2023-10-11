@@ -16,6 +16,7 @@ public class CpeOriginsView extends BlackDuckComponent {
     private String originId;
     private String originName;
     private String originUrl;
+    private String packageUrl;
     private String source;
     private String versionName;
 
@@ -57,6 +58,14 @@ public class CpeOriginsView extends BlackDuckComponent {
 
     public void setOriginUrl(String originUrl) {
         this.originUrl = originUrl;
+    }
+
+    public String getPackageUrl() {
+        return packageUrl;
+    }
+
+    public void setPackageUrl(String packageUrl) {
+        this.packageUrl = packageUrl;
     }
 
     public String getSource() {
