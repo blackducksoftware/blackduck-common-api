@@ -60,6 +60,7 @@ public class VersionBomComponentView extends BlackDuckView {
     private RiskProfileView activityRiskProfile;
     private ProjectVersionComponentPolicyStatusType approvalStatus;
     private String attributionStatement;
+    private Boolean bomMatchInclusion;
     private String component;
     private String componentModification;
     private Boolean componentModified;
@@ -116,6 +117,14 @@ public class VersionBomComponentView extends BlackDuckView {
 
     public void setAttributionStatement(String attributionStatement) {
         this.attributionStatement = attributionStatement;
+    }
+
+    public Boolean getBomMatchInclusion() {
+        return bomMatchInclusion;
+    }
+
+    public void setBomMatchInclusion(Boolean bomMatchInclusion) {
+        this.bomMatchInclusion = bomMatchInclusion;
     }
 
     public String getComponent() {

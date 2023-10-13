@@ -25,6 +25,8 @@ public class RuntimesView extends BlackDuckView {
     private String jobId;
     private String jobName;
     private String jobrunnerName;
+    private Boolean longRunning;
+    private BigDecimal longRunningThresholdMs;
     private String nextExecutionTime;
     private BigDecimal priority;
     private RuntimesItemsPropertiesView properties;
@@ -127,6 +129,22 @@ public class RuntimesView extends BlackDuckView {
 
     public void setJobrunnerName(String jobrunnerName) {
         this.jobrunnerName = jobrunnerName;
+    }
+
+    public Boolean getLongRunning() {
+        return longRunning;
+    }
+
+    public void setLongRunning(Boolean longRunning) {
+        this.longRunning = longRunning;
+    }
+
+    public BigDecimal getLongRunningThresholdMs() {
+        return longRunningThresholdMs;
+    }
+
+    public void setLongRunningThresholdMs(BigDecimal longRunningThresholdMs) {
+        this.longRunningThresholdMs = longRunningThresholdMs;
     }
 
     public String getNextExecutionTime() {

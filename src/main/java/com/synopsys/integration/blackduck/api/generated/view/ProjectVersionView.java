@@ -10,12 +10,14 @@ package com.synopsys.integration.blackduck.api.generated.view;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
 import com.synopsys.integration.blackduck.api.core.BlackDuckView;
 import com.synopsys.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.synopsys.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.synopsys.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.synopsys.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.synopsys.integration.blackduck.api.generated.component.ProjectVersionAutoUnmappingStatusView;
 import com.synopsys.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
 import com.synopsys.integration.blackduck.api.generated.view.CodeLocationView;
 import com.synopsys.integration.blackduck.api.generated.view.ProjectVersionBomStatusView;
@@ -76,7 +78,9 @@ public class ProjectVersionView extends BlackDuckView {
         links.put(VULNERABLE_COMPONENTS_LINK, VULNERABLE_COMPONENTS_LINK_RESPONSE);
     }
 
+    private ProjectVersionAutoUnmappingStatusView autoUnmappingStatus;
     private String branch;
+    private Boolean codeLocationProtection;
     private java.util.Date createdAt;
     private String createdBy;
     private String createdByUser;
@@ -94,12 +98,28 @@ public class ProjectVersionView extends BlackDuckView {
     private String source;
     private String versionName;
 
+    public ProjectVersionAutoUnmappingStatusView getAutoUnmappingStatus() {
+        return autoUnmappingStatus;
+    }
+
+    public void setAutoUnmappingStatus(ProjectVersionAutoUnmappingStatusView autoUnmappingStatus) {
+        this.autoUnmappingStatus = autoUnmappingStatus;
+    }
+
     public String getBranch() {
         return branch;
     }
 
     public void setBranch(String branch) {
         this.branch = branch;
+    }
+
+    public Boolean getCodeLocationProtection() {
+        return codeLocationProtection;
+    }
+
+    public void setCodeLocationProtection(Boolean codeLocationProtection) {
+        this.codeLocationProtection = codeLocationProtection;
     }
 
     public java.util.Date getCreatedAt() {

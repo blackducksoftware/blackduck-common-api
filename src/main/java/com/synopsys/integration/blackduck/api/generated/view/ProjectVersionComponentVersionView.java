@@ -58,6 +58,7 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
     private RiskProfileView activityRiskProfile;
     private ProjectVersionComponentPolicyStatusType approvalStatus;
     private String attributionStatement;
+    private Boolean bomMatchInclusion;
     private String component;
     private String componentModification;
     private Boolean componentModified;
@@ -68,6 +69,7 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
     private String componentVersionName;
     private Boolean ignored;
     private Boolean inAttributionReport;
+    private BigDecimal layerIndex;
     private RiskProfileView licenseRiskProfile;
     private java.util.List<ProjectVersionComponentVersionLicensesView> licenses;
     private Boolean manuallyAdjusted;
@@ -85,6 +87,7 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
     private BigDecimal totalFileMatchCount;
     private java.util.List<UsageType> usages;
     private RiskProfileView versionRiskProfile;
+    private BigDecimal whiteoutLayerIndex;
 
     public ProjectVersionComponentVersionActivityDataView getActivityData() {
         return activityData;
@@ -116,6 +119,14 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setAttributionStatement(String attributionStatement) {
         this.attributionStatement = attributionStatement;
+    }
+
+    public Boolean getBomMatchInclusion() {
+        return bomMatchInclusion;
+    }
+
+    public void setBomMatchInclusion(Boolean bomMatchInclusion) {
+        this.bomMatchInclusion = bomMatchInclusion;
     }
 
     public String getComponent() {
@@ -196,6 +207,14 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setInAttributionReport(Boolean inAttributionReport) {
         this.inAttributionReport = inAttributionReport;
+    }
+
+    public BigDecimal getLayerIndex() {
+        return layerIndex;
+    }
+
+    public void setLayerIndex(BigDecimal layerIndex) {
+        this.layerIndex = layerIndex;
     }
 
     public RiskProfileView getLicenseRiskProfile() {
@@ -332,6 +351,14 @@ public class ProjectVersionComponentVersionView extends BlackDuckView {
 
     public void setVersionRiskProfile(RiskProfileView versionRiskProfile) {
         this.versionRiskProfile = versionRiskProfile;
+    }
+
+    public BigDecimal getWhiteoutLayerIndex() {
+        return whiteoutLayerIndex;
+    }
+
+    public void setWhiteoutLayerIndex(BigDecimal whiteoutLayerIndex) {
+        this.whiteoutLayerIndex = whiteoutLayerIndex;
     }
 
     public UrlMultipleResponses<IssueView> metaComponentIssuesLink() {

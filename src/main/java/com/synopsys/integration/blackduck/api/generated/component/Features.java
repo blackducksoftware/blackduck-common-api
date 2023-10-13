@@ -8,13 +8,25 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
+import com.synopsys.integration.blackduck.api.generated.component.FeaturesCodeLocationAutoUnmapping;
 import com.synopsys.integration.blackduck.api.generated.component.FeaturesExpiringPolicyOverrides;
+import com.synopsys.integration.blackduck.api.generated.component.FeaturesRollupSubProjectRisk;
 import com.synopsys.integration.blackduck.api.generated.component.FeaturesScm;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class Features extends BlackDuckComponent {
+    private FeaturesCodeLocationAutoUnmapping codeLocationAutoUnmapping;
     private FeaturesExpiringPolicyOverrides expiringPolicyOverrides;
+    private FeaturesRollupSubProjectRisk rollupSubProjectRisk;
     private FeaturesScm scm;
+
+    public FeaturesCodeLocationAutoUnmapping getCodeLocationAutoUnmapping() {
+        return codeLocationAutoUnmapping;
+    }
+
+    public void setCodeLocationAutoUnmapping(FeaturesCodeLocationAutoUnmapping codeLocationAutoUnmapping) {
+        this.codeLocationAutoUnmapping = codeLocationAutoUnmapping;
+    }
 
     public FeaturesExpiringPolicyOverrides getExpiringPolicyOverrides() {
         return expiringPolicyOverrides;
@@ -22,6 +34,14 @@ public class Features extends BlackDuckComponent {
 
     public void setExpiringPolicyOverrides(FeaturesExpiringPolicyOverrides expiringPolicyOverrides) {
         this.expiringPolicyOverrides = expiringPolicyOverrides;
+    }
+
+    public FeaturesRollupSubProjectRisk getRollupSubProjectRisk() {
+        return rollupSubProjectRisk;
+    }
+
+    public void setRollupSubProjectRisk(FeaturesRollupSubProjectRisk rollupSubProjectRisk) {
+        this.rollupSubProjectRisk = rollupSubProjectRisk;
     }
 
     public FeaturesScm getScm() {

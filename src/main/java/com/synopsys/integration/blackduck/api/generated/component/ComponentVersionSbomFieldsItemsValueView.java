@@ -8,13 +8,13 @@
 package com.synopsys.integration.blackduck.api.generated.component;
 
 import com.synopsys.integration.blackduck.api.core.BlackDuckComponent;
-import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentVersionSbomFieldsItemsValueType;
+import com.synopsys.integration.blackduck.api.generated.enumeration.ComponentSbomFieldsItemsValueType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentVersionSbomFieldsItemsValueView extends BlackDuckComponent {
     private String email;
     private String name;
-    private ComponentVersionSbomFieldsItemsValueType type;
+    private ComponentSbomFieldsItemsValueType type;
 
     public String getEmail() {
         return email;
@@ -32,11 +32,11 @@ public class ComponentVersionSbomFieldsItemsValueView extends BlackDuckComponent
         this.name = name;
     }
 
-    public ComponentVersionSbomFieldsItemsValueType getType() {
+    public ComponentSbomFieldsItemsValueType getType() {
         return type;
     }
 
-    public void setType(ComponentVersionSbomFieldsItemsValueType type) {
+    public void setType(ComponentSbomFieldsItemsValueType type) {
         this.type = type;
     }
 

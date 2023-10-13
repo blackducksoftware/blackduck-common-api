@@ -16,6 +16,7 @@ import com.synopsys.integration.blackduck.api.generated.component.HistoriesItems
 public class HistoriesView extends BlackDuckView {
     private String cronString;
     private String endTime;
+    private String entityDescription;
     private String error;
     private String id;
     private String intervalUnit;
@@ -53,6 +54,14 @@ public class HistoriesView extends BlackDuckView {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public String getEntityDescription() {
+        return entityDescription;
+    }
+
+    public void setEntityDescription(String entityDescription) {
+        this.entityDescription = entityDescription;
     }
 
     public String getError() {
