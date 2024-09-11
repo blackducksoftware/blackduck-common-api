@@ -1,9 +1,9 @@
 /*
  * blackduck-common-api
  *
- * Copyright (c) 2024 Synopsys, Inc.
+ * Copyright (c) 2024 Black Duck Software, Inc.
  *
- * Use subject to the terms and conditions of the Synopsys End User Software License and Maintenance Agreement. All rights reserved worldwide.
+ * Use subject to the terms and conditions of the Black Duck Software End User Software License and Maintenance Agreement. All rights reserved worldwide.
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
@@ -11,7 +11,7 @@ import com.blackduck.integration.blackduck.api.generated.view.ProjectVersionView
 import com.blackduck.integration.blackduck.api.generated.view.TagView;
 import com.blackduck.integration.blackduck.api.manual.temporary.response.AssignedUserGroupView;
 import com.blackduck.integration.blackduck.api.manual.temporary.view.AssignedUserView;
-import com.synopsys.integration.blackduck.api.generated.view.*;
+import com.blackduck.integration.blackduck.api.generated.view.*;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
