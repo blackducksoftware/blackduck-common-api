@@ -7,11 +7,11 @@
  */
 package com.blackduck.integration.blackduck.api.core;
 
+import com.blackduck.integration.exception.IntegrationException;
+import com.blackduck.integration.rest.HttpUrl;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.blackduck.integration.exception.IntegrationException;
-import com.blackduck.integration.rest.HttpUrl;
 
 import java.io.IOException;
 

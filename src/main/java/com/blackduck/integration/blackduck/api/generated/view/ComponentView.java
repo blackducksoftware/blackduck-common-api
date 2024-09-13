@@ -7,10 +7,6 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
@@ -18,6 +14,10 @@ import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponse
 import com.blackduck.integration.blackduck.api.generated.component.ComponentLogoView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ComponentApprovalStatusType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.OriginSourceType;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentView extends BlackDuckView {

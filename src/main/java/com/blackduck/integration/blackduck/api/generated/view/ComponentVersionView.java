@@ -7,20 +7,16 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
-import com.blackduck.integration.blackduck.api.generated.response.ComponentVersionUpgradeGuidanceView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
-import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
-import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
-import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
+import com.blackduck.integration.blackduck.api.core.response.*;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ComponentVersionType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseStatusType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.OriginSourceType;
+import com.blackduck.integration.blackduck.api.generated.response.ComponentVersionUpgradeGuidanceView;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentVersionView extends BlackDuckView {

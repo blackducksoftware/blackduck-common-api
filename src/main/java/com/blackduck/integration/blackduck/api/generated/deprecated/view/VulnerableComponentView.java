@@ -7,18 +7,18 @@
  */
 package com.blackduck.integration.blackduck.api.generated.deprecated.view;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
+import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsLicenseView;
 import com.blackduck.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
 import com.blackduck.integration.blackduck.api.generated.view.ProjectVersionVulnerableBomComponentsItemsVulnerabilityWithRemediationView;
 import com.blackduck.integration.blackduck.api.generated.view.VulnerabilityView;
-import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionVulnerableBomComponentsItemsLicenseView;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // VulnerableComponentView from the previous API is now called ProjectVersionVulnerableBomComponentsView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

@@ -7,10 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SourceEntryFileBomMatchType;
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SourceEntryType;
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
 import com.blackduck.integration.blackduck.api.generated.deprecated.component.CompositePathWithArchiveContext;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SourceEntryFileBomMatchType;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SourceEntryType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SourceEntryView extends BlackDuckComponent {

@@ -7,9 +7,9 @@
  */
 package com.blackduck.integration.blackduck.api.generated.deprecated.component;
 
-import java.math.BigDecimal;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
+
+import java.math.BigDecimal;
 
 // TextByteOffsetView from the previous API is now called FileLicensesLicenseItemsOffsetsView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

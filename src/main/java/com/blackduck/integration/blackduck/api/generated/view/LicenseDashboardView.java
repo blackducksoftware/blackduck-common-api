@@ -7,16 +7,16 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.math.BigDecimal;
-
-import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsLicenseFamilyView;
-import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsStatusUpdatedByView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsCreatedByView;
+import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsLicenseFamilyView;
+import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsStatusUpdatedByView;
 import com.blackduck.integration.blackduck.api.generated.component.LicenseDashboardItemsUpdatedByView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseSourceType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseStatusType;
+
+import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseDashboardView extends BlackDuckView {

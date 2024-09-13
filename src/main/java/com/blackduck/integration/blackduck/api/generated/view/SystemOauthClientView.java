@@ -7,10 +7,11 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.math.BigDecimal;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.SystemOauthClientGrantTypesType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.SystemOauthClientScopesType;
+
+import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SystemOauthClientView extends BlackDuckView {

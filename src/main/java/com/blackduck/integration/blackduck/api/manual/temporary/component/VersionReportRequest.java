@@ -7,10 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.VersionReportRequestCategoriesType;
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ReportFormatType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ReportType;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.VersionReportRequestCategoriesType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VersionReportRequest extends BlackDuckComponent {

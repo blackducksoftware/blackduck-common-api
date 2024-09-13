@@ -7,10 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.generated.deprecated.component;
 
-import java.math.BigDecimal;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
 import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComparisonItemsView;
+
+import java.math.BigDecimal;
 
 // VersionBomComponentDiffView from the previous API is now called ProjectVersionComparisonView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

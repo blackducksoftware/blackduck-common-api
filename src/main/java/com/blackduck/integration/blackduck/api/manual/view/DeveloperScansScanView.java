@@ -7,17 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
-import java.math.BigDecimal;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsComponentViolatingPoliciesView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsFailedEvaluationPoliciesView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsLongTermUpgradeGuidanceView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationLicensesView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsPolicyViolationVulnerabilitiesView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsShortTermUpgradeGuidanceView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsTransitiveUpgradeGuidanceView;
-import com.blackduck.integration.blackduck.api.generated.component.DeveloperScansScanItemsViolatingPoliciesView;
+import com.blackduck.integration.blackduck.api.generated.component.*;
+
+import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class DeveloperScansScanView extends BlackDuckView {

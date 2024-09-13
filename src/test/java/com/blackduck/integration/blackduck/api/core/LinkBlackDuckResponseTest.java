@@ -1,13 +1,13 @@
 package com.blackduck.integration.blackduck.api.core;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.manual.view.ProjectView;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class LinkBlackDuckResponseTest {
     @Test

@@ -7,23 +7,18 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
+import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+import com.blackduck.integration.blackduck.api.core.response.*;
+import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
 import com.blackduck.integration.blackduck.api.generated.view.ProjectVersionView;
 import com.blackduck.integration.blackduck.api.generated.view.TagView;
 import com.blackduck.integration.blackduck.api.manual.temporary.response.AssignedUserGroupView;
 import com.blackduck.integration.blackduck.api.manual.temporary.view.AssignedUserView;
-import com.blackduck.integration.blackduck.api.generated.view.*;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
-import com.blackduck.integration.blackduck.api.core.BlackDuckView;
-import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
-import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
-import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectCloneCategoriesType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectView extends BlackDuckView {

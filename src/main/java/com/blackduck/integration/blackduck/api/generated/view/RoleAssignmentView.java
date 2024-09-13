@@ -7,13 +7,14 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class RoleAssignmentView extends BlackDuckView {

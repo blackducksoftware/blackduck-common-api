@@ -7,10 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.view;
 
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.ComponentApprovalStatusType;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ComponentVersionType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.OriginSourceType;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.ComponentApprovalStatusType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ComponentDetailsView extends BlackDuckView {

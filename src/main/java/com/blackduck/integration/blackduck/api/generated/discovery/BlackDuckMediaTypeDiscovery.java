@@ -7,15 +7,10 @@
  */
 package com.blackduck.integration.blackduck.api.generated.discovery;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.regex.Pattern;
-
 import com.blackduck.integration.rest.HttpUrl;
-import com.blackduck.integration.rest.request.Request;
+
+import java.util.*;
+import java.util.regex.Pattern;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {

@@ -7,12 +7,12 @@
  */
 package com.blackduck.integration.blackduck.api.generated.deprecated.component;
 
-import java.math.BigDecimal;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
 import com.blackduck.integration.blackduck.api.generated.enumeration.VulnerabilityCvss3TemporalMetricsExploitabilityType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.VulnerabilityCvss3TemporalMetricsRemediationLevelType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.VulnerabilityCvss3TemporalMetricsReportConfidenceType;
+
+import java.math.BigDecimal;
 
 // Cvss3TemporalMetricsView from the previous API is now called VulnerabilityCvss3TemporalMetricsView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

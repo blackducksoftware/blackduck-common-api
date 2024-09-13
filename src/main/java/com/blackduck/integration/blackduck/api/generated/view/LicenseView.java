@@ -7,22 +7,22 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
-import com.blackduck.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
-import com.blackduck.integration.blackduck.api.generated.component.LicenseStatusUpdatedByView;
-import com.blackduck.integration.blackduck.api.generated.component.LicenseUpdatedByView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.blackduck.integration.blackduck.api.generated.component.LicenseCreatedByView;
+import com.blackduck.integration.blackduck.api.generated.component.LicenseLicenseFamilyView;
+import com.blackduck.integration.blackduck.api.generated.component.LicenseStatusUpdatedByView;
+import com.blackduck.integration.blackduck.api.generated.component.LicenseUpdatedByView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseSourceType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseStatusType;
 import com.blackduck.integration.blackduck.api.manual.response.BlackDuckStringResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseView extends BlackDuckView {

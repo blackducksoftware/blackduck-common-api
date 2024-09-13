@@ -7,9 +7,9 @@
  */
 package com.blackduck.integration.blackduck.api.generated.component;
 
-import java.math.BigDecimal;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
+
+import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionComponentMatchAmbiguityView extends BlackDuckComponent {

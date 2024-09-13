@@ -7,13 +7,13 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.blackduck.integration.blackduck.api.manual.enumeration.NotificationStateRequestStateType;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class NotificationUserView<T extends NotificationContentComponent> extends NotificationView<T> {
     public static final Map<String, LinkBlackDuckResponse> links = new HashMap<>();

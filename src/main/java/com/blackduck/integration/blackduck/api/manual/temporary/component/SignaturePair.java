@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SignaturePairSignatureType;
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.SignaturePairSignatureType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class SignaturePair extends BlackDuckComponent {

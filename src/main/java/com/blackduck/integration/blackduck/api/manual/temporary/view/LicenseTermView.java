@@ -7,16 +7,16 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.view;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.blackduck.integration.blackduck.api.generated.component.ComponentVersionLicenseLicensesLicenseFamilySummaryView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
+import com.blackduck.integration.blackduck.api.generated.component.ComponentVersionLicenseLicensesLicenseFamilySummaryView;
 import com.blackduck.integration.blackduck.api.generated.component.LicenseFamilyUpdatedByView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseResponsibilityType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseTermSourceType;
+
+import java.util.HashMap;
+import java.util.Map;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseTermView extends BlackDuckView {

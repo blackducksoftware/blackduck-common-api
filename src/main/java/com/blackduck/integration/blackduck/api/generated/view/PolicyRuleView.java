@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import com.blackduck.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+import com.blackduck.integration.blackduck.api.generated.component.PolicyRuleExpressionView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.PolicyRuleCategoryType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.PolicyRuleScanModesType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.PolicyRuleSeverityType;

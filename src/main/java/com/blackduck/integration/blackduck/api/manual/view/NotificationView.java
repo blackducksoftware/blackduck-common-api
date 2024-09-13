@@ -7,11 +7,11 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
-import java.util.Date;
-
+import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.manual.component.NotificationContentComponent;
 import com.blackduck.integration.blackduck.api.manual.enumeration.NotificationType;
-import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+
+import java.util.Date;
 
 public class NotificationView<T extends NotificationContentComponent> extends BlackDuckView {
     private String contentType;

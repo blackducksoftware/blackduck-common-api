@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import com.blackduck.integration.blackduck.api.generated.component.ComponentVersionMatchedFilesItemsFilePathView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+import com.blackduck.integration.blackduck.api.generated.component.ComponentVersionMatchedFilesItemsFilePathView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.UsageType;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

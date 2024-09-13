@@ -7,9 +7,9 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
-import java.util.Set;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+
+import java.util.Set;
 
 // DeveloperScanComponentResultView now has generated class available through the DeveloperScansScanView
 @Deprecated

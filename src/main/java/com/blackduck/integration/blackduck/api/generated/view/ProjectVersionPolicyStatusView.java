@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
-import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionPolicyStatusComponentVersionPolicyViolationDetailsView;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
 import com.blackduck.integration.blackduck.api.manual.temporary.component.NameValuePairView;
 

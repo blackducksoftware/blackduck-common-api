@@ -7,21 +7,17 @@
  */
 package com.blackduck.integration.blackduck.api.generated.view;
 
+import com.blackduck.integration.blackduck.api.core.BlackDuckView;
+import com.blackduck.integration.blackduck.api.core.response.*;
+import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionAutoUnmappingStatusView;
+import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
+import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.ProjectVersionPhaseType;
+import com.blackduck.integration.blackduck.api.manual.temporary.response.VersionRiskProfileView;
+import com.blackduck.integration.blackduck.api.manual.view.ProjectView;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
-import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionAutoUnmappingStatusView;
-import com.blackduck.integration.blackduck.api.core.BlackDuckView;
-import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
-import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
-import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
-import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionDistributionType;
-import com.blackduck.integration.blackduck.api.manual.view.ProjectView;
-import com.blackduck.integration.blackduck.api.manual.temporary.enumeration.ProjectVersionPhaseType;
-import com.blackduck.integration.blackduck.api.manual.temporary.response.VersionRiskProfileView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ProjectVersionView extends BlackDuckView {

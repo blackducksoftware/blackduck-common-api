@@ -8,8 +8,8 @@
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
-import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseOwnershipType;
+import com.blackduck.integration.blackduck.api.generated.enumeration.LicenseType;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LicenseDefinition extends BlackDuckComponent {

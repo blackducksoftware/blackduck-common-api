@@ -7,13 +7,13 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.response;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.blackduck.integration.blackduck.api.generated.view.ProjectVersionView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
+import com.blackduck.integration.blackduck.api.generated.view.ProjectVersionView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class VersionRiskProfileView extends BlackDuckResponse {

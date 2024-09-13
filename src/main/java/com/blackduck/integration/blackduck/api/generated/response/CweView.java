@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.generated.response;
 
-import com.blackduck.integration.blackduck.api.generated.component.CweCommonConsequencesView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
+import com.blackduck.integration.blackduck.api.generated.component.CweCommonConsequencesView;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class CweView extends BlackDuckResponse {

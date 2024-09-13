@@ -7,9 +7,9 @@
  */
 package com.blackduck.integration.blackduck.api.manual.view;
 
+import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.generated.view.CodeLocationView;
 import com.blackduck.integration.blackduck.api.manual.enumeration.ScanSummaryStatusType;
-import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 
 import java.lang.reflect.Type;
 import java.util.Date;

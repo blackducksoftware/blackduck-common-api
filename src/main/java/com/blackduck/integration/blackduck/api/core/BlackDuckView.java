@@ -12,14 +12,13 @@ import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
 import com.blackduck.integration.rest.HttpUrl;
+import org.apache.http.entity.ContentType;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import org.apache.http.entity.ContentType;
 
 /**
  * A marker class used when a BlackDuckResponse has the '_meta' property which, for now, must be determined manually by actually performing requests against Black Duck endpoints.

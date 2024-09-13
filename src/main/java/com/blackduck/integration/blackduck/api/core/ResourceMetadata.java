@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.core;
 
-import com.google.gson.annotations.JsonAdapter;
 import com.blackduck.integration.rest.HttpUrl;
+import com.google.gson.annotations.JsonAdapter;
 
 public class ResourceMetadata extends BlackDuckComponent {
     private java.util.List<String> allow;

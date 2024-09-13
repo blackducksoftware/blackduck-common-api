@@ -7,31 +7,22 @@
  */
 package com.blackduck.integration.blackduck.api.generated.deprecated.view;
 
-import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckView;
 import com.blackduck.integration.blackduck.api.core.response.LinkBlackDuckResponse;
 import com.blackduck.integration.blackduck.api.core.response.LinkMultipleResponses;
 import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
-import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
-import com.blackduck.integration.blackduck.api.manual.temporary.component.VersionBomOriginView;
 import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComponentActivityDataView;
+import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComponentLicensesView;
 import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComponentMatchAmbiguityView;
 import com.blackduck.integration.blackduck.api.generated.component.ProjectVersionComponentReviewedDetailsView;
-import com.blackduck.integration.blackduck.api.generated.enumeration.MatchType;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentMatchConfidenceStatusType;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentReviewStatusType;
-import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentType;
-import com.blackduck.integration.blackduck.api.generated.enumeration.UsageType;
-import com.blackduck.integration.blackduck.api.generated.view.ComponentMatchedFilesView;
-import com.blackduck.integration.blackduck.api.generated.view.ComponentPolicyRulesView;
-import com.blackduck.integration.blackduck.api.generated.view.IssueView;
-import com.blackduck.integration.blackduck.api.generated.view.OriginView;
-import com.blackduck.integration.blackduck.api.generated.view.RiskProfileView;
+import com.blackduck.integration.blackduck.api.generated.enumeration.*;
+import com.blackduck.integration.blackduck.api.generated.view.*;
+import com.blackduck.integration.blackduck.api.manual.temporary.component.VersionBomOriginView;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 // VersionBomComponentView from the previous API is now called ProjectVersionComponentView
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created

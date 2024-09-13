@@ -7,11 +7,11 @@
  */
 package com.blackduck.integration.blackduck.api.manual.response;
 
-import java.io.Closeable;
-import java.io.IOException;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
 import com.blackduck.integration.rest.response.Response;
+
+import java.io.Closeable;
+import java.io.IOException;
 
 public class BlackDuckResponseResponse extends BlackDuckResponse implements Closeable {
     private Response response;

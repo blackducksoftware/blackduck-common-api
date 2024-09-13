@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.response;
 
-import com.blackduck.integration.blackduck.api.manual.temporary.component.LegacyFilterValueView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
+import com.blackduck.integration.blackduck.api.manual.temporary.component.LegacyFilterValueView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class LegacyFilterView extends BlackDuckResponse {

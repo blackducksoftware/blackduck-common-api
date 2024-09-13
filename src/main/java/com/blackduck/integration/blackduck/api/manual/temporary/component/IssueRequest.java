@@ -7,9 +7,9 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
-import java.util.Date;
-
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
+
+import java.util.Date;
 
 public class IssueRequest extends BlackDuckComponent {
     private String issueAssignee;

@@ -7,13 +7,12 @@
  */
 package com.blackduck.integration.blackduck.api.manual.temporary.component;
 
-import com.blackduck.integration.blackduck.api.generated.view.RiskProfileView;
 import com.blackduck.integration.blackduck.api.core.BlackDuckComponent;
 import com.blackduck.integration.blackduck.api.generated.deprecated.enumeration.MatchedFileUsagesType;
-
 import com.blackduck.integration.blackduck.api.generated.deprecated.enumeration.VersionBomComponentMatchType;
 import com.blackduck.integration.blackduck.api.generated.deprecated.enumeration.VersionBomComponentReviewStatusType;
 import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectVersionComponentPolicyStatusType;
+import com.blackduck.integration.blackduck.api.generated.view.RiskProfileView;
 
 //this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class HierarchicalVersionBomComponentView extends BlackDuckComponent {
