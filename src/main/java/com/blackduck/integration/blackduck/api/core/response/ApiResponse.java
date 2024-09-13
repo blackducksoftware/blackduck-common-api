@@ -7,7 +7,7 @@
  */
 package com.blackduck.integration.blackduck.api.core.response;
 
-import com.synopsys.integration.util.Stringable;
+import com.blackduck.integration.util.Stringable;
 
 public abstract class ApiResponse<T> extends Stringable {
     private final Class<T> responseClass;

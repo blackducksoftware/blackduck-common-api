@@ -8,7 +8,7 @@
 package com.blackduck.integration.blackduck.api.core;
 
 import com.google.gson.annotations.JsonAdapter;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.rest.HttpUrl;
 
 public class ResourceLink extends BlackDuckComponent {
     @JsonAdapter(HttpUrlTypeAdapter.class)

@@ -10,8 +10,8 @@ package com.blackduck.integration.blackduck.api.core;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.synopsys.integration.exception.IntegrationException;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.exception.IntegrationException;
+import com.blackduck.integration.rest.HttpUrl;
 
 import java.io.IOException;
 

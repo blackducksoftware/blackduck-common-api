@@ -8,7 +8,7 @@
 package com.blackduck.integration.blackduck.api.core.response;
 
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.rest.HttpUrl;
 
 public class UrlResponse<T extends BlackDuckResponse> extends ApiResponse<T> {
     private final HttpUrl url;

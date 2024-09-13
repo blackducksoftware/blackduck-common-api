@@ -11,7 +11,7 @@ import java.io.Closeable;
 import java.io.IOException;
 
 import com.blackduck.integration.blackduck.api.core.BlackDuckResponse;
-import com.synopsys.integration.rest.response.Response;
+import com.blackduck.integration.rest.response.Response;
 
 public class BlackDuckResponseResponse extends BlackDuckResponse implements Closeable {
     private Response response;

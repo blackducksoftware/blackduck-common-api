@@ -7,8 +7,8 @@
  */
 package com.blackduck.integration.blackduck.api.core;
 
-import com.synopsys.integration.exception.IntegrationException;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.exception.IntegrationException;
+import com.blackduck.integration.rest.HttpUrl;
 
 /**
  * This will represent a starting point for a REST conversation with Black Duck, such as '/api/codelocations' or '/api/projects'

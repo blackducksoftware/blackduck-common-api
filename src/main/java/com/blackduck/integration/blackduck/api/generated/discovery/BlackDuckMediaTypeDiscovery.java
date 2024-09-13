@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import com.synopsys.integration.rest.HttpUrl;
-import com.synopsys.integration.rest.request.Request;
+import com.blackduck.integration.rest.HttpUrl;
+import com.blackduck.integration.rest.request.Request;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class BlackDuckMediaTypeDiscovery {

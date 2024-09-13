@@ -13,12 +13,12 @@ buildscript {
 project.ext.moduleName = 'com.blackduck.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2023.10.0.5-SNAPSHOT'
+version = '2023.10.0.6-SNAPSHOT'
 
 description = 'A library of mostly temporary request/response classes for the Black Duck REST API.'
 
 apply plugin: 'com.blackduck.integration.library'
 
 dependencies {
-    api 'com.blackduck.integration:integration-rest:10.4.6'
+    api 'com.blackduck.integration:integration-rest:11.0.0'
 }

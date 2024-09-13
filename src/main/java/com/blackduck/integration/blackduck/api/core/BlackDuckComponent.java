@@ -7,7 +7,7 @@
  */
 package com.blackduck.integration.blackduck.api.core;
 
-import com.synopsys.integration.util.Stringable;
+import com.blackduck.integration.util.Stringable;
 
 /**
  * A base class for any object that can interact with the Black Duck API.

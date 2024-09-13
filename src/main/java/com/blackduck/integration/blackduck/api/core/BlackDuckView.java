@@ -11,7 +11,7 @@ import com.blackduck.integration.blackduck.api.core.response.LinkMultipleRespons
 import com.blackduck.integration.blackduck.api.core.response.LinkSingleResponse;
 import com.blackduck.integration.blackduck.api.core.response.UrlMultipleResponses;
 import com.blackduck.integration.blackduck.api.core.response.UrlSingleResponse;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.rest.HttpUrl;
 
 import java.util.Collections;
 import java.util.List;

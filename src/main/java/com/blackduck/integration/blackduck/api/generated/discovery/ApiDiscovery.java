@@ -66,7 +66,7 @@ import com.blackduck.integration.blackduck.api.generated.view.UserGroupView;
 import com.blackduck.integration.blackduck.api.generated.view.UserView;
 import com.blackduck.integration.blackduck.api.generated.view.VulnerabilityReportsReportView;
 import com.blackduck.integration.blackduck.api.generated.view.VulnerabilityView;
-import com.synopsys.integration.rest.HttpUrl;
+import com.blackduck.integration.rest.HttpUrl;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 public class ApiDiscovery {
