@@ -1,17 +1,24 @@
 buildscript {
     apply from: 'https://raw.githubusercontent.com/blackducksoftware/integration-resources/master/gradle_common/buildscript-repositories.gradle', to: buildscript
-    apply from: 'https://raw.githubusercontent.com/blackducksoftware/integration-resources/master/gradle_common/buildscript-dependencies.gradle', to: buildscript
+    apply from: 'https://raw.githubusercontent.com/blackducksoftware/integration-resources/master/gradle_common/buildscript-cgp-version.gradle'
+
+    ext {
+        javaTargetCompatibility = 8
+        javaSourceCompatibility = 8
+    }
+
+    dependencies { classpath "com.blackduck.integration:common-gradle-plugin:${managedCgpVersion}" }
 }
 
-project.ext.moduleName = 'com.synopsys.integration.blackduck-common-api'
+project.ext.moduleName = 'com.blackduck.integration.blackduck-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '2023.10.0.5-SNAPSHOT'
+version = '2023.10.0.6-SNAPSHOT'
 
 description = 'A library of mostly temporary request/response classes for the Black Duck REST API.'
 
-apply plugin: 'com.synopsys.integration.library'
+apply plugin: 'com.blackduck.integration.library'
 
 dependencies {
-    api 'com.synopsys.integration:integration-rest:10.4.6'
+    api 'com.blackduck.integration:integration-rest:11.0.0'
 }
