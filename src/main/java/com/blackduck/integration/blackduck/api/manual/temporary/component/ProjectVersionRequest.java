@@ -21,6 +21,7 @@ public class ProjectVersionRequest extends BlackDuckComponent {
     private String releaseComments;
     private java.util.Date releasedOn;
     private String versionName;
+    private Boolean update;
 
     public String getCloneFromReleaseUrl() {
         return cloneFromReleaseUrl;
@@ -84,6 +85,14 @@ public class ProjectVersionRequest extends BlackDuckComponent {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
+    }
+
+    public Boolean getUpdate() {
+        return update;
+    }
+
+    public void setUpdate(Boolean update) {
+        this.update = update;
     }
 
 }
