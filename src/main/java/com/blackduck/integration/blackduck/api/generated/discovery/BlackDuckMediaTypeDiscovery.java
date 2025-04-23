@@ -39,6 +39,7 @@ public class BlackDuckMediaTypeDiscovery {
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_4_JSON = "application/vnd.blackducksoftware.project-detail-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON = "application/vnd.blackducksoftware.project-detail-5+json";
     public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_6_JSON = "application/vnd.blackducksoftware.project-detail-6+json";
+    public static final String VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_7_JSON = "application/vnd.blackducksoftware.project-detail-7+json";
     public static final String VND_BLACKDUCKSOFTWARE_REPORT_4_JSON = "application/vnd.blackducksoftware.report-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_SCAN_4_JSON = "application/vnd.blackducksoftware.scan-4+json";
     public static final String VND_BLACKDUCKSOFTWARE_SCAN_6_JSON = "application/vnd.blackducksoftware.scan-6+json";
@@ -381,7 +382,7 @@ public class BlackDuckMediaTypeDiscovery {
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_VULNERABILITIES_VULNERABILITY_MATCHES, VND_BLACKDUCKSOFTWARE_VULNERABILITY_4_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_VULNERABLE_BOM_COMPONENTS, VND_BLACKDUCKSOFTWARE_BILL_OF_MATERIALS_6_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_VERSIONS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
-        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_6_JSON));
+        mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECTS_WITH_ID, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_7_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_CHILDREN, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
         mediaTypeMatchers.add(new MediaTypeMatcher(API_PROJECT_GROUPS_DESCENDANTS, VND_BLACKDUCKSOFTWARE_PROJECT_DETAIL_5_JSON));
