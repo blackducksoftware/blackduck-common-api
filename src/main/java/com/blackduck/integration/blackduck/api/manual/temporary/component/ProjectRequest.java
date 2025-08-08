@@ -14,6 +14,8 @@ import com.blackduck.integration.blackduck.api.generated.enumeration.ProjectClon
 public class ProjectRequest extends BlackDuckComponent {
     private java.util.List<ProjectCloneCategoriesType> cloneCategories;
     private Boolean customSignatureEnabled;
+    private Boolean deepLicenseDataEnabled;
+    private Boolean deepLicenseDataSnippetEnabled;    
     private String description;
     private String name;
     private Boolean projectLevelAdjustments;
@@ -36,6 +38,22 @@ public class ProjectRequest extends BlackDuckComponent {
 
     public void setCustomSignatureEnabled(Boolean customSignatureEnabled) {
         this.customSignatureEnabled = customSignatureEnabled;
+    }
+    
+    public Boolean getDeepLicenseDataEnabled() {
+        return deepLicenseDataEnabled;
+    }
+
+    public void setDeepLicenseDataEnabled(Boolean deepLicenseDataEnabled) {
+        this.deepLicenseDataEnabled = deepLicenseDataEnabled;
+    }
+    
+    public Boolean getDeepLicenseDataSnippetEnabled() {
+        return deepLicenseDataSnippetEnabled;
+    }
+
+    public void setDeepLicenseDataSnippetEnabled(Boolean deepLicenseDataSnippetEnabled) {
+        this.deepLicenseDataSnippetEnabled = deepLicenseDataSnippetEnabled;
     }
 
     public String getDescription() {

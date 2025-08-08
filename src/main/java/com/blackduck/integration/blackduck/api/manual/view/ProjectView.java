@@ -58,6 +58,8 @@ public class ProjectView extends BlackDuckView {
     private String createdByUser;
     private BigDecimal customSignatureDepth;
     private Boolean customSignatureEnabled;
+    private Boolean deepLicenseDataEnabled;
+    private Boolean deepLicenseDataSnippetEnabled;
     private String description;
     private String name;
     private String projectGroup;
@@ -120,6 +122,22 @@ public class ProjectView extends BlackDuckView {
 
     public void setCustomSignatureEnabled(Boolean customSignatureEnabled) {
         this.customSignatureEnabled = customSignatureEnabled;
+    }
+    
+    public Boolean getDeepLicenseDataEnabled() {
+        return deepLicenseDataEnabled;
+    }
+
+    public void setDeepLicenseDataEnabledEnabled(Boolean deepLicenseDataEnabled) {
+        this.deepLicenseDataEnabled = deepLicenseDataEnabled;
+    }
+    
+    public Boolean getDeepLicenseDataSnippetEnabled() {
+        return deepLicenseDataSnippetEnabled;
+    }
+
+    public void setDeepLicenseDataSnippetEnabled(Boolean deepLicenseDataSnippetEnabled) {
+        this.deepLicenseDataSnippetEnabled = deepLicenseDataSnippetEnabled;
     }
 
     public String getDescription() {
